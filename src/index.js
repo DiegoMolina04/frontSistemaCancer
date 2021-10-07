@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 //import '../src/css/App.css';
 //import App from '../src/js/App';
 
-import Loggin from '../src/js/Loggin'
+import Login from './js/Login'
 //import '../src/css/Loggin.css';
 
 import reportWebVitals from '../src/js/reportWebVitals';
@@ -12,7 +12,7 @@ import reportWebVitals from '../src/js/reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
 
-    <Loggin />
+    <Login />
 
   </React.StrictMode>,
   document.getElementById('root')

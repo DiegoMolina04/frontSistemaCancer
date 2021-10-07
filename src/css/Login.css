@@ -1,0 +1,101 @@
+
+body{
+    /*background-color: #ab0d2f;*/
+    background-color: #9a0526;
+}
+
+/*Caja contenedora del login*/
+#caja{
+    border: 1px solid;
+    border-color: #323d47be;
+    border-radius: 7px;
+    /*margin: 10% 36rem 0 36rem;*/
+    /*margin: 150px 550px 0 550px;*/
+    margin-top: 10%;
+    width: 450px;
+    background-color: #eff2f5;
+    /*width: 50%;*/
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    /*margin-top: 10%;*/
+    box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+}
+
+/*Letras inicio de sesión*/
+#caja p{
+    
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+/*Inputs de usuario y contraseña*/
+#usuario, #contraseña{
+    width: 18rem;
+    height: 40px;
+    /*width: 60%;*/
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#usuario{
+    margin-bottom: 1rem; /*1rem = 16px*/
+
+}
+
+/*Contenedor de botón enviar*/
+#cajaBoton {
+    /*border: 2px solid violet;*/
+    text-align: center;
+}
+
+/*Iconos al lado del input*/
+#caja .input-group #btnGroupAddon{
+    width: 40px;
+    height: 40px;
+    /*background-color: rgba(62, 138, 62, 0.589);*/
+    background-color: #64af54;
+    
+}
+
+/*Botón enviar*/
+#cajaBoton .btn{
+    margin-top: 2rem;
+    background: transparent;
+    color: #000;
+    /*border-color: rgba(62, 138, 62, 0.589);*/
+    border-color: #64af54;
+    font-family: 'Noto Sans Display', sans-serif;
+    width: 6rem;
+}
+
+#cajaBoton .btn:hover{
+    /*background-color: rgba(62, 138, 62, 0.589);*/
+    background-color: #64af54;
+    color: white;
+    
+}
+
+/*Linea*/
+#caja #linea{
+
+    color: #000;
+}
+
+/*Contenedor del logo*/
+#cajaLogo{
+
+    text-align: center;
+
+}
+
+#logo{
+    height: 13rem;
+}
+
+/*#seccion{
+    background-color: rgb(133, 52, 52);
+}*/
+
