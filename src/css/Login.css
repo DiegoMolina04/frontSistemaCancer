@@ -1,7 +1,22 @@
-
-body{
+/*
+html,body{
     /*background-color: #ab0d2f;*/
+    /*background-color: #9a0526;
+    height:100%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+}*/
+
+
+/*Color de fondo*/
+#seccion{
+    
+    height: 100vh; /*vh (viewport-height) = Altura de la ventana gráfica.*/
+    width: 100%;
+    border: 0.01px solid #9a0526; /*Despliega borde en toda la pantalla*/
     background-color: #9a0526;
+    
 }
 
 /*Caja contenedora del login*/
@@ -37,7 +52,8 @@ body{
     /*width: 60%;*/
     margin-left: auto;
     margin-right: auto;
-    
+    /**/
+    box-shadow: none; /*Quita la sombra azul alrededor del input*/
 }
 
 #usuario{
@@ -69,6 +85,7 @@ body{
     border-color: #64af54;
     font-family: 'Noto Sans Display', sans-serif;
     width: 6rem;
+    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
 
 #cajaBoton .btn:hover{
@@ -95,7 +112,5 @@ body{
     height: 13rem;
 }
 
-/*#seccion{
-    background-color: rgb(133, 52, 52);
-}*/
+
 

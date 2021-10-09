@@ -19,13 +19,13 @@ function Login() {
 
         <p>Inicio de sesión</p>
 
-        <div class="input-group">
-            <div class="input-group-text" id="btnGroupAddon"><i class="fas fa-user"></i></div>
+        <div className="input-group">
+            <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-user"></i></div>
             <input id="usuario" type="text" className="form-control" placeholder="Nombre de usuario"/>
         </div>
 
-        <div class="input-group">
-            <div class="input-group-text" id="btnGroupAddon"><i class="fas fa-key"></i></div>
+        <div className="input-group">
+            <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-key"></i></div>
             <input id="contraseña" type="password" className="form-control" placeholder="Contraseña"/>
         </div>
         
