@@ -90,6 +90,7 @@ html,body{
 
 #cajaBoton .btn:hover{
     /*background-color: rgba(62, 138, 62, 0.589);*/
+    border-color: #64af54;
     background-color: #64af54;
     color: white;
     

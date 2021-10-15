@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import '../css/Login.css';
 import '../css/fontawesome-free-5.15.4-web/css/all.css'
-import logo from '../image/inc.png'
+import logo from '../image/logo.png'
 
 function Login() {
   return (
@@ -21,18 +21,18 @@ function Login() {
 
         <div className="input-group">
             <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-user"></i></div>
-            <input id="usuario" type="text" className="form-control" placeholder="Nombre de usuario"/>
+            <input id="usuario" type="text" className="form-control" placeholder="Nombre de usuario" title="Ingrese su nombre de usuario"/>
         </div>
 
         <div className="input-group">
             <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-key"></i></div>
-            <input id="contraseña" type="password" className="form-control" placeholder="Contraseña"/>
+            <input id="contraseña" type="password" className="form-control" placeholder="Contraseña" title="Ingrese su contraseña"/>
         </div>
         
 
         <div id="cajaBoton">
 
-            <button type="button" className="btn btn-success">Enviar</button>
+            <button type="button" className="btn btn-success" title="Iniciar sesión">Enviar</button>
 
         </div>
 
