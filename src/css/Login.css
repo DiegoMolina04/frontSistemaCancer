@@ -14,8 +14,8 @@ html,body{
     
     height: 100vh; /*vh (viewport-height) = Altura de la ventana gráfica.*/
     width: 100%;
-    border: 0.01px solid #9a0526; /*Despliega borde en toda la pantalla*/
-    background-color: #9a0526;
+    border: 0.01px solid #8a132d; /*Despliega borde en toda la pantalla*/
+    background-color: #8a132d; /*9a0526*/
     
 }
 
