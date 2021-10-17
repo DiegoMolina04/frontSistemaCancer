@@ -2,6 +2,7 @@
 import '../css/Login.css';
 import '../css/fontawesome-free-5.15.4-web/css/all.css'
 import logo from '../image/logo.png'
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
@@ -29,12 +30,13 @@ function Login() {
             <input id="contraseña" type="password" className="form-control" placeholder="Contraseña" title="Ingrese su contraseña"/>
         </div>
         
-
+        <Link to='/plataforma' >
         <div id="cajaBoton">
 
             <button type="button" className="btn btn-success" title="Iniciar sesión">Enviar</button>
 
         </div>
+        </Link>
 
       </div>
 

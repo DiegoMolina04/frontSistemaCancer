@@ -56,6 +56,7 @@ html,body{
     box-shadow: none; /*Quita la sombra azul alrededor del input*/
 }
 
+/*Input de usuario*/
 #usuario{
     margin-bottom: 1rem; /*1rem = 16px*/
 
@@ -88,6 +89,7 @@ html,body{
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
 
+/*Propiedad hover sobre el botón enviar*/
 #cajaBoton .btn:hover{
     /*background-color: rgba(62, 138, 62, 0.589);*/
     border-color: #64af54;
@@ -96,7 +98,7 @@ html,body{
     
 }
 
-/*Linea*/
+/*Linea debajo del logo*/
 #caja #linea{
 
     color: #000;
@@ -109,6 +111,7 @@ html,body{
 
 }
 
+/*Imagen logo*/
 #logo{
     height: 13rem;
 }

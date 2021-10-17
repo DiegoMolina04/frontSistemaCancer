@@ -1,9 +1,16 @@
 //import logo from './logo.svg';
 import '../css/Plataforma.css';
-import '../css/fontawesome-free-5.15.4-web/css/all.css'
-import logo from '../image/logo.png'
+import '../css/fontawesome-free-5.15.4-web/css/all.css';
+import logo from '../image/logo.png';
+
+
+
+import { Link } from "react-router-dom";
 
 function Plataforma() {
+
+  
+    
   return (
     
     <div id="fondo">
@@ -24,26 +31,34 @@ function Plataforma() {
 
         <div id="opciones">
 
+          <Link to='/plataforma/diagnosticar'>
           <button type="button" className="btn btn-success" title="Iniciar diagnostico del paciente">
             <i class="fas fa-diagnoses"></i>
             Diagnosticar
           </button>
-          
+          </Link>
+
+          <Link to='/plataforma/reglas' >
           <button type="button" className="btn btn-success" title="Ver reglas de diagnostico">
             <i class="fas fa-heartbeat"></i>
             Sintomas
             {/*Reglamento*/}
           </button>
+          </Link>
 
+          <Link to='/plataforma/diccionario' >
           <button type="button" className="btn btn-success" title="Ver diccionario de terminos">
             <i class="fas fa-book"></i>
             Diccionario
           </button>
+          </Link>
 
+          <Link to='/plataforma/diagrama' >
           <button type="button" className="btn btn-success" title="Ver diagrama de flujo">
             <i class="fas fa-project-diagram"></i>
             Diagrama
           </button>
+          </Link>
 
         </div>
 
@@ -70,11 +85,16 @@ function Plataforma() {
         {/*Contenedor botón inicio perfil*/}
         <div id="botonesSuperior" className="btn-group" role="group" >
 
-          <button id="inicio" type="button" className="btn btn-success" title="Regresar a la pagina de inicio">
+          
+          <Link to='/login' >
+          <button id="inicio" type="button" className="btn btn-success" title="Regresar a la pagina de inicio" >
             <i class="fas fa-home"></i>
             Inicio
           </button>
+          </Link>
+
           
+
           <button id="expandiblePerfil" type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false" title="Opciones de perfil"> {/*class="btn btn-primary dropdown-toggle"*/}
             Perfil
             <i class="far fa-caret-square-down"></i>
@@ -89,11 +109,13 @@ function Plataforma() {
 
       </div>
 
+      {/*
       <div id="contenido">
 
-        Contenido
+        
 
       </div>
+      */}
 
     </div>    
     

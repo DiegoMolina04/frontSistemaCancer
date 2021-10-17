@@ -1,0 +1,171 @@
+
+/*Color de fondo para vista agregar usuario*/
+#fondo-AgregarUsuario{
+    /*height: 100vh;*/ /*vh (viewport-height) = Altura de la ventana gráfica.*/
+    height: fit-content;
+    width: 100%;
+    border: 0.01px solid #8a132d; /*Despliega borde en toda la pantalla*/
+    background-color: #8a132d; /*9a0526*/
+}
+
+/*Caja contenedora de agregar usuario*/
+#caja-AgregarUsuario{
+
+    /*border: 2px solid blue;*/
+    border: 1px solid #000;
+    width: 50%;
+    margin-top: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    height: fit-content;
+    padding: 2rem;
+    border-radius: 7px;
+    background-color: #eff2f5;
+    box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+    
+}
+
+/*Caja de la imagen del logo*/
+#cajaLogo-AgregarUsuario{
+
+    /*border: 2px solid brown;*/
+    text-align: center;
+}
+
+/*Imagen logo*/
+#logo-AgregarUsuario{
+    
+    /*height: 13rem;*/
+    height: 28.7%;
+    width: 28.7%;
+}
+
+/*Caja texto Nuevo Usuario*/
+#caja-AgregarUsuario #cajaNuevoUsuario-AgregarUsuario{
+    /*border: 2px solid skyblue;*/
+    margin-top: 10px;
+    text-align: center;
+}
+
+/*Label Nuevo registro*/
+#cajaNuevoUsuario-AgregarUsuario #labelNuevoUsuario-AgregarUsuario{
+
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+
+}
+
+/*Linea debajo del logo*/
+#linea-AgregarUsuario{
+
+    color: #000;
+}
+
+/*Caja contenedora del formulario*/
+#formulario-AgregarUsuario{
+    
+    /*border: 2px solid seagreen;*/
+    padding: 1rem;
+}
+
+/*Todos los label del formulario*/
+#formulario-AgregarUsuario label{
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 20px;
+}
+
+/*Propiedades de los iconos al lado de los input*/
+#formulario-AgregarUsuario .input-group #btnGroupAddon{
+    width: 42px;
+    /*background-color: rgba(62, 138, 62, 0.589);*/
+    background-color: #64af54;
+    margin-top: 10px;
+    
+}
+
+/*Propiedades label Tipo de cuenta*/
+#formulario-AgregarUsuario #tipoCuenta-AgregarCuenta{
+   display: block; 
+}
+
+/*Propiedades de los p Administrador y Usuario*/
+#pAdministrador-AgregarCuenta, #pUsuario-AgregarCuenta{
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 18px;
+}
+
+/*Propiedades de los inputs*/
+#formulario-AgregarUsuario .input-group input{
+    margin-top: 10px;
+    
+}
+
+/*Propiedad focus sobre los radio buttons*/
+#formulario-AgregarUsuario .form-check #radioButton:focus{
+    background-color: #64af54;
+    border-color: #64af54;
+    box-shadow: none;
+}
+
+/*Propiedad checked sobre los radio buttton*/
+#formulario-AgregarUsuario .form-check #radioButton:checked{
+    background-color: #64af54;
+    border-color: #64af54;
+}
+
+/*Caja botones enviar y limpiar*/
+#formulario-AgregarUsuario #cajaBotones-AgregarCuenta{
+    /*border: 3px solid purple;*/
+    margin-top: 30px;
+}
+
+/*Caja contenedora del botón Enviar*/
+#formulario-AgregarUsuario #cajaEnviar-AgregarCuenta{
+    /*border: 3px solid red;*/
+    float: left;
+    width: 50%;
+    text-align: right;
+    
+}
+
+/*Caja contenedora del botón Limpiar*/
+#formulario-AgregarUsuario #cajaLimpiar-AgregarCuenta{
+    /*border: 3px solid palevioletred;*/
+    text-align: left;
+    /*margin-left: 30%;*/
+
+}
+
+/*Propiedades de los botones Enviar y Limpiar*/
+#cajaEnviar-AgregarCuenta #botonEnviar-AgregarCuenta, #cajaLimpiar-AgregarCuenta #botonLimpiar-AgregarCuenta{
+    background: transparent;
+    color: #000;
+    /*border-color: rgba(62, 138, 62, 0.589);*/
+    border-color: #64af54;
+    font-family: 'Noto Sans Display', sans-serif;
+    width: 6rem;
+    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
+}
+
+/*Propiedad del boton Enviar*/
+#cajaEnviar-AgregarCuenta #botonEnviar-AgregarCuenta{
+    margin-right: 20%;
+}
+
+/*Propiedad del boton Limpiar*/
+#cajaLimpiar-AgregarCuenta #botonLimpiar-AgregarCuenta{
+    margin-left: 10%;
+}
+
+/*Propiedad hover sobre los botones Enviar y Limpiar*/
+#cajaEnviar-AgregarCuenta #botonEnviar-AgregarCuenta:hover, #cajaLimpiar-AgregarCuenta #botonLimpiar-AgregarCuenta:hover{
+    /*background-color: rgba(62, 138, 62, 0.589);*/
+    border-color: #64af54;
+    background-color: #64af54;
+    color: white;
+    
+}
+
+

@@ -4,13 +4,14 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";/////////////////////
 
 //import '../src/css/App.css';
-//import App from '../src/js/App';
+import App from '../src/App.js';
 
-import Login from './js/Login'
+//import Login from './js/Login'
 //import '../src/css/Loggin.css';
 
 import reportWebVitals from '../src/js/reportWebVitals';
-import Plataforma from './js/Plataforma';
+/*import Plataforma from './js/Plataforma';
+import Reglas from './js/Reglas';*/
 
 /*<App />*/
 
@@ -18,17 +19,22 @@ const rootElement = document.getElementById("root");/////////
 
 ReactDOM.render(
 
+  /*
   <BrowserRouter>
 
     <Switch>
 
       <Route path = "/login" component={Login} />
       <Route path = "/plataforma" component={Plataforma} />
-
+      <Route path = "/reglas" component={Reglas} />
 
     </Switch>
   
-  </BrowserRouter>,
+  </BrowserRouter>,*/
+
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
 
   rootElement
   /*<React.StrictMode>
