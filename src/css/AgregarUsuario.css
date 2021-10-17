@@ -102,6 +102,13 @@
     
 }
 
+/*Propiedad placeholder de los inputs*/
+#formulario-AgregarUsuario .input-group input::placeholder{
+
+    font-style: italic;
+
+}
+
 /*Propiedad focus sobre los radio buttons*/
 #formulario-AgregarUsuario .form-check #radioButton:focus{
     background-color: #64af54;

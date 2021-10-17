@@ -51,7 +51,7 @@ function AgregarUsuario() {
                     <label>Ingrese su contraseña</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-key"></i></div>
-                        <input id="contraseña-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese su contraseña" title="Digite su  contraseña"/>
+                        <input id="contraseña-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese su contraseña" title="Digite su contraseña"/>
                     </div>
 
                     <br />
@@ -60,7 +60,7 @@ function AgregarUsuario() {
                     <label>Ingrese nuevamente su contraseña</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-key"></i></div>
-                        <input id="contraseñaRe-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese nuevamente su contraseña" title="Reingrese su  contraseña"/>
+                        <input id="contraseñaRe-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese nuevamente su contraseña" title="Reingrese su contraseña"/>
                     </div>
 
                     <br />

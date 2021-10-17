@@ -7,6 +7,7 @@ import Reglas from '../src/js/Reglas.js'
 import Diagnosticar from '../src/js/Diagnosticar.js'
 import Diccionario from '../src/js/Diccionario.js'
 import Diagrama from '../src/js/Diagrama.js'
+import SeleccionAdministrador from "./js/SeleccionAdministrador.js";
 
 function App(){
 
@@ -55,6 +56,10 @@ function App(){
                     <div>
                         <Diagrama />
                     </div>
+                </Route>
+
+                <Route exact path = "/seleccionadministrador" >
+                    <SeleccionAdministrador />
                 </Route>
 
             </Switch>

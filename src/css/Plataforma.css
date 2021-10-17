@@ -358,6 +358,7 @@
 #busqueda input::placeholder{
     
     color: #000;
+    font-style: italic;
 }
 
 
