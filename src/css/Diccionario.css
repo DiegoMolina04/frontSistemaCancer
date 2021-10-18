@@ -1,18 +1,22 @@
 
+/*Caja contenedora de toda la vista Diccionario*/
 #fondo-Diccionario{
-    border: 4px solid blue;
-    height: 93.5vh;
+    /*border: 4px solid blue;*/
+    height: 92vh;
     /*overflow-y: scroll;*/
 }
 
-/**/
-#labelTerminos-Diccionario{
+/*Propiedades de la caja contenedora del label Terminos*/
+#cajaLabelTerminos-Diccionario{
 
-    border: 5px solid aqua;
-    
+    /*border: 5px solid aqua;*/
+    margin-top: 2px;
+    background-color: #eff2f5;
+    box-shadow: 5px 3px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
 }
 
-#labelTerminos-Diccionario label{
+/*Propiedades del Label Terminos*/
+#cajaLabelTerminos-Diccionario label{
     margin-left: 2%;
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 23px;
@@ -21,7 +25,7 @@
 
 /*Propiedades de la caja contenedora de la tabla*/
 #cajaTabla-Diccionario{
-    border: 2px solid burlywood;
+    /*border: 2px solid burlywood;*/
     height: 85%;
     width: 50%;
     margin-top: 50px;
@@ -29,6 +33,7 @@
     margin-right: auto;
     overflow-x: hidden;
     overflow-y: scroll;
+    box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
 }
 
 /*Propiedades de toda la tabla en general*/
@@ -58,6 +63,7 @@
     /*background-color: pink;*/
     width: 50%;
     text-align: center;
+    
 }
 
 /*Propiedades de la fila ID*/
@@ -75,3 +81,8 @@
 
     text-align: justify;
 }
+
+/*Propiedad hover sobre las filas de la tabla
+#tabla-Diccionario tbody tr:hover{
+    background-color: #138a70;
+}*/

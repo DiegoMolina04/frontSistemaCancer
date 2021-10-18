@@ -7,7 +7,7 @@ function Diccionario() {
 
         <div id="fondo-Diccionario">
 
-            <div id="labelTerminos-Diccionario">
+            <div id="cajaLabelTerminos-Diccionario">
                 <label>Terminos</label>
             </div>
             
