@@ -6,7 +6,9 @@ function SeleccionAdministrador() {
 
     return ( 
 
-        <div>Esto es seleccion administrador</div>
+        <div id="fondo-SeleccionAdministrador">
+            
+        </div>
     );
 }
 

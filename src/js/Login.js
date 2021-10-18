@@ -15,6 +15,9 @@ function Login() {
             <img id="logo" src={logo} alt=""/>
 
         </div>
+        
+        
+
 
         <hr id="linea"/>
 
@@ -22,7 +25,7 @@ function Login() {
 
         <div className="input-group">
             <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-user"></i></div>
-            <input id="usuario" type="text" className="form-control" placeholder="Nombre de usuario" title="Ingrese su nombre de usuario"/>
+            <input id="usuario" type="text" className="form-control" placeholder="Email" title="Ingrese su correo"/>
         </div>
 
         <div className="input-group">

@@ -137,7 +137,7 @@
 }
 
 /*Propiedades de los botones inicio y perfil en el menu superior*/
-#botonesSuperior button{
+#botonesSuperior #expandiblePerfil, #botonesSuperior #inicio{
     
     width: 6rem;
     height: 37px;
@@ -158,8 +158,29 @@
 
 }
 
-/*Propiedad hover para botones inicio, perfil y categoria*/
-#botonesSuperior button:hover{
+/*Propiedades del botón agregarUsuario en el menu superior*/
+#botonesSuperior #agregarUsuario{
+    width: 10.3rem;
+    height: 37px;
+    margin-top: 5px;
+    margin-right: -1px;
+    /*background: transparent;*/
+    background-color: #eff2f5;
+    color: #000;
+    /*color: white;*/
+    /*border-color: rgba(62, 138, 62, 0.589);*/
+    /*border-color: #64af54;*/
+    border-color: #91142f;
+
+    /*border-width: 0 2px 0 2px;*/
+    /*border-color: transparent #138a70 transparent #138a70;*/
+    
+    font-family: 'Noto Sans Display', sans-serif;
+    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
+}
+
+/*Propiedad hover para botones inicio, perfil y agregarUsuario*/
+#botonesSuperior #inicio:hover, #botonesSuperior #agregarUsuario:hover, #botonesSuperior #expandiblePerfil:hover{
     /*background-color: rgba(62, 138, 62, 0.589);*/
     /*border-color: red;*/
     /*background-color: #64af54;*/
@@ -201,8 +222,8 @@
     margin-left: 10px;
 }
 
-/*Icono casa en menu superir boton inicio*/
-#botonesSuperior #inicio i{
+/*Icono casa en menu superir boton inicio e Icono mas en menu superior boton agregar usuario*/
+#botonesSuperior #inicio i, #botonesSuperior #agregarUsuario i{
     margin-right: 10px;
 }
 

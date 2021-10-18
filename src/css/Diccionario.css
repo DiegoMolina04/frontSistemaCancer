@@ -1,0 +1,77 @@
+
+#fondo-Diccionario{
+    border: 4px solid blue;
+    height: 93.5vh;
+    /*overflow-y: scroll;*/
+}
+
+/**/
+#labelTerminos-Diccionario{
+
+    border: 5px solid aqua;
+    
+}
+
+#labelTerminos-Diccionario label{
+    margin-left: 2%;
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+/*Propiedades de la caja contenedora de la tabla*/
+#cajaTabla-Diccionario{
+    border: 2px solid burlywood;
+    height: 85%;
+    width: 50%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/*Propiedades de toda la tabla en general*/
+#tabla-Diccionario{
+    
+    font-family: 'Noto Sans Display', sans-serif;
+    background-color: #eff2f5;
+    
+}
+
+/*Propiedades de la columna ID en la cabecera*/
+#idTablaCabecera-Diccionario{
+    /*background-color: red;*/
+    width: 20%;
+    text-align: center;
+}
+
+/*Propiedades de la columna Palabra en la cabecera*/
+#palabraTablaCabecera-Diccionario{
+    /*background-color: aqua;*/
+    width: 30%;
+    text-align: center;
+}
+
+/*Propiedades de la columna Descripción en la cabecera*/
+#descripcionTablaCabecera-Diccionario{
+    /*background-color: pink;*/
+    width: 50%;
+    text-align: center;
+}
+
+/*Propiedades de la fila ID*/
+#idTablaFila-Diccionario{
+    text-align: center;
+}
+
+/*Propiedades de la fila Palabra*/
+#palabraTablaFila-Diccionario{
+    text-align: center;
+}
+
+/*Propiedades de la fila Descripción*/
+#descripcionTablaFila-Diccionario{
+
+    text-align: justify;
+}

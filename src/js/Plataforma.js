@@ -85,16 +85,21 @@ function Plataforma() {
         {/*Contenedor botón inicio perfil*/}
         <div id="botonesSuperior" className="btn-group" role="group" >
 
-          
+           {/*Botón para agregar nuevo usuario*/}
+           <Link to='/agregarusuario' >
+           <button id="agregarUsuario" type="button" className="btn btn-success" title="Agregar un nuevo usuario" >
+           <i class="fas fa-plus-circle"></i>
+            Agregar Usuario
+          </button>
+          </Link>
+
           <Link to='/login' >
           <button id="inicio" type="button" className="btn btn-success" title="Regresar a la pagina de inicio" >
             <i class="fas fa-home"></i>
             Inicio
           </button>
           </Link>
-
-          
-
+        
           <button id="expandiblePerfil" type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false" title="Opciones de perfil"> {/*class="btn btn-primary dropdown-toggle"*/}
             Perfil
             <i class="far fa-caret-square-down"></i>

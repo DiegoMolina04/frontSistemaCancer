@@ -19,12 +19,14 @@ function AgregarUsuario() {
 
                 </div>
 
+                
+                {/*Linea debajo del logo*/}
+                <hr id="linea-AgregarUsuario"/>
+                
                 <div id="cajaNuevoUsuario-AgregarUsuario">
                     <label id="labelNuevoUsuario-AgregarUsuario">Nuevo usuario</label>
                 </div>
 
-                {/*Linea debajo del logo*/}
-                <hr id="linea-AgregarUsuario"/>
 
                 {/*Contenedor de todo el formulario*/}
                 <div id="formulario-AgregarUsuario">
