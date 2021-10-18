@@ -85,9 +85,9 @@ function Plataforma() {
         {/*Contenedor botón inicio perfil*/}
         <div id="botonesSuperior" className="btn-group" role="group" >
 
-           {/*Botón para agregar nuevo usuario*/}
-           <Link to='/agregarusuario' >
-           <button id="agregarUsuario" type="button" className="btn btn-success" title="Agregar un nuevo usuario" >
+          {/*Botón para agregar nuevo usuario*/}
+          <Link to='/agregarusuario' >
+          <button id="agregarUsuario" type="button" className="btn btn-success" title="Agregar un nuevo usuario" >
            <i class="fas fa-plus-circle"></i>
             Agregar Usuario
           </button>

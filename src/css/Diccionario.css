@@ -6,13 +6,25 @@
     /*overflow-y: scroll;*/
 }
 
-/*Propiedades de la caja contenedora del label Terminos*/
-#cajaLabelTerminos-Diccionario{
+/*Propiedades caja contenedora de cabecera Terminos y Boton*/
+#cabeceraTerminosBoton-Diccionario{
 
     /*border: 5px solid aqua;*/
-    margin-top: 2px;
+    /*margin-top: 2px;*/
+    height: 3rem;
+    padding: 4px;
     background-color: #eff2f5;
     box-shadow: 5px 3px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+}
+
+/*Propiedades caja contenedora de Terminos*/
+#cajaLabelTerminos-Diccionario{
+    /*border: 2px solid salmon;*/
+    /*margin-top: 15px;*/
+    /*margin-top: 0px;*/
+    width: 40%;
+    float: left;
+    
 }
 
 /*Propiedades del Label Terminos*/
@@ -23,6 +35,48 @@
     font-weight: 700;
 }
 
+/*Propiedades de la caja botón agregar termino*/
+#cabeceraTerminosBoton-Diccionario #cajaAgregarTermino-Diccionario{
+
+    /*border: 2px solid darkorchid;*/
+    /*margin-top: 2px;*/
+    text-align: right;
+    
+}
+
+/*Propiedades del label ¿Desea agregar un termino?*/
+#cajaAgregarTermino-Diccionario label{
+    font-size: 16px;
+    font-style: italic;
+    margin-right: 10px;
+}
+
+/*Propiedades del botón Agregar Termino*/
+#cajaAgregarTermino-Diccionario #agregarTermino-Diccionario{
+    
+    background-color: #eff2f5;
+    padding-top: 2px;
+    color: #000;
+    border-color: #000;
+    /*border-color: transparent;*/
+    
+}
+
+/**/
+#cajaAgregarTermino-Diccionario #agregarTermino-Diccionario:hover{
+    
+    background-color: #138a70;
+    border-color: #138a70;
+    color: white;
+    /*border-color: transparent;*/
+    
+}
+
+/*Propiedades del icono mas al lado del botón Agregar Termino*/
+#cajaAgregarTermino-Diccionario #agregarTermino-Diccionario i{
+    margin-right: 10px;
+}
+
 /*Propiedades de la caja contenedora de la tabla*/
 #cajaTabla-Diccionario{
     /*border: 2px solid burlywood;*/
@@ -31,7 +85,7 @@
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    overflow-x: hidden;
+    overflow-x: scroll;
     overflow-y: scroll;
     box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
 }
@@ -66,6 +120,11 @@
     
 }
 
+/*Propiedades de la columna Modificar/Eliminar en la cabecera*/
+#modificarEliminarTablaCabecera-Diccionario{
+    text-align: center;
+}
+
 /*Propiedades de la fila ID*/
 #idTablaFila-Diccionario{
     text-align: center;
@@ -82,7 +141,51 @@
     text-align: justify;
 }
 
+/*Propiedades de la fila Modificar/Eliminar*/
+#modificarEliminarTablaFila-Diccionario{
+    text-align: center;
+}
+
 /*Propiedad hover sobre las filas de la tabla
 #tabla-Diccionario tbody tr:hover{
     background-color: #138a70;
 }*/
+
+/*Propiedades de los botones de modificar y eliminar*/
+#modificarEliminarTablaFila-Diccionario button{
+    margin-top: 30%;
+    border-radius: 0px;
+    background: transparent;
+    color: #000;
+    /*border-color: rgba(62, 138, 62, 0.589);*/
+    /*border-color: #64af54;*/
+    border-color: transparent;
+    font-family: 'Noto Sans Display', sans-serif;
+    /*width: 6rem;*/
+    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
+}
+
+/*Propiedad hover sobre los botones modificar y eliminar
+#modificarEliminarTablaFila-Diccionario button:hover{
+    /*border-color: #64af54;
+    border-color: transparent;
+    /*background-color: #64af54;
+    background-color: transparent;
+    /*color: white;
+}*/
+
+/*Propiedades de los iconos en los botones modificar y eliminar*/
+#modificarEliminarTablaFila-Diccionario i{
+    font-size: 23px;
+    
+}
+
+/*Propiedad del icono modificar en el botón modificar*/
+#botonModificar-Diccionario #iconoModificar-Diccionario{
+    color: rgb(83, 83, 83);
+}
+
+/*Propiedad del icono eliminar en el botón eliminar*/
+#botonEliminar-Diccionario #iconoEliminar-Diccionario{
+    color: rgb(192, 3, 3);
+}
