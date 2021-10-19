@@ -24,7 +24,7 @@ function Diccionario() {
                         <i class="fas fa-plus-circle"></i>
                          Agregar Termino
                     </button>
-                    
+
                 </div>
 
             </div>
@@ -53,12 +53,12 @@ function Diccionario() {
                             {/*Fila para los botones modificar o eliminar regla*/}
                             <td id="modificarEliminarTablaFila-Diccionario">
 
-                                <button id="botonModificar-Diccionario" type="button" class="btn btn-success" title="Modificar termino">
+                                <button id="botonModificar-Diccionario" type="button" class="btn btn-success" title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-Diccionario">
                                     <i id="iconoModificar-Diccionario" class="fas fa-cog"></i>
                                 </button>
                                 
-                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success">
-                                    <i id="iconoEliminar-Diccionario" class="fas fa-times-circle" title="Eliminar regla"></i>
+                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success" title="Eliminar regla" data-bs-toggle="modal" data-bs-target="#modalEliminar-Diccionario">
+                                    <i id="iconoEliminar-Diccionario" class="fas fa-times-circle"></i>
                                 </button>
 
                             </td>
@@ -72,13 +72,14 @@ function Diccionario() {
                             {/*Fila para los botones modificar o eliminar regla*/}
                             <td id="modificarEliminarTablaFila-Diccionario">
 
-                                <button id="botonModificar-Diccionario" type="button" class="btn btn-success" title="Modificar termino">
+                                <button id="botonModificar-Diccionario" type="button" class="btn btn-success" title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-Diccionario">
                                     <i id="iconoModificar-Diccionario" class="fas fa-cog"></i>
                                 </button>
                                 
-                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success">
-                                    <i id="iconoEliminar-Diccionario" class="fas fa-times-circle" title="Eliminar regla"></i>
+                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success" title="Eliminar regla" data-bs-toggle="modal" data-bs-target="#modalEliminar-Diccionario">
+                                    <i id="iconoEliminar-Diccionario" class="fas fa-times-circle"></i>
                                 </button>
+                                
 
                             </td>
                         </tr>
@@ -91,12 +92,12 @@ function Diccionario() {
                             {/*Fila para los botones modificar o eliminar regla*/}
                             <td id="modificarEliminarTablaFila-Diccionario">
 
-                                <button id="botonModificar-Diccionario" type="button" class="btn btn-success" title="Modificar termino">
+                                <button id="botonModificar-Diccionario" type="button" class="btn btn-success" title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-Diccionario">
                                     <i id="iconoModificar-Diccionario" class="fas fa-cog"></i>
                                 </button>
                                 
-                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success">
-                                    <i id="iconoEliminar-Diccionario" class="fas fa-times-circle" title="Eliminar regla"></i>
+                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success" title="Eliminar regla" data-bs-toggle="modal" data-bs-target="#modalEliminar-Diccionario">
+                                    <i id="iconoEliminar-Diccionario" class="fas fa-times-circle"></i>
                                 </button>
 
                             </td>
@@ -110,16 +111,97 @@ function Diccionario() {
                             {/*Fila para los botones modificar o eliminar regla*/}
                             <td id="modificarEliminarTablaFila-Diccionario">
 
-                                <button id="botonModificar-Diccionario" type="button" class="btn btn-success" title="Modificar termino">
+                                <button id="botonModificar-Diccionario" type="button" class="btn btn-success" title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-Diccionario">
                                     <i id="iconoModificar-Diccionario" class="fas fa-cog"></i>
                                 </button>
                                 
-                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success">
-                                    <i id="iconoEliminar-Diccionario" class="fas fa-times-circle" title="Eliminar regla"></i>
+                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success" title="Eliminar regla" data-bs-toggle="modal" data-bs-target="#modalEliminar-Diccionario">
+                                    <i id="iconoEliminar-Diccionario" class="fas fa-times-circle"></i>
                                 </button>
 
                             </td>
                         </tr>
+
+                        {/*Modal para el botón de Eliminar Termino*/}
+                        <div class="modal fade" id="modalEliminar-Diccionario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+
+                                  <h5 class="modal-title" id="modalLabelEliminar-Diccionario">
+
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <label >Advertencia</label>
+
+                                  </h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" title="Regresa el diciconario de terminos"></button>
+                                </div>
+                                <div class="modal-body">
+                                  
+                                    <label>¿Realmente quiere eliminar este termino?</label>
+                                    <label id="labelRevertirCambios-Diccionario">Los cambios no se podrán revertir.</label>
+
+                                </div>
+                                <div class="modal-footer">
+
+                                  <button type="button" id="botonModalCancelar-Diccionario" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa al diccionario de terminos">Cancelar</button>
+                                  <button type="button" id="botonModalEliminar-Diccionario" class="btn btn-primary" title="Eliminar termino">Eliminar</button>
+
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
+                        
+                        {/*Modal para el botón de Modificar Termino*/}
+                        <div class="modal fade" id="modalModificar-Diccionario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+
+                                  <h5 class="modal-title" id="modalLabelModificar-Diccionario">
+
+                                    <i class="fas fa-cog"></i>
+                                    <label >Modificar Termino</label>
+
+                                  </h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" title="Regresa el diciconario de terminos"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    {/*Sección Termino*/}
+                                    <label>Termino</label>
+                                    
+                                    <div className="input-group">
+                                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div>
+                                        <input id="" type="text" className="form-control" placeholder="Ingrese el nuevo termino" title="Termino actual" />
+                                    </div>
+
+                                    <br />
+
+                                    {/*Sección Descripción*/}
+                                    <label>Descripción</label>
+                                    
+                                    <div className="input-group">
+                                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-book"></i></div>
+                                        
+                                        <textarea class="form-control" id="floatingTextarea" placeholder="Ingrese la nueva descripción" title="Descripción actual"></textarea>
+                                        
+                                        
+                                    </div>
+
+                                    <br />
+
+                                </div>
+                                <div class="modal-footer">
+
+                                  <button type="button" id="botonModalCancelar-Diccionario" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa al diccionario de terminos">Cancelar</button>
+                                  <button type="button" id="botonModalModificar-Diccionario" class="btn btn-primary" title="Modificar termino">Modificar</button>
+
+                                </div>
+                              </div>
+                            </div>
+                        </div>
 
                     </tbody>
                   </table>                  

@@ -189,3 +189,116 @@
 #botonEliminar-Diccionario #iconoEliminar-Diccionario{
     color: rgb(192, 3, 3);
 }
+
+
+/*Propiedades de los labels del modal Eliminar termino. Advertencia y ¿Realmente quiere eliminar este termino?.*/
+#modalEliminar-Diccionario #modalLabelEliminar-Diccionario label,
+#modalEliminar-Diccionario .modal-body label
+{
+
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+/*Propiedades del icono advertencia en el modal de Eliminar termino*/
+#modalEliminar-Diccionario #modalLabelEliminar-Diccionario i{
+    margin-right: 10px;
+}
+
+/*Propiedades del label Los cambios no se podrán revertir en modal Eliminar termino.*/
+#modalEliminar-Diccionario .modal-body #labelRevertirCambios-Diccionario{
+    font-style: italic;
+}
+
+/*Propiedades del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
+#modalEliminar-Diccionario .modal-footer #botonModalCancelar-Diccionario, #modalModificar-Diccionario .modal-footer #botonModalCancelar-Diccionario{
+    font-family: 'Noto Sans Display', sans-serif;
+    background-color: transparent;
+    border-color: #535353;
+    color: #000;
+}
+
+/*Propiedad hover del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
+#modalEliminar-Diccionario .modal-footer #botonModalCancelar-Diccionario:hover, #modalModificar-Diccionario .modal-footer #botonModalCancelar-Diccionario:hover{
+    
+    background-color: #535353;
+    color: white;
+}
+
+/*Propiedad focus del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
+#modalEliminar-Diccionario .modal-footer #botonModalCancelar-Diccionario:focus, #modalModificar-Diccionario .modal-footer #botonModalCancelar-Diccionario:focus{
+    box-shadow: none;
+}
+
+/*Propiedades del boton Eliminar en modal Eliminar termino*/
+#modalEliminar-Diccionario .modal-footer #botonModalEliminar-Diccionario{
+    font-family: 'Noto Sans Display', sans-serif;
+    background-color: transparent;
+    border-color: #c00303;
+    color: #000;
+}
+
+/*Propiedad hover del boton Eliminar en modal Eliminar termino*/
+#modalEliminar-Diccionario .modal-footer #botonModalEliminar-Diccionario:hover{
+    
+    background-color: #c00303;
+    color: white;
+}
+
+/*Propiedad focus del boton Eliminar en modal Eliminar termino*/
+#modalEliminar-Diccionario .modal-footer #botonModalEliminar-Diccionario:focus{
+    box-shadow: none;
+}
+
+/*Propiedades del botón de la X para cerrar el modal Eliminar termino*/
+.modal-header .btn-close:focus{
+    
+    box-shadow: none;
+}
+
+/*Propiedades del icono modificar en el modal de Modificar termino*/
+#modalModificar-Diccionario #modalLabelModificar-Diccionario i{
+    margin-right: 10px;
+}
+
+/*Propiedades de los label Termino y Descripción en el modal de Modificar termino*/
+#modalModificar-Diccionario .modal-body label{
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/*Propiedades del textarea Descripción en el modal de Modificar termino*/
+#modalModificar-Diccionario .modal-body textarea{
+    resize: none;
+    height: 10rem;
+}
+
+/*Propiedades focus del input Termino y el textarea Descripción en el modal de Modificar termino*/
+#modalModificar-Diccionario .modal-body input:focus, #modalModificar-Diccionario .modal-body textarea:focus{
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+/*Propiedades de los placeholder del input Termino y el textarea Descripción en el modal de Modificar termino*/
+#modalModificar-Diccionario .modal-body input::placeholder, #modalModificar-Diccionario .modal-body textarea::placeholder{
+    font-style: italic;
+}
+
+/*Propiedades del botón modificar en el modal Modificar termino*/
+#modalModificar-Diccionario .modal-footer #botonModalModificar-Diccionario{
+    background-color: transparent;
+    border-color: #64af54;
+    color: #000;
+}
+
+/*Propiedad hover del botón modificar en el modal Modificar termino*/
+#modalModificar-Diccionario .modal-footer #botonModalModificar-Diccionario:hover{
+    background-color: #64af54;
+    color: white;
+}
+
+/*Propiedad focus del botón modificar en el modal Modificar termino*/
+#modalModificar-Diccionario .modal-footer #botonModalModificar-Diccionario:focus{
+    background-color: #64af54;
+    color: white;
+}
