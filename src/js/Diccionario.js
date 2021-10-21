@@ -1,5 +1,6 @@
 import '../css/Diccionario.css';
 import '../css/fontawesome-free-5.15.4-web/css/all.css'
+import { Link } from "react-router-dom";
 
 function Diccionario() {
 
@@ -16,14 +17,73 @@ function Diccionario() {
 
                 <div id="cajaAgregarTermino-Diccionario">
                     
-                    <label>
+                    <label id="labelAgregarTermino-Diccionario">
                         ¿Desea agregar un termino?
                     </label>
 
-                    <button id="agregarTermino-Diccionario" type="button" className="btn btn-success" title="Agregar un nuevo termino" >
+                    
+                    <button id="agregarTermino-Diccionario" type="button" className="btn btn-success" title="Agregar un nuevo termino" data-bs-toggle="modal" data-bs-target="#modalAgregarTermino-Diccionario">
                         <i class="fas fa-plus-circle"></i>
                          Agregar Termino
                     </button>
+
+
+                    {/*Modal para el botón de Agregar Termino*/}
+
+                    <div class="modal fade" id="modalAgregarTermino-Diccionario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+
+
+                                    <h5 class="modal-title" id="modalLabelAgregarTermino-Diccionario">
+
+                                        <i class="fas fa-plus-circle"></i>
+                                        <label >Agregar Nuevo Termino</label>
+
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" title="Regresa el diciconario de terminos"></button>
+                                </div>
+
+                                <div class="modal-body">
+
+                                    {/*Sección Termino*/}
+                                    <label id="labelTerminoAgregarTermino-Diccionario">Termino</label>
+                                    
+                                    
+                                    <div className="input-group">
+                                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div>
+                                        <input id="" type="text" className="form-control" placeholder="Ingrese el termino" title="Nuevo termino" />
+                                    </div>
+
+                                    <br />
+
+                                    {/*Sección Descripción*/}
+                                    <label id="labelDescripcionAgregarTermino-Diccionario">Descripción</label>
+                                    
+                                    <div className="input-group">
+                                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-book"></i></div>
+                                        
+                                        <textarea class="form-control" id="floatingTextarea" placeholder="Ingrese la descripción" title="Nueva descripción"></textarea>
+                                        
+                                        
+                                    </div>
+
+                                    <br />
+
+                                </div>
+                                <div class="modal-footer">
+
+                                  <button type="button" id="botonModalCancelar-Diccionario" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa al diccionario de terminos">Cancelar</button>
+                                  <button type="button" id="botonModalModificar-Diccionario" class="btn btn-primary" title="Modificar termino">Modificar</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
 
                 </div>
 

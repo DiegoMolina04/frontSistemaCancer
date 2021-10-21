@@ -45,7 +45,7 @@
 }
 
 /*Propiedades del label ¿Desea agregar un termino?*/
-#cajaAgregarTermino-Diccionario label{
+#cajaAgregarTermino-Diccionario #labelAgregarTermino-Diccionario{
     font-size: 16px;
     font-style: italic;
     margin-right: 10px;
@@ -62,13 +62,20 @@
     
 }
 
-/**/
+/*Propiedad hover del botón Agregar Termino*/
 #cajaAgregarTermino-Diccionario #agregarTermino-Diccionario:hover{
     
     background-color: #138a70;
     border-color: #138a70;
     color: white;
     /*border-color: transparent;*/
+    
+}
+
+/*Propiedad focus del botón Agregar Termino*/
+#cajaAgregarTermino-Diccionario #agregarTermino-Diccionario:focus{
+    
+    box-shadow: none;
     
 }
 
@@ -301,4 +308,18 @@
 #modalModificar-Diccionario .modal-footer #botonModalModificar-Diccionario:focus{
     background-color: #64af54;
     color: white;
+}
+
+/*Propiedades de icono mas en Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
+
+#modalAgregarTermino-Diccionario #modalLabelAgregarTermino-Diccionario i{
+    margin-right: 10px;
+}
+
+/*Propiedades de los label Termino y Descripción en Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
+
+#modalAgregarTermino-Diccionario .modal-body #labelTerminoAgregarTermino-Diccionario,
+#modalAgregarTermino-Diccionario .modal-body #labelDescripcionAgregarTermino-Diccionario
+{
+    text-align: left;
 }
