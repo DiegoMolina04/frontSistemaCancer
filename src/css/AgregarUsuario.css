@@ -122,7 +122,7 @@
     border-color: #64af54;
 }
 
-/*Caja botones enviar y limpiar*/
+/*Caja botones enviar y Regresar*/
 #formulario-AgregarUsuario #cajaBotones-AgregarCuenta{
     /*border: 3px solid purple;*/
     margin-top: 30px;
@@ -131,26 +131,32 @@
 /*Caja contenedora del botón Enviar*/
 #formulario-AgregarUsuario #cajaEnviar-AgregarCuenta{
     /*border: 3px solid red;*/
-    float: left;
-    width: 50%;
-    text-align: right;
+    /*text-align: center;*/
+    text-align: left;
+    /*float: left;*/
+    /*width: 50%;*/
+    /*text-align: right;*/
     
 }
 
-/*Caja contenedora del botón Limpiar*/
-#formulario-AgregarUsuario #cajaLimpiar-AgregarCuenta{
+/*Caja contenedora del botón Regresar*/
+#formulario-AgregarUsuario #cajaRegresar-AgregarCuenta{
     /*border: 3px solid palevioletred;*/
-    text-align: left;
+    float: left;
+    width: 49%;
+    /*text-align: center;*/
+    text-align: right;
+    /*text-align: left;*/
     /*margin-left: 30%;*/
 
 }
 
-/*Propiedades de los botones Enviar y Limpiar*/
-#cajaEnviar-AgregarCuenta #botonEnviar-AgregarCuenta, #cajaLimpiar-AgregarCuenta #botonLimpiar-AgregarCuenta{
+/*Propiedades de los botones Enviar y Regresar*/
+#cajaEnviar-AgregarCuenta #botonEnviar-AgregarCuenta, #cajaRegresar-AgregarCuenta #botonRegresar-AgregarCuenta{
     background: transparent;
     color: #000;
     /*border-color: rgba(62, 138, 62, 0.589);*/
-    border-color: #64af54;
+    /*border-color: #64af54;*/
     font-family: 'Noto Sans Display', sans-serif;
     width: 6rem;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
@@ -158,16 +164,21 @@
 
 /*Propiedad del boton Enviar*/
 #cajaEnviar-AgregarCuenta #botonEnviar-AgregarCuenta{
-    margin-right: 20%;
-}
-
-/*Propiedad del boton Limpiar*/
-#cajaLimpiar-AgregarCuenta #botonLimpiar-AgregarCuenta{
+    /*margin-right: 20%;*/
     margin-left: 10%;
+    border-color: #64af54;
 }
 
-/*Propiedad hover sobre los botones Enviar y Limpiar*/
-#cajaEnviar-AgregarCuenta #botonEnviar-AgregarCuenta:hover, #cajaLimpiar-AgregarCuenta #botonLimpiar-AgregarCuenta:hover{
+/*Propiedad del boton Regresar*/
+#cajaRegresar-AgregarCuenta #botonRegresar-AgregarCuenta{
+    /*margin-left: 10%;*/
+    margin-right: 20%;
+    border-color: #535353;
+    
+}
+
+/*Propiedad hover sobre boton Enviar*/
+#cajaEnviar-AgregarCuenta #botonEnviar-AgregarCuenta:hover{
     /*background-color: rgba(62, 138, 62, 0.589);*/
     border-color: #64af54;
     background-color: #64af54;
@@ -175,4 +186,10 @@
     
 }
 
+/*Propiedad hover sobre boton Regresar*/
+#cajaRegresar-AgregarCuenta #botonRegresar-AgregarCuenta:hover{
+    background-color: #535353;
+    border-color: #535353;
+    color: white;
+}
 

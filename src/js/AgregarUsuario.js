@@ -80,16 +80,19 @@ function AgregarUsuario() {
                       
                     <br />
 
-                    {/*Sección Botones Enviar y Limpiar*/}
+                    {/*Sección Botones Enviar y Regresar*/}
                     <div id="cajaBotones-AgregarCuenta">
 
+                        <Link to='/plataforma' >
+                        <div id="cajaRegresar-AgregarCuenta">
+                            <button id="botonRegresar-AgregarCuenta" type="button" class="btn btn-primary">Regresar</button>
+                        </div>
+                        </Link>
+                        
                         <div id="cajaEnviar-AgregarCuenta">
                             <button id="botonEnviar-AgregarCuenta" type="button" class="btn btn-primary">Enviar</button>
                         </div>
-
-                        <div id="cajaLimpiar-AgregarCuenta">
-                            <button id="botonLimpiar-AgregarCuenta" type="button" class="btn btn-primary">Limpiar</button>
-                        </div>
+                        
 
                     </div>
                     
