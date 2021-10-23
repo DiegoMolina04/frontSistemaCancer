@@ -79,6 +79,11 @@ function Plataforma() {
           
           {/*<input type="text" placeholder="¿Busca algo puntual?" title="Ingrese la palabra a buscar"/>*/}
           <input id="usuario" type="text" className="form-control" placeholder="¿Busca algo puntual?" title="Ingrese la palabra a buscar"/>
+          
+          
+          <button id="enviarBuscar-Plataforma" type="button" className="btn btn-success" title="Buscar" >
+            <i class="fas fa-arrow-alt-circle-right"></i>
+          </button>
 
         </div>
 

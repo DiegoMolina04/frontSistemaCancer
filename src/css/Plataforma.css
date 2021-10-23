@@ -358,7 +358,10 @@
     /*color: white;*/
     /*border-color: #64af54 #64af54 #64af54 transparent;*/
 
-    border-color: transparent #138a70 transparent #138a70;;
+    border-color: transparent #91142f transparent #91142f;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     
     /*border-color: #64af54;*/
     font-family: 'Noto Sans Display', sans-serif;
@@ -380,6 +383,28 @@
     
     color: #000;
     font-style: italic;
+}
+
+/*Propiedades del botón enviar para buscar palabra*/
+#busqueda #enviarBuscar-Plataforma{
+    height: 37px;
+    margin-bottom: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #eff2f5;
+    color: #000;
+    border-color: #91142f;
+}
+
+/*Propiedad hover del botón enviar para buscar palabra*/
+#busqueda #enviarBuscar-Plataforma:hover{
+    background-color: #138a70;
+    color: white;
+}
+
+/*Propiedad focus del botón enviar para buscar palabra*/
+#busqueda #enviarBuscar-Plataforma:focus{
+    box-shadow: none;
 }
 
 
