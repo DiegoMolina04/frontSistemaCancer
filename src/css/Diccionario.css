@@ -306,8 +306,7 @@
 
 /*Propiedad focus del botón modificar en el modal Modificar termino*/
 #modalModificar-Diccionario .modal-footer #botonModalModificar-Diccionario:focus{
-    background-color: #64af54;
-    color: white;
+    box-shadow: none;
 }
 
 /*Propiedades de icono mas en Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
@@ -316,10 +315,76 @@
     margin-right: 10px;
 }
 
-/*Propiedades de los label Termino y Descripción en Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
-
+/*Propiedades de las cajas del label Termino y Descripción en Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
 #modalAgregarTermino-Diccionario .modal-body #labelTerminoAgregarTermino-Diccionario,
 #modalAgregarTermino-Diccionario .modal-body #labelDescripcionAgregarTermino-Diccionario
 {
     text-align: left;
 }
+
+/*Propiedades de los label Termino y Descripción en Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
+#modalAgregarTermino-Diccionario .modal-body #labelTerminoAgregarTermino-Diccionario label,
+#modalAgregarTermino-Diccionario .modal-body #labelDescripcionAgregarTermino-Diccionario label
+{
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+/*Propiedades del textarea Descripción en Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
+#modalAgregarTermino-Diccionario .modal-body .input-group textarea{
+    resize: none;
+    height: 10rem;
+}
+
+/*Propiedades del botón cancelar en Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
+#modalAgregarTermino-Diccionario .modal-footer #botonModalCancelar-Diccionario{
+    font-family: 'Noto Sans Display', sans-serif;
+    background-color: transparent;
+    border-color: #535353;
+    color: #000;
+}
+
+/*Propiedad hover del boton Cancelar en Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
+#modalAgregarTermino-Diccionario .modal-footer #botonModalCancelar-Diccionario:hover{
+    
+    background-color: #535353;
+    color: white;
+}
+
+/*Propiedad focus del boton Cancelar Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
+#modalAgregarTermino-Diccionario .modal-footer #botonModalCancelar-Diccionario:focus{
+    box-shadow: none;
+}
+
+/*Propiedades del botón modificar en el modalAgregarTermino-Diccionario*/
+#modalAgregarTermino-Diccionario .modal-footer #botonModalModificar-Diccionario{
+    background-color: transparent;
+    border-color: #64af54;
+    color: #000;
+    font-weight: 100;
+}
+
+/*Propiedad hover del botón modificar en el modalAgregarTermino-Diccionario*/
+#modalAgregarTermino-Diccionario .modal-footer #botonModalModificar-Diccionario:hover{
+    background-color: #64af54;
+    color: white;
+}
+
+/*Propiedad focus del botón modificar en el modalAgregarTermino-Diccionario*/
+#modalAgregarTermino-Diccionario .modal-footer #botonModalModificar-Diccionario:focus{
+    box-shadow: none;
+}
+
+/*Propiedad placeholder en el input y textarea en el modalAgregarTermino-Diccionario*/
+#modalAgregarTermino-Diccionario .input-group input::placeholder, #modalAgregarTermino-Diccionario .input-group textarea::placeholder{
+    font-style: italic;
+}
+
+/*Propiedad focus en el input y textarea en el modalAgregarTermino-Diccionario*/
+#modalAgregarTermino-Diccionario .input-group input:focus, #modalAgregarTermino-Diccionario .input-group textarea:focus{
+    box-shadow: none;
+    border-color: #ced4da;
+}
+

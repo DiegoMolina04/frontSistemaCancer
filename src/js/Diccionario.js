@@ -50,8 +50,12 @@ function Diccionario() {
                                 <div class="modal-body">
 
                                     {/*Sección Termino*/}
-                                    <label id="labelTerminoAgregarTermino-Diccionario">Termino</label>
-                                    
+
+                                    <div id="labelTerminoAgregarTermino-Diccionario">
+
+                                        <label>Termino</label>
+
+                                    </div>
                                     
                                     <div className="input-group">
                                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div>
@@ -61,7 +65,10 @@ function Diccionario() {
                                     <br />
 
                                     {/*Sección Descripción*/}
-                                    <label id="labelDescripcionAgregarTermino-Diccionario">Descripción</label>
+
+                                    <div id="labelDescripcionAgregarTermino-Diccionario">
+                                        <label>Descripción</label>
+                                    </div>
                                     
                                     <div className="input-group">
                                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-book"></i></div>
