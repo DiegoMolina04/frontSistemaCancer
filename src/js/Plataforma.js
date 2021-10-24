@@ -98,12 +98,13 @@ function Plataforma() {
           </button>
           </Link>
 
-          <Link to='/login' >
+          <Link to='/plataforma' >
           <button id="inicio" type="button" className="btn btn-success" title="Regresar a la pagina de inicio" >
             <i class="fas fa-home"></i>
             Inicio
           </button>
           </Link>
+          
         
           <button id="expandiblePerfil" type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false" title="Opciones de perfil"> {/*class="btn btn-primary dropdown-toggle"*/}
             Perfil
@@ -112,7 +113,9 @@ function Plataforma() {
 
           <ul class="dropdown-menu" >
             <li><a class="dropdown-item" href="" >Ver perfil</a></li>
+            <Link to='/login' >
             <li><a class="dropdown-item" href="" >Salir</a></li>
+            </Link>
           </ul>
 
         </div>
