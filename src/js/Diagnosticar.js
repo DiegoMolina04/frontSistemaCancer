@@ -3,7 +3,13 @@ function Diagnosticar() {
 
     return ( 
 
-        <div>Esto es diagnosticar</div>
+        <div id="cabeceraSintomasBoton-Reglas">
+
+        <div id="cajaLabelSintoma-Reglas">
+            <label>Diagnosticar</label>
+        </div>
+        
+    </div>
     );
 }
 
