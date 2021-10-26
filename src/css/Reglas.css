@@ -272,6 +272,7 @@
     font-size: 17px;
     font-weight: 700;
     margin-bottom: 10px;
+    display: block;
 }
 
 /*Propiedades del textarea Descripción en el modal de Modificar Sintoma*/
@@ -280,14 +281,14 @@
     height: 10rem;
 }
 
-/*Propiedades focus del input Sintoma y el textarea Descripción en el modal de Modificar Sintoma*/
-#modalModificar-Reglas .modal-body input:focus, #modalModificar-Reglas .modal-body textarea:focus{
+/*Propiedades focus del textarea Descripción en el modal de Modificar Sintoma*/
+#modalModificar-Reglas .modal-body textarea:focus{
     box-shadow: none;
     border-color: #ced4da;
 }
 
-/*Propiedades de los placeholder del input Sintoma y el textarea Descripción en el modal de Modificar Sintoma*/
-#modalModificar-Reglas .modal-body input::placeholder, #modalModificar-Reglas .modal-body textarea::placeholder{
+/*Propiedades del placeholder del textarea Descripción en el modal de Modificar Sintoma*/
+#modalModificar-Reglas .modal-body textarea::placeholder{
     font-style: italic;
 }
 
@@ -377,14 +378,54 @@
     box-shadow: none;
 }
 
-/*Propiedad placeholder en el input y textarea en el modalAgregarSintoma-Reglas*/
-#modalAgregarSintoma-Reglas .input-group input::placeholder, #modalAgregarSintoma-Reglas .input-group textarea::placeholder{
+/*Propiedad placeholder en el textarea en el modalAgregarSintoma-Reglas*/
+#modalAgregarSintoma-Reglas .input-group textarea::placeholder{
     font-style: italic;
 }
 
-/*Propiedad focus en el input y textarea en el modalAgregarSintoma-Reglas*/
-#modalAgregarSintoma-Reglas .input-group input:focus, #modalAgregarSintoma-Reglas .input-group textarea:focus{
+/*Propiedad focus en el textarea en el modalAgregarSintoma-Reglas*/
+#modalAgregarSintoma-Reglas .input-group textarea:focus{
     box-shadow: none;
     border-color: #ced4da;
 }
 
+/*Propiedades de los labels en los radio buttons en el modal modificar sintoma*/
+#modalModificar-Reglas .modal-body #labelSintomaModalModificar-Reglas, #modalModificar-Reglas .modal-body #labelSeñalModalModificar-Reglas{
+    font-size: 17px;
+    
+}
+
+/*Propiedad checked de los radio button en el modal modificar sintoma*/
+#modalModificar-Reglas .modal-body #radioButton:checked{
+    background-color: #64af54;
+    border-color: #64af54;
+}
+
+/*Propiedad focus de los radio button en el modal modificar sintoma*/
+#modalModificar-Reglas .modal-body #radioButton:focus{
+    box-shadow: none;
+}
+
+/*Propiedad de la caja de los radio button en el modal agregar sintoma*/
+#modalAgregarSintoma-Reglas .modal-body #cajaRadioButtonModalAgregar-Reglas{
+    /*border-color: 2px solid purple;*/
+    text-align: left;
+}
+
+/*Propiedades de los labels en los radio buttons en el modal agregar sintoma*/
+#modalAgregarSintoma-Reglas .modal-body #cajaRadioButtonModalAgregar-Reglas #labelSintomaModalAgregar-Reglas, 
+#modalAgregarSintoma-Reglas .modal-body #cajaRadioButtonModalAgregar-Reglas #labelSeñalModalAgregar-Reglas{
+    font-size: 17px;
+    
+}
+
+/*Propiedad checked de los radio button en el modal agregar sintoma*/
+#modalAgregarSintoma-Reglas .modal-body #cajaRadioButtonModalAgregar-Reglas #radioButton:checked{
+    background-color: #64af54;
+    border-color: #64af54;
+}
+
+/*Propiedad focus de los radio button en el modal agregar sintoma*/
+#modalAgregarSintoma-Reglas .modal-body #cajaRadioButtonModalAgregar-Reglas #radioButton:focus{
+    box-shadow: none;
+}
