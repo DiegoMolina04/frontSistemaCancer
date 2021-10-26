@@ -1,0 +1,56 @@
+
+/*Propiedades caja contenedora de cabecera Diagnosticar*/
+#cabeceraDiagnosticar-Diagnosticar{
+
+    /*border: 5px solid aqua;*/
+    /*margin-top: 2px;*/
+    height: 3rem;
+    padding: 4px;
+    background-color: #eff2f5;
+    box-shadow: 5px 3px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+}
+
+/*Propiedades del label Diagnosticar en la cabecera*/
+#cajaLabelDiagnosticar-Diagnosticar label{
+    
+    margin-left: 0.7rem;
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+/*Propiedades de la caja principal de diagnostico*/
+#cajaDiagnostico-Diagnosticar{
+
+    border: 2px solid aqua;
+    margin-top: 50px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Propiedades de la caja contenedora del label Sintoma*/
+#cajaDiagnostico-Diagnosticar #cajalabelSintoma-Diagnosticar{
+    border: 2px solid purple;
+    text-align: center;
+}
+
+/*Propiedades del label Sintoma en la caja principal*/
+#cajaDiagnostico-Diagnosticar #cajalabelSintoma-Diagnosticar label{
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/*Propiedades de la caja contenedora del sintoma en la caja principal*/
+#cajaDiagnostico-Diagnosticar #cajaRegla-Diagnosticar{
+    border: 2px solid red;
+    text-align: justify;
+    padding: 1.5rem;
+}
+
+/*Propiedades del label del sintoma*/
+#cajaDiagnostico-Diagnosticar #cajaRegla-Diagnosticar label{
+    font-family: 'Noto Sans Display', sans-serif;
+    
+}
