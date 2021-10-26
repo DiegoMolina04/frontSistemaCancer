@@ -132,7 +132,7 @@
 #formulario-AgregarUsuario #cajaEnviar-AgregarCuenta{
     /*border: 3px solid red;*/
     /*text-align: center;*/
-    text-align: left;
+    text-align: center;
     /*float: left;*/
     /*width: 50%;*/
     /*text-align: right;*/
@@ -145,7 +145,7 @@
     float: left;
     width: 49%;
     /*text-align: center;*/
-    text-align: right;
+    text-align: center;
     /*text-align: left;*/
     /*margin-left: 30%;*/
 
@@ -165,14 +165,14 @@
 /*Propiedad del boton Enviar*/
 #cajaEnviar-AgregarCuenta #botonEnviar-AgregarCuenta{
     /*margin-right: 20%;*/
-    margin-left: 10%;
+    /*margin-left: 10%;*/
     border-color: #64af54;
 }
 
 /*Propiedad del boton Regresar*/
 #cajaRegresar-AgregarCuenta #botonRegresar-AgregarCuenta{
     /*margin-left: 10%;*/
-    margin-right: 20%;
+    /*margin-right: 2rem;*/
     border-color: #535353;
     
 }

@@ -83,11 +83,15 @@ function AgregarUsuario() {
                     {/*Sección Botones Enviar y Regresar*/}
                     <div id="cajaBotones-AgregarCuenta">
 
-                        <Link to='/plataforma' >
+                        
                         <div id="cajaRegresar-AgregarCuenta">
+
+                            <Link to='/plataforma'>
                             <button id="botonRegresar-AgregarCuenta" type="button" class="btn btn-primary">Regresar</button>
+                            </Link>
+
                         </div>
-                        </Link>
+                        
                         
                         <div id="cajaEnviar-AgregarCuenta">
                             <button id="botonEnviar-AgregarCuenta" type="button" class="btn btn-primary">Enviar</button>
