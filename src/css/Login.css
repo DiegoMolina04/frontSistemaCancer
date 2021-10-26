@@ -62,6 +62,11 @@ html,body{
 
 }
 
+/*Propiedad focus en los inputs usuario y contraseña*/
+#usuario:focus, #contraseña:focus{
+    border-color: #ced4da;
+}
+
 /*Contenedor de botón enviar*/
 #cajaBoton {
     /*border: 2px solid violet;*/
