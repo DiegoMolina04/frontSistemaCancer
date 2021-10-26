@@ -84,7 +84,7 @@ function Diccionario() {
                                 <div class="modal-footer">
 
                                   <button type="button" id="botonModalCancelar-Diccionario" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa al diccionario de terminos">Cancelar</button>
-                                  <button type="button" id="botonModalModificar-Diccionario" class="btn btn-primary" title="Modificar termino">Modificar</button>
+                                  <button type="button" id="botonModalModificar-Diccionario" class="btn btn-primary" title="Agregar termino">Agregar</button>
 
                                 </div>
                             </div>
