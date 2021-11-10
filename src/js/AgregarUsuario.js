@@ -1,10 +1,69 @@
 import '../css/AgregarUsuario.css';
 import '../css/fontawesome-free-5.15.4-web/css/all.css'
 import logoAgregarUsuario from '../image/logo.png'
+import React, {Fragment, useState} from 'react';
 import { Link } from "react-router-dom";
 
 function AgregarUsuario() {
 
+    const [datos, setDatos] = useState({
+        nombre: '',
+        email: '',
+        contraseña: '',
+        es_admin: false
+    })
+    {/*,
+    es_admin: ''*/}
+    
+    const handleInputChange = (event) => {
+          // console.log(event.target.name)
+          // console.log(event.target.value)
+          setDatos({
+              ...datos,
+              [event.target.name] : event.target.value
+        })
+    }
+
+    const handleRadioChange = (event) => {
+        
+        const es_admin = event.currentTarget.value === 'true' ? true: false;
+
+        setDatos({
+           es_admin
+      })
+  }
+    
+    const enviarDatos = (event) => {
+       
+          event.preventDefault()
+            fetch("http://4f3a-186-154-36-85.ngrok.io/user",{
+              method:"POST",
+              mode:"cors",
+              headers:{
+                
+                "Content-Type":"application/json"
+              },
+              body: JSON.stringify(datos)
+          })
+          console.log(JSON.stringify(datos))
+
+    }
+    {/* const enviarDatos = async(event) => {
+       
+          event.preventDefault()
+          await fetch("http://4104-186-154-36-85.ngrok.io/user",{
+              method:"POST",
+              mode:"no-cors",
+              headers:{
+                "Access-Control-Allow-Origin":"http://localhost:3000",
+                "Access-Control-Allow-Methods": "POST",
+                "Content-Type":"application/"
+              },
+              body: JSON.stringify(datos)
+          })
+          console.log(JSON.stringify(datos))
+
+    } */}
     return ( 
 
         <div id="fondo-AgregarUsuario">
@@ -29,13 +88,15 @@ function AgregarUsuario() {
 
 
                 {/*Contenedor de todo el formulario*/}
+                <form className="row" onSubmit={enviarDatos}>
+
                 <div id="formulario-AgregarUsuario">
 
                     {/*Sección ingrese nombre*/}
                     <label>Ingrese su nombre completo</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-user"></i></div>
-                        <input id="nombre-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese su nombre de usuario" title="Digite su nombre completo"/>
+                        <input id="nombre-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese su nombre de usuario" title="Digite su nombre completo" onChange={handleInputChange} name="nombre"/>
                     </div>
 
                     <br />
@@ -44,7 +105,7 @@ function AgregarUsuario() {
                     <label>Ingrese su email</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-envelope"></i></div>
-                        <input id="correo-AgregarUsuario" type="email" className="form-control" placeholder="Ingrese su email" title="Digite su email"/>
+                        <input id="correo-AgregarUsuario" type="email" className="form-control" placeholder="Ingrese su email" title="Digite su email" onChange={handleInputChange} name="email"/>
                     </div>
 
                     <br />
@@ -53,7 +114,7 @@ function AgregarUsuario() {
                     <label>Ingrese su contraseña</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-key"></i></div>
-                        <input id="contraseña-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese su contraseña" title="Digite su contraseña"/>
+                        <input id="contraseña-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese su contraseña" title="Digite su contraseña" onChange={handleInputChange} name="contraseña"/>
                     </div>
 
                     <br />
@@ -62,7 +123,7 @@ function AgregarUsuario() {
                     <label>Ingrese nuevamente su contraseña</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-key"></i></div>
-                        <input id="contraseñaRe-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese nuevamente su contraseña" title="Reingrese su contraseña"/>
+                        <input id="contraseñaRe-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese nuevamente su contraseña" title="Reingrese su contraseña" onChange={handleInputChange} name="Recontraseña"/>
                     </div>
 
                     <br />
@@ -70,7 +131,7 @@ function AgregarUsuario() {
                     {/*Sección tipo de usuario*/}
                     <label id="tipoCuenta-AgregarCuenta">Tipo de cuenta</label>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButton" value="option1" title="Cuenta para administrador"/>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButton" value="true" title="Cuenta para administrador" onChange={handleRadioChange} name="es_admin"/>
                         <p id="pAdministrador-AgregarCuenta" for="inlineRadio1">Administrador</p>
                     </div>
                     <div class="form-check form-check-inline">
@@ -94,7 +155,7 @@ function AgregarUsuario() {
                         
                         
                         <div id="cajaEnviar-AgregarCuenta">
-                            <button id="botonEnviar-AgregarCuenta" type="button" class="btn btn-primary">Enviar</button>
+                            <button id="botonEnviar-AgregarCuenta" type="submit" class="btn btn-primary">Enviar</button>
                         </div>
                         
 
@@ -118,6 +179,7 @@ function AgregarUsuario() {
                     </div>
                     */}
                 </div>
+                </form>
 
             </div>
 

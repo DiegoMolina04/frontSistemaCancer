@@ -2,10 +2,13 @@
 import '../css/Login.css';
 import '../css/fontawesome-free-5.15.4-web/css/all.css'
 import logo from '../image/logo.png'
+import React, {Fragment, useState} from 'react';
 import { Link } from "react-router-dom";
 
 function Login() {
+
   return (
+  
     <div id="seccion">
 
       <div id="caja">
@@ -15,9 +18,6 @@ function Login() {
             <img id="logo" src={logo} alt=""/>
 
         </div>
-        
-        
-
 
         <hr id="linea"/>
 
@@ -36,7 +36,7 @@ function Login() {
         <Link to='/plataforma' >
         <div id="cajaBoton">
 
-            <button type="button" className="btn btn-success" title="Iniciar sesión">Enviar</button>
+            <button type="button" className="btn btn-success" title="Iniciar sesión" onClick="prueba()">Enviar</button>
 
         </div>
         </Link>
