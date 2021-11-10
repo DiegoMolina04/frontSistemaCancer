@@ -109,6 +109,12 @@
 
 }
 
+/*Propiedad focus de los inputs*/
+#formulario-AgregarUsuario .input-group input:focus{
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
 /*Propiedad focus sobre los radio buttons*/
 #formulario-AgregarUsuario .form-check #radioButton:focus{
     background-color: #64af54;

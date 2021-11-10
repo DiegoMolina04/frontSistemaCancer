@@ -148,14 +148,14 @@ function AgregarUsuario() {
                         <div id="cajaRegresar-AgregarCuenta">
 
                             <Link to='/plataforma'>
-                            <button id="botonRegresar-AgregarCuenta" type="button" class="btn btn-primary">Regresar</button>
+                            <button id="botonRegresar-AgregarCuenta" type="button" class="btn btn-primary" title="Regresar a la plataforma">Regresar</button>
                             </Link>
 
                         </div>
                         
                         
                         <div id="cajaEnviar-AgregarCuenta">
-                            <button id="botonEnviar-AgregarCuenta" type="submit" class="btn btn-primary">Enviar</button>
+                            <button id="botonEnviar-AgregarCuenta" type="submit" class="btn btn-primary" title="Crear nuevo usuario">Enviar</button>
                         </div>
                         
 
