@@ -99,16 +99,14 @@ function Buscar() {
 
             </div>
 
-           
-            
             <div id="cajaTabla-Buscar">
                 <table id="tabla-Buscar" class="table table-bordered">
                     
                     <thead> {/*Cabeceras*/}
                         <tr>
                             <th id="idTablaCabecera-Buscar" scope="col" title="Identificador del termino">ID</th>
-                            <th id="palabraTablaCabecera-Buscar" scope="col" title="Nombre del termino">Termino</th>
-                            <th id="descripcionTablaCabecera-Buscar" scope="col" title="Descripción del termino">Descripción</th>
+                            <th id="palabraTablaCabecera-Buscar" scope="col" title="Nombre del termino">Expresión encontrada</th>
+                            <th id="descripcionTablaCabecera-Buscar" scope="col" title="Descripción del termino">Descripción / Clasificación</th>
 
                             {/*Columna para agregar o elimina*/}
                             <th id="modificarEliminarTablaCabecera-Buscar" scope="col" title="Descripción del termino">Modificar/Eliminar</th>
@@ -123,11 +121,11 @@ function Buscar() {
                             {/*Fila para los botones modificar o eliminar regla*/}
                             <td id="modificarEliminarTablaFila-Buscar">
 
-                                <button id="botonModificar-Buscar" type="button" class="btn btn-success" title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-Buscar">
+                                <button id="botonModificar-Buscar" type="button" class="btn btn-success" title="Modificar" data-bs-toggle="modal" data-bs-target="#modalModificar-Buscar">
                                     <i id="iconoModificar-Buscar" class="fas fa-cog"></i>
                                 </button>
                                 
-                                <button id="botonEliminar-Buscar" type="button" class="btn btn-success" title="Eliminar regla" data-bs-toggle="modal" data-bs-target="#modalEliminar-Buscar">
+                                <button id="botonEliminar-Buscar" type="button" class="btn btn-success" title="Eliminar" data-bs-toggle="modal" data-bs-target="#modalEliminar-Buscar">
                                     <i id="iconoEliminar-Buscar" class="fas fa-times-circle"></i>
                                 </button>
 
@@ -136,17 +134,17 @@ function Buscar() {
 
                         <tr>
                             <th id="idTablaFila-Buscar" scope="row">2</th>
-                            <td id="palabraTablaFila-Buscar">Melanoma</td>
-                            <td id="descripcionTablaFila-Buscar">El melanoma ocurre cuando las células productoras de pigmento que dan color a la piel se vuelven cancerosas.Los síntomas incluyen neoplasias inusuales y nuevas, o cambios en un lunar ya existente. Los melanomas pueden aparecer en cualquier lugar del cuerpo.</td>
+                            <td id="palabraTablaFila-Buscar">¿Un lunar existente ha cambiado de forma?</td>
+                            <td id="descripcionTablaFila-Buscar">Síntoma</td>
 
                             {/*Fila para los botones modificar o eliminar regla*/}
                             <td id="modificarEliminarTablaFila-Buscar">
 
-                                <button id="botonModificar-Buscar" type="button" class="btn btn-success" title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-Buscar">
+                                <button id="botonModificar-Buscar" type="button" class="btn btn-success" title="Modificar" data-bs-toggle="modal" data-bs-target="#modalModificar-Buscar">
                                     <i id="iconoModificar-Buscar" class="fas fa-cog"></i>
                                 </button>
                                 
-                                <button id="botonEliminar-Buscar" type="button" class="btn btn-success" title="Eliminar regla" data-bs-toggle="modal" data-bs-target="#modalEliminar-Buscar">
+                                <button id="botonEliminar-Buscar" type="button" class="btn btn-success" title="Eliminar" data-bs-toggle="modal" data-bs-target="#modalEliminar-Buscar">
                                     <i id="iconoEliminar-Buscar" class="fas fa-times-circle"></i>
                                 </button>
                                 
@@ -162,11 +160,11 @@ function Buscar() {
                             {/*Fila para los botones modificar o eliminar regla*/}
                             <td id="modificarEliminarTablaFila-Buscar">
 
-                                <button id="botonModificar-Buscar" type="button" class="btn btn-success" title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-Buscar">
+                                <button id="botonModificar-Buscar" type="button" class="btn btn-success" title="Modificar" data-bs-toggle="modal" data-bs-target="#modalModificar-Buscar">
                                     <i id="iconoModificar-Buscar" class="fas fa-cog"></i>
                                 </button>
                                 
-                                <button id="botonEliminar-Buscar" type="button" class="btn btn-success" title="Eliminar regla" data-bs-toggle="modal" data-bs-target="#modalEliminar-Buscar">
+                                <button id="botonEliminar-Buscar" type="button" class="btn btn-success" title="Eliminar" data-bs-toggle="modal" data-bs-target="#modalEliminar-Buscar">
                                     <i id="iconoEliminar-Buscar" class="fas fa-times-circle"></i>
                                 </button>
 
@@ -181,11 +179,11 @@ function Buscar() {
                             {/*Fila para los botones modificar o eliminar regla*/}
                             <td id="modificarEliminarTablaFila-Buscar">
 
-                                <button id="botonModificar-Buscar" type="button" class="btn btn-success" title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-Buscar">
+                                <button id="botonModificar-Buscar" type="button" class="btn btn-success" title="Modificar" data-bs-toggle="modal" data-bs-target="#modalModificar-Buscar">
                                     <i id="iconoModificar-Buscar" class="fas fa-cog"></i>
                                 </button>
                                 
-                                <button id="botonEliminar-Buscar" type="button" class="btn btn-success" title="Eliminar regla" data-bs-toggle="modal" data-bs-target="#modalEliminar-Buscar">
+                                <button id="botonEliminar-Buscar" type="button" class="btn btn-success" title="Eliminar" data-bs-toggle="modal" data-bs-target="#modalEliminar-Buscar">
                                     <i id="iconoEliminar-Buscar" class="fas fa-times-circle"></i>
                                 </button>
 
@@ -208,7 +206,7 @@ function Buscar() {
                                 </div>
                                 <div class="modal-body">
                                   
-                                    <label>¿Realmente quiere eliminar este termino?</label>
+                                    <label>¿Realmente quiere eliminar este termino/sintoma?</label>
                                     <label id="labelRevertirCambios-Buscar">Los cambios no se podrán revertir.</label>
 
                                 </div>
@@ -232,7 +230,7 @@ function Buscar() {
                                   <h5 class="modal-title" id="modalLabelModificar-Buscar">
 
                                     <i class="fas fa-cog"></i>
-                                    <label >Modificar Termino</label>
+                                    <label >Modificar expresión encontrada</label>
 
                                   </h5>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" title="Regresa el diciconario de terminos"></button>
@@ -240,22 +238,22 @@ function Buscar() {
                                 <div class="modal-body">
 
                                     {/*Sección Termino*/}
-                                    <label>Termino</label>
+                                    <label>Expresión encontrada</label>
                                     
                                     <div className="input-group">
                                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div>
-                                        <input id="" type="text" className="form-control" placeholder="Ingrese el nuevo termino" title="Termino actual" />
+                                        <input id="" type="text" className="form-control" placeholder="Ingrese la nueva expresión" title="Termino actual" />
                                     </div>
 
                                     <br />
 
                                     {/*Sección Descripción*/}
-                                    <label>Descripción</label>
+                                    <label>Descripción / Clasificación</label>
                                     
                                     <div className="input-group">
                                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-book"></i></div>
                                         
-                                        <textarea class="form-control" id="floatingTextarea" placeholder="Ingrese la nueva descripción" title="Descripción actual"></textarea>
+                                        <textarea class="form-control" id="floatingTextarea" placeholder="Ingrese la nueva descripción / clasificación" title="Descripción actual"></textarea>
                                         
                                         
                                     </div>
@@ -267,6 +265,65 @@ function Buscar() {
 
                                   <button type="button" id="botonModalCancelar-Buscar" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa al Buscar de terminos">Cancelar</button>
                                   <button type="button" id="botonModalModificar-Buscar" class="btn btn-primary" title="Modificar termino">Modificar</button>
+
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
+                        {/*Modal para el botón de Modificar Sintoma*/}
+                        <div class="modal fade" id="modalModificar-" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+
+                                  <h5 class="modal-title" id="modalLabelModificar-Reglas">
+
+                                    <i class="fas fa-cog"></i>
+                                    <label >Modificar síntoma</label>
+
+                                  </h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" title="Regresa a la tabla de síntomas"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                   {/*Sección Sintoma*/}
+                                   <label>Síntoma</label>
+                                    
+                                    <div className="input-group">
+                                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-book"></i></div>
+                                        
+                                        <textarea class="form-control" id="floatingTextarea" placeholder="Ingrese el nuevo síntoma" title="Síntoma actual"></textarea>
+                                        
+                                        
+                                    </div>
+
+                                    <br />
+
+                                     {/*Sección Sintoma*/}
+                                     <label>Clasificación</label>
+                                    
+                                    {/*<div className="input-group">
+                                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div>
+                                        <input id="" type="text" className="form-control" placeholder="Ingrese el nuevo síntoma" title="Síntoma actual" />
+                                    </div>*/}
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButton" value="option1" title="Es una señal"/>
+                                        <p id="labelSeñalModalModificar-Reglas" for="inlineRadio1">Señal</p>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButton" value="option2" title="Es un sintoma"/>
+                                        <p id="labelSintomaModalModificar-Reglas" for="inlineRadio2">Síntoma</p>
+                                    </div>
+
+                                    <br />
+
+                                </div>
+                                <div class="modal-footer">
+
+                                  <button type="button" id="botonModalCancelar-Reglas" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a la tabla de síntomas">Cancelar</button>
+                                  <button type="button" id="botonModalModificar-Reglas" class="btn btn-primary" title="Modificar síntoma">Modificar</button>
 
                                 </div>
                               </div>

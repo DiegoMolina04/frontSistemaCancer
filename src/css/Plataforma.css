@@ -387,7 +387,7 @@
 /*Propiedad del input para cambiar color del placeholder*/
 #busqueda input::placeholder{
     
-    color: #000;
+    color: #565758;
     font-style: italic;
 }
 

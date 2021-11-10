@@ -124,7 +124,7 @@ function Diccionario() {
                                     <i id="iconoModificar-Diccionario" class="fas fa-cog"></i>
                                 </button>
                                 
-                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success" title="Eliminar regla" data-bs-toggle="modal" data-bs-target="#modalEliminar-Diccionario">
+                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success" title="Eliminar termino" data-bs-toggle="modal" data-bs-target="#modalEliminar-Diccionario">
                                     <i id="iconoEliminar-Diccionario" class="fas fa-times-circle"></i>
                                 </button>
 
@@ -143,7 +143,7 @@ function Diccionario() {
                                     <i id="iconoModificar-Diccionario" class="fas fa-cog"></i>
                                 </button>
                                 
-                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success" title="Eliminar regla" data-bs-toggle="modal" data-bs-target="#modalEliminar-Diccionario">
+                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success" title="Eliminar termino" data-bs-toggle="modal" data-bs-target="#modalEliminar-Diccionario">
                                     <i id="iconoEliminar-Diccionario" class="fas fa-times-circle"></i>
                                 </button>
                                 
@@ -163,7 +163,7 @@ function Diccionario() {
                                     <i id="iconoModificar-Diccionario" class="fas fa-cog"></i>
                                 </button>
                                 
-                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success" title="Eliminar regla" data-bs-toggle="modal" data-bs-target="#modalEliminar-Diccionario">
+                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success" title="Eliminar termino" data-bs-toggle="modal" data-bs-target="#modalEliminar-Diccionario">
                                     <i id="iconoEliminar-Diccionario" class="fas fa-times-circle"></i>
                                 </button>
 
@@ -182,7 +182,7 @@ function Diccionario() {
                                     <i id="iconoModificar-Diccionario" class="fas fa-cog"></i>
                                 </button>
                                 
-                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success" title="Eliminar regla" data-bs-toggle="modal" data-bs-target="#modalEliminar-Diccionario">
+                                <button id="botonEliminar-Diccionario" type="button" class="btn btn-success" title="Eliminar termino" data-bs-toggle="modal" data-bs-target="#modalEliminar-Diccionario">
                                     <i id="iconoEliminar-Diccionario" class="fas fa-times-circle"></i>
                                 </button>
 

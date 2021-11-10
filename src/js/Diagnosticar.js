@@ -38,7 +38,7 @@ function Diagnosticar() {
 
                 <div id="botonNegativo-Diagnosticar">
                     
-                    <button type="button" class="btn btn-primary">
+                    <button type="button" class="btn btn-primary" title="No corresponde">
                         <i class="fas fa-times"></i>
                     </button>
 
@@ -46,7 +46,7 @@ function Diagnosticar() {
                 
                 <div id="botonPositivo-Diagnosticar">
 
-                    <button type="button" class="btn btn-secondary">
+                    <button type="button" class="btn btn-secondary" title="Si corresponde">
                         <i class="fas fa-check"></i>
                     </button>
 
