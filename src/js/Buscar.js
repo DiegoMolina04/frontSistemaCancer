@@ -8,9 +8,9 @@ function Buscar() {
 
         <div id="fondo-Buscar">
 
-            <div id="cabeceraTerminosBoton-Buscar">
+            <div id="cabeceraBuscarBoton-Buscar">
 
-                <div id="cajaLabelTerminos-Buscar">
+                <div id="cajaLabelBuscar-Buscar">
                     <label>Palabra buscada ""</label>
                 </div>
                 

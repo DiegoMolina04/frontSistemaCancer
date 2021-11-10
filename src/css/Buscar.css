@@ -6,8 +6,8 @@
     /*overflow-y: scroll;*/
 }
 
-/*Propiedades caja contenedora de cabecera Terminos y Boton*/
-#cabeceraTerminosBoton-Buscar{
+/*Propiedades caja contenedora de cabecera Buscar y Boton*/
+#cabeceraBuscarBoton-Buscar{
 
     /*border: 5px solid aqua;*/
     /*margin-top: 2px;*/
@@ -17,7 +17,7 @@
     box-shadow: 5px 3px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
 }
 
-/*Propiedades caja contenedora de Terminos*/
+/*Propiedades caja contenedora de Buscar*/
 #cajaLabelTerminos-Buscar{
     /*border: 2px solid salmon;*/
     /*margin-top: 15px;*/
@@ -28,8 +28,8 @@
 }
 
 /*Propiedades del Label Terminos*/
-#cajaLabelTerminos-Buscar label{
-    margin-left: 2%;
+#cajaLabelBuscar-Buscar label{
+    margin-left: 1%;
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 23px;
     font-weight: 700;

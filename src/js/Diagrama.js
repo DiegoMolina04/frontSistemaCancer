@@ -1,9 +1,19 @@
+import '../css/Diagrama.css';
+import '../css/fontawesome-free-5.15.4-web/css/all.css'
+import { Link } from "react-router-dom";
 
 function Diagrama() {
 
     return ( 
 
-        <div>Esto es Diagrama</div>
+        <div id="cabeceraDiagnosticar-Diagrama">
+            
+            <div id="cajaLabelDiagnosticar-Diagrama">
+                <label>Diagrama</label>
+            </div>
+
+        </div>
+
     );
 }
 
