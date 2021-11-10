@@ -16,6 +16,8 @@ html,body{
     width: 100%;
     border: 0.01px solid #8a132d; /*Despliega borde en toda la pantalla*/
     background-color: #8a132d; /*9a0526*/
+    display: flex;
+    align-items: center;
     
 }
 
@@ -26,7 +28,7 @@ html,body{
     border-radius: 7px;
     /*margin: 10% 36rem 0 36rem;*/
     /*margin: 150px 550px 0 550px;*/
-    margin-top: 10%;
+    /*margin-top: 5%;*/
     width: 450px;
     background-color: #eff2f5;
     /*width: 50%;*/

@@ -208,6 +208,12 @@
 /*Letras de la lista desplegada del boton perfil menu superior*/
 #botonesSuperior .dropdown-menu .dropdown-item{
     color: white;
+    /*text-decoration: none;*/
+}
+
+/*Etiqueta a en el dropdown de perfil para quitar subrayado*/
+#botonesSuperior .dropdown-menu a{
+    text-decoration: none;
 }
 
 /*Propiedad hover de la lista desplegada del boton perfil menu superior*/
