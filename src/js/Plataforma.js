@@ -113,7 +113,11 @@ function Plataforma() {
           </button>
 
           <ul class="dropdown-menu" >
-            <li><a class="dropdown-item" href="" >Ver perfil</a></li>
+            
+            <Link to='/verperfil' >
+            <li><a class="dropdown-item" href="" >Cambiar contraseña</a></li>
+            </Link>
+
             <Link to='/login' >
             <li><a class="dropdown-item" href="" >Salir</a></li>
             </Link>

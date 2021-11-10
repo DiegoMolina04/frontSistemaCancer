@@ -8,6 +8,7 @@ import Diagnosticar from '../src/js/Diagnosticar.js'
 import Diccionario from '../src/js/Diccionario.js'
 import Diagrama from '../src/js/Diagrama.js'
 import Buscar from "./js/Buscar.js";
+import VerPerfil from "./js/VerPerfil.js";
 import SeleccionAdministrador from "./js/SeleccionAdministrador.js";
 
 function App(){
@@ -64,6 +65,10 @@ function App(){
                     <div>
                         <Buscar />
                     </div>
+                </Route>
+
+                <Route exact path = "/verperfil" >
+                    <VerPerfil />
                 </Route>
 
                 <Route exact path = "/seleccionadministrador" >
