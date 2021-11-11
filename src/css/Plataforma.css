@@ -413,6 +413,74 @@
     box-shadow: none;
 }
 
+/*Propiedades del icono del modal Cambiar contraseña*/
+.modal #modalLabelAgregarAdministrarUsuarios-AdministrarUsuarios i{
+    margin-right: 10px;
+
+}
+
+/*Propiedades de todos los label del modal Cambiar contraseña*/
+.modal .modal-body #labelContraseñaActual-Plataforma,
+.modal .modal-body #labelNuevaContraseña-Plataforma,
+.modal .modal-body #labelRectificacionContraseña-Plataforma
+{
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'Noto Sans Display', sans-serif;
+    display: block;
+}
+
+/*Propiedad focus de todos los inputs del modal Cambiar contraseña*/
+.modal .modal-body input:focus{
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+/*Propiedad placeholder de todos los inputs del modal Cambiar contraseña*/
+.modal .modal-body input::placeholder{
+    font-style: italic;
+}
+
+/*Propiedades del botón cancelar en modal Cambiar contraseña*/
+.modal .modal-footer #botonModalCancelar-AdministrarUsuarios{
+    font-family: 'Noto Sans Display', sans-serif;
+    background-color: transparent;
+    border-color: #535353;
+    color: #000;
+}
+
+/*Propiedades del botón modificar en modal Cambiar contraseña*/
+.modal .modal-footer #botonModalModificar-AdministrarUsuarios{
+    font-family: 'Noto Sans Display', sans-serif;
+    background-color: transparent;
+    border-color: #64af54;
+    color: #000;
+}
+
+/*Propiedad hover del botón cancelar en modal Cambiar contraseña*/
+.modal .modal-footer #botonModalCancelar-AdministrarUsuarios:hover{
+    background-color: #535353;
+    color: white;
+}
+
+/*Propiedad hover del botón modificar en modal Cambiar contraseña*/
+.modal .modal-footer #botonModalModificar-AdministrarUsuarios:hover{
+    background-color: #64af54;
+    color: white;
+}
+
+/*Propiedad focus del botón cancelar en modal Cambiar contraseña*/
+.modal .modal-footer #botonModalCancelar-AdministrarUsuarios:focus{
+    box-shadow: none;
+}
+
+/*Propiedad focus del botón modificar en modal Cambiar contraseña*/
+.modal .modal-footer #botonModalModificar-AdministrarUsuarios:focus{
+    box-shadow: none;
+}
+
+
 
 
 

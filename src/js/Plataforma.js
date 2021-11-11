@@ -114,9 +114,7 @@ function Plataforma() {
 
           <ul class="dropdown-menu" >
             
-            <Link to='/verperfil' >
-            <li><a class="dropdown-item" href="" >Cambiar contraseña</a></li>
-            </Link>
+            <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#modalCambiarContraseña-Plataforma">Cambiar contraseña</a></li>
 
             <Link to='/login' >
             <li><a class="dropdown-item" href="" >Salir</a></li>
@@ -126,6 +124,81 @@ function Plataforma() {
         </div>
 
       </div>
+
+      <div class="modal fade" id="modalCambiarContraseña-Plataforma" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="modalLabelAgregarAdministrarUsuarios-AdministrarUsuarios">
+
+                      <i class="fas fa-cog"></i>
+                        <label >Cambiar Contraseña</label>
+
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" title="Regresa a administrar usuarios"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    {/*Sección AdministrarUsuarios*/}
+
+                    <div id="labelAdministrarUsuariosAgregarAdministrarUsuarios-AdministrarUsuarios">
+
+                        <label id="labelContraseñaActual-Plataforma">Ingrese su contraseña actual</label>
+
+                    </div>
+                    
+                    <div className="input-group">
+                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-key"></i></div>
+                        <input id="" type="password" className="form-control" placeholder="Ingrese la contraseña actual" title="Contraseña actual" />
+                    </div>
+
+                    <br />
+
+                    {/*Sección Descripción*/}
+
+                    <div id="labelcorreoAgregarAdministrarUsuarios-AdministrarUsuarios">
+                        <label id="labelNuevaContraseña-Plataforma">Ingrese la nueva contraseña</label>
+                    </div>
+                    
+                    <div className="input-group">
+                        
+                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-key"></i></div>
+                        
+                        <input id="" type="text" className="form-control" placeholder="Ingrese la nueva contraseña" title="Nueva contraseña" />
+                        
+                        
+                    </div>
+
+                    <br />
+
+                    <label id="labelRectificacionContraseña-Plataforma">Ingrese nuevamente la nueva contraseña</label>
+
+                    <div className="input-group">
+                        
+                      <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-key"></i></div>
+                      
+                      <input id="" type="password" className="form-control" placeholder="Ingrese nuevamente la nueva contraseña" title="Rectificación nueva contraseña" />
+                      
+                      
+                    </div>
+
+                    <br />
+
+
+                </div>
+                <div class="modal-footer">
+
+                  <button type="button" id="botonModalCancelar-AdministrarUsuarios" class="btn btn-secondary" data-bs-dismiss="modal" title="Cancelar">Cancelar</button>
+                  <button type="button" id="botonModalModificar-AdministrarUsuarios" class="btn btn-primary" title="Modificar contraseña">Modificar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
       {/*
       <div id="contenido">
