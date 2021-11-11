@@ -135,7 +135,7 @@ function AgregarUsuario() {
                         <p id="pAdministrador-AgregarCuenta" for="inlineRadio1">Administrador</p>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButton" value="option2" title="Cuenta para usuario"/>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButton" value="option2" title="Cuenta para usuario" onChange={handleRadioChange} name="es_admin"/>
                         <p id="pUsuario-AgregarCuenta" for="inlineRadio2">Usuario</p>
                     </div>
                       

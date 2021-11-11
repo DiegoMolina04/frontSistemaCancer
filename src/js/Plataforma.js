@@ -82,7 +82,7 @@ function Plataforma() {
           
           <Link to='/plataforma/buscar'>
           <button id="enviarBuscar-Plataforma" type="button" className="btn btn-success" title="Buscar" >
-            <i class="fas fa-arrow-alt-circle-right"></i>
+            <i class="fas fa-search"></i>
           </button>
           </Link>
 
@@ -92,7 +92,7 @@ function Plataforma() {
         <div id="botonesSuperior" className="btn-group" role="group" >
 
           {/*Botón para agregar nuevo usuario*/}
-          <Link to='/agregarusuario' >
+          <Link to="/plataforma/administrarusuarios" >
           <button id="agregarUsuario" type="button" className="btn btn-success" title="Agregar un nuevo usuario" >
             <i className="fas fa-user"></i>
             Administrar Usuarios

@@ -9,6 +9,7 @@ import Diccionario from '../src/js/Diccionario.js'
 import Diagrama from '../src/js/Diagrama.js'
 import Buscar from "./js/Buscar.js";
 import VerPerfil from "./js/VerPerfil.js";
+import AdministrarUsuarios from "./js/AdministrarUsuarios.js";
 import SeleccionAdministrador from "./js/SeleccionAdministrador.js";
 
 function App(){
@@ -64,6 +65,13 @@ function App(){
                     <Plataforma />
                     <div>
                         <Buscar />
+                    </div>
+                </Route>
+
+                <Route exact path = "/plataforma/administrarusuarios" >
+                    <Plataforma />
+                    <div>
+                        <AdministrarUsuarios />
                     </div>
                 </Route>
 
