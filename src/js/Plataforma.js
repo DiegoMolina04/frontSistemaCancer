@@ -94,12 +94,12 @@ function Plataforma() {
           {/*Botón para agregar nuevo usuario*/}
           <Link to='/agregarusuario' >
           <button id="agregarUsuario" type="button" className="btn btn-success" title="Agregar un nuevo usuario" >
-           <i class="fas fa-plus-circle"></i>
-            Agregar Usuario
+            <i className="fas fa-user"></i>
+            Administrar Usuarios
           </button>
           </Link>
 
-          <Link to='/plataforma' >
+          <Link to='/plataforma/diagnosticar' >
           <button id="inicio" type="button" className="btn btn-success" title="Regresar a la pagina de inicio" >
             <i class="fas fa-home"></i>
             Inicio
