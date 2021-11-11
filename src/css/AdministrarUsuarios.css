@@ -6,8 +6,8 @@
     /*overflow-y: scroll;*/
 }
 
-/*Propiedades caja contenedora de cabecera Terminos y Boton*/
-#cabeceraTerminosBoton-AdministrarUsuarios{
+/*Propiedades caja contenedora de cabecera AdministrarUsuarioss y Boton*/
+#cabeceraAdministrarUsuariossBoton-AdministrarUsuarios{
 
     /*border: 5px solid aqua;*/
     /*margin-top: 2px;*/
@@ -17,8 +17,8 @@
     box-shadow: 5px 3px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
 }
 
-/*Propiedades caja contenedora de Terminos*/
-#cajaLabelTerminos-AdministrarUsuarios{
+/*Propiedades caja contenedora de AdministrarUsuarioss*/
+#cajaLabelAdministrarUsuarioss-AdministrarUsuarios{
     /*border: 2px solid salmon;*/
     /*margin-top: 15px;*/
     /*margin-top: 0px;*/
@@ -27,8 +27,8 @@
     
 }
 
-/*Propiedades del Label Terminos*/
-#cajaLabelTerminos-AdministrarUsuarios label{
+/*Propiedades del Label AdministrarUsuarioss*/
+#cajaLabelAdministrarUsuarioss-AdministrarUsuarios label{
     margin-left: 2%;
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 23px;
@@ -36,7 +36,7 @@
 }
 
 /*Propiedades de la caja botón agregar termino*/
-#cabeceraTerminosBoton-AdministrarUsuarios #cajaAgregarTermino-AdministrarUsuarios{
+#cabeceraAdministrarUsuariossBoton-AdministrarUsuarios #cajaAgregarAdministrarUsuarios-AdministrarUsuarios{
 
     /*border: 2px solid darkorchid;*/
     /*margin-top: 2px;*/
@@ -45,14 +45,14 @@
 }
 
 /*Propiedades del label ¿Desea agregar un termino?*/
-#cajaAgregarTermino-AdministrarUsuarios #labelAgregarTermino-AdministrarUsuarios{
+#cajaAgregarAdministrarUsuarios-AdministrarUsuarios #labelAgregarAdministrarUsuarios-AdministrarUsuarios{
     font-size: 16px;
     font-style: italic;
     margin-right: 10px;
 }
 
-/*Propiedades del botón Agregar Termino*/
-#cajaAgregarTermino-AdministrarUsuarios #agregarTermino-AdministrarUsuarios{
+/*Propiedades del botón Agregar AdministrarUsuarios*/
+#cajaAgregarAdministrarUsuarios-AdministrarUsuarios #agregarAdministrarUsuarios-AdministrarUsuarios{
     
     background-color: #eff2f5;
     padding-top: 2px;
@@ -62,8 +62,8 @@
     
 }
 
-/*Propiedad hover del botón Agregar Termino*/
-#cajaAgregarTermino-AdministrarUsuarios #agregarTermino-AdministrarUsuarios:hover{
+/*Propiedad hover del botón Agregar AdministrarUsuarios*/
+#cajaAgregarAdministrarUsuarios-AdministrarUsuarios #agregarAdministrarUsuarios-AdministrarUsuarios:hover{
     
     background-color: #138a70;
     border-color: #138a70;
@@ -72,15 +72,15 @@
     
 }
 
-/*Propiedad focus del botón Agregar Termino*/
-#cajaAgregarTermino-AdministrarUsuarios #agregarTermino-AdministrarUsuarios:focus{
+/*Propiedad focus del botón Agregar AdministrarUsuarios*/
+#cajaAgregarAdministrarUsuarios-AdministrarUsuarios #agregarAdministrarUsuarios-AdministrarUsuarios:focus{
     
     box-shadow: none;
     
 }
 
-/*Propiedades del icono mas al lado del botón Agregar Termino*/
-#cajaAgregarTermino-AdministrarUsuarios #agregarTermino-AdministrarUsuarios i{
+/*Propiedades del icono mas al lado del botón Agregar AdministrarUsuarios*/
+#cajaAgregarAdministrarUsuarios-AdministrarUsuarios #agregarAdministrarUsuarios-AdministrarUsuarios i{
     margin-right: 10px;
 }
 
@@ -282,7 +282,7 @@
     margin-right: 10px;
 }
 
-/*Propiedades de los label Termino y Correo en el modal de Modificar termino*/
+/*Propiedades de los label AdministrarUsuarios y Correo en el modal de Modificar termino*/
 #modalModificar-AdministrarUsuarios .modal-body label{
     font-size: 17px;
     font-weight: 700;
@@ -295,13 +295,13 @@
     height: 10rem;
 }
 
-/*Propiedades focus del input Termino y el textarea Correo en el modal de Modificar termino*/
+/*Propiedades focus del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
 #modalModificar-AdministrarUsuarios .modal-body input:focus, #modalModificar-AdministrarUsuarios .modal-body textarea:focus{
     box-shadow: none;
     border-color: #ced4da;
 }
 
-/*Propiedades de los placeholder del input Termino y el textarea Correo en el modal de Modificar termino*/
+/*Propiedades de los placeholder del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
 #modalModificar-AdministrarUsuarios .modal-body input::placeholder, #modalModificar-AdministrarUsuarios .modal-body textarea::placeholder{
     font-style: italic;
 }
@@ -324,24 +324,24 @@
     box-shadow: none;
 }
 
-/*Propiedades de icono mas en Agregar Nuevo Termino en el modalAgregarTermino-AdministrarUsuarios*/
+/*Propiedades de icono mas en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
 
-#modalAgregarTermino-AdministrarUsuarios #modalLabelAgregarTermino-AdministrarUsuarios i{
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios #modalLabelAgregarAdministrarUsuarios-AdministrarUsuarios i{
     margin-right: 10px;
 }
 
-/*Propiedades de las cajas del label Termino y Correo en Agregar Nuevo Termino en el modalAgregarTermino-AdministrarUsuarios*/
-#modalAgregarTermino-AdministrarUsuarios .modal-body #labelTerminoAgregarTermino-AdministrarUsuarios,
-#modalAgregarTermino-AdministrarUsuarios .modal-body #labelcorreoAgregarTermino-AdministrarUsuarios,
-#modalAgregarTermino-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta
+/*Propiedades de las cajas del label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelAdministrarUsuariosAgregarAdministrarUsuarios-AdministrarUsuarios,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelcorreoAgregarAdministrarUsuarios-AdministrarUsuarios,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta
 {
     text-align: left;
 }
 
-/*Propiedades de los label Termino y Correo en Agregar Nuevo Termino en el modalAgregarTermino-AdministrarUsuarios*/
-#modalAgregarTermino-AdministrarUsuarios .modal-body #labelTerminoAgregarTermino-AdministrarUsuarios label,
-#modalAgregarTermino-AdministrarUsuarios .modal-body #labelcorreoAgregarTermino-AdministrarUsuarios label,
-#modalAgregarTermino-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta
+/*Propiedades de los label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelAdministrarUsuariosAgregarAdministrarUsuarios-AdministrarUsuarios label,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelcorreoAgregarAdministrarUsuarios-AdministrarUsuarios label,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta
 {
     font-size: 17px;
     font-weight: 700;
@@ -350,58 +350,58 @@
     display: block;
 }
 
-/*Propiedades del textarea Correo en Agregar Nuevo Termino en el modalAgregarTermino-AdministrarUsuarios
-#modalAgregarTermino-AdministrarUsuarios .modal-body .input-group textarea{
+/*Propiedades del textarea Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body .input-group textarea{
     resize: none;
     height: 10rem;
 }*/
 
-/*Propiedades del botón cancelar en Agregar Nuevo Termino en el modalAgregarTermino-AdministrarUsuarios*/
-#modalAgregarTermino-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarUsuarios{
+/*Propiedades del botón cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarUsuarios{
     font-family: 'Noto Sans Display', sans-serif;
     background-color: transparent;
     border-color: #535353;
     color: #000;
 }
 
-/*Propiedad hover del boton Cancelar en Agregar Nuevo Termino en el modalAgregarTermino-AdministrarUsuarios*/
-#modalAgregarTermino-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarUsuarios:hover{
+/*Propiedad hover del boton Cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarUsuarios:hover{
     
     background-color: #535353;
     color: white;
 }
 
-/*Propiedad focus del boton Cancelar Agregar Nuevo Termino en el modalAgregarTermino-AdministrarUsuarios*/
-#modalAgregarTermino-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarUsuarios:focus{
+/*Propiedad focus del boton Cancelar Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarUsuarios:focus{
     box-shadow: none;
 }
 
-/*Propiedades del botón modificar en el modalAgregarTermino-AdministrarUsuarios*/
-#modalAgregarTermino-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarUsuarios{
+/*Propiedades del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarUsuarios{
     background-color: transparent;
     border-color: #64af54;
     color: #000;
     font-weight: 100;
 }
 
-/*Propiedad hover del botón modificar en el modalAgregarTermino-AdministrarUsuarios*/
-#modalAgregarTermino-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarUsuarios:hover{
+/*Propiedad hover del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarUsuarios:hover{
     background-color: #64af54;
     color: white;
 }
 
-/*Propiedad focus del botón modificar en el modalAgregarTermino-AdministrarUsuarios*/
-#modalAgregarTermino-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarUsuarios:focus{
+/*Propiedad focus del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarUsuarios:focus{
     box-shadow: none;
 }
 
-/*Propiedad placeholder en el input y textarea en el modalAgregarTermino-AdministrarUsuarios*/
-#modalAgregarTermino-AdministrarUsuarios .input-group input::placeholder, #modalAgregarTermino-AdministrarUsuarios .input-group textarea::placeholder{
+/*Propiedad placeholder en el input y textarea en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input::placeholder, #modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group textarea::placeholder{
     font-style: italic;
 }
 
-/*Propiedad focus en el input y textarea en el modalAgregarTermino-AdministrarUsuarios*/
-#modalAgregarTermino-AdministrarUsuarios .input-group input:focus, #modalAgregarTermino-AdministrarUsuarios .input-group textarea:focus{
+/*Propiedad focus en el input y textarea en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input:focus, #modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group textarea:focus{
     box-shadow: none;
     border-color: #ced4da;
 }

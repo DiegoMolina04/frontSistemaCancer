@@ -8,29 +8,29 @@ function AdministrarUsuarios() {
 
         <div id="fondo-AdministrarUsuarios">
 
-            <div id="cabeceraTerminosBoton-AdministrarUsuarios">
+            <div id="cabeceraAdministrarUsuariossBoton-AdministrarUsuarios">
 
-                <div id="cajaLabelTerminos-AdministrarUsuarios">
+                <div id="cajaLabelAdministrarUsuarioss-AdministrarUsuarios">
                     <label>Administrar Usuarios</label>
                 </div>
                 
 
-                <div id="cajaAgregarTermino-AdministrarUsuarios">
+                <div id="cajaAgregarAdministrarUsuarios-AdministrarUsuarios">
                     
-                    <label id="labelAgregarTermino-AdministrarUsuarios">
+                    <label id="labelAgregarAdministrarUsuarios-AdministrarUsuarios">
                         ¿Desea agregar un nuevo usuario?
                     </label>
 
                     
-                    <button id="agregarTermino-AdministrarUsuarios" type="button" className="btn btn-success" title="Agregar un nuevo termino" data-bs-toggle="modal" data-bs-target="#modalAgregarTermino-AdministrarUsuarios">
+                    <button id="agregarAdministrarUsuarios-AdministrarUsuarios" type="button" className="btn btn-success" title="Agregar un nuevo usuario" data-bs-toggle="modal" data-bs-target="#modalAgregarAdministrarUsuarios-AdministrarUsuarios">
                         <i class="fas fa-plus-circle"></i>
                          Agregar Usuario
                     </button>
 
 
-                    {/*Modal para el botón de Agregar Termino*/}
+                    {/*Modal para el botón de Agregar AdministrarUsuarios*/}
 
-                    <div class="modal fade" id="modalAgregarTermino-AdministrarUsuarios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal fade" id="modalAgregarAdministrarUsuarios-AdministrarUsuarios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -38,20 +38,20 @@ function AdministrarUsuarios() {
                                 <div class="modal-header">
 
 
-                                    <h5 class="modal-title" id="modalLabelAgregarTermino-AdministrarUsuarios">
+                                    <h5 class="modal-title" id="modalLabelAgregarAdministrarUsuarios-AdministrarUsuarios">
 
                                         <i class="fas fa-plus-circle"></i>
                                         <label >Agregar Nuevo Usuario</label>
 
                                     </h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" title="Regresa el diciconario de terminos"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" title="Regresa a administrar usuarios"></button>
                                 </div>
 
                                 <div class="modal-body">
 
-                                    {/*Sección Termino*/}
+                                    {/*Sección AdministrarUsuarios*/}
 
-                                    <div id="labelTerminoAgregarTermino-AdministrarUsuarios">
+                                    <div id="labelAdministrarUsuariosAgregarAdministrarUsuarios-AdministrarUsuarios">
 
                                         <label>Nombre Usuario</label>
 
@@ -66,7 +66,7 @@ function AdministrarUsuarios() {
 
                                     {/*Sección Descripción*/}
 
-                                    <div id="labelcorreoAgregarTermino-AdministrarUsuarios">
+                                    <div id="labelcorreoAgregarAdministrarUsuarios-AdministrarUsuarios">
                                         <label>Correo</label>
                                     </div>
                                     
@@ -99,7 +99,7 @@ function AdministrarUsuarios() {
                                 </div>
                                 <div class="modal-footer">
 
-                                  <button type="button" id="botonModalCancelar-AdministrarUsuarios" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa al AdministrarUsuarios de terminos">Cancelar</button>
+                                  <button type="button" id="botonModalCancelar-AdministrarUsuarios" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresar a administrar usuarios">Cancelar</button>
                                   <button type="button" id="botonModalModificar-AdministrarUsuarios" class="btn btn-primary" title="Agregar termino">Agregar</button>
 
                                 </div>
@@ -120,12 +120,12 @@ function AdministrarUsuarios() {
                     <thead> {/*Cabeceras*/}
                         <tr>
                             <th id="idTablaCabecera-AdministrarUsuarios" scope="col" title="Identificador del termino">ID</th>
-                            <th id="nombreUsuarioTablaCabecera-AdministrarUsuarios" scope="col" title="Nombre del termino">Nombre Usuario</th>
-                            <th id="correoTablaCabecera-AdministrarUsuarios" scope="col" title="Descripción del termino">Correo</th>
-                            <th id="rolTablaCabecera-AdministrarUsuarios" scope="col" title="Descripción del termino">Tipo De Cuenta</th>
+                            <th id="nombreUsuarioTablaCabecera-AdministrarUsuarios" scope="col" title="Nombre del usuario">Nombre Usuario</th>
+                            <th id="correoTablaCabecera-AdministrarUsuarios" scope="col" title="Correo del usuario">Correo</th>
+                            <th id="rolTablaCabecera-AdministrarUsuarios" scope="col" title="Tipo de cuenta de usuario">Tipo De Cuenta</th>
 
                             {/*Columna para agregar o elimina*/}
-                            <th id="modificarEliminarTablaCabecera-AdministrarUsuarios" scope="col" title="Descripción del termino">Modificar/Eliminar</th>
+                            <th id="modificarEliminarTablaCabecera-AdministrarUsuarios" scope="col" title="Modificar/Eliminar el usuario">Modificar/Eliminar</th>
                           </tr>
                     </thead>
                     <tbody> {/*Filas*/}
@@ -206,7 +206,7 @@ function AdministrarUsuarios() {
                             </td>
                         </tr>
 
-                        {/*Modal para el botón de Eliminar Termino*/}
+                        {/*Modal para el botón de Eliminar AdministrarUsuarios*/}
                         <div class="modal fade" id="modalEliminar-AdministrarUsuarios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog">
                               <div class="modal-content">
@@ -218,7 +218,7 @@ function AdministrarUsuarios() {
                                     <label >Advertencia</label>
 
                                   </h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" title="Regresa el diciconario de terminos"></button>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" title="Regresar a administrador de usuarios"></button>
                                 </div>
                                 <div class="modal-body">
                                   
@@ -237,7 +237,7 @@ function AdministrarUsuarios() {
                         </div>
 
                         
-                        {/*Modal para el botón de Modificar Termino*/}
+                        {/*Modal para el botón de Modificar AdministrarUsuarios*/}
                         <div class="modal fade" id="modalModificar-AdministrarUsuarios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog">
                               <div class="modal-content">
@@ -246,41 +246,65 @@ function AdministrarUsuarios() {
                                   <h5 class="modal-title" id="modalLabelModificar-AdministrarUsuarios">
 
                                     <i class="fas fa-cog"></i>
-                                    <label >Modificar Termino</label>
+                                    <label >Modificar Cuenta</label>
 
                                   </h5>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" title="Regresar a administrar usuarios"></button>
                                 </div>
                                 <div class="modal-body">
 
-                                    {/*Sección Termino*/}
-                                    <label>Termino</label>
+                                    {/*Sección AdministrarUsuarios*/}
+
+                                    <div id="labelAdministrarUsuariosAgregarAdministrarUsuarios-AdministrarUsuarios">
+
+                                        <label>Nombre Usuario</label>
+
+                                    </div>
                                     
                                     <div className="input-group">
                                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div>
-                                        <input id="" type="text" className="form-control" placeholder="Ingrese el nuevo termino" title="Termino actual" />
+                                        <input id="" type="text" className="form-control" placeholder="Ingrese el nombre de usuario completo" title="Nuevo usuario" />
                                     </div>
 
                                     <br />
 
                                     {/*Sección Descripción*/}
-                                    <label>Descripción</label>
+
+                                    <div id="labelcorreoAgregarAdministrarUsuarios-AdministrarUsuarios">
+                                        <label>Correo</label>
+                                    </div>
                                     
                                     <div className="input-group">
-                                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-book"></i></div>
                                         
-                                        <textarea class="form-control" id="floatingTextarea" placeholder="Ingrese la nueva descripción" title="Descripción actual"></textarea>
+                                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-envelope"></i></div>
+                                        
+                                        <input id="" type="email" className="form-control" placeholder="Ingrese el correo" title="Nuevo correo" />
                                         
                                         
                                     </div>
 
                                     <br />
 
+                                    <label id="tipoCuenta-AgregarCuenta">Tipo de cuenta</label>
+
+                                    <div id="cajaRadioButtons-AgregarCuenta">
+                                
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButtonAdministrador-AdministrarUsuarios" value="true" title="Cuenta para administrador"/>
+                                            <p id="pAdministrador-AdministrarUsuarios" for="inlineRadio1">Administrador</p>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButtonAdministrador-AdministrarUsuarios" value="option2" title="Cuenta para usuario"/>
+                                            <p id="pUsuario-AdministrarUsuarios" for="inlineRadio2">Usuario</p>
+                                        </div>
+
+                                    </div>
+
                                 </div>
                                 <div class="modal-footer">
 
-                                  <button type="button" id="botonModalCancelar-AdministrarUsuarios" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa al AdministrarUsuarios de terminos">Cancelar</button>
-                                  <button type="button" id="botonModalModificar-AdministrarUsuarios" class="btn btn-primary" title="Modificar termino">Modificar</button>
+                                  <button type="button" id="botonModalCancelar-AdministrarUsuarios" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a administrar usuarios">Cancelar</button>
+                                  <button type="button" id="botonModalModificar-AdministrarUsuarios" class="btn btn-primary" title="Modificar usuario">Modificar</button>
 
                                 </div>
                               </div>
