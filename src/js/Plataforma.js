@@ -74,6 +74,7 @@ function Plataforma() {
             <option selected >Seleccione Categoria...</option> {/*disabled*/}
             <option value="1">Sintoma</option>
             <option value="2">Diccionario</option>
+            <option value="3">Usuario</option>
 
           </select>
           
