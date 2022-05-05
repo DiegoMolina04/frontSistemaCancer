@@ -7,17 +7,17 @@ import { Link } from "react-router-dom";
 function AgregarUsuario() {
 
     const [datos, setDatos] = useState({
-        nombre: '',
-        email: '',
-        contraseña: '',
+        nombre:'',
+        email:'',
+        contraseña:'',
         es_admin: false
     })
     {/*,
     es_admin: ''*/}
     
     const handleInputChange = (event) => {
-          // console.log(event.target.name)
-          // console.log(event.target.value)
+          //console.log(event.target.name)
+          //console.log(event.target.value)
           setDatos({
               ...datos,
               [event.target.name] : event.target.value
@@ -29,14 +29,15 @@ function AgregarUsuario() {
         const es_admin = event.currentTarget.value === 'true' ? true: false;
 
         setDatos({
-           es_admin
+            ...datos,
+            es_admin
       })
   }
     
     const enviarDatos = (event) => {
        
           event.preventDefault()
-            fetch("http://4f3a-186-154-36-85.ngrok.io/user",{
+            fetch("https://abea-186-29-180-157.ngrok.io/v1/users/create-one",{
               method:"POST",
               mode:"cors",
               headers:{
@@ -131,11 +132,11 @@ function AgregarUsuario() {
                     {/*Sección tipo de usuario*/}
                     <label id="tipoCuenta-AgregarCuenta">Tipo de cuenta</label>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButton" value="true" title="Cuenta para administrador" onChange={handleRadioChange} name="es_admin"/>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButton" value="true" title="Cuenta para administrador" onChange={handleRadioChange} name="es_admin"/> {/* name="inlineRadioOptions" */}
                         <p id="pAdministrador-AgregarCuenta" for="inlineRadio1">Administrador</p>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButton" value="option2" title="Cuenta para usuario" onChange={handleRadioChange} name="es_admin"/>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButton" value="option2" title="Cuenta para usuario" onChange={handleRadioChange} name="es_admin"/> {/* name="inlineRadioOptions" */}
                         <p id="pUsuario-AgregarCuenta" for="inlineRadio2">Usuario</p>
                     </div>
                       

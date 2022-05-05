@@ -21,12 +21,13 @@ function AdministrarUsuarios() {
                         ¿Desea agregar un nuevo usuario?
                     </label>
 
-                    
-                    <button id="agregarAdministrarUsuarios-AdministrarUsuarios" type="button" className="btn btn-success" title="Agregar un nuevo usuario" data-bs-toggle="modal" data-bs-target="#modalAgregarAdministrarUsuarios-AdministrarUsuarios">
+                    <Link to='/agregarusuario' >
+                    {/* <button id="agregarAdministrarUsuarios-AdministrarUsuarios" type="button" className="btn btn-success" title="Agregar un nuevo usuario" data-bs-toggle="modal" data-bs-target="#modalAgregarAdministrarUsuarios-AdministrarUsuarios"> */}
+                    <button id="agregarAdministrarUsuarios-AdministrarUsuarios" type="button" className="btn btn-success" title="Agregar un nuevo usuario">
                         <i class="fas fa-plus-circle"></i>
                          Agregar Usuario
                     </button>
-
+                    </Link>
 
                     {/*Modal para el botón de Agregar AdministrarUsuarios*/}
 
