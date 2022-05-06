@@ -33,13 +33,13 @@ function Login() {
             <input id="contraseña" type="password" className="form-control" placeholder="Contraseña" title="Ingrese su contraseña"/>
         </div>
         
-        <Link to='/plataforma/diagnosticar' >
+        
         <div id="cajaBoton">
-
+          <Link to='/plataforma/diagnosticar' >
             <button type="button" className="btn btn-success" title="Iniciar sesión" onClick="prueba()">Enviar</button>
-
+          </Link>
         </div>
-        </Link>
+        
 
       </div>
 

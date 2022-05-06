@@ -65,8 +65,8 @@
 /*Propiedad hover del botón Agregar Termino*/
 #cajaAgregarTermino-Diccionario #agregarTermino-Diccionario:hover{
     
-    background-color: #138a70;
-    border-color: #138a70;
+    background-color: #E4AC34;
+    border-color: #E4AC34;
     color: white;
     /*border-color: transparent;*/
     
@@ -155,7 +155,7 @@
 
 /*Propiedad hover sobre las filas de la tabla
 #tabla-Diccionario tbody tr:hover{
-    background-color: #138a70;
+    background-color: #E4AC34;
 }*/
 
 /*Propiedades de los botones de modificar y eliminar*/
@@ -165,7 +165,7 @@
     background: transparent;
     color: #000;
     /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #64af54;*/
+    /*border-color: #ffc107;*/
     border-color: transparent;
     font-family: 'Noto Sans Display', sans-serif;
     /*width: 6rem;*/
@@ -174,9 +174,9 @@
 
 /*Propiedad hover sobre los botones modificar y eliminar
 #modificarEliminarTablaFila-Diccionario button:hover{
-    /*border-color: #64af54;
+    /*border-color: #ffc107;
     border-color: transparent;
-    /*background-color: #64af54;
+    /*background-color: #ffc107;
     background-color: transparent;
     /*color: white;
 }*/
@@ -294,13 +294,13 @@
 /*Propiedades del botón modificar en el modal Modificar termino*/
 #modalModificar-Diccionario .modal-footer #botonModalModificar-Diccionario{
     background-color: transparent;
-    border-color: #64af54;
+    border-color: #ffc107;
     color: #000;
 }
 
 /*Propiedad hover del botón modificar en el modal Modificar termino*/
 #modalModificar-Diccionario .modal-footer #botonModalModificar-Diccionario:hover{
-    background-color: #64af54;
+    background-color: #ffc107;
     color: white;
 }
 
@@ -361,14 +361,14 @@
 /*Propiedades del botón modificar en el modalAgregarTermino-Diccionario*/
 #modalAgregarTermino-Diccionario .modal-footer #botonModalModificar-Diccionario{
     background-color: transparent;
-    border-color: #64af54;
+    border-color: #ffc107;
     color: #000;
     font-weight: 100;
 }
 
 /*Propiedad hover del botón modificar en el modalAgregarTermino-Diccionario*/
 #modalAgregarTermino-Diccionario .modal-footer #botonModalModificar-Diccionario:hover{
-    background-color: #64af54;
+    background-color: #ffc107;
     color: white;
 }
 
@@ -388,3 +388,8 @@
     border-color: #ced4da;
 }
 
+/*Propiedades del icono al lado de los input en los modales*/
+#modalModificar-Diccionario #btnGroupAddon, #modalAgregarTermino-Diccionario #btnGroupAddon{
+    background-color: #ffc107;/*E4AC34*/
+    color: white;
+}

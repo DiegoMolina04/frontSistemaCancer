@@ -49,7 +49,7 @@
 /*Propiedades del label Sintoma en la caja principal*/
 #cajaDiagnostico-Diagnosticar #cajalabelSintoma-Diagnosticar label{
     font-family: 'Noto Sans Display', sans-serif;
-    font-size: 20px;
+    font-size: 23px;/*20px*/
     font-weight: 700;
 }
 
@@ -63,7 +63,7 @@
 /*Propiedades del label del sintoma*/
 #cajaDiagnostico-Diagnosticar #cajaRegla-Diagnosticar label{
     font-family: 'Noto Sans Display', sans-serif;
-    
+    font-size: 18px;
 }
 
 /*Propiedades de la caja contenedora de los botones Positivo y Negativo*/

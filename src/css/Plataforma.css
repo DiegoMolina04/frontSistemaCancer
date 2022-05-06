@@ -31,9 +31,9 @@
     /*background-color: #282c34ab;*/
     /*background-color: #d33658;*/
     
-    /*background-color: #91142f;*/
+    /*background-color: #212844 ;*/
 
-    background-color: #8a132d;
+    background-color: #212844 ;
     
     z-index: 99px;
     /*background-color: rgb(224, 224, 224);*/
@@ -56,7 +56,7 @@
     /*background-color: #282c34;*/
     /*background-color: rgb(223, 223, 223);*/
     /*background-color: #cd0c36;*/
-    background-color: #91142f;
+    background-color: #212844 ;
     box-shadow: 5px 2px 5px;
 
 }
@@ -81,7 +81,7 @@
     
     height: 3rem;
     /*background-color: rgb(224, 224, 224);*/
-    background-color: #7e0d26;
+    background-color: #3B4962;
 
     box-shadow: -5px 2px 5px;
     
@@ -97,13 +97,14 @@
     letter-spacing: 2px;/*Separar las letras*/
     font-size: 20px;
     color: white;
+    padding: 6px;
 }
 
 /*Caja logo*/
 #imagen{
     /*border: 3px solid salmon;*/
-    border: 5px solid #91142f;
-    border-top: 10px solid #91142f;
+    border: 5px solid #212844 ;
+    border-top: 10px solid #212844 ;
     margin-top: -10px;
     text-align: center;
     /*background-color: aliceblue;*/
@@ -113,8 +114,8 @@
 /*Tamaño logo*/
 #imagen #logo{
 
-    width: 5rem;
-    height: 5rem;
+    width: 8rem;
+    height: 1.5rem;
 }
 
 
@@ -122,7 +123,7 @@
 .btn-group{
     float: right;
     /*margin-right: 2rem;
-    border-color: #64af54;
+    border-color: #ffc107;
     margin: 1px 2px 0px 0px;
     /*box-shadow: none; /*Quita la sombra verde alrededor del botón
 }*/
@@ -147,11 +148,11 @@
     color: #000;
     /*color: white;*/
     /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #64af54;*/
-    border-color: #91142f;
+    /*border-color: #ffc107;*/
+    border-color: #212844 ;
 
     /*border-width: 0 2px 0 2px;*/
-    /*border-color: transparent #138a70 transparent #138a70;*/
+    /*border-color: transparent #138a70 transparent #E4AC34;*/
     
     font-family: 'Noto Sans Display', sans-serif;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
@@ -169,11 +170,11 @@
     color: #000;
     /*color: white;*/
     /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #64af54;*/
-    border-color: #91142f;
+    /*border-color: #ffc107;*/
+    border-color: #212844 ;
 
     /*border-width: 0 2px 0 2px;*/
-    /*border-color: transparent #138a70 transparent #138a70;*/
+    /*border-color: transparent #138a70 transparent #E4AC34;*/
     
     font-family: 'Noto Sans Display', sans-serif;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
@@ -183,9 +184,9 @@
 #botonesSuperior #inicio:hover, #botonesSuperior #agregarUsuario:hover, #botonesSuperior #expandiblePerfil:hover{
     /*background-color: rgba(62, 138, 62, 0.589);*/
     /*border-color: red;*/
-    /*background-color: #64af54;*/
+    /*background-color: #ffc107;*/
 
-    background-color: #138a70;
+    background-color: #E4AC34;
     color: white;
 }
 
@@ -193,15 +194,15 @@
 #botonesSuperior button:focus{
     /*background-color: rgba(62, 138, 62, 0.589);*/
     /*border-color: red;*/
-    /*background-color: #64af54;*/
-    background-color: #138a70;
+    /*background-color: #ffc107;*/
+    background-color: #E4AC34;
     color: white;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
 
 /*Lista desplegada del boton perfil menu superior*/
 #botonesSuperior .dropdown-menu{
-    background-color: #138a70;
+    background-color: #E4AC34;
     
 }
 
@@ -259,7 +260,7 @@
     /*color: #000;*/
     color: white;
     /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #64af54;*/
+    /*border-color: #ffc107;*/
     border-color: transparent;
     text-align: left;
     
@@ -278,17 +279,17 @@
 /*Propiedad hover para botones en el Sidebar (diagnosticar, reglas, diccionaro y diagrama)*/
 #navbar #opciones button:hover{
     /*float: right;*/
-    /*background-color: #64af54;*/
+    /*background-color: #ffc107;*/
 
     /*background-color: rgb(80, 80, 80);*/
 
     /*background-color: #149176;*/
 
-    background-color: #138a70;
+    background-color: #E4AC34;
 
     color: white;
     /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #64af54;*/
+    /*border-color: #ffc107;*/
     /*border-color: transparent;*/
     font-family: 'Noto Sans Display', sans-serif;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
@@ -320,10 +321,10 @@
     color: #000;
     /*color: white;*/
     /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #64af54;*/
+    /*border-color: #ffc107;*/
 
-    /*border-color: transparent #138a70 transparent #138a70;*/
-    border-color: #91142f;
+    /*border-color: transparent #138a70 transparent #E4AC34;*/
+    border-color: #212844 ;
 
     font-family: 'Noto Sans Display', sans-serif;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
@@ -333,9 +334,9 @@
 /*Propiedad hover del desplegable select categoria en el menu superior*/
 #busqueda select:hover{
 
-    /*background-color: #64af54;*/
+    /*background-color: #ffc107;*/
 
-    background-color: #138a70;
+    background-color: #E4AC34;
     transition:all .2s ease-out;
     color: white;
     
@@ -362,23 +363,23 @@
     /*margin: 1px 0 0 0;*/
     color: #000;
     /*color: white;*/
-    /*border-color: #64af54 #64af54 #64af54 transparent;*/
+    /*border-color: #ffc107 #ffc107 #ffc107 transparent;*/
 
-    border-color: transparent #91142f transparent #91142f;
+    border-color: transparent #212844  transparent #212844 ;
 
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     
-    /*border-color: #64af54;*/
+    /*border-color: #ffc107;*/
     font-family: 'Noto Sans Display', sans-serif;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
 
 /*Propiedades del input categoria en el menu superior*/
 #busqueda input:focus{
-    /*border-color: #64af54 #64af54 #64af54 transparent;*/
-    /*border-color: #64af54!important;*/
-    /*border-color: #64af54;*/
+    /*border-color: #ffc107 #ffc107 #ffc107 transparent;*/
+    /*border-color: #ffc107!important;*/
+    /*border-color: #ffc107;*/
     font-family: 'Noto Sans Display', sans-serif;
     box-shadow: none!important; /*Quita la sombra verde alrededor del botón*/
     color: #000;
@@ -399,12 +400,12 @@
     border-bottom-left-radius: 0px;
     background-color: #eff2f5;
     color: #000;
-    border-color: #91142f;
+    border-color: #212844 ;
 }
 
 /*Propiedad hover del botón enviar para buscar palabra*/
 #busqueda #enviarBuscar-Plataforma:hover{
-    background-color: #138a70;
+    background-color: #E4AC34;
     color: white;
 }
 
@@ -454,7 +455,7 @@
 .modal .modal-footer #botonModalModificar-AdministrarUsuarios{
     font-family: 'Noto Sans Display', sans-serif;
     background-color: transparent;
-    border-color: #64af54;
+    border-color: #ffc107;
     color: #000;
 }
 
@@ -466,7 +467,7 @@
 
 /*Propiedad hover del botón modificar en modal Cambiar contraseña*/
 .modal .modal-footer #botonModalModificar-AdministrarUsuarios:hover{
-    background-color: #64af54;
+    background-color: #ffc107;
     color: white;
 }
 
@@ -480,7 +481,11 @@
     box-shadow: none;
 }
 
-
+/*Propiedades del icono al lado de los input en los modales*/
+#modalCambiarContraseña-Plataforma #btnGroupAddon{
+    background-color: #ffc107;/*E4AC34*/
+    color: white;
+}
 
 
 

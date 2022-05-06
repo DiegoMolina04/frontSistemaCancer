@@ -4,8 +4,8 @@
     /*height: 100vh;*/ /*vh (viewport-height) = Altura de la ventana gráfica.*/
     height: fit-content;
     width: 100%;
-    border: 0.01px solid #8a132d; /*Despliega borde en toda la pantalla*/
-    background-color: #8a132d; /*9a0526*/
+    border: 0.01px solid #212844; /*Despliega borde en toda la pantalla*/
+    background-color: #212844; /*9a0526*/
 }
 
 /*Caja contenedora de agregar usuario*/
@@ -31,14 +31,16 @@
 
     /*border: 2px solid brown;*/
     text-align: center;
+
 }
 
 /*Imagen logo*/
 #logo-AgregarUsuario{
     
     /*height: 13rem;*/
-    height: 28.7%;
-    width: 28.7%;
+    
+    height: 5rem;
+    margin: 2rem 0 2rem 0;
 }
 
 /*Caja texto Nuevo Usuario*/
@@ -80,7 +82,7 @@
 #formulario-AgregarUsuario .input-group #btnGroupAddon{
     width: 42px;
     /*background-color: rgba(62, 138, 62, 0.589);*/
-    background-color: #64af54;
+    background-color: #ffc107;
     margin-top: 10px;
     
 }
@@ -117,15 +119,15 @@
 
 /*Propiedad focus sobre los radio buttons*/
 #formulario-AgregarUsuario .form-check #radioButton:focus{
-    background-color: #64af54;
-    border-color: #64af54;
+    background-color: #ffc107;
+    border-color: #ffc107;
     box-shadow: none;
 }
 
 /*Propiedad checked sobre los radio buttton*/
 #formulario-AgregarUsuario .form-check #radioButton:checked{
-    background-color: #64af54;
-    border-color: #64af54;
+    background-color: #ffc107;
+    border-color: #ffc107;
 }
 
 /*Caja botones enviar y Regresar*/
@@ -162,7 +164,7 @@
     background: transparent;
     color: #000;
     /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #64af54;*/
+    /*border-color: #ffc107;*/
     font-family: 'Noto Sans Display', sans-serif;
     width: 6rem;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
@@ -172,7 +174,7 @@
 #cajaEnviar-AgregarCuenta #botonEnviar-AgregarCuenta{
     /*margin-right: 20%;*/
     /*margin-left: 10%;*/
-    border-color: #64af54;
+    border-color: #ffc107;
 }
 
 /*Propiedad del boton Regresar*/
@@ -186,8 +188,8 @@
 /*Propiedad hover sobre boton Enviar*/
 #cajaEnviar-AgregarCuenta #botonEnviar-AgregarCuenta:hover{
     /*background-color: rgba(62, 138, 62, 0.589);*/
-    border-color: #64af54;
-    background-color: #64af54;
+    border-color: #ffc107 ;
+    background-color: #ffc107 ;
     color: white;
     
 }

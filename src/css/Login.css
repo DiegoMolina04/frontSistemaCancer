@@ -14,8 +14,8 @@ html,body{
     
     height: 100vh; /*vh (viewport-height) = Altura de la ventana gráfica.*/
     width: 100%;
-    border: 0.01px solid #8a132d; /*Despliega borde en toda la pantalla*/
-    background-color: #8a132d; /*9a0526*/
+    border: 0.01px solid #212844; /*Despliega borde en toda la pantalla*/
+    background-color: #212844; /*9a0526*/
     display: flex;
     align-items: center;
     
@@ -80,7 +80,7 @@ html,body{
     width: 40px;
     height: 40px;
     /*background-color: rgba(62, 138, 62, 0.589);*/
-    background-color: #64af54;
+    background-color: #ffc107;
     
 }
 
@@ -90,7 +90,7 @@ html,body{
     background: transparent;
     color: #000;
     /*border-color: rgba(62, 138, 62, 0.589);*/
-    border-color: #64af54;
+    border-color: #ffc107;
     font-family: 'Noto Sans Display', sans-serif;
     width: 6rem;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
@@ -99,10 +99,10 @@ html,body{
 /*Propiedad hover sobre el botón enviar*/
 #cajaBoton .btn:hover{
     /*background-color: rgba(62, 138, 62, 0.589);*/
-    border-color: #64af54;
-    background-color: #64af54;
+    border-color: #ffc107;
+    background-color: #ffc107;
     color: white;
-    
+    font-weight: bolder;
 }
 
 /*Linea debajo del logo*/
@@ -120,7 +120,8 @@ html,body{
 
 /*Imagen logo*/
 #logo{
-    height: 13rem;
+    height: 5rem;
+    margin: 2rem 0 2rem 0;
 }
 
 

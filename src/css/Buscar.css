@@ -116,7 +116,7 @@
     background: transparent;
     color: #000;
     /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #64af54;*/
+    /*border-color: #ffc107;*/
     border-color: transparent;
     font-family: 'Noto Sans Display', sans-serif;
     /*width: 6rem;*/
@@ -125,9 +125,9 @@
 
 /*Propiedad hover sobre los botones modificar y eliminar
 #modificarEliminarTablaFila-Buscar button:hover{
-    /*border-color: #64af54;
+    /*border-color: #ffc107;
     border-color: transparent;
-    /*background-color: #64af54;
+    /*background-color: #ffc107;
     background-color: transparent;
     /*color: white;
 }*/
@@ -245,13 +245,13 @@
 /*Propiedades del botón modificar en el modal Modificar termino*/
 #modalModificar-Buscar .modal-footer #botonModalModificar-Buscar{
     background-color: transparent;
-    border-color: #64af54;
+    border-color: #ffc107;
     color: #000;
 }
 
 /*Propiedad hover del botón modificar en el modal Modificar termino*/
 #modalModificar-Buscar .modal-footer #botonModalModificar-Buscar:hover{
-    background-color: #64af54;
+    background-color: #ffc107;
     color: white;
 }
 
@@ -260,4 +260,8 @@
     box-shadow: none;
 }
 
-
+/*Propiedades del icono al lado de los input en el modal*/
+#modalModificar-Buscar #btnGroupAddon{
+    background-color: #ffc107;/*E4AC34*/
+    color: white;
+}
