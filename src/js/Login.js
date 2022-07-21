@@ -35,7 +35,7 @@ function Login() {
         
         
         <div id="cajaBoton">
-          <Link to='/plataforma/diagnosticar' >
+          <Link to='/crearcontraseña' >
             <button type="button" className="btn btn-success" title="Iniciar sesión" onClick="prueba()">Enviar</button>
           </Link>
         </div>

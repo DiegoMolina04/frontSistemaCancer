@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
 import Plataforma from '../src/js/Plataforma.js'
 import Login from '../src/js/Login.js'
 import AgregarUsuario from "./js/AgregarUsuario.js";
+import CrearContraseña from "./js/CrearContraseña.js";
 import Reglas from '../src/js/Reglas.js'
 import Diagnosticar from '../src/js/Diagnosticar.js'
 import Diccionario from '../src/js/Diccionario.js'
@@ -27,6 +28,10 @@ function App(){
 
                 <Route exact path = "/agregarusuario" >
                     <AgregarUsuario />
+                </Route>
+
+                <Route exact path = "/crearcontraseña" >
+                    <CrearContraseña />
                 </Route>
 
                 <Route exact path = "/plataforma" >

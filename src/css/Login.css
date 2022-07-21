@@ -29,9 +29,13 @@ html,body{
     /*margin: 10% 36rem 0 36rem;*/
     /*margin: 150px 550px 0 550px;*/
     /*margin-top: 5%;*/
-    width: 450px;
+    
+    /*width: 450px;*/
+
     background-color: #eff2f5;
-    /*width: 50%;*/
+    /*width: 30%;*/
+    min-width: 30%;
+    /*max-width: 10%;*/
     margin-left: auto;
     margin-right: auto;
     padding: 2rem;
@@ -49,12 +53,13 @@ html,body{
 
 /*Inputs de usuario y contraseña*/
 #usuario, #contraseña{
-    width: 18rem;
-    height: 40px;
+    /*width: 18rem;
+    height: 40px;*/
     /*width: 60%;*/
     margin-left: auto;
     margin-right: auto;
     /**/
+    height: 40px;
     box-shadow: none; /*Quita la sombra azul alrededor del input*/
 }
 
@@ -79,6 +84,9 @@ html,body{
 #caja .input-group #btnGroupAddon{
     width: 40px;
     height: 40px;
+
+    /*min-width: 5%;
+    min-height: 30px;*/
     /*background-color: rgba(62, 138, 62, 0.589);*/
     background-color: #ffc107;
     
@@ -120,7 +128,7 @@ html,body{
 
 /*Imagen logo*/
 #logo{
-    height: 5rem;
+    height: 4rem;/*5rem*/
     margin: 2rem 0 2rem 0;
 }
 

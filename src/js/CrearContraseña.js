@@ -1,10 +1,10 @@
-import '../css/AgregarUsuario.css';
+import '../css/CrearContraseña.css';
 import '../css/fontawesome-free-5.15.4-web/css/all.css'
-import logoAgregarUsuario from '../image/logo.png'
+import logoCrearContraseña from '../image/logo.png'
 import React, {Fragment, useState} from 'react';
 import { Link } from "react-router-dom";
 
-function AgregarUsuario() {
+function CrearContraseña() {
 
     const [datos, setDatos] = useState({
         nombre:'',
@@ -67,55 +67,37 @@ function AgregarUsuario() {
     } */}
     return ( 
 
-        <div id="fondo-AgregarUsuario">
+        <div id="fondo-CrearContraseña">
 
             {/*Contenedor de agregar usuario*/}
-            <div id="caja-AgregarUsuario">
+            <div id="caja-CrearContraseña">
                 
                 {/*Contenedor del logo*/}
-                <div id="cajaLogo-AgregarUsuario">
+                <div id="cajaLogo-CrearContraseña">
 
-                    <img id="logo-AgregarUsuario" src={logoAgregarUsuario} alt=""/>
+                    <img id="logo-CrearContraseña" src={logoCrearContraseña} alt=""/>
 
                 </div>
 
                 
                 {/*Linea debajo del logo*/}
-                <hr id="linea-AgregarUsuario"/>
+                <hr id="linea-CrearContraseña"/>
                 
-                <div id="cajaNuevoUsuario-AgregarUsuario">
-                    <label id="labelNuevoUsuario-AgregarUsuario">Nuevo usuario</label>
+                <div id="cajaNuevoUsuario-CrearContraseña">
+                    <label id="labelNuevoUsuario-CrearContraseña">Registro Contraseña Primera Vez</label>
                 </div>
 
-
+                <br />
                 {/*Contenedor de todo el formulario*/}
                 <form className="row" onSubmit={enviarDatos}>
 
-                <div id="formulario-AgregarUsuario">
-
-                    {/*Sección ingrese nombre*/}
-                    <label>Ingrese su nombre completo</label>
-                    <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-user"></i></div>
-                        <input id="nombre-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese su nombre de usuario" title="Digite su nombre completo" onChange={handleInputChange} name="nombre"/>
-                    </div>
-
-                    <br />
-                    
-                    {/*Sección ingrese email*/}
-                    <label>Ingrese su email</label>
-                    <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-envelope"></i></div>
-                        <input id="correo-AgregarUsuario" type="email" className="form-control" placeholder="Ingrese su email" title="Digite su email" onChange={handleInputChange} name="email"/>
-                    </div>
-
-                    <br />
+                <div id="formulario-CrearContraseña">
 
                     {/*Sección ingrese contraseña*/}
                     <label>Ingrese su contraseña</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-key"></i></div>
-                        <input id="contraseña-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese su contraseña" title="Digite su contraseña" onChange={handleInputChange} name="contraseña"/>
+                        <input id="contraseña-CrearContraseña" type="text" className="form-control" placeholder="Ingrese su contraseña" title="Digite su contraseña" onChange={handleInputChange} name="contraseña"/>
                     </div>
 
                     <br />
@@ -124,24 +106,9 @@ function AgregarUsuario() {
                     <label>Ingrese nuevamente su contraseña</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-key"></i></div>
-                        <input id="contraseñaRe-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese nuevamente su contraseña" title="Reingrese su contraseña" onChange={handleInputChange} name="Recontraseña"/>
+                        <input id="contraseñaRe-CrearContraseña" type="text" className="form-control" placeholder="Ingrese nuevamente su contraseña" title="Reingrese su contraseña" onChange={handleInputChange} name="Recontraseña"/>
                     </div>
 
-                    <br />
-
-                    {/*Sección tipo de usuario*/}
-                    <label id="tipoCuenta-AgregarCuenta">Tipo de cuenta</label>
-                    <div class="form-check form-check-inline">
-                        {/*<input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButton" value="true" title="Cuenta para administrador" onChange={handleRadioChange} name="es_admin"/> /* name="inlineRadioOptions" */}
-                        <input class="form-check-input" type="radio" id="radioButton" value="true" title="Cuenta para administrador" onChange={handleRadioChange} name="es_admin"/> {/* name="inlineRadioOptions" */}
-                        <p id="pAdministrador-AgregarCuenta" for="inlineRadio1">Administrador</p>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        {/*<input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButton" value="option2" title="Cuenta para usuario" onChange={handleRadioChange} name="es_admin"/> /* name="inlineRadioOptions" */}
-                        <input class="form-check-input" type="radio" id="radioButton" value="option2" title="Cuenta para usuario" onChange={handleRadioChange} name="es_admin"/> {/* name="inlineRadioOptions" */}
-                        <p id="pUsuario-AgregarCuenta" for="inlineRadio2">Usuario</p>
-                    </div>
-                      
                     <br />
 
                     {/*Sección Botones Enviar y Regresar*/}
@@ -150,15 +117,16 @@ function AgregarUsuario() {
                         
                         <div id="cajaRegresar-AgregarCuenta">
 
-                            <Link to='/plataforma'>
-                            <button id="botonRegresar-AgregarCuenta" type="button" class="btn btn-primary" title="Regresar a la plataforma">Regresar</button>
+                            <Link to='/login'>
+                            <button id="botonRegresar-AgregarCuenta" type="button" class="btn btn-primary" title="Regresar a la plataforma">Cancelar</button>
                             </Link>
 
                         </div>
                         
-                        
                         <div id="cajaEnviar-AgregarCuenta">
+                            <Link to='/plataforma/diagnosticar'>
                             <button id="botonEnviar-AgregarCuenta" type="submit" class="btn btn-primary" title="Crear nuevo usuario">Enviar</button>
+                            </Link>
                         </div>
                         
 
@@ -190,4 +158,4 @@ function AgregarUsuario() {
     );
 }
 
-export default AgregarUsuario;
+export default CrearContraseña;
