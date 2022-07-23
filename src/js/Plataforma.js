@@ -1,5 +1,6 @@
 //import logo from './logo.svg';
 import '../css/Plataforma.css';
+import '../css/Filtro.css';
 import '../css/fontawesome-free-5.15.4-web/css/all.css';
 import logo from '../image/logo.png';
 
@@ -67,18 +68,18 @@ function Plataforma() {
       {/*Caja Menu superior*/}
       <div id="menuSuperior">
 
-        <div id="busqueda">
+        {/*<div id="busqueda">
 
           <select class="form-select" title="Seleccione categoria para buscar palabra" >
             
-            <option selected >Seleccione Categoria...</option> {/*disabled*/}
+            <option selected >Seleccione Categoria...</option> {/*disabled}
             <option value="1">Sintoma</option>
             <option value="2">Diccionario</option>
             <option value="3">Usuario</option>
 
           </select>
           
-          {/*<input type="text" placeholder="¿Busca algo puntual?" title="Ingrese la palabra a buscar"/>*/}
+          {/*<input type="text" placeholder="¿Busca algo puntual?" title="Ingrese la palabra a buscar"/>}
           <input id="usuario" type="text" className="form-control" placeholder="¿Busca algo puntual?" title="Ingrese la palabra a buscar"/>
           
           <Link to='/plataforma/buscar'>
@@ -87,7 +88,7 @@ function Plataforma() {
           </button>
           </Link>
 
-        </div>
+        </div>*/}
 
         {/*Contenedor botón inicio perfil*/}
         <div id="botonesSuperior" className="btn-group" role="group" >

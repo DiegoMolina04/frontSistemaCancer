@@ -3,7 +3,7 @@
 #fondo-AdministrarUsuarios{
     /*border: 4px solid blue;*/
     height: 92vh;
-    /*overflow-y: scroll;*/
+    /*overflow-x: scroll;*/
 }
 
 /*Propiedades caja contenedora de cabecera AdministrarUsuarioss y Boton*/
@@ -12,9 +12,11 @@
     /*border: 5px solid aqua;*/
     /*margin-top: 2px;*/
     height: 3rem;
-    padding: 4px;
+    /*padding: 4px;*/
     background-color: #eff2f5;
     box-shadow: 5px 3px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+    /*overflow-wrap: break-word;*/
+    overflow: auto;
 }
 
 /*Propiedades caja contenedora de AdministrarUsuarioss*/
@@ -38,9 +40,12 @@
 /*Propiedades de la caja botón agregar termino*/
 #cabeceraAdministrarUsuariossBoton-AdministrarUsuarios #cajaAgregarAdministrarUsuarios-AdministrarUsuarios{
 
-    /*border: 2px solid darkorchid;*/
+    border: 2px solid darkorchid;
+    
     /*margin-top: 2px;*/
-    text-align: right;
+    
+    width: 30%;
+    display: inline;
     
 }
 
@@ -435,3 +440,4 @@
     background-color: #ffc107;/*E4AC34*/
     color: white;
 }
+

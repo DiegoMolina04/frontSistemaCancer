@@ -12,8 +12,13 @@ import Buscar from "./js/Buscar.js";
 import VerPerfil from "./js/VerPerfil.js";
 import AdministrarUsuarios from "./js/AdministrarUsuarios.js";
 import SeleccionAdministrador from "./js/SeleccionAdministrador.js";
+import { UserContext } from "./context/UserContext.js";
+import { useMemo, useState } from "react";
 
 function App(){
+
+    const [user, setUser] = useState(null);
+    const value = useMemo(() => ({user, setUser}), [user, setUser]);
 
     return (
         
@@ -22,71 +27,75 @@ function App(){
             
             <Switch>
 
-                <Route exact path = "/login" >
-                    <Login />
-                </Route>
+                <UserContext.Provider value={value}>
 
-                <Route exact path = "/agregarusuario" >
-                    <AgregarUsuario />
-                </Route>
+                    <Route exact path = "/login" >
+                        <Login />
+                    </Route>
 
-                <Route exact path = "/crearcontraseña" >
-                    <CrearContraseña />
-                </Route>
+                    <Route exact path = "/agregarusuario" >
+                        <AgregarUsuario />
+                    </Route>
 
-                <Route exact path = "/plataforma" >
-                    <Plataforma />
-                </Route>
+                    <Route exact path = "/crearcontraseña" >
+                        <CrearContraseña />
+                    </Route>
 
-                <Route exact path = "/plataforma/diagnosticar" >
-                    <Plataforma />
-                    <div>
-                        <Diagnosticar />
-                    </div>
-                </Route>
+                    <Route exact path = "/plataforma" >
+                        <Plataforma />
+                    </Route>
 
-                <Route exact path = "/plataforma/reglas" >
-                    <Plataforma />
-                    <div>
-                        <Reglas />
-                    </div>
-                </Route>
+                    <Route exact path = "/plataforma/diagnosticar" >
+                        <Plataforma />
+                        <div>
+                            <Diagnosticar />
+                        </div>
+                    </Route>
 
-                <Route exact path = "/plataforma/diccionario" >
-                    <Plataforma />
-                    <div>
-                        <Diccionario />
-                    </div>
-                </Route>
+                    <Route exact path = "/plataforma/reglas" >
+                        <Plataforma />
+                        <div>
+                            <Reglas />
+                        </div>
+                    </Route>
 
-                <Route exact path = "/plataforma/diagrama" >
-                    <Plataforma />
-                    <div>
-                        <Diagrama />
-                    </div>
-                </Route>
+                    <Route exact path = "/plataforma/diccionario" >
+                        <Plataforma />
+                        <div>
+                            <Diccionario />
+                        </div>
+                    </Route>
 
-                <Route exact path = "/plataforma/buscar" >
-                    <Plataforma />
-                    <div>
-                        <Buscar />
-                    </div>
-                </Route>
+                    <Route exact path = "/plataforma/diagrama" >
+                        <Plataforma />
+                        <div>
+                            <Diagrama />
+                        </div>
+                    </Route>
 
-                <Route exact path = "/plataforma/administrarusuarios" >
-                    <Plataforma />
-                    <div>
-                        <AdministrarUsuarios />
-                    </div>
-                </Route>
+                    <Route exact path = "/plataforma/buscar" >
+                        <Plataforma />
+                        <div>
+                            <Buscar />
+                        </div>
+                    </Route>
 
-                <Route exact path = "/verperfil" >
-                    <VerPerfil />
-                </Route>
+                    <Route exact path = "/plataforma/administrarusuarios" >
+                        <Plataforma />
+                        <div>
+                            <AdministrarUsuarios />
+                        </div>
+                    </Route>
 
-                <Route exact path = "/seleccionadministrador" >
-                    <SeleccionAdministrador />
-                </Route>
+                    <Route exact path = "/verperfil" >
+                        <VerPerfil />
+                    </Route>
+
+                    <Route exact path = "/seleccionadministrador" >
+                        <SeleccionAdministrador />
+                    </Route>
+
+                </UserContext.Provider>
 
             </Switch>
             

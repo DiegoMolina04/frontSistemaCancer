@@ -1,0 +1,121 @@
+/*Caja superior barra busqueda y desplegable categoria*/
+#busqueda{
+    
+    /*border: 5px solid #E4AC34;*/
+    padding: 10px;
+    /*margin-right: 50px;*/
+    /*width: 50rem;*/
+    display: inline;
+    /*padding: 10px;*/
+    /*margin-left: 48rem;*/
+    /*float: right;*/
+    /*margin-right: 30rem;*/
+    /*border: 5px solid green;*/
+    /*margin-left: 40%;*/
+    /*margin-right: 10%;*/
+}
+
+/*Propiedades del desplegable select categoria en el menu superior*/
+#busqueda select{
+    /*width: 13rem;/*8rem*/
+    width: fit-content;
+    max-width: 94%;
+    height: 37px;
+    /*margin-bottom: 5px;*/
+    /*background: transparent;*/
+    background-color: #eff2f5;
+    color: #000;
+    /*color: white;*/
+    /*border-color: rgba(62, 138, 62, 0.589);*/
+    /*border-color: #ffc107;*/
+
+    /*border-color: transparent #138a70 transparent #E4AC34;*/
+    border-color: #212844 ;
+
+    font-family: 'Noto Sans Display', sans-serif;
+    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
+
+}
+
+/*Propiedad hover del desplegable select categoria en el menu superior*/
+#busqueda select:hover{
+
+    /*background-color: #ffc107;*/
+
+    background-color: #E4AC34;
+    transition:all .2s ease-out;
+    color: white;
+    
+    
+
+}
+
+
+/*Propiedad del desplegable select categoria para mostrar en linea*/
+#busqueda .form-select{
+    display: inline;
+}
+
+/*Propiedades del input categoria en el menu superior*/
+#busqueda input{
+
+    display: inline;
+    width: 14rem;
+    /*border: 2px solid red;*/
+    height: 37px;
+    /*background: transparent;*/
+    background-color: #eff2f5;
+    margin-top: 5px;
+    /*margin: 1px 0 0 0;*/
+    color: #000;
+    /*color: white;*/
+    /*border-color: #ffc107 #ffc107 #ffc107 transparent;*/
+
+    border-color: transparent #212844  transparent #212844 ;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    
+    /*border-color: #ffc107;*/
+    font-family: 'Noto Sans Display', sans-serif;
+    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
+}
+
+/*Propiedades del input categoria en el menu superior*/
+#busqueda input:focus{
+    /*border-color: #ffc107 #ffc107 #ffc107 transparent;*/
+    /*border-color: #ffc107!important;*/
+    /*border-color: #ffc107;*/
+    font-family: 'Noto Sans Display', sans-serif;
+    box-shadow: none!important; /*Quita la sombra verde alrededor del botón*/
+    color: #000;
+}
+
+/*Propiedad del input para cambiar color del placeholder*/
+#busqueda input::placeholder{
+    
+    color: #565758;
+    font-style: italic;
+}
+
+/*Propiedades del botón enviar para buscar palabra*/
+#busqueda #enviarBuscar-Plataforma{
+    height: 37px;
+    margin-bottom: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #eff2f5;
+    color: #000;
+    border-color: #212844 ;
+}
+
+/*Propiedad hover del botón enviar para buscar palabra*/
+#busqueda #enviarBuscar-Plataforma:hover{
+    background-color: #E4AC34;
+    color: white;
+}
+
+/*Propiedad focus del botón enviar para buscar palabra*/
+#busqueda #enviarBuscar-Plataforma:focus{
+    box-shadow: none;
+}

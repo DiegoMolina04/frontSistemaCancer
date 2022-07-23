@@ -25,6 +25,9 @@
     display: inline;
     float: left;
     width: 10rem;
+    max-width: 30%;
+    /*min-width: 10rem;
+    max-width: 10%;*/
     min-height: 100vh;
     /*background-color: #9a0526;*/
     /*background-color: #9c7079;*/
@@ -51,6 +54,9 @@
 
     /*float: right;
     width: 89.35rem;*/
+    /*overflow-x: scroll;*/
+
+    /*overflow: auto;*/
 
     /*box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
     /*background-color: #282c34;*/
@@ -58,6 +64,7 @@
     /*background-color: #cd0c36;*/
     background-color: #212844 ;
     box-shadow: 5px 2px 5px;
+    
 
 }
 
@@ -114,8 +121,9 @@
 /*Tamaño logo*/
 #imagen #logo{
 
-    width: 8rem;
+    /*width: 8rem;*/
     height: 1.5rem;
+    max-width: 100%;
 }
 
 
@@ -135,6 +143,7 @@
     /*margin-left: 30%;*/
     /*margin-right: 15px;*/
     display: inline;
+    z-index: 1000px;
 }
 
 /*Propiedades de los botones inicio y perfil en el menu superior*/
@@ -295,124 +304,6 @@
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
 
-/*Caja superior barra busqueda y desplegable categoria*/
-#busqueda{
-    
-    /*border: 5px solid darkorchid;*/
-    /*margin-right: 50px;*/
-    /*width: 50rem;*/
-    display: inline;
-    /*padding: 10px;*/
-    /*margin-left: 48rem;*/
-    /*float: right;*/
-    /*margin-right: 30rem;*/
-    /*border: 5px solid green;*/
-    /*margin-left: 40%;*/
-    /*margin-right: 10%;*/
-}
-
-/*Propiedades del desplegable select categoria en el menu superior*/
-#busqueda select{
-    width: 13rem;/*8rem*/
-    height: 37px;
-    margin-bottom: 5px;
-    /*background: transparent;*/
-    background-color: #eff2f5;
-    color: #000;
-    /*color: white;*/
-    /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #ffc107;*/
-
-    /*border-color: transparent #138a70 transparent #E4AC34;*/
-    border-color: #212844 ;
-
-    font-family: 'Noto Sans Display', sans-serif;
-    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
-
-}
-
-/*Propiedad hover del desplegable select categoria en el menu superior*/
-#busqueda select:hover{
-
-    /*background-color: #ffc107;*/
-
-    background-color: #E4AC34;
-    transition:all .2s ease-out;
-    color: white;
-    
-    
-
-}
-
-
-/*Propiedad del desplegable select categoria para mostrar en linea*/
-#busqueda .form-select{
-    display: inline;
-}
-
-/*Propiedades del input categoria en el menu superior*/
-#busqueda input{
-
-    display: inline;
-    width: 14rem;
-    /*border: 2px solid red;*/
-    height: 37px;
-    /*background: transparent;*/
-    background-color: #eff2f5;
-    margin-top: 5px;
-    /*margin: 1px 0 0 0;*/
-    color: #000;
-    /*color: white;*/
-    /*border-color: #ffc107 #ffc107 #ffc107 transparent;*/
-
-    border-color: transparent #212844  transparent #212844 ;
-
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    
-    /*border-color: #ffc107;*/
-    font-family: 'Noto Sans Display', sans-serif;
-    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
-}
-
-/*Propiedades del input categoria en el menu superior*/
-#busqueda input:focus{
-    /*border-color: #ffc107 #ffc107 #ffc107 transparent;*/
-    /*border-color: #ffc107!important;*/
-    /*border-color: #ffc107;*/
-    font-family: 'Noto Sans Display', sans-serif;
-    box-shadow: none!important; /*Quita la sombra verde alrededor del botón*/
-    color: #000;
-}
-
-/*Propiedad del input para cambiar color del placeholder*/
-#busqueda input::placeholder{
-    
-    color: #565758;
-    font-style: italic;
-}
-
-/*Propiedades del botón enviar para buscar palabra*/
-#busqueda #enviarBuscar-Plataforma{
-    height: 37px;
-    margin-bottom: 5px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    background-color: #eff2f5;
-    color: #000;
-    border-color: #212844 ;
-}
-
-/*Propiedad hover del botón enviar para buscar palabra*/
-#busqueda #enviarBuscar-Plataforma:hover{
-    background-color: #E4AC34;
-    color: white;
-}
-
-/*Propiedad focus del botón enviar para buscar palabra*/
-#busqueda #enviarBuscar-Plataforma:focus{
-    box-shadow: none;
-}
 
 /*Propiedades del icono del modal Cambiar contraseña*/
 .modal #modalLabelAgregarAdministrarUsuarios-AdministrarUsuarios i{
@@ -487,5 +378,8 @@
     color: white;
 }
 
+#botonesSuperior #expandiblePerfil::selection{
 
+    z-index: 99px;
+}
 

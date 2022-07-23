@@ -7,10 +7,8 @@ import { Link } from "react-router-dom";
 function CrearContraseña() {
 
     const [datos, setDatos] = useState({
-        nombre:'',
-        email:'',
-        contraseña:'',
-        es_admin: false
+
+        contraseña:''
     })
     {/*,
     es_admin: ''*/}
@@ -37,7 +35,7 @@ function CrearContraseña() {
     const enviarDatos = (event) => {
        
           event.preventDefault()
-            fetch("https://abea-186-29-180-157.ngrok.io/v1/users/create-one",{
+            fetch("https://secure-brushlands-86892.herokuapp.com/v1/users/:email/update-one",{
               method:"POST",
               mode:"cors",
               headers:{
@@ -79,7 +77,6 @@ function CrearContraseña() {
 
                 </div>
 
-                
                 {/*Linea debajo del logo*/}
                 <hr id="linea-CrearContraseña"/>
                 
@@ -110,6 +107,7 @@ function CrearContraseña() {
                     </div>
 
                     <br />
+
 
                     {/*Sección Botones Enviar y Regresar*/}
                     <div id="cajaBotones-AgregarCuenta">

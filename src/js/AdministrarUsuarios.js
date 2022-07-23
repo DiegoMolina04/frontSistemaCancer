@@ -10,9 +10,31 @@ function AdministrarUsuarios() {
 
             <div id="cabeceraAdministrarUsuariossBoton-AdministrarUsuarios">
 
-                <div id="cajaLabelAdministrarUsuarioss-AdministrarUsuarios">
-                    <label>Administrar Usuarios</label>
+                <div id="busqueda">
+
+                    <select class="form-select" title="Seleccione categoria para buscar palabra" >
+                    
+                    <option selected >Seleccione Categoria...</option> {/*disabled*/}
+                    <option value="1">Sintoma</option>
+                    <option value="2">Diccionario</option>
+                    <option value="3">Usuario</option>
+
+                    </select>
+
+                    {/*<input type="text" placeholder="¿Busca algo puntual?" title="Ingrese la palabra a buscar"/>*/}
+                    <input id="usuario" type="text" className="form-control" placeholder="¿Busca algo puntual?" title="Ingrese la palabra a buscar"/>
+
+                    <Link to='/plataforma/buscar'>
+                    <button id="enviarBuscar-Plataforma" type="button" className="btn btn-success" title="Buscar" >
+                    <i class="fas fa-search"></i>
+                    </button>
+                    </Link>
+
                 </div>
+
+                {/*<div id="cajaLabelAdministrarUsuarioss-AdministrarUsuarios">
+                    <label>Administrar Usuarios</label>
+                </div>*/}
                 
 
                 <div id="cajaAgregarAdministrarUsuarios-AdministrarUsuarios">
@@ -28,87 +50,7 @@ function AdministrarUsuarios() {
                          Agregar Usuario
                     </button>
                     </Link>
-
-                    {/*Modal para el botón de Agregar AdministrarUsuarios*/}
-
-                    <div class="modal fade" id="modalAgregarAdministrarUsuarios-AdministrarUsuarios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-
-                                <div class="modal-header">
-
-
-                                    <h5 class="modal-title" id="modalLabelAgregarAdministrarUsuarios-AdministrarUsuarios">
-
-                                        <i class="fas fa-plus-circle"></i>
-                                        <label >Agregar Nuevo Usuario</label>
-
-                                    </h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" title="Regresa a administrar usuarios"></button>
-                                </div>
-
-                                <div class="modal-body">
-
-                                    {/*Sección AdministrarUsuarios*/}
-
-                                    <div id="labelAdministrarUsuariosAgregarAdministrarUsuarios-AdministrarUsuarios">
-
-                                        <label>Nombre Usuario</label>
-
-                                    </div>
-                                    
-                                    <div className="input-group">
-                                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div>
-                                        <input id="" type="text" className="form-control" placeholder="Ingrese el nombre de usuario completo" title="Nuevo usuario" />
-                                    </div>
-
-                                    <br />
-
-                                    {/*Sección Descripción*/}
-
-                                    <div id="labelcorreoAgregarAdministrarUsuarios-AdministrarUsuarios">
-                                        <label>Correo</label>
-                                    </div>
-                                    
-                                    <div className="input-group">
-                                        
-                                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-envelope"></i></div>
-                                        
-                                        <input id="" type="email" className="form-control" placeholder="Ingrese el correo" title="Nuevo correo" />
-                                        
-                                        
-                                    </div>
-
-                                    <br />
-
-                                    <label id="tipoCuenta-AgregarCuenta">Tipo de cuenta</label>
-
-                                    <div id="cajaRadioButtons-AgregarCuenta">
-                                
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButtonAdministrador-AdministrarUsuarios" value="true" title="Cuenta para administrador"/>
-                                            <p id="pAdministrador-AdministrarUsuarios" for="inlineRadio1">Administrador</p>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButtonAdministrador-AdministrarUsuarios" value="option2" title="Cuenta para usuario"/>
-                                            <p id="pUsuario-AdministrarUsuarios" for="inlineRadio2">Usuario</p>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <div class="modal-footer">
-
-                                  <button type="button" id="botonModalCancelar-AdministrarUsuarios" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresar a administrar usuarios">Cancelar</button>
-                                  <button type="button" id="botonModalModificar-AdministrarUsuarios" class="btn btn-primary" title="Agregar termino">Agregar</button>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     
-
                 </div>
 
             </div>
