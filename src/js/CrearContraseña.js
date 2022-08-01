@@ -1,68 +1,110 @@
 import '../css/CrearContraseña.css';
 import '../css/fontawesome-free-5.15.4-web/css/all.css'
 import logoCrearContraseña from '../image/logo.png'
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useState, useContext} from 'react';
 import { Link } from "react-router-dom";
+import { UserContext } from "../context/UserContext.js";
+import { Redirect } from "react-router-dom";
 
 function CrearContraseña() {
-
+    
     const [datos, setDatos] = useState({
 
         contraseña:''
     })
-    {/*,
-    es_admin: ''*/}
     
     const handleInputChange = (event) => {
-          //console.log(event.target.name)
-          //console.log(event.target.value)
+          /*console.log(event.target.name)
+          console.log(event.target.value)*/
           setDatos({
               ...datos,
               [event.target.name] : event.target.value
         })
     }
-
-    const handleRadioChange = (event) => {
-        
-        const es_admin = event.currentTarget.value === 'true' ? true: false;
-
-        setDatos({
-            ...datos,
-            es_admin
-      })
-  }
     
-    const enviarDatos = (event) => {
-       
-          event.preventDefault()
-            fetch("https://secure-brushlands-86892.herokuapp.com/v1/users/:email/update-one",{
-              method:"POST",
-              mode:"cors",
-              headers:{
-                
-                "Content-Type":"application/json"
-              },
-              body: JSON.stringify(datos)
-          })
-          console.log(JSON.stringify(datos))
+    /*Contextos para globalizar respuesta de servidor, consultar correo para crear contraseña y reutilizar 
+    contexto token (sin realizar acciones referentes a este) para darle un estado a la pagina*/
 
+    const {respuestaServidor, setRespuestaServidor} = useContext(UserContext);
+    const {correo, setCorreo} = useContext(UserContext);
+    const {token, setToken} = useContext(UserContext);
+
+    /*Se inicia componente para mostrar mensajes correspondientes a errores*/
+    let componenteMostrarMensaje = <h5></h5>
+
+    const enviarDatos = async(event) => {
+        
+        event.preventDefault();
+        
+        if (datos.contraseña == datos.Recontraseña && datos.contraseña != "" && datos.Recontraseña != ""){
+            
+            const url = "https://secure-brushlands-86892.herokuapp.com/v1/users/"+correo+"/update-one";
+            
+            const data = await fetch(url,{
+                method:"PUT",
+                mode:"cors",
+                headers:{
+                    
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify(datos)
+            })
+            /*console.log(JSON.stringify(datos));*/
+            
+            /*console.log("Creado correctamente");
+            
+            console.log("El correo es "+correo);*/
+            
+            const respuesta = await data.json();
+            /*setCorreo();*/
+            setRespuestaServidor(respuesta);
+            setRespuestaServidor(respuesta);
+            setToken("Correcto");
+            /*console.log(respuestaServidor);*/
+            /*console.log("Esta es la respuesta "+JSON.stringify(respuestaServidor, null, 2));*/
+            
+
+        }else if(datos.contraseña == "" || datos.Recontraseña == ""){ /*Se verifica que no existan campos vacios*/
+            
+            setToken("Campos vacios");
+            /*console.log(respuestaServidor);*/
+            
+
+        }else{ /*Si las contraseñas son distintas*/
+
+            /*console.log("Entre");*/
+            /*setRespuestaServidor("Incorrecto");*/
+            setToken("Incorrecto");
+
+            /*console.log(respuestaServidor);*/
+            
+        }
+        
     }
-    {/* const enviarDatos = async(event) => {
-       
-          event.preventDefault()
-          await fetch("http://4104-186-154-36-85.ngrok.io/user",{
-              method:"POST",
-              mode:"no-cors",
-              headers:{
-                "Access-Control-Allow-Origin":"http://localhost:3000",
-                "Access-Control-Allow-Methods": "POST",
-                "Content-Type":"application/"
-              },
-              body: JSON.stringify(datos)
-          })
-          console.log(JSON.stringify(datos))
 
-    } */}
+    switch (token){
+        
+        case "Campos vacios":
+            componenteMostrarMensaje = <h5>Por favor llene todos los campos.</h5>
+        break;
+        
+        case "Incorrecto":
+            componenteMostrarMensaje = <h5>Los campos no son iguales, verifique información.</h5>
+        break;
+
+        case "Correcto":
+            /*setRespuestaServidor(200);*/
+            /*console.log("Esta es la respuesta "+JSON.stringify(respuestaServidor.status, null, 2));*/
+            return <Redirect to="/login" />
+        break;
+
+        /*404 intentar actualizar con correo que no existe
+        400 falla algo en la base de datos        
+        */
+    }
+
+    /*console.log("Desde crear contraseña "+correo);*/
+    
     return ( 
 
         <div id="fondo-CrearContraseña">
@@ -85,6 +127,9 @@ function CrearContraseña() {
                 </div>
 
                 <br />
+
+                {componenteMostrarMensaje}
+
                 {/*Contenedor de todo el formulario*/}
                 <form className="row" onSubmit={enviarDatos}>
 
@@ -122,9 +167,11 @@ function CrearContraseña() {
                         </div>
                         
                         <div id="cajaEnviar-AgregarCuenta">
-                            <Link to='/plataforma/diagnosticar'>
+                            
+                            {/*<Link to='/plataforma/diagnosticar'></Link>*/}
+
                             <button id="botonEnviar-AgregarCuenta" type="submit" class="btn btn-primary" title="Crear nuevo usuario">Enviar</button>
-                            </Link>
+                            
                         </div>
                         
 

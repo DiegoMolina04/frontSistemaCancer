@@ -17,8 +17,19 @@ import { useMemo, useState } from "react";
 
 function App(){
 
-    const [user, setUser] = useState(null);
-    const value = useMemo(() => ({user, setUser}), [user, setUser]);
+    const [correo, setCorreo] = useState("");
+    const email = useMemo(() => ({correo, setCorreo}), [correo, setCorreo]);
+
+    const [token, setToken] = useState("");
+    const mostrarToken = useMemo(() => ({token, setToken}), [token, setToken]);
+
+    const [es_admin, setEs_admin] = useState("");
+    const mostrarEs_admin = useMemo(() => ({es_admin, setEs_admin}), [es_admin, setEs_admin]);
+
+    const [respuestaServidor, setRespuestaServidor] = useState("");
+    const value = useMemo(() => ({respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin}), [respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin]);
+
+    
 
     return (
         
@@ -31,6 +42,7 @@ function App(){
 
                     <Route exact path = "/login" >
                         <Login />
+                        
                     </Route>
 
                     <Route exact path = "/agregarusuario" >

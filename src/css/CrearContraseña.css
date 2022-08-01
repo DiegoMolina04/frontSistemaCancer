@@ -45,6 +45,13 @@
     margin: 2rem 0 2rem 0;
 }
 
+/*Mensajes informativos para el usuario*/
+#caja-CrearContraseña h5{
+    font-family: 'Noto Sans Display', sans-serif;
+    /*color: red;*/
+    font-style: italic;
+}
+
 /*Caja texto Nuevo Usuario*/
 #caja-CrearContraseña #cajaNuevoUsuario-CrearContraseña{
     /*border: 2px solid skyblue;*/

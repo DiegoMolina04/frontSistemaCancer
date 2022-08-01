@@ -51,6 +51,13 @@ html,body{
     font-family: 'Noto Sans Display', sans-serif;
 }
 
+/*Mensajes de error para usuario*/
+#caja h6{
+    font-family: 'Noto Sans Display', sans-serif;
+    /*color: red;*/
+    font-style: italic;
+}
+
 /*Inputs de usuario y contraseña*/
 #usuario, #contraseña{
     /*width: 18rem;
@@ -94,7 +101,8 @@ html,body{
 }
 
 /*Botón enviar*/
-#cajaBoton .btn{
+#cajaBoton #btnEnviar{
+    
     margin-top: 2rem;
     background: transparent;
     color: #000;
@@ -106,12 +114,36 @@ html,body{
 }
 
 /*Propiedad hover sobre el botón enviar*/
-#cajaBoton .btn:hover{
+#cajaBoton #btnEnviar:hover{
     /*background-color: rgba(62, 138, 62, 0.589);*/
     border-color: #ffc107;
     background-color: #ffc107;
     color: white;
     font-weight: bolder;
+}
+
+/*Botón regresar*/
+#cajaBoton #btnRegresar{
+    margin-top: 2rem;
+    margin-right: 10%;
+    background: transparent;
+    color: #000;
+    /*border-color: rgba(62, 138, 62, 0.589);*/
+    /*border-color: #ffc107;*/
+    font-family: 'Noto Sans Display', sans-serif;
+    width: 6rem;
+    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
+    border-color: #6c757d;
+}
+
+/*Propiedad hover sobre el botón regresar*/
+#cajaBoton #btnRegresar:hover{
+    /*background-color: rgba(62, 138, 62, 0.589);*/
+    /*border-color: #ffc107;*/
+    background-color: #6c757d;
+    color: white;
+    font-weight: bolder;
+    
 }
 
 /*Linea debajo del logo*/
