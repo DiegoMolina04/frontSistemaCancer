@@ -45,8 +45,8 @@ function App(){
                         
                     </Route>
 
-                    <Route exact path = "/agregarusuario" >
-                        <AgregarUsuario />
+                    <Route exact path = "/agregarusuario" render={() => token && es_admin ? <AgregarUsuario />: <Login />}>
+                        
                     </Route>
 
                     <Route exact path = "/crearcontraseña" >
@@ -57,11 +57,23 @@ function App(){
                         <Plataforma />
                     </Route>
 
-                    <Route exact path = "/plataforma/diagnosticar" >
+                    {/*<Route exact path = "/plataforma/diagnosticar" >
                         <Plataforma />
                         <div>
                             <Diagnosticar />
                         </div>
+                    </Route>*/}
+
+                    <Route exact path = "/plataforma/diagnosticar" render={() => token ? /*Si tiene token redirecciona a la pagina deseada*/
+                        <div>
+                            <Plataforma />
+                                <div>
+                                    <Diagnosticar />
+                                </div>
+                        </div>
+                        : <Login /> /*Si no, redirecciona al Login*/
+                        }> 
+                        
                     </Route>
 
                     <Route exact path = "/plataforma/reglas" >

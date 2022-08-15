@@ -13,7 +13,8 @@
 
     /*border: 2px solid blue;*/
     border: 1px solid #000;
-    width: 50%;
+    /*width: 50%;*/
+    max-width: 500px;
     margin-top: 8%;
     margin-left: auto;
     margin-right: auto;
@@ -39,7 +40,7 @@
     
     /*height: 13rem;*/
     
-    height: 5rem;
+    height: 4rem;
     margin: 2rem 0 2rem 0;
 }
 
@@ -49,6 +50,14 @@
     margin-top: 10px;
     text-align: center;
 }
+
+/*Texto informativo para el usuario en caso de error*/
+#caja-AgregarUsuario h5{
+    font-family: 'Noto Sans Display', sans-serif;
+    /*color: red;*/
+    font-style: italic;
+}
+
 
 /*Label Nuevo registro*/
 #cajaNuevoUsuario-AgregarUsuario #labelNuevoUsuario-AgregarUsuario{

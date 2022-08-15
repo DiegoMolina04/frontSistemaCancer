@@ -2,15 +2,29 @@
 #busqueda{
     
     /*border: 5px solid #E4AC34;*/
-    padding: 10px;
+    
+    /*padding: 10px;*/
+    /*border: 2px solid green;*/
     /*margin-right: 50px;*/
     /*width: 50rem;*/
-    display: inline;
+
+    /*display: inline;*/
+
+    /*width: 40%;*/
+
+    width: fit-content;
+
+    display: inline-table;
+    
+    margin: 0% 10% 0% 3%;
+    /*align-items: flex-end;*/
+    /*display: inline-block;*/
+    
     /*padding: 10px;*/
     /*margin-left: 48rem;*/
     /*float: right;*/
     /*margin-right: 30rem;*/
-    /*border: 5px solid green;*/
+    
     /*margin-left: 40%;*/
     /*margin-right: 10%;*/
 }
@@ -71,7 +85,9 @@
     /*color: white;*/
     /*border-color: #ffc107 #ffc107 #ffc107 transparent;*/
 
-    border-color: transparent #212844  transparent #212844 ;
+    /*border-color: transparent #212844  transparent #212844 ;*/
+
+    border-color: #212844;
 
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;

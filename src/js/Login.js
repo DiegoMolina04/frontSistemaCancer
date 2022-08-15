@@ -69,6 +69,7 @@ const consultarUsuario = async(event) => {
           headers:{
             
             "Content-Type":"application/json"
+            
           },
           body: JSON.stringify(datos)
       })

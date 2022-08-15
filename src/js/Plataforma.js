@@ -3,14 +3,26 @@ import '../css/Plataforma.css';
 import '../css/Filtro.css';
 import '../css/fontawesome-free-5.15.4-web/css/all.css';
 import logo from '../image/logo.png';
-
-
-
+import { UserContext } from "../context/UserContext.js";
+import React, {Fragment, useState, useContext} from 'react';
 import { Link } from "react-router-dom";
 
 function Plataforma() {
 
+  const {es_admin, setEs_admin} = useContext(UserContext); //Se verifica si se debe o no mostrar botón administrar usuarios
   
+  let componenteAdministrarUsuarios = null;
+
+  setEs_admin(true); //Provisional para pruebas
+
+  if(es_admin == true){
+    componenteAdministrarUsuarios = <Link to="/plataforma/administrarusuarios" >
+    <button id="agregarUsuario" type="button" className="btn btn-success" title="Agregar un nuevo usuario" >
+      <i className="fas fa-user"></i>
+      Administrar Usuarios
+    </button>
+    </Link>
+  }
     
   return (
     
@@ -94,12 +106,7 @@ function Plataforma() {
         <div id="botonesSuperior" className="btn-group" role="group" >
 
           {/*Botón para agregar nuevo usuario*/}
-          <Link to="/plataforma/administrarusuarios" >
-          <button id="agregarUsuario" type="button" className="btn btn-success" title="Agregar un nuevo usuario" >
-            <i className="fas fa-user"></i>
-            Administrar Usuarios
-          </button>
-          </Link>
+          {componenteAdministrarUsuarios}
 
           <Link to='/plataforma/diagnosticar' >
           <button id="inicio" type="button" className="btn btn-success" title="Regresar a la pagina de inicio" >

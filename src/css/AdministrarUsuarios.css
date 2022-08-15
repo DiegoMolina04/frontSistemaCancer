@@ -7,7 +7,7 @@
 }
 
 /*Propiedades caja contenedora de cabecera AdministrarUsuarioss y Boton*/
-#cabeceraAdministrarUsuariossBoton-AdministrarUsuarios{
+#cabeceraAdministrarUsuarios-AdministrarUsuarios{
 
     /*border: 5px solid aqua;*/
     /*margin-top: 2px;*/
@@ -19,11 +19,27 @@
     overflow: auto;
 }
 
+/*Caja contenedora de la palabra Administrar Usuarios*/
+#cabeceraAdministrarUsuarios-AdministrarUsuarios #cajaNombreOpcion-AdministrarUsuarios{
+    /*border: 2px solid tomato;*/
+    display: inline-table;
+    width: fit-content;
+    /*margin-right: 3%;*/
+}
+
+/*Palabra Administrar Usuarios*/
+#cabeceraAdministrarUsuarios-AdministrarUsuarios #cajaNombreOpcion-AdministrarUsuarios p{
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 130%;
+    padding: 5px 0px 0px 10px;
+}
+
 /*Propiedades caja contenedora de AdministrarUsuarioss*/
 #cajaLabelAdministrarUsuarioss-AdministrarUsuarios{
     /*border: 2px solid salmon;*/
     /*margin-top: 15px;*/
     /*margin-top: 0px;*/
+    display: inline-table;
     width: 40%;
     float: left;
     
@@ -38,14 +54,20 @@
 }
 
 /*Propiedades de la caja botón agregar termino*/
-#cabeceraAdministrarUsuariossBoton-AdministrarUsuarios #cajaAgregarAdministrarUsuarios-AdministrarUsuarios{
+#cabeceraAdministrarUsuarios-AdministrarUsuarios #cajaAgregarAdministrarUsuarios-AdministrarUsuarios{
 
-    border: 2px solid darkorchid;
+    /*border: 2px solid darkorchid;*/
     
     /*margin-top: 2px;*/
-    
-    width: 30%;
-    display: inline;
+    /*width: fit-content;*/
+    width: fit-content;
+    /*display: inline-block;*/
+
+    float: right;
+    margin: 5px 5px 0px 0px;
+    /*text-align: right;*/
+    /*display: inline;*/
+    /*display: inline;*/
     
 }
 
@@ -90,16 +112,18 @@
 }
 
 /*Propiedades de la caja contenedora de la tabla*/
-#cajaTabla-AdministrarUsuarios{
+form #cajaTabla-AdministrarUsuarios{
     /*border: 2px solid burlywood;*/
-    height: 80%;
     width: 50%;
+    height: 20rem !important;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    overflow-x: scroll;
-    overflow-y: scroll;
+    /*overflow-x: scroll;
+    overflow-y: scroll;*/
+    overflow: auto;
     box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+    /*background-color: #c00303;*/
 }
 
 /*Propiedades de toda la tabla en general*/
@@ -107,14 +131,80 @@
     
     font-family: 'Noto Sans Display', sans-serif;
     background-color: #eff2f5;
+    /*background-color: #2a5077;*/
+    
+}
+
+/*Propiedades de la cabecera que contiene los mensajes para el usuario y el botón recargar*/
+#cajaCabecera-AdministrarUsuarios{
+    /*border: 2px solid burlywood;*/
+    overflow: auto;
+    /*text-align: right;*/
+}
+
+/*Propiedades caja del mensaje respuesta*/
+#cajaCabecera-AdministrarUsuarios #cajaMensajeRespuesta-AdministrarUsuario{
+    /*border: 2px solid chocolate;*/
+    /*display: inline-block;*/
+    /*display: inline-block;*/
+    float: left;
+    width: 80%;
+    /*width: fit-content;*/
+    height: 3rem;
+}
+
+/*Propiedades del mensaje respuesta*/
+#cajaMensajeRespuesta-AdministrarUsuario #mensajeRespuesta-AdministrarUsuario{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+/*Propiedades caja del boton recargar*/
+#cajaCabecera-AdministrarUsuarios #cajaBotonRecargar-AdministrarUsuario{
+    /*border: 2px solid blueviolet;*/
+    /*display: inline-block;*/
+    /*display: inline-block;*/
+    float: right;
+    width: 20%;
+    /*width: fit-content;*/
+    height: 3rem;
+    text-align: right;
+    /*margin-left: 5px;*/
+}
+
+/*Propiedades del botón recargar en la tabla*/
+#cajaBotonRecargar-AdministrarUsuario #botonRecargar-AdministrarUsuario{
+    margin-top: 5px;
+    background-color: #eff2f5;
+    /*padding-top: 2px;*/
+    color: #000;
+    border-color: #000;
+    margin-right: 10px;
+}
+
+/*Propiedad hover del botón recargar en la tabla*/
+#cajaBotonRecargar-AdministrarUsuario #botonRecargar-AdministrarUsuario:hover{
+    
+    background-color: #E4AC34;
+    border-color: #E4AC34;
+    color: white;
+    /*border-color: transparent;*/
+    
+}
+
+/*Propiedad focus del botón recargar en la tabla*/
+#cajaBotonRecargar-AdministrarUsuario #botonRecargar-AdministrarUsuario:focus{
+    
+    box-shadow: none;
     
 }
 
 /*Propiedades de la columna ID en la cabecera*/
-#idTablaCabecera-AdministrarUsuarios{
+#cedulaTablaCabecera-AdministrarUsuarios{
     /*background-color: red;*/
-    width: 10%;
     text-align: center;
+    width: 10%;
 }
 
 /*Propiedades de la columna nombreUsuario en la cabecera*/
@@ -146,9 +236,10 @@
     text-align: center;
 }
 
-/*Propiedades de la fila ID*/
-#idTablaFila-AdministrarUsuarios{
+/*Propiedades de la fila Cedula*/
+#cedulaTablaFila-AdministrarUsuarios{
     text-align: center;
+    font-weight: lighter;
 }
 
 /*Propiedades de la fila nombreUsuario*/
@@ -290,7 +381,7 @@
 /*Propiedades de los label AdministrarUsuarios y Correo en el modal de Modificar termino*/
 #modalModificar-AdministrarUsuarios .modal-body label{
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
@@ -338,7 +429,8 @@
 /*Propiedades de las cajas del label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
 #modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelAdministrarUsuariosAgregarAdministrarUsuarios-AdministrarUsuarios,
 #modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelcorreoAgregarAdministrarUsuarios-AdministrarUsuarios,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelCedulaAgregarAdministrarUsuarios-AdministrarUsuarios
 {
     text-align: left;
 }
@@ -346,7 +438,8 @@
 /*Propiedades de los label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
 #modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelAdministrarUsuariosAgregarAdministrarUsuarios-AdministrarUsuarios label,
 #modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelcorreoAgregarAdministrarUsuarios-AdministrarUsuarios label,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelCedulaAgregarAdministrarUsuarios-AdministrarUsuarios label
 {
     font-size: 17px;
     font-weight: 700;
