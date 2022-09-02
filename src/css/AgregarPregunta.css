@@ -1,0 +1,272 @@
+/*Color de fondo para vista agregar usuario*/
+#fondo-AgregarPregunta{
+    /*height: 100vh;*/ /*vh (viewport-height) = Altura de la ventana gráfica.*/
+    height: fit-content;
+    width: 100%;
+    border: 0.01px solid #212844; /*Despliega borde en toda la pantalla*/
+    background-color: #212844; /*9a0526*/
+}
+
+/*Caja contenedora de agregar usuario*/
+#caja-AgregarPregunta{
+
+    /*border: 2px solid blue;*/
+    border: 1px solid #000;
+    /*width: 50%;*/
+    max-width: 500px;
+    margin-top: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    height: fit-content;
+    padding: 2rem;
+    border-radius: 7px;
+    background-color: #eff2f5;
+    box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+    
+}
+
+/*Caja de la imagen del logo*/
+#cajaLogo-AgregarPregunta{
+
+    /*border: 2px solid brown;*/
+    text-align: center;
+
+}
+
+/*Imagen logo*/
+#logo-AgregarPregunta{
+    
+    /*height: 13rem;*/
+    
+    height: 4rem;
+    margin: 2rem 0 2rem 0;
+}
+
+/*Caja texto Nuevo Usuario*/
+#caja-AgregarPregunta #cajaNuevaPregunta-AgregarPregunta{
+    /*border: 2px solid skyblue;*/
+    margin-top: 10px;
+    text-align: center;
+}
+
+/*Texto informativo para el usuario en caso de error*/
+#caja-AgregarPregunta h5{
+    font-family: 'Noto Sans Display', sans-serif;
+    /*color: red;*/
+    font-style: italic;
+    margin-left: 14px;
+}
+
+
+/*Label Nuevo registro*/
+#cajaNuevaPregunta-AgregarPregunta #labelNuevoPregunta-AgregarPregunta{
+
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+
+}
+
+/*Linea debajo del logo*/
+#linea-AgregarPregunta{
+
+    color: #000;
+}
+
+/*Caja contenedora del formulario*/
+#formulario-AgregarPregunta{
+    
+    /*border: 2px solid seagreen;*/
+    padding: 1rem;
+}
+
+/*Todos los label del formulario*/
+#formulario-AgregarPregunta label{
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 20px;
+}
+
+/*Propiedades de los iconos al lado de los input*/
+#formulario-AgregarPregunta .input-group #btnGroupAddon{
+    width: 42px;
+    /*background-color: rgba(62, 138, 62, 0.589);*/
+    background-color: #ffc107;
+    margin-top: 10px;
+    
+}
+
+
+/*Propiedades de los inputs*/
+#formulario-AgregarPregunta .input-group input{
+    margin-top: 10px;
+    
+}
+
+/*Propiedad placeholder de los inputs*/
+#formulario-AgregarPregunta .input-group input::placeholder{
+
+    font-style: italic;
+
+}
+
+/*Propiedad focus de los inputs*/
+#formulario-AgregarPregunta .input-group input:focus{
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+/*Propiedades de la caja contenedora de la tabla en agregar pregunta*/
+#cajaTabla-AgregarPreguntas {
+    border: 1px solid #ced4da;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 15rem;
+}
+
+/*Propiedades de la caja del boton recargar tabla en agregar pregunta*/
+#cajaBotonRecargar-AgregarPreguntas{
+    text-align: right;
+}
+
+/*Propiedades del botón recargar en la tabla modificar*/
+#cajaBotonRecargar-AgregarPreguntas #botonRecargar-AgregarPreguntas {
+    margin-top: 5px;
+    background-color: #eff2f5;
+    /*padding-top: 2px;*/
+    color: #000;
+    border-color: #000;
+    margin-right: 10px;
+}
+
+/*Propiedad hover del botón recargar en la tabla modificar*/
+#cajaBotonRecargar-AgregarPreguntas #botonRecargar-AgregarPreguntas:hover {
+
+    background-color: #E4AC34;
+    border-color: #E4AC34;
+    color: white;
+    /*border-color: transparent;*/
+
+}
+
+/*Propiedad focus del botón recargar en la tabla modificar*/
+#cajaBotonRecargar-AgregarPreguntas #botonRecargar-AgregarPreguntas:focus {
+
+    box-shadow: none;
+
+}
+
+/*Propiedades de ancho de la columna sintomas en modificar pregunta*/
+#sintomaTablaCabecera-AgregarPreguntas{
+    width: 80%;
+}
+
+/*Propiedades de ancho de la columna elegir en modificar pregunta*/
+#seleccionTablaCabecera-AgregarPreguntas{
+    width: 20%;
+}
+
+/*Propiedades de las cabeceras de la tabla agregar pregunta*/
+#tablaSintomas-AgregarPreguntas th{
+    text-align: center;
+    font-weight: 600;
+}
+
+/*Propiedades de la columna que contiene los checkbox en tabla modificar*/
+#tablaSintomas-AgregarPreguntas #columnaCheckbox-AgregarPreguntas {
+
+    text-align: center;
+    
+}
+
+/*Propiedad del checkbox en tabla modificar*/
+#tablaSintomas-AgregarPreguntas td #checkbox-AgregarPreguntas {
+    
+    margin-bottom: 30%;
+}
+
+/*Propiedad checked de la columna que contiene los checkbox en tabla modificar*/
+#tablaSintomas-AgregarPreguntas td #checkbox-AgregarPreguntas:checked {
+
+    background-color: #ffc107;
+    border-color: #ffc107;
+    box-shadow: none;
+}
+
+/*Propiedad focus de la columna que contiene los checkbox en tabla modificar*/
+#tablaSintomas-AgregarPreguntas td #checkbox-AgregarPreguntas:focus {
+
+    box-shadow: none;
+}
+
+/*Caja botones enviar y Regresar*/
+#formulario-AgregarPregunta #cajaBotones-AgregarPregunta{
+    /*border: 3px solid purple;*/
+    margin-top: 30px;
+}
+
+/*Caja contenedora del botón Enviar*/
+#formulario-AgregarPregunta #cajaEnviar-AgregarPregunta{
+    /*border: 3px solid red;*/
+    /*text-align: center;*/
+    text-align: center;
+    /*float: left;*/
+    /*width: 50%;*/
+    /*text-align: right;*/
+    
+}
+
+/*Caja contenedora del botón Regresar*/
+#formulario-AgregarPregunta #cajaRegresar-AgregarPregunta{
+    /*border: 3px solid palevioletred;*/
+    float: left;
+    width: 49%;
+    /*text-align: center;*/
+    text-align: center;
+    /*text-align: left;*/
+    /*margin-left: 30%;*/
+
+}
+
+/*Propiedades de los botones Enviar y Regresar*/
+#cajaEnviar-AgregarPregunta #botonEnviar-AgregarPregunta, #cajaRegresar-AgregarPregunta #botonRegresar-AgregarPregunta{
+    background: transparent;
+    color: #000;
+    /*border-color: rgba(62, 138, 62, 0.589);*/
+    /*border-color: #ffc107;*/
+    font-family: 'Noto Sans Display', sans-serif;
+    width: 6rem;
+    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
+}
+
+/*Propiedad del boton Enviar*/
+#cajaEnviar-AgregarPregunta #botonEnviar-AgregarPregunta{
+    /*margin-right: 20%;*/
+    /*margin-left: 10%;*/
+    border-color: #ffc107;
+}
+
+/*Propiedad del boton Regresar*/
+#cajaRegresar-AgregarPregunta #botonRegresar-AgregarPregunta{
+    /*margin-left: 10%;*/
+    /*margin-right: 2rem;*/
+    border-color: #535353;
+    
+}
+
+/*Propiedad hover sobre boton Enviar*/
+#cajaEnviar-AgregarPregunta #botonEnviar-AgregarPregunta:hover{
+    /*background-color: rgba(62, 138, 62, 0.589);*/
+    border-color: #ffc107 ;
+    background-color: #ffc107 ;
+    color: white;
+    
+}
+
+/*Propiedad hover sobre boton Regresar*/
+#cajaRegresar-AgregarPregunta #botonRegresar-AgregarPregunta:hover{
+    background-color: #535353;
+    border-color: #535353;
+    color: white;
+}
+

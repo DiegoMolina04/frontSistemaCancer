@@ -122,8 +122,11 @@ const consultarUsuario = async(event) => {
         /*Muestra campo contraseña cuando contraseña vacia y verificación de email -> Please verify your credentials*/
         case 400:/*400*/
           
-          setCorreo(datos.email);
-          componenteMostrarMensaje = <h6>Ingrese contraseña</h6>;
+          if(datos.email==""){
+            componenteMostrarMensaje = <h6>Debe ingresar un correo</h6>;
+          }else{
+            setCorreo(datos.email);
+          componenteMostrarMensaje = <h6>Ingrese contraseña valida</h6>;
           /*Se carga componenteCorreo con el correo setteado y sin posibilidad de editar*/
           componenteCorreo= <div className="input-group">
                               <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-user"></i></div>
@@ -138,10 +141,9 @@ const consultarUsuario = async(event) => {
 
           componenteBtnRegresar=<button id="btnRegresar" type="button" class="btn btn-secondary" onClick={estadoInicial} title="Regresar">Regresar</button>
           
-          /*type="reset"*/
-          /*<a title="Regresar" onClick={estadoInicial}>Regresar</a>*/
           
-          /*class="btn btn-secondary"*/
+          }
+
           /*setRespuestaServidor("");*/
           
         break;
@@ -159,7 +161,7 @@ const consultarUsuario = async(event) => {
         /*Email no existe || Campos vacios -> User with provided email dont exist*/ 
         case 404:/*404*/
           
-          if(datos.email==""){ /*Campo email vacio*/
+          if(datos.email===""){ /*Campo email vacio*/
 
             /*console.log("Correo vacio");*/
             componenteMostrarMensaje = <h6>Debe ingresar un correo</h6>;
@@ -174,7 +176,7 @@ const consultarUsuario = async(event) => {
             /*componenteMostrarMensaje = <h6>Ingrese un correo valido</h6>*/
             /*setRespuestaServidor("");*/
           }
-
+          /*setRespuestaServidor("");*/
         break;
         
       }

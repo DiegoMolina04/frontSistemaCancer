@@ -13,7 +13,7 @@ function Plataforma() {
   
   let componenteAdministrarUsuarios = null;
 
-  setEs_admin(true); //Provisional para pruebas
+  //setEs_admin(true); //Provisional para pruebas
 
   if(es_admin == true){
     componenteAdministrarUsuarios = <Link to="/plataforma/administrarusuarios" >
@@ -48,6 +48,13 @@ function Plataforma() {
           <button type="button" className="btn btn-success" title="Iniciar diagnostico del paciente">
             <i class="fas fa-diagnoses"></i>
             Diagnosticar
+          </button>
+          </Link>
+
+          <Link to='/plataforma/preguntas'>
+          <button type="button" className="btn btn-success" title="Ver preguntas de diagnostico">
+            <i class="fas fa-question"></i>
+            Preguntas
           </button>
           </Link>
 
