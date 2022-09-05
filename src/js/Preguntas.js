@@ -1,19 +1,15 @@
 import '../css/Preguntas.css';
 import '../css/fontawesome-free-5.15.4-web/css/all.css'
 import { Link } from "react-router-dom";
-import React, { Fragment, useState, useContext } from 'react';
-import { Redirect } from "react-router-dom";
-/*import { Link } from "react-router-dom";*/
+import React, { useState, useContext } from 'react';
 import { UserContext } from "../context/UserContext.js";
 
 
 function Preguntas() {
 
-    const { respuestaServidor, setRespuestaServidor } = useContext(UserContext);
-    const { token, setToken } = useContext(UserContext);
+    const { respuestaServidor, setRespuestaServidor } = useContext(UserContext); //Se usa para guardar las respuestas del servidor
+    const { token, setToken } = useContext(UserContext); //Se verifica si tiene sesión iniciada
     const { es_admin, setEs_admin } = useContext(UserContext); //Se verifica si se debe o no mostrar componentes para el usuario
-    /*console.log("Renderizado !);*/
-    /*    const userData = [{}]*/
 
     const [preguntas, setPreguntas] = useState([]); //Se guardan todos los usuarios
     const [codigo, setCodigo] = useState(null); //Se guarda identificador si se trata del boton para listar o filtrar
@@ -32,41 +28,21 @@ function Preguntas() {
         symptoms: { "": "" }
     });
 
-    const [rol, setRol] = useState(null);
-
-    /*console.log("El estado ! " + rol);
-    console.log("Contenido del filtro " + JSON.stringify(filtro));*/
-    /*console.log("El sintoma mensaje");
-    console.log(sintomaMensaje);*/
-    /*console.log("El sintoma ID");
-    console.log(sintomaId);
-    console.log("El tamaño de sintoma ID");
-    console.log(sintomaId.length);*/
-    console.log(editarPregunta);
-    /*console.log("Este es el pregunta original");
-    console.log(JSON.stringify(preguntaOriginal.symptoms));*/
-
-    const [id, setId] = useState({
+    const [id, setId] = useState({ //Se usa para guardar el id a modificar
         id: ''
     });
 
-    let componenteListarPreguntas = null;
+    let componenteListarPreguntas = null; //Se usa para cargar la tabla de preguntas
 
-    let componenteListarSintomas = null;
+    let componenteListarSintomas = null; //Se usa para cargar la tabla de sintomas en modificar pregunta
 
-    let componenteAgregarPregunta = null;
+    let componenteAgregarPregunta = null; //Se usa para cargar el botón agrega pregunta si es un admin
 
-    let componenteMensajeTabla = null;
+    let componenteMensajeTabla = null; //Se usa para mostrar el mensaje informativo al usuario
 
-    let componenteFiltro = null;
+    let componenteNombreOpcion = null; //Se usa para mostrar el mensaje de la vista dependiendo si es admin o usuario
 
-    let componenteNombreOpcion = null;
-
-    let componenteCabeceraModificarEliminar = null;
-
-    console.log("El token es " + token);
-
-    /*let componenteMensajeModal = null;*/
+    let componenteCabeceraModificarEliminar = null; //Se usa para cargar la columna de modificar/eliminar si es un admin
 
     /*Se verifica si es admin para mostrar los componentes necesarios de este rol*/
     if (es_admin == true) { /*Si es admin*/
@@ -76,7 +52,7 @@ function Preguntas() {
             ¿Desea agregar una nueva pregunta?
         </label>
             <Link to='/agregarpregunta' >
-                {/* <button id="agregarPregunta-AdministrarPreguntas" type="button" className="btn btn-success" title="Agregar un nuevo usuario" data-bs-toggle="modal" data-bs-target="#modalAgregarAdministrarUsuarios-AdministrarUsuarios"> */}
+
                 <button id="agregarPregunta-AdministrarPreguntas" type="button" className="btn btn-success" title="Agregar nueva pregunta">
                     <i class="fas fa-plus-circle"></i>
                     Agregar Pregunta
@@ -101,7 +77,7 @@ function Preguntas() {
 
     }
 
-    function handleCheckboxChange (event, elemento) {//const handleCheckboxChange = (event) => {
+    function handleCheckboxChange(event, elemento) {//Para guardar los cambios de los checkbox
 
         //console.log(event.currentTarget);
         //console.log(event.target.checked);
@@ -112,8 +88,8 @@ function Preguntas() {
         let elementoSintomaId = elemento.id;
         let elementoSintomaMensaje = elemento.sintoma;
 
-        if(event.target.checked == true){ //Si el checkbox es seleccionado
-            
+        if (event.target.checked == true) { //Si el checkbox es seleccionado
+
             setSintomaId([
                 ...sintomaId,
                 elementoSintomaId
@@ -124,11 +100,11 @@ function Preguntas() {
                 elementoSintomaMensaje
             ]);
 
-        }else{ //Si el checkbox es deseleccionado
+        } else { //Si el checkbox es deseleccionado
 
             const arrayFiltradoId = sintomaId.filter((item) => item !== elementoSintomaId); //Se saca del array el id del sintoma guardado
             setSintomaId(arrayFiltradoId);
-            
+
             const arrayFiltradoMensaje = sintomaMensaje.filter((item) => item !== elementoSintomaMensaje); //Se saca del array el id del sintoma guardado
             setSintomaMensaje(arrayFiltradoMensaje);
 
@@ -137,8 +113,7 @@ function Preguntas() {
     }
 
     const handleInputChangeFiltrar = (event) => { //Para guardar los datos ingresados en el filtrar
-        /*console.log(event.target.name)
-        console.log(event.target.value)*/
+
         setFiltro({
             ...filtro,
             [event.target.name]: event.target.value
@@ -147,9 +122,6 @@ function Preguntas() {
     }
 
     const handleDropdownChangeFiltrar = (event) => { //Para guardar la categoria seleccionada en el filtrar
-        /*console.log(event.target.name)
-        console.log(event.target.value)
-        console.log("Este es el valor de la seleccion " + event.currentTarget.value);*/
 
         const categoria = event.currentTarget.value;
         setFiltro({
@@ -172,25 +144,20 @@ function Preguntas() {
 
         })
 
-
         const respuesta = await data.json();
-        //console.log(respuesta);
 
         if (respuesta.code == 401) {
             setRespuestaServidor(401);
-        } else if(respuesta.status == 200) {
+        } else if (respuesta.status == 200) {
             setPreguntas(respuesta.result.items);
         } else {
 
         }
     }
 
-    async function enviarModificarPregunta(arrayDatos){
-        /*let datos = {
-            pregunta: editarPregunta.pregunta
-        };*/
+    async function enviarModificarPregunta(arrayDatos) {
 
-        const url = "https://secure-brushlands-86892.herokuapp.com/v1/questions/" +editarPregunta.id+ "/update-one";
+        const url = "https://secure-brushlands-86892.herokuapp.com/v1/questions/" + editarPregunta.id + "/update-one";
 
         const data = await fetch(url, {
             method: "PUT",
@@ -206,134 +173,117 @@ function Preguntas() {
         const respuesta = await data.json();
         console.log(respuesta);
 
-        if (respuesta.status === undefined) { //Si el correo ya existe -> Error 404
-            //console.log("Es indefinido");
+        if (respuesta.status === undefined) {
+
             setRespuestaServidor(respuesta.code);
-            //console.log(respuesta.code);
+
         } else { //Si es diferente
             setRespuestaServidor(respuesta.status);
         }
 
-        setRol(null);
     }
 
     const modificarPreguntas = async (event) => {
 
         event.preventDefault();
         setRespuestaServidor("");
-        console.log("Entre al modificarPregunta");
+
         let sintomasNuevosOrganizados = JSON.stringify(sintomaId.sort());
         let sintomasOriginalesOrganizados = JSON.stringify((preguntaOriginal.sintomas).sort());
 
-        if(editarPregunta.pregunta == "" || sintomaId.length == 0){ //Si alguno de los campos esta vacio
+        if (editarPregunta.pregunta == "" || sintomaId.length == 0) { //Si alguno de los campos esta vacio
+
             setRespuestaServidor(408);
-        }else if((editarPregunta.pregunta == preguntaOriginal.pregunta) && (sintomasNuevosOrganizados == sintomasOriginalesOrganizados) ){ //Si la pregunta y sintomas no se modificaron
-            
-            console.log("No hubo cambios");
+
+        } else if ((editarPregunta.pregunta == preguntaOriginal.pregunta) && (sintomasNuevosOrganizados == sintomasOriginalesOrganizados)) { //Si la pregunta y sintomas no se modificaron
+
             setRespuestaServidor(207);
 
-        }else if((editarPregunta.pregunta == preguntaOriginal.pregunta) && (sintomasNuevosOrganizados != sintomasOriginalesOrganizados)){ //Si la pregunta es igual y los sintomas cambian
-            
-            //console.log(preguntaOriginal.sintomas);
-            /*console.log(sintomaId);
-            console.log(preguntaOriginal.sintomas);*/
-            /*const contieneSintoma = [];
-            const sintomasNuevos = [];*/
-            console.log("Pregunta igual y sintomas diferentes");
+        } else if ((editarPregunta.pregunta == preguntaOriginal.pregunta) && (sintomasNuevosOrganizados != sintomasOriginalesOrganizados)) { //Si la pregunta es igual y los sintomas cambian
+
+            /*console.log("Pregunta igual y sintomas diferentes");
             console.log("Este es el ID de la pregunta "+editarPregunta.id);
-            console.log("Antes !!");
-            let sintomasOriginales = preguntaOriginal.sintomas;//let sintomasOriginales = preguntaOriginal.sintomas;
-            //const sintomasNuevos = sintomaId;
+            console.log("Antes !!");*/
+            let sintomasOriginales = preguntaOriginal.sintomas;
             const sintomasNuevos = [];
-            console.log("Sintomas originales "+sintomasOriginales);
+            //console.log("Sintomas originales "+sintomasOriginales);
             //console.log("Sintomas organizados "+sintomasOriginales.sort());
-            console.log("Sintomas nuevos "+sintomaId);
+            //console.log("Sintomas nuevos "+sintomaId);
 
             sintomaId.map(elemento => (
 
                 (preguntaOriginal.sintomas.includes(elemento)) ? (sintomasOriginales = sintomasOriginales.filter(id => id !== elemento)) : sintomasNuevos.push(elemento)//(sintomasOriginales = sintomasOriginales.filter(id => id !== elemento) && sintomasNuevos.push(elemento))
-                ));
+            ));
 
-            console.log("Despues !!");
+            /*console.log("Despues !!");
             console.log("Sintomas a borrar "+sintomasOriginales);
-            console.log("Sintomas nuevos "+sintomasNuevos);
-            if(sintomasOriginales.length == 0){ //Si solo hay que insertar sintomas
-                console.log("solo hay que insertar sintomas");
-                const arrayDatos = {'sintomas':sintomasNuevos}
-                //console.log(arrayDatos);
-                //console.log(arrayDatos);
-                //const url = "https://secure-brushlands-86892.herokuapp.com/v1/questions/" +editarPregunta.id+ "/update-one";
+            console.log("Sintomas nuevos "+sintomasNuevos);*/
+            if (sintomasOriginales.length == 0) { //Si solo hay que insertar sintomas
+                //console.log("solo hay que insertar sintomas");
+                const arrayDatos = { 'sintomas': sintomasNuevos }
+
                 enviarModificarPregunta(arrayDatos);
 
-            }else if(sintomasNuevos.length == 0){ //Si solo hay que borrar sintomas
-                console.log("solo hay que borrar sintomas");
-                const arrayDatos = {'remover_sintomas':sintomasOriginales}
+            } else if (sintomasNuevos.length == 0) { //Si solo hay que borrar sintomas
+                //console.log("solo hay que borrar sintomas");
+                const arrayDatos = { 'remover_sintomas': sintomasOriginales }
                 enviarModificarPregunta(arrayDatos);
 
-            }else if(sintomasNuevos.length != 0 && sintomasOriginales.length != 0){ //Si hay que insertar sintomas y borrar sintomas
-                console.log("hay que insertar sintomas y borrar sintomas");
-                //const sintomasBorrar = JSON.stringify(sintomasOriginales);
-                const arrayDatos = {'sintomas':sintomasNuevos, 'remover_sintomas':sintomasOriginales}//const arrayDatos = {'sintomas':sintomasNuevos, 'remover_sintomas':sintomasOriginales}
-                //console.log("Sintomas a remover "+sintomasOriginales);
-                //console.log(arrayDatos);
-                //console.log(arrayDatos);
+            } else if (sintomasNuevos.length != 0 && sintomasOriginales.length != 0) { //Si hay que insertar sintomas y borrar sintomas
+                //console.log("hay que insertar sintomas y borrar sintomas");
+
+                const arrayDatos = { 'sintomas': sintomasNuevos, 'remover_sintomas': sintomasOriginales }//const arrayDatos = {'sintomas':sintomasNuevos, 'remover_sintomas':sintomasOriginales}
+
                 enviarModificarPregunta(arrayDatos);
             }
 
-            //enviarModificarPregunta(editarPregunta.id, url, arrayDatos);
+        } else if ((editarPregunta.pregunta !== preguntaOriginal.pregunta) && (sintomasNuevosOrganizados == sintomasOriginalesOrganizados)) { //Si pregunta diferente y sintomas iguales
 
-        }else if((editarPregunta.pregunta !== preguntaOriginal.pregunta) && (sintomasNuevosOrganizados == sintomasOriginalesOrganizados)){ //Si pregunta diferente y sintomas iguales
-
-            console.log("Pregunta diferente y sintomas iguales");
-            const arrayDatos = {'pregunta':editarPregunta.pregunta}
+            //console.log("Pregunta diferente y sintomas iguales");
+            const arrayDatos = { 'pregunta': editarPregunta.pregunta }
             enviarModificarPregunta(arrayDatos);
 
-        }else if((editarPregunta.pregunta != preguntaOriginal.pregunta) && (sintomasNuevosOrganizados != sintomasOriginalesOrganizados)){ //Si Pregunta y sintomas diferentes
-            
-            console.log("Pregunta y sintomas diferente");
-            console.log("Antes !!");
-            let sintomasOriginales = preguntaOriginal.sintomas;//let sintomasOriginales = preguntaOriginal.sintomas;
-            //const sintomasNuevos = sintomaId;
+        } else if ((editarPregunta.pregunta != preguntaOriginal.pregunta) && (sintomasNuevosOrganizados != sintomasOriginalesOrganizados)) { //Si Pregunta y sintomas diferentes
+
+            /*console.log("Pregunta y sintomas diferente");
+            console.log("Antes !!");*/
+            let sintomasOriginales = preguntaOriginal.sintomas;
             const sintomasNuevos = [];
-            console.log("Sintomas originales "+sintomasOriginales);
-            //console.log("Sintomas organizados "+sintomasOriginales.sort());
-            console.log("Sintomas nuevos "+sintomaId);
+            /*console.log("Sintomas originales "+sintomasOriginales);
+            console.log("Sintomas nuevos "+sintomaId);*/
 
             sintomaId.map(elemento => (
-                //console.log(elemento)
-                //contieneSintoma = sintomaId.includes(elemento)
-                //contieneSintoma ? console.log() : console.log()
-                
+
                 (preguntaOriginal.sintomas.includes(elemento)) ? (sintomasOriginales = sintomasOriginales.filter(id => id !== elemento)) : sintomasNuevos.push(elemento)//(sintomasOriginales = sintomasOriginales.filter(id => id !== elemento) && sintomasNuevos.push(elemento))
-                ));
+            ));
 
-            console.log("Despues !!");
+            /*console.log("Despues !!");
             console.log("Sintomas a borrar "+sintomasOriginales);
-            console.log("Sintomas nuevos "+sintomasNuevos);
-            if(sintomasOriginales.length == 0){ //Si solo hay que insertar sintomas e insertar pregunta
-                console.log("solo hay que insertar sintomas e insertar pregunta");
-                const arrayDatos = {'pregunta':editarPregunta.pregunta, 'sintomas':sintomasNuevos}
-                //console.log(arrayDatos);
-                //console.log(arrayDatos);
-                //const url = "https://secure-brushlands-86892.herokuapp.com/v1/questions/" +editarPregunta.id+ "/update-one";
+            console.log("Sintomas nuevos "+sintomasNuevos);*/
+            if (sintomasOriginales.length == 0) { //Si solo hay que insertar sintomas e insertar pregunta
+
+                //console.log("solo hay que insertar sintomas e insertar pregunta");
+                const arrayDatos = { 'pregunta': editarPregunta.pregunta, 'sintomas': sintomasNuevos }
                 enviarModificarPregunta(arrayDatos);
 
-            }else if(sintomasNuevos.length == 0){ //Si solo hay que borrar sintomas e insertar pregunta
-                console.log("solo hay que borrar sintomas e insertar pregunta");
-                const arrayDatos = {'pregunta':editarPregunta.pregunta, 'remover_sintomas':sintomasOriginales}
+            } else if (sintomasNuevos.length == 0) { //Si solo hay que borrar sintomas e insertar pregunta
+
+                //console.log("solo hay que borrar sintomas e insertar pregunta");
+                const arrayDatos = { 'pregunta': editarPregunta.pregunta, 'remover_sintomas': sintomasOriginales }
                 enviarModificarPregunta(arrayDatos);
 
-            }else if(sintomasNuevos.length != 0 && sintomasOriginales.length != 0){ //Si hay que insertar sintomas, borrar sintomas y pregunta
-                console.log("hay que insertar sintomas, borrar sintomas y pregunta");
-                //const sintomasBorrar = JSON.stringify(sintomasOriginales);
-                const arrayDatos = {'pregunta':editarPregunta.pregunta, 'sintomas':sintomasNuevos, 'remover_sintomas':sintomasOriginales}
+            } else if (sintomasNuevos.length != 0 && sintomasOriginales.length != 0) { //Si hay que insertar sintomas, borrar sintomas y pregunta
+
+                //console.log("hay que insertar sintomas, borrar sintomas y pregunta");
+                const arrayDatos = { 'pregunta': editarPregunta.pregunta, 'sintomas': sintomasNuevos, 'remover_sintomas': sintomasOriginales }
                 enviarModificarPregunta(arrayDatos);
             }
         }
 
-        setEditarPregunta({ 
+        setEditarPregunta({ //Se reinician los valores al hacer click en modificar sintoma
             pregunta: "",
-            symptoms: { "": "" }});
+            symptoms: { "": "" }
+        });
 
     }
 
@@ -357,19 +307,14 @@ function Preguntas() {
         })
 
         const respuesta = await data.json();
-        //console.log(respuesta.status);
-        console.log("Este es lo de filtrar pregunta");
-        console.log(JSON.stringify(respuesta));
-        /*console.log(respuesta);*/
-        /*setRespuestaServidor(respuesta);
-        setCodigo("filtrar");*/
-        console.log("Esta es la respuesta");
-        console.log();
+        /*console.log("Este es lo de filtrar pregunta");
+        console.log(JSON.stringify(respuesta));*/
+
         if (respuesta.code == 401) {
             setRespuestaServidor(401);
-        } else if ((respuesta.result.items).length == 0) { /*Si no se tiene nada en el array del get*/
-            console.log("Vector vacio");
-            console.log(preguntas);
+        } else if ((respuesta.result.items).length == 0) { //Si no se tiene nada en el array del get
+            /*console.log("Vector vacio");
+            console.log(preguntas);*/
             setRespuestaServidor(404);
         } else {
             setPreguntas(respuesta.result.items);
@@ -383,13 +328,7 @@ function Preguntas() {
 
         event.preventDefault();
 
-        //console.log(editarUsuario.id);
-
         const url = "https://secure-brushlands-86892.herokuapp.com/v1/questions/" + id + "/delete-one";
-
-        //console.log(url);
-
-        //console.log("Este es el usuario " + editarUsuario.email + " | el id " + editarUsuario.id + " | el rol " + rol);
 
         const data = await fetch(url, {
             method: "DELETE",
@@ -409,7 +348,7 @@ function Preguntas() {
     }
 
     async function cargarSintomas() { //const cargarSintomas = async (event) => {
-        
+
         /*event.preventDefault();*/
         const data = await fetch("https://secure-brushlands-86892.herokuapp.com/v1/symptoms/get-all", {
             method: "GET",
@@ -423,11 +362,11 @@ function Preguntas() {
         })
 
         const respuesta = await data.json();
-        console.log(respuesta);
+        //console.log(respuesta);
 
-        if(respuesta.code == 401){
+        if (respuesta.code == 401) {
             setRespuestaServidor(401);
-        }else{
+        } else {
             setSintomas(respuesta.result.items);
             setCodigo("listarSintomas");
         }
@@ -442,8 +381,7 @@ function Preguntas() {
             componenteListarPreguntas = preguntas.map(elemento => (
                 <tr>
                     <th id="preguntaTablaFila-AdministrarPreguntas" scope="row">{elemento.pregunta}</th>
-                    <td id="sintomaTablaFila-AdministrarPreguntas">{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}</td> {/*elemento.symptoms*/}
-                    {/*elemento.es_admin = null*/}
+                    <td id="sintomaTablaFila-AdministrarPreguntas">{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}</td> {/*Se cargan los items listandolos*/}
                     <td id="modificarEliminarTablaFila-AdministrarPreguntas">
 
                         <button id="botonModificar-AdministrarPreguntas" type="button" class="btn btn-success" onClick={() => { reiniciarSetearDatos(elemento) }} title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-AdministrarPreguntas">
@@ -461,7 +399,7 @@ function Preguntas() {
             componenteListarPreguntas = preguntas.map(elemento => (
                 <tr>
                     <th id="preguntaTablaFila-AdministrarPreguntas" scope="row">{elemento.pregunta}</th>
-                    <td id="sintomaTablaFila-AdministrarPreguntas">{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}</td> {/*elemento.symptoms*/}
+                    <td id="sintomaTablaFila-AdministrarPreguntas">{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}</td>{/*Se cargan los items listandolos*/}
                 </tr>
             ))
         }
@@ -469,15 +407,15 @@ function Preguntas() {
 
         if (es_admin == true) {/*Si codigo == filtrar y rol = admin, se muestra tabla con botones de modificar y eliminar*/
 
-            console.log("Esto es lo del filtrar");
-            console.log(filtro);
+            /*console.log("Esto es lo del filtrar");
+            console.log(filtro);*/
             if (filtro.categoria !== undefined && filtro.categoria !== "Seleccione Categoria..." && filtro.inputFiltro != undefined && filtro.inputFiltro !== "") {
-                console.log("Entre al filtro");
-                console.log(preguntas);
+                /*console.log("Entre al filtro");
+                console.log(preguntas);*/
                 componenteListarPreguntas = preguntas.map(elemento => (
                     <tr>
                         <th id="preguntaTablaFila-AdministrarPreguntas" scope="row">{elemento.pregunta}</th>
-                        <td id="sintomaTablaFila-AdministrarPreguntas">{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}</td>
+                        <td id="sintomaTablaFila-AdministrarPreguntas">{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}</td>{/*Se cargan los items listandolos*/}
 
                         <td id="modificarEliminarTablaFila-AdministrarPreguntas">
 
@@ -498,11 +436,11 @@ function Preguntas() {
             }
 
         } else {/*Si codigo == filtrar y rol = usuario, se muestra tabla sin botones de modificar y eliminar*/
-            console.log("Esto es lo del filtrar");
-            console.log(filtro);
+            /*console.log("Esto es lo del filtrar");
+            console.log(filtro);*/
             if (filtro.categoria !== undefined && filtro.categoria !== "Seleccione Categoria..." && filtro.inputFiltro != undefined && filtro.inputFiltro !== "") {
-                console.log("Entre al filtro");
-                console.log(preguntas);
+                /*console.log("Entre al filtro");
+                console.log(preguntas);*/
                 componenteListarPreguntas = preguntas.map(elemento => (
                     <tr>
                         <th id="preguntaTablaFila-AdministrarPreguntas" scope="row">{elemento.pregunta}</th>
@@ -515,7 +453,7 @@ function Preguntas() {
             }
         }
 
-    } else if(codigo == "listarSintomas"){ //Se listan los sintomas en modificar pregunta
+    } else if (codigo == "listarSintomas") { //Se listan los sintomas en modificar pregunta
 
         componenteListarSintomas = sintomas.map(elemento => (
             <tr>
@@ -531,24 +469,13 @@ function Preguntas() {
     const listarUsuarios = async (event) => {
 
         event.preventDefault();
-        console.log("Entre al listarUsuarios");
+        //console.log("Entre al listarUsuarios");
         setCodigo("listar");
-        //console.log("Este es el valor del form "+event.currentTarget.value);
 
         setRespuestaServidor("");
         consultarPreguntas();
 
 
-    }
-
-    const filtrarUsuarios = async (event) => {
-        event.preventDefault();
-        console.log("Entre al filtrarUsuarios");
-        setCodigo("filtrar");
-        //console.log("Este es el valor del form "+event.currentTarget.value);
-
-        setRespuestaServidor("");
-        consultarPreguntas();
     }
 
     function setearDatos(elemento) {
@@ -557,10 +484,10 @@ function Preguntas() {
         setRespuestaServidor("");
     }
 
-    function cargarSintomasModificar() {
+    function cargarSintomasModificar() {//Se devuelven los sintomas a los que se les hace click y se muestran en textarea
 
         try {
-            /*return editarPregunta.symptoms.map(elemento => (elemento.sintoma))*/
+
             return sintomaMensaje.map(elemento => (elemento));
 
         } catch (error) {
@@ -568,11 +495,11 @@ function Preguntas() {
         }
     }
 
-    function reiniciarSetearDatos(elemento){
-        
+    function reiniciarSetearDatos(elemento) {
+
         setearDatos(elemento); //Se guardan los valores originales a modificar
         setPreguntaOriginal(elemento); //Se guardan los valores originales
-        
+
         //Se reinician los datos guardados en el textarea
         setSintomaId([]);
         setSintomaMensaje([]);
@@ -630,7 +557,6 @@ function Preguntas() {
 
                 <div id="cajaNombreOpcion-AdministrarPreguntas">
 
-                    {/*<p>Administrar Preguntas</p>*/}
                     {componenteNombreOpcion}
 
                 </div>
@@ -643,24 +569,17 @@ function Preguntas() {
 
                             <option selected >Seleccione Categoria...</option> {/*disabled*/}
                             <option value="pregunta">Pregunta</option>
-                            {/*<option value="sintoma">Sintoma</option>*/}
 
                         </select>
 
-                        {/*<input type="text" placeholder="¿Busca algo puntual?" title="Ingrese la palabra a buscar"/>*/}
                         <input id="filtrar" type="text" className="form-control" onChange={handleInputChangeFiltrar} name="inputFiltro" placeholder="¿Busca algo puntual?" title="Ingrese valor a buscar" />
 
-                        {/*<Link to='/plataforma/buscar'></Link>*/}
                         <button id="enviarBuscar-Plataforma" type="submit" className="btn btn-success" title="Buscar" >
                             <i class="fas fa-search"></i>
                         </button>
 
                     </form>
                 </div>
-
-                {/*<div id="cajaLabelAdministrarUsuarioss-AdministrarUsuarios">
-                    <label>Administrar Usuarios</label>
-                </div>*/}
 
 
                 <div id="cajaAgregarAdministrarPreguntas-AdministrarPreguntas">
@@ -671,7 +590,7 @@ function Preguntas() {
 
             </div>
 
-            <form id="formato" onSubmit={listarUsuarios}> {/*listarUsuarios*/}
+            <form id="formato" onSubmit={listarUsuarios}>
 
                 <div id="cajaTabla-AdministrarPreguntas">
 
@@ -690,31 +609,12 @@ function Preguntas() {
                             <tr>
                                 <th id="preguntaTablaCabecera-AdministrarPreguntas" scope="col" title="Preguntas del sistema">Pregunta</th>
                                 <th id="sintomaTablaCabecera-AdministrarPreguntas" scope="col" title="Sintomas ligados a preguntas">Sintoma</th>
-                                {/*<th id="correoTablaCabecera-AdministrarUsuarios" scope="col" title="Correo del usuario">Correo</th>
-                                <th id="rolTablaCabecera-AdministrarUsuarios" scope="col" title="Tipo de cuenta de usuario">Tipo De Cuenta</th>*/}
 
                                 {/*Columna para agregar o elimina*/}
                                 {componenteCabeceraModificarEliminar}
                             </tr>
                         </thead>
                         <tbody> {/*Filas*/}
-                            {/*usuario.map(elemento=>(
-                            <tr>
-                                <th id="preguntaTablaFila-AdministrarPreguntas" scope="row">{elemento.cedula}</th>
-                                <td id="sintomaTablaFila-AdministrarPreguntas">{elemento.nombre}</td>
-                                <td id="modificarEliminarTablaFila-AdministrarPreguntas">
-
-                                    <button id="botonModificar-AdministrarPreguntas" type="button" class="btn btn-success" title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-AdministrarPreguntas">
-                                        <i id="iconoModificar-AdministrarPreguntas" class="fas fa-cog"></i>
-                                    </button>
-                                    
-                                    <button id="botonEliminar-AdministrarPreguntas" type="button" class="btn btn-success" title="Eliminar termino" data-bs-toggle="modal" data-bs-target="#modalEliminar-AdministrarPreguntas">
-                                        <i id="iconoEliminar-AdministrarPreguntas" class="fas fa-times-circle"></i>
-                                    </button>
-
-                                </td>
-                            </tr>
-                    ))*/}
 
                             {componenteListarPreguntas}
 
@@ -735,7 +635,6 @@ function Preguntas() {
                                     <label >Advertencia</label>
 
                                 </h5>
-                                {/*<button type="button" class="btn-close" data-bs-dismiss="modal" title="Regresar a administrador de usuarios"></button>*/}
                             </div>
                             <div class="modal-body">
 
@@ -767,14 +666,9 @@ function Preguntas() {
                                     <label >Modificar Pregunta</label>
 
                                 </h5>
-                                {/*<button type="button" class="btn-close" data-bs-dismiss="modal" title="Regresar a administrar usuarios"></button>*/}
                             </div>
                             <div class="modal-body">
 
-
-                                {/*Sección Cedula*/}
-                                {/*componenteMensajeModal*/}
-                                
                                 <div id="labelPreguntaModificar-AdministrarPreguntas">
 
                                     <label>Pregunta</label>
@@ -799,20 +693,19 @@ function Preguntas() {
 
                                 <div className="input-group">
                                     <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div> {/*editarPregunta.symptoms.map(elemento => (elemento.sintoma))*/}
-                                    {/*<input id="" type="text" className="form-control" value={cargarSintomasModificar()} placeholder="Seleccione sintomas" onChange={handleInputChangeModificar} name="nombre" title="Sintomas seleccionados" readonly="readonly"/>*/}
                                     <textarea class="form-control" placeholder="Seleccione los sintomas" readonly="readonly" value={cargarSintomasModificar()} onChange={handleInputChangeModificar} title="Sintomas seleccionados"></textarea>
                                 </div>
 
                                 <br />
 
                                 {/*Sección Descripción*/}
-                                
+
                                 <div id="cajaTablaModificar-AdministrarPreguntas">
 
-                                    <div id="cajaBotonRecargarModificar-AdministrarPreguntas"> 
-                                    {/*<form className="row" onSubmit={cargarSintomas}></form>*/}
+                                    <div id="cajaBotonRecargarModificar-AdministrarPreguntas">
+
                                         <button id="botonRecargarModificar-AdministrarPreguntas" type='button' onClick={() => cargarSintomas()} className="btn btn-success" title='Recargar tabla'><i class="fas fa-redo"></i></button>
-                                    
+
                                     </div>
                                     <table id="tablaSintomas-AdministrarPreguntas" class="table table-bordered">
 
@@ -820,10 +713,10 @@ function Preguntas() {
                                             <tr>
                                                 <th id="sintomaTablaCabeceraModificar-AdministrarPreguntas" scope="col" title="Sintomas">Sintoma</th>
                                                 <th id="seleccionTablaCabeceraModificar-AdministrarPreguntas" scope="col" title="Selecciones">Elegir</th>
-                                                
+
                                             </tr>
                                             {componenteListarSintomas}
-                                            
+
                                         </thead>
                                     </table>
                                 </div>
