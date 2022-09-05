@@ -96,6 +96,23 @@
     
 }
 
+/*Propiedades del textarea seleccione los sintomas*/
+#formulario-AgregarPregunta .input-group textarea{
+    margin-top: 10px;
+    resize: none;
+    height: 7rem;
+}
+
+/*Propiedad focus del textarea seleccione los sintomas*/
+#formulario-AgregarPregunta .input-group textarea:focus{
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+/*Propiedad focus del textarea seleccione los sintomas*/
+#formulario-AgregarPregunta .input-group textarea::placeholder{
+    font-style: italic;
+}
 
 /*Propiedades de los inputs*/
 #formulario-AgregarPregunta .input-group input{

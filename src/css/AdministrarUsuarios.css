@@ -28,7 +28,7 @@
 }
 
 /*Palabra Administrar Usuarios*/
-#cabeceraAdministrarUsuarios-AdministrarUsuarios #cajaNombreOpcion-AdministrarUsuarios p{
+#cabeceraAdministrarUsuarios-AdministrarUsuarios #cajaNombreOpcion-AdministrarUsuarios label{
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 130%;
     padding: 5px 0px 0px 10px;

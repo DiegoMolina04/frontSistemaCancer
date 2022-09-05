@@ -1,7 +1,7 @@
 /*Caja superior barra busqueda y desplegable categoria*/
 #busqueda{
     
-    /*border: 5px solid #E4AC34;*/
+    /*border: 2px solid #E4AC34;*/
     
     /*padding: 10px;*/
     /*border: 2px solid green;*/
@@ -17,6 +17,7 @@
     display: inline-table;
     
     margin: 0% 0% 0% 1%;
+    
     /*align-items: flex-end;*/
     /*display: inline-block;*/
     

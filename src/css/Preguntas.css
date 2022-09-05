@@ -24,12 +24,15 @@
 #cabeceraAdministrarPreguntas-AdministrarPreguntas #cajaNombreOpcion-AdministrarPreguntas {
     /*border: 2px solid tomato;*/
     display: inline-table;
-    width: fit-content;
+    /*width: fit-content;*/
+    width: 16%;
+    
+    /*margin-bottom: -50px;*/
     /*margin-right: 3%;*/
 }
 
 /*Palabra Administrar Usuarios*/
-#cabeceraAdministrarPreguntas-AdministrarPreguntas #cajaNombreOpcion-AdministrarPreguntas p {
+#cabeceraAdministrarPreguntas-AdministrarPreguntas #cajaNombreOpcion-AdministrarPreguntas label {
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 130%;
     padding: 5px 0px 0px 10px;
@@ -363,10 +366,24 @@ form #cajaTabla-AdministrarPreguntas {
     margin-bottom: 10px;
 }
 
-/*Propiedades del textarea Correo en el modal de Modificar termino*/
+/*Propiedades del textarea sintomas seleccionadio en el modal de Modificar pregunta*/
 #modalModificar-AdministrarPreguntas .modal-body textarea {
     resize: none;
-    height: 10rem;
+    height: 7rem;
+}
+
+/*Propiedades de la cabecera del sintoma en modificar pregunta*/
+#tablaSintomas-AdministrarPreguntas #sintomaTablaCabeceraModificar-AdministrarPreguntas{
+    width: 80%;
+}
+
+/*Propiedades de la cabecera del elegir en modificar pregunta*/
+#tablaSintomas-AdministrarPreguntas #seleccionTablaCabeceraModificar-AdministrarPreguntas{
+    width: 20%;
+}
+
+#tablaSintomas-AdministrarPreguntas #columnaCheckbox-AgregarPreguntas{
+    text-align: center;
 }
 
 /*Propiedades focus del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
@@ -517,6 +534,7 @@ form #cajaTabla-AdministrarPreguntas {
 /*Propiedades tabla modificar preguntas*/
 #cajaTablaModificar-AdministrarPreguntas {
     border: 1px solid #ced4da;
+    height: 15rem;
 }
 
 /*Propiedades de la caja del boton recargar modificar*/
@@ -540,13 +558,13 @@ form #cajaTabla-AdministrarPreguntas {
 }
 
 /*Propiedad del checkbox en tabla modificar*/
-#cajaTablaModificar-AdministrarPreguntas #tablaSintomas-AdministrarPreguntas td #checkbox-AdministrarPreguntas {
+/*#cajaTablaModificar-AdministrarPreguntas #tablaSintomas-AdministrarPreguntas td #checkbox-AdministrarPreguntas {
     
     margin-bottom: 30%;
-}
+}*/
 
 /*Propiedad checked de la columna que contiene los checkbox en tabla modificar*/
-#cajaTablaModificar-AdministrarPreguntas #tablaSintomas-AdministrarPreguntas td #checkbox-AdministrarPreguntas:checked {
+#cajaTablaModificar-AdministrarPreguntas #tablaSintomas-AdministrarPreguntas td #checkbox-AgregarPreguntas:checked {
 
     background-color: #ffc107;
     border-color: #ffc107;

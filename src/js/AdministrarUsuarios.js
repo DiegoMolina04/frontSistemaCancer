@@ -501,7 +501,7 @@ function AdministrarUsuarios() {
 
                 <div id="cajaNombreOpcion-AdministrarUsuarios">
 
-                    <p>Administrar Usuarios</p>
+                    <label>Administrar Usuarios</label>
 
                 </div>
 

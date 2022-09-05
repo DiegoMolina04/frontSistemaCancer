@@ -6,7 +6,7 @@ import AgregarUsuario from "./js/AgregarUsuario.js";
 import CrearContraseña from "./js/CrearContraseña.js";
 import Preguntas from "./js/Preguntas.js";
 import AgregarPregunta from "./js/AgregarPregunta.js";
-import Reglas from '../src/js/Reglas.js'
+import Sintomas from './js/Sintomas.js'
 import Diagnosticar from '../src/js/Diagnosticar.js'
 import Diccionario from '../src/js/Diccionario.js'
 import Diagrama from '../src/js/Diagrama.js'
@@ -101,10 +101,10 @@ function App() {
 
                     </Route>
 
-                    <Route exact path="/plataforma/reglas" >
+                    <Route exact path="/plataforma/sintomas" >
                         <Plataforma />
                         <div>
-                            <Reglas />
+                            <Sintomas />
                         </div>
                     </Route>
 

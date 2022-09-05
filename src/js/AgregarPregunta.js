@@ -22,8 +22,8 @@ function AgregarPregunta() {
     const [mensaje, setMensaje] = useState();
     const [sintomas, setSintomas] = useState(null);
     //const [sintomaSeleccionado, setSintomaSeleccionado] = useState("");
-    const [sintomaId, setSintomaId] = useState([]);
-    const [sintomaMensaje, setSintomaMensaje] = useState([]);
+    const [sintomaId, setSintomaId] = useState([]); //Se guardan los id para crear el registro en la base de datos
+    const [sintomaMensaje, setSintomaMensaje] = useState([]); //Se guarda el mensaje del id para mostrarlo en el textarea
 
     const {respuestaServidor, setRespuestaServidor} = useContext(UserContext);
     const {token, setToken} = useContext(UserContext);
@@ -303,7 +303,8 @@ break;
                     <label>Seleccione el/los sintomas</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-book"></i></div>
-                        <input id="inputSeleccionSintomas-AgregarPregunta" type="text" className="form-control" placeholder="Seleccione los sintomas" title="Digite su nombre completo" name="sintoma" readonly="readonly" value={sintomaMensaje} />{/*value={sintomaSeleccionado}*/}
+                        <textarea class="form-control" placeholder="Seleccione los sintomas" readonly="readonly" value={sintomaMensaje}></textarea>
+                        {/*<input id="inputSeleccionSintomas-AgregarPregunta" type="text" className="form-control" placeholder="Seleccione los sintomas" title="Digite su nombre completo" name="sintoma" readonly="readonly" value={sintomaMensaje} />*/}{/*value={sintomaSeleccionado}*/}
                     </div>
 
                     <br />
@@ -320,26 +321,6 @@ break;
                                 <tr>
                                     <th id="sintomaTablaCabecera-AgregarPreguntas" scope="col" title="Sintomas">Sintoma</th>
                                     <th id="seleccionTablaCabecera-AgregarPreguntas" scope="col" title="Selecciones">Elegir</th>
-                                    {/*<th id="correoTablaCabecera-AdministrarUsuarios" scope="col" title="Correo del usuario">Correo</th>
-                                <th id="rolTablaCabecera-AdministrarUsuarios" scope="col" title="Tipo de cuenta de usuario">Tipo De Cuenta</th>*/}
-
-                                    {/*Columna para agregar o elimina*/}
-                                    {/*<tr>
-                                                <th id="preguntaTablaFila-AdministrarPreguntas" scope="row">{elemento.pregunta}</th>
-                                                <td id="sintomaTablaFila-AdministrarPreguntas">{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}</td>
-                                                
-                                                <td id="modificarEliminarTablaFila-AdministrarPreguntas">
-
-                                                    <button id="botonModificar-AdministrarPreguntas" type="button" class="btn btn-success" onClick={() => { setearDatos(elemento) }} title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-AdministrarPreguntas">
-                                                        <i id="iconoModificar-AdministrarPreguntas" class="fas fa-cog"></i>
-                                                    </button>
-
-                                                    <button id="botonEliminar-AdministrarPreguntas" type="button" class="btn btn-success" onClick={() => { setearDatos(elemento) }} title="Eliminar termino" data-bs-toggle="modal" data-bs-target="#modalEliminar-AdministrarPreguntas">
-                                                        <i id="iconoEliminar-AdministrarPreguntas" class="fas fa-times-circle"></i>
-                                                    </button>
-
-                                                </td>
-                                            </tr>*/}
 
                                 </tr>
                                 {componenteListarSintomas}

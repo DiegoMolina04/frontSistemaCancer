@@ -58,7 +58,7 @@ function Plataforma() {
           </button>
           </Link>
 
-          <Link to='/plataforma/reglas' >
+          <Link to='/plataforma/sintomas' >
           <button type="button" className="btn btn-success" title="Ver reglas de diagnostico">
             <i class="fas fa-heartbeat"></i>
             Sintomas
