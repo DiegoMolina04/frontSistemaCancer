@@ -466,7 +466,7 @@ function Preguntas() {
 
     }
 
-    const listarUsuarios = async (event) => {
+    const listarPreguntas = async (event) => {
 
         event.preventDefault();
         //console.log("Entre al listarUsuarios");
@@ -541,7 +541,7 @@ function Preguntas() {
             break;
 
         case 500:
-            componenteMensajeTabla = <h5 id="mensajeRespuesta-AdministrarPreguntas">El correo/cedula ya esta registrado.</h5>
+            componenteMensajeTabla = <h5 id="mensajeRespuesta-AdministrarPreguntas">Un error a sucedido, intente de nuevo.</h5>
             break;
 
         default:
@@ -590,7 +590,7 @@ function Preguntas() {
 
             </div>
 
-            <form id="formato" onSubmit={listarUsuarios}>
+            <form id="formato" onSubmit={listarPreguntas}>
 
                 <div id="cajaTabla-AdministrarPreguntas">
 
@@ -660,7 +660,7 @@ function Preguntas() {
                         <div class="modal-content">
                             <div class="modal-header">
 
-                                <h5 class="modal-title" id="modalLabelModificar-AdministrarUsuarios">
+                                <h5 class="modal-title" id="modalLabelModificar-AdministrarPreguntas">
 
                                     <i class="fas fa-cog"></i>
                                     <label >Modificar Pregunta</label>
@@ -724,8 +724,8 @@ function Preguntas() {
                             </div>
                             <div class="modal-footer">
 
-                                <button type="button" id="botonModalCancelar-AdministrarPreguntas" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a administrar usuarios">Cancelar</button>
-                                <button type="submit" id="botonModalModificar-AdministrarPreguntas" class="btn btn-primary" data-bs-dismiss="modal" title="Modificar usuario">Modificar</button>
+                                <button type="button" id="botonModalCancelar-AdministrarPreguntas" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a preguntas">Cancelar</button>
+                                <button type="submit" id="botonModalModificar-AdministrarPreguntas" class="btn btn-primary" data-bs-dismiss="modal" title="Modificar pregunta">Modificar</button>
 
                             </div>
                         </div>

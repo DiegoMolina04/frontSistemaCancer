@@ -1,163 +1,244 @@
-
-/*Caja contenedora de toda la vista Sintomas*/
-#fondo-AdministrarSintomas{
+/*Caja contenedora de toda la vista AdministrarUsuarios*/
+#fondo-AdministrarSintomas {
     /*border: 4px solid blue;*/
     height: 92vh;
-    /*overflow-y: scroll;*/
+    /*overflow-x: scroll;*/
 }
 
-/*Propiedades caja contenedora de cabecera Sintomas y Boton*/
-#cabeceraSintomasBoton-AdministrarSintomas{
+/*Propiedades caja contenedora de cabecera AdministrarUsuarioss y Boton*/
+#cabeceraAdministrarPreguntas-AdministrarSintomas {
 
     /*border: 5px solid aqua;*/
     /*margin-top: 2px;*/
     height: 3rem;
     /*padding: 4px;*/
     background-color: #eff2f5;
-    box-shadow: 5px 3px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+    box-shadow: 5px 3px 15px #000;
+    /*#666*/
+    /*box-shadow: x y difuminación color*/
+    /*overflow-wrap: break-word;*/
     overflow: auto;
 }
 
-/*Propiedades caja contenedora de Sintomas*/
-#cajaLabelSintoma-AdministrarSintomas{
-    /*border: 2px solid salmon;*/
-    /*margin-top: 15px;*/
-    /*margin-top: 0px;*/
+/*Caja contenedora de la palabra Administrar Usuarios*/
+#cabeceraAdministrarPreguntas-AdministrarSintomas #cajaNombreOpcion-AdministrarSintomas {
+    /*border: 2px solid tomato;*/
+    display: inline-table;
+    /*width: fit-content;*/
     width: 16%;
-    float: left;
     
+    /*margin-bottom: -50px;*/
+    /*margin-right: 3%;*/
 }
 
-/*Propiedades del Label Sintomas*/
-#cajaLabelSintoma-AdministrarSintomas label{
-    /*margin-left: 2%;*/
+/*Palabra Administrar Usuarios*/
+#cabeceraAdministrarPreguntas-AdministrarSintomas #cajaNombreOpcion-AdministrarSintomas label {
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 130%;
     padding: 5px 0px 0px 10px;
-    /*font-weight: 700;*/
 }
 
-/*Propiedades de la caja contenedora del boton agregar sintoma*/
-#cajaAgregarSintoma-AdministrarSintomas{
-    width: fit-content;
-    float: right;
+/*Propiedades caja contenedora de AdministrarUsuarioss*/
+#cajaLabelAdministrarUsuarioss-AdministrarUsuarios {
+    /*border: 2px solid salmon;*/
+    /*margin-top: 15px;*/
+    /*margin-top: 0px;*/
+    display: inline-table;
+    width: 40%;
+    float: left;
+
 }
 
-/*Propiedades de la caja botón agregar Sintoma*/
-#cabeceraSintomasBoton-AdministrarSintomas #cajaAgregarSintoma-AdministrarSintomas{
+/*Propiedades del Label AdministrarUsuarioss*/
+#cajaLabelAdministrarUsuarioss-AdministrarUsuarios label {
+    margin-left: 2%;
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+/*Propiedades de la caja botón agregar termino*/
+#cabeceraAdministrarPreguntas-AdministrarSintomas #cajaAgregarAdministrarSintomas-AdministrarSintomas {
 
     /*border: 2px solid darkorchid;*/
+
+    /*margin-top: 2px;*/
+    /*width: fit-content;*/
+    width: fit-content;
+    /*display: inline-block;*/
+
+    float: right;
     margin: 5px 5px 0px 0px;
-    text-align: right;
-    
+    /*text-align: right;*/
+    /*display: inline;*/
+    /*display: inline;*/
+
 }
 
-/*Propiedades del label ¿Desea agregar un nuevo sintoma?*/
-#cajaAgregarSintoma-AdministrarSintomas #labelAgregarSintoma-AdministrarSintomas{
+/*Propiedades del label ¿Desea agregar un termino?*/
+#cajaAgregarAdministrarSintomas-AdministrarSintomas #labelAgregarSintoma-AdministrarSintomas {
     font-size: 16px;
     font-style: italic;
     margin-right: 10px;
 }
 
-/*Propiedades del botón Agregar Sintoma*/
-#cajaAgregarSintoma-AdministrarSintomas #agregarSintoma-AdministrarSintomas{
-    
+/*Propiedades del botón Agregar AdministrarUsuarios*/
+#cajaAgregarAdministrarSintomas-AdministrarSintomas #agregarSintoma-AdministrarSintomas {
+
     background-color: #eff2f5;
     padding-top: 2px;
     color: #000;
     border-color: #000;
     /*border-color: transparent;*/
-    
+
 }
 
-/*Propiedad hover del botón Agregar Sintoma*/
-#cajaAgregarSintoma-AdministrarSintomas #agregarSintoma-AdministrarSintomas:hover{
-    
+/*Propiedad hover del botón Agregar AdministrarUsuarios*/
+#cajaAgregarAdministrarSintomas-AdministrarSintomas #agregarSintoma-AdministrarSintomas:hover {
+
     background-color: #E4AC34;
     border-color: #E4AC34;
     color: white;
     /*border-color: transparent;*/
-    
+
 }
 
-/*Propiedad focus del botón Agregar Sintoma*/
-#cajaAgregarSintoma-AdministrarSintomas #agregarSintoma-AdministrarSintomas:focus{
-    
+/*Propiedad focus del botón Agregar AdministrarUsuarios*/
+#cajaAgregarAdministrarSintomas-AdministrarSintomas #agregarSintoma-AdministrarSintomas:focus {
+
     box-shadow: none;
-    
+
 }
 
-/*Propiedades del icono mas al lado del botón Agregar Sintoma*/
-#cajaAgregarSintoma-AdministrarSintomas #agregarSintoma-AdministrarSintomas i{
+/*Propiedades del icono mas al lado del botón Agregar AdministrarUsuarios*/
+#cajaAgregarAdministrarSintomas-AdministrarSintomas #agregarSintoma-AdministrarSintomas i {
     margin-right: 10px;
 }
 
 /*Propiedades de la caja contenedora de la tabla*/
-#cajaTabla-AdministrarSintomas{
+form #cajaTabla-AdministrarSintomas {
     /*border: 2px solid burlywood;*/
-    height: 20rem;
     width: 50%;
+    height: 20rem !important;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    overflow-x: scroll;
-    overflow-y: scroll;
-    box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+    /*overflow-x: scroll;
+    overflow-y: scroll;*/
+    overflow: auto;
+    box-shadow: 5px 10px 15px #000;
+    /*#666*/
+    /*box-shadow: x y difuminación color*/
+    /*background-color: #c00303;*/
 }
 
 /*Propiedades de toda la tabla en general*/
-#tabla-AdministrarSintomas{
-    
+#tabla-AdministrarSintomas {
+
     font-family: 'Noto Sans Display', sans-serif;
     background-color: #eff2f5;
-    
+    /*background-color: #2a5077;*/
+
 }
 
-/*Propiedades de la columna ID en la cabecera*/
-/*#idTablaCabecera-Reglas{
-    //background-color: red;
+/*Propiedades de la cabecera que contiene los mensajes para el usuario y el botón recargar*/
+#cajaCabecera-AdministrarSintomas {
+    /*border: 2px solid burlywood;*/
+    overflow: auto;
+    /*text-align: right;*/
+}
+
+/*Propiedades caja del mensaje respuesta*/
+#cajaCabecera-AdministrarSintomas #cajaMensajeRespuesta-AdministrarSintomas {
+    /*border: 2px solid chocolate;*/
+    /*display: inline-block;*/
+    /*display: inline-block;*/
+    float: left;
+    width: 80%;
+    /*width: fit-content;*/
+    height: 3rem;
+}
+
+/*Propiedades del mensaje respuesta*/
+#cajaMensajeRespuesta-AdministrarSintomas #mensajeRespuesta-AdministrarSintomas {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+/*Propiedades caja del boton recargar*/
+#cajaCabecera-AdministrarSintomas #cajaBotonRecargar-AdministrarSintomas {
+    /*border: 2px solid blueviolet;*/
+    /*display: inline-block;*/
+    /*display: inline-block;*/
+    float: right;
     width: 20%;
+    /*width: fit-content;*/
+    height: 3rem;
+    text-align: right;
+    /*margin-left: 5px;*/
+}
+
+/*Propiedades del botón recargar en la tabla*/
+#cajaBotonRecargar-AdministrarSintomas #botonRecargar-AdministrarSintomas {
+    margin-top: 5px;
+    background-color: #eff2f5;
+    /*padding-top: 2px;*/
+    color: #000;
+    border-color: #000;
+    margin-right: 10px;
+}
+
+/*Propiedad hover del botón recargar en la tabla*/
+#cajaBotonRecargar-AdministrarSintomas #botonRecargar-AdministrarSintomas:hover {
+
+    background-color: #E4AC34;
+    border-color: #E4AC34;
+    color: white;
+    /*border-color: transparent;*/
+
+}
+
+/*Propiedad focus del botón recargar en la tabla*/
+#cajaBotonRecargar-AdministrarSintomas #botonRecargar-AdministrarSintomas:focus {
+
+    box-shadow: none;
+
+}
+
+/*Propiedades de la columna pregunta en la cabecera*/
+#sintomaTablaCabecera-AdministrarSintomas {
+    /*background-color: red;*/
     text-align: center;
-}*/
+    width: 40%;
+}
 
 /*Propiedades de la columna Sintoma en la cabecera*/
-#sintomaTablaCabecera-AdministrarSintomas{
+#tipoDepresionTablaCabecera-AdministrarSintomas {
     /*background-color: aqua;*/
-    width: 50%;
+    width: 40%;
     text-align: center;
-}
-
-/*Propiedades de la columna Clasificación en la cabecera*/
-#clasificacionTablaCabecera-AdministrarSintomas{
-    /*background-color: pink;*/
-    width: 30%;
-    text-align: center;
-    
 }
 
 /*Propiedades de la columna Modificar/Eliminar en la cabecera*/
-#modificarEliminarTablaCabecera-AdministrarSintomas{
+#modificarEliminarTablaCabecera-AdministrarSintomas {
+    width: 20%;
     text-align: center;
 }
 
-/*Propiedades de la fila ID*/
-/*#idTablaFila-Reglas{
+/*Propiedades de la fila Cedula*/
+#sintomaTablaFila-AdministrarSintomas {
     text-align: center;
-}*/
-
-/*Propiedades de la fila Palabra*/
-#sintomaTablaFila-AdministrarSintomas{
-    text-align: justify;
+    font-weight: lighter;
 }
 
-/*Propiedades de la fila Clasificación*/
-#clasificacionTablaFila-AdministrarSintomas{
-
+/*Propiedades de la fila nombreUsuario*/
+#tipoDepresionTablaFila-AdministrarSintomas {
     text-align: center;
 }
 
 /*Propiedades de la fila Modificar/Eliminar*/
-#modificarEliminarTablaFila-AdministrarSintomas{
+#modificarEliminarTablaFila-AdministrarSintomas {
     text-align: center;
 }
 
@@ -167,7 +248,7 @@
 }*/
 
 /*Propiedades de los botones de modificar y eliminar*/
-#modificarEliminarTablaFila-AdministrarSintomas button{
+#modificarEliminarTablaFila-AdministrarSintomas button {
     margin-top: 5%;
     border-radius: 0px;
     background: transparent;
@@ -177,7 +258,8 @@
     border-color: transparent;
     font-family: 'Noto Sans Display', sans-serif;
     /*width: 6rem;*/
-    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
+    box-shadow: none;
+    /*Quita la sombra verde alrededor del botón*/
 }
 
 /*Propiedad hover sobre los botones modificar y eliminar
@@ -190,257 +272,334 @@
 }*/
 
 /*Propiedades de los iconos en los botones modificar y eliminar*/
-#modificarEliminarTablaFila-AdministrarSintomas i{
+#modificarEliminarTablaFila-AdministrarSintomas i {
     font-size: 23px;
-    
+
 }
 
 /*Propiedad del icono modificar en el botón modificar*/
-#botonModificar-AdministrarSintomas #iconoModificar-AdministrarSintomas{
+#botonModificar-AdministrarSintomas #iconoModificar-AdministrarSintomas {
     color: rgb(83, 83, 83);
 }
 
 /*Propiedad del icono eliminar en el botón eliminar*/
-#botonEliminar-AdministrarSintomas #iconoEliminar-AdministrarSintomas{
+#botonEliminar-AdministrarSintomas #iconoEliminar-AdministrarSintomas {
     color: rgb(192, 3, 3);
 }
 
 
-/*Propiedades de los labels del modal Eliminar Sintoma. Advertencia y ¿Realmente quiere eliminar este Sintoma?.*/
+/*Propiedades de los labels del modal Eliminar termino. Advertencia y ¿Realmente quiere eliminar este termino?.*/
 #modalEliminar-AdministrarSintomas #modalLabelEliminar-AdministrarSintomas label,
-#modalEliminar-AdministrarSintomas .modal-body label
-{
+#modalEliminar-AdministrarSintomas .modal-body label {
 
     font-family: 'Noto Sans Display', sans-serif;
 }
 
-/*Propiedades del icono advertencia en el modal de Eliminar Sintoma*/
-#modalEliminar-AdministrarSintomas #modalLabelEliminar-AdministrarSintomas i{
+/*Propiedades del icono advertencia en el modal de Eliminar termino*/
+#modalEliminar-AdministrarSintomas #modalLabelEliminar-AdministrarSintomas i {
     margin-right: 10px;
 }
 
-/*Propiedades del label Los cambios no se podrán revertir en modal Eliminar Sintoma.*/
-#modalEliminar-AdministrarSintomas .modal-body #labelRevertirCambios-AdministrarSintomas{
+/*Propiedades del label Los cambios no se podrán revertir en modal Eliminar termino.*/
+#modalEliminar-AdministrarSintomas .modal-body #labelRevertirCambios-AdministrarSintomas {
     font-style: italic;
 }
 
-/*Propiedades del boton Cancelar en modal Eliminar Sintoma y en el modal Modificar Sintoma*/
-#modalEliminar-AdministrarSintomas .modal-footer #botonModalCancelar-AdministrarSintomas, #modalModificar-AdministrarSintomas .modal-footer #botonModalCancelar-AdministrarSintomas{
+/*Propiedades del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
+#modalEliminar-AdministrarSintomas .modal-footer #botonModalCancelar-AdministrarSintomas,
+#modalModificar-AdministrarSintomas .modal-footer #botonModalCancelar-AdministrarSintomas {
     font-family: 'Noto Sans Display', sans-serif;
     background-color: transparent;
     border-color: #535353;
     color: #000;
 }
 
-/*Propiedad hover del boton Cancelar en modal Eliminar Sintoma y en el modal Modificar Sintoma*/
-#modalEliminar-AdministrarSintomas .modal-footer #botonModalCancelar-AdministrarSintomas:hover, #modalModificar-AdministrarSintomas .modal-footer #botonModalCancelar-AdministrarSintomas:hover{
-    
+/*Propiedad hover del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
+#modalEliminar-AdministrarSintomas .modal-footer #botonModalCancelar-AdministrarSintomas:hover,
+#modalModificar-AdministrarSintomas .modal-footer #botonModalCancelar-AdministrarSintomas:hover {
+
     background-color: #535353;
     color: white;
 }
 
-/*Propiedad focus del boton Cancelar en modal Eliminar Sintoma y en el modal Modificar SintomaSintoma*/
-#modalEliminar-AdministrarSintomas .modal-footer #botonModalCancelar-AdministrarSintomas:focus, #modalModificar-AdministrarSintomas .modal-footer #botonModalCancelar-AdministrarSintomas:focus{
+/*Propiedad focus del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
+#modalEliminar-AdministrarSintomas .modal-footer #botonModalCancelar-AdministrarSintomas:focus,
+#modalModificar-AdministrarSintomas .modal-footer #botonModalCancelar-AdministrarSintomas:focus {
     box-shadow: none;
 }
 
-/*Propiedades del boton Eliminar en modal Eliminar Sintoma*/
-#modalEliminar-AdministrarSintomas .modal-footer #botonModalEliminar-AdministrarSintomas{
+/*Propiedades del boton Eliminar en modal Eliminar termino*/
+#modalEliminar-AdministrarSintomas .modal-footer #botonModalEliminar-AdministrarSintomas {
     font-family: 'Noto Sans Display', sans-serif;
     background-color: transparent;
     border-color: #c00303;
     color: #000;
 }
 
-/*Propiedad hover del boton Eliminar en modal Eliminar Sintoma*/
-#modalEliminar-AdministrarSintomas .modal-footer #botonModalEliminar-AdministrarSintomas:hover{
-    
+/*Propiedad hover del boton Eliminar en modal Eliminar termino*/
+#modalEliminar-AdministrarSintomas .modal-footer #botonModalEliminar-AdministrarSintomas:hover {
+
     background-color: #c00303;
     color: white;
 }
 
-/*Propiedad focus del boton Eliminar en modal Eliminar Sintoma*/
-#modalEliminar-AdministrarSintomas .modal-footer #botonModalEliminar-AdministrarSintomas:focus{
+/*Propiedad focus del boton Eliminar en modal Eliminar termino*/
+#modalEliminar-AdministrarSintomas .modal-footer #botonModalEliminar-AdministrarSintomas:focus {
     box-shadow: none;
 }
 
-/*Propiedades del botón de la X para cerrar el modal Eliminar Sintoma*/
-.modal-header .btn-close:focus{
-    
+/*Propiedades del botón de la X para cerrar el modal Eliminar termino*/
+.modal-header .btn-close:focus {
+
     box-shadow: none;
 }
 
-/*Propiedades del icono modificar en el modal de Modificar Sintoma*/
-#modalModificar-AdministrarSintomas #modalLabelModificar-AdministrarSintomas i{
+/*Propiedades del icono modificar en el modal de Modificar termino*/
+#modalModificar-AdministrarSintomas #modalLabelModificar-AdministrarSintomas i {
     margin-right: 10px;
 }
 
-/*Propiedades de los label Sintoma y Descripción en el modal de Modificar Sintoma*/
-#modalModificar-AdministrarSintomas .modal-body label{
+/*Propiedades de los label AdministrarUsuarios y Correo en el modal de Modificar termino*/
+#modalModificar-AdministrarSintomas .modal-body label {
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 10px;
-    display: block;
 }
 
-/*Propiedades del textarea Descripción en el modal de Modificar Sintoma*/
-#modalModificar-AdministrarSintomas .modal-body textarea{
+/*Propiedades del textarea sintomas seleccionadio en el modal de Modificar pregunta*/
+#modalModificar-AdministrarSintomas .modal-body textarea {
     resize: none;
-    height: 10rem;
+    height: 7rem;
 }
 
-/*Propiedades focus del textarea Descripción en el modal de Modificar Sintoma*/
-#modalModificar-AdministrarSintomas .modal-body textarea:focus{
+/*Propiedades de la cabecera del sintoma en modificar pregunta*/
+#tablaTiposDepresion-AdministrarSintomas #tipoDepresionTablaCabeceraModificar-AdministrarSintomas{
+    width: 80%;
+}
+
+/*Propiedades de la cabecera del elegir en modificar pregunta*/
+#tablaTiposDepresion-AdministrarSintomas #seleccionTablaCabeceraModificar-AdministrarSintomas{
+    width: 20%;
+}
+
+#tablaTiposDepresion-AdministrarSintomas #columnaCheckbox-AgregarSintomas{
+    text-align: center;
+}
+
+/*Propiedades focus del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
+#modalModificar-AdministrarSintomas .modal-body input:focus,
+#modalModificar-AdministrarSintomas .modal-body textarea:focus {
     box-shadow: none;
     border-color: #ced4da;
 }
 
-/*Propiedades del placeholder del textarea Descripción en el modal de Modificar Sintoma*/
-#modalModificar-AdministrarSintomas .modal-body textarea::placeholder{
+/*Propiedades de los placeholder del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
+#modalModificar-AdministrarSintomas .modal-body input::placeholder,
+#modalModificar-AdministrarSintomas .modal-body textarea::placeholder {
     font-style: italic;
 }
 
-/*Propiedades del botón modificar en el modal Modificar Sintoma*/
-#modalModificar-AdministrarSintomas .modal-footer #botonModalModificar-AdministrarSintomas{
+/*Propiedades del botón modificar en el modal Modificar termino*/
+#modalModificar-AdministrarSintomas .modal-footer #botonModalModificar-AdministrarSintomas {
     background-color: transparent;
     border-color: #ffc107;
     color: #000;
 }
 
-/*Propiedad hover del botón modificar en el modal Modificar Sintoma*/
-#modalModificar-AdministrarSintomas .modal-footer #botonModalModificar-AdministrarSintomas:hover{
+/*Propiedad hover del botón modificar en el modal Modificar termino*/
+#modalModificar-AdministrarSintomas .modal-footer #botonModalModificar-AdministrarSintomas:hover {
     background-color: #ffc107;
     color: white;
 }
 
-/*Propiedad focus del botón modificar en el modal Modificar Sintoma*/
-#modalModificar-AdministrarSintomas .modal-footer #botonModalModificar-AdministrarSintomas:focus{
+/*Propiedad focus del botón modificar en el modal Modificar termino*/
+#modalModificar-AdministrarSintomas .modal-footer #botonModalModificar-AdministrarSintomas:focus {
     box-shadow: none;
 }
 
-/*Propiedades de icono mas en Agregar Nuevo Sintoma en el modalAgregarSintoma-AdministrarSintomas*/
+/*Propiedades de icono mas en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
 
-#modalAgregarSintoma-AdministrarSintomas #modalLabelAgregarSintoma-AdministrarSintomas i{
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios #modallabelAgregarPregunta-AdministrarPreguntas i {
     margin-right: 10px;
 }
 
-/*Propiedades de las cajas del label Sintoma y Descripción en Agregar Nuevo Sintoma en el modalAgregarSintoma-AdministrarSintomas*/
-#modalAgregarSintoma-AdministrarSintomas .modal-body #labelSintomaAgregarSintoma-AdministrarSintomas,
-#modalAgregarSintoma-AdministrarSintomas .modal-body #labelDescripcionAgregarSintoma-AdministrarSintomas
-{
+/*Propiedades de las cajas del label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelTipoDepresionModificar-AdministrarSintomas,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelSintomaModificar-AdministrarSintomas {
     text-align: left;
 }
 
-/*Propiedades de los label Sintoma y Descripción en Agregar Nuevo Sintoma en el modalAgregarSintoma-AdministrarSintomas*/
-#modalAgregarSintoma-AdministrarSintomas .modal-body #labelSintomaAgregarSintoma-AdministrarSintomas label,
-#modalAgregarSintoma-AdministrarSintomas .modal-body #labelDescripcionAgregarSintoma-AdministrarSintomas label
-{
+/*Propiedades de los label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalModificar-AdministrarSintomas .modal-body #labelTipoDepresionModificar-AdministrarSintomas label,
+#modalModificar-AdministrarSintomas .modal-body #tipoCuenta-AgregarCuenta,
+#modalModificar-AdministrarSintomas .modal-body #labelSintomaModificar-AdministrarSintomas label {
     font-size: 17px;
     font-weight: 700;
     margin-bottom: 10px;
     font-family: 'Noto Sans Display', sans-serif;
+    display: block;
 }
 
-/*Propiedades del textarea Descripción en Agregar Nuevo Sintoma en el modalAgregarSintoma-AdministrarSintomas*/
-#modalAgregarSintoma-AdministrarSintomas .modal-body .input-group textarea{
+/*Propiedades del textarea Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body .input-group textarea{
     resize: none;
-    height: 5rem;
-}
+    height: 10rem;
+}*/
 
-/*Propiedades del botón cancelar en Agregar Nuevo Sintoma en el modalAgregarSintoma-AdministrarSintomas*/
-#modalAgregarSintoma-AdministrarSintomas .modal-footer #botonModalCancelar-AdministrarSintomas{
+/*Propiedades del botón cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarSintomas {
     font-family: 'Noto Sans Display', sans-serif;
     background-color: transparent;
     border-color: #535353;
     color: #000;
 }
 
-/*Propiedad hover del boton Cancelar en Agregar Nuevo Sintoma en el modalAgregarSintoma-AdministrarSintomas*/
-#modalAgregarSintoma-AdministrarSintomas .modal-footer #botonModalCancelar-AdministrarSintomas:hover{
-    
+/*Propiedad hover del boton Cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarSintomas:hover {
+
     background-color: #535353;
     color: white;
 }
 
-/*Propiedad focus del boton Cancelar Agregar Nuevo Sintoma en el modalAgregarSintoma-AdministrarSintomas*/
-#modalAgregarSintoma-AdministrarSintomas .modal-footer #botonModalCancelar-AdministrarSintomas:focus{
+/*Propiedad focus del boton Cancelar Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarSintomas:focus {
     box-shadow: none;
 }
 
-/*Propiedades del botón modificar en el modalAgregarSintoma-AdministrarSintomas*/
-#modalAgregarSintoma-AdministrarSintomas .modal-footer #botonModalModificar-AdministrarSintomas{
+/*Propiedades del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarSintomas {
     background-color: transparent;
     border-color: #ffc107;
     color: #000;
     font-weight: 100;
 }
 
-/*Propiedad hover del botón modificar en el modalAgregarSintoma-AdministrarSintomas*/
-#modalAgregarSintoma-AdministrarSintomas .modal-footer #botonModalModificar-AdministrarSintomas:hover{
+/*Propiedad hover del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarSintomas:hover {
     background-color: #ffc107;
     color: white;
 }
 
-/*Propiedad focus del botón modificar en el modalAgregarSintoma-AdministrarSintomas*/
-#modalAgregarSintoma-AdministrarSintomas .modal-footer #botonModalModificar-AdministrarSintomas:focus{
+/*Propiedad focus del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarSintomas:focus {
     box-shadow: none;
 }
 
-/*Propiedad placeholder en el textarea en el modalAgregarSintoma-AdministrarSintomas*/
-#modalAgregarSintoma-AdministrarSintomas .input-group textarea::placeholder{
+/*Propiedad placeholder en el input y textarea en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input::placeholder,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group textarea::placeholder {
     font-style: italic;
 }
 
-/*Propiedad focus en el textarea en el modalAgregarSintoma-AdministrarSintomas*/
-#modalAgregarSintoma-AdministrarSintomas .input-group textarea:focus{
+/*Propiedad focus en el input y textarea en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input:focus,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group textarea:focus {
     box-shadow: none;
     border-color: #ced4da;
 }
 
-/*Propiedades de los labels en los radio buttons en el modal modificar sintoma*/
-#modalModificar-AdministrarSintomas .modal-body #labelSintomaModalModificar-AdministrarSintomas, #modalModificar-AdministrarSintomas .modal-body #labelSeñalModalModificar-Reglas{
-    font-size: 17px;
-    
+/*Propiedades de los p Administrador y Usuario*/
+#pAdministrador-AdministrarUsuarios,
+#pUsuario-AdministrarUsuarios {
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 18px;
 }
 
-/*Propiedad checked de los radio button en el modal modificar sintoma*/
-#modalModificar-AdministrarSintomas .modal-body #radioButton:checked{
-    background-color: #ffc107;
-    border-color: #ffc107;
-}
-
-/*Propiedad focus de los radio button en el modal modificar sintoma*/
-#modalModificar-AdministrarSintomas .modal-body #radioButton:focus{
-    box-shadow: none;
-}
-
-/*Propiedad de la caja de los radio button en el modal agregar sintoma*/
-#modalAgregarSintoma-AdministrarSintomas .modal-body #cajaRadioButtonModalAgregar-AdministrarSintomas{
-    /*border-color: 2px solid purple;*/
+/*Propiedad de los radio buttons*/
+.modal-body #cajaRadioButtons-AgregarCuenta {
     text-align: left;
 }
 
-/*Propiedades de los labels en los radio buttons en el modal agregar sintoma*/
-#modalAgregarSintoma-AdministrarSintomas .modal-body #cajaRadioButtonModalAgregar-AdministrarSintomas #labelSintomaModalAgregar-Reglas, 
-#modalAgregarSintoma-AdministrarSintomas .modal-body #cajaRadioButtonModalAgregar-AdministrarSintomas #labelSeñalModalAgregar-AdministrarSintomas{
-    font-size: 17px;
-    
+/*Propiedad focus sobre los radio buttons*/
+.modal-body .form-check #radioButtonAdministrador-AdministrarUsuarios:focus {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    box-shadow: none;
 }
 
-/*Propiedad checked de los radio button en el modal agregar sintoma*/
-#modalAgregarSintoma-AdministrarSintomas .modal-body #cajaRadioButtonModalAgregar-AdministrarSintomas #radioButton:checked{
+/*Propiedad checked sobre los radio buttton*/
+.modal-body .form-check #radioButtonAdministrador-AdministrarUsuarios:checked {
     background-color: #ffc107;
     border-color: #ffc107;
 }
 
-/*Propiedad focus de los radio button en el modal agregar sintoma*/
-#modalAgregarSintoma-AdministrarSintomas .modal-body #cajaRadioButtonModalAgregar-AdministrarSintomas #radioButton:focus{
-    box-shadow: none;
-}
-
 /*Propiedades del icono al lado de los input en los modales*/
-#modalModificar-AdministrarSintomas #btnGroupAddon, #modalAgregarSintoma-AdministrarSintomas #btnGroupAddon{
-    background-color: #ffc107;/*E4AC34*/
+#modalModificar-AdministrarSintomas #btnGroupAddon {
+    background-color: #ffc107;
+    /*E4AC34*/
     color: white;
 }
 
+/*Propiedades tabla modificar preguntas*/
+#cajaTablaModificar-AdministrarSintomas {
+    border: 1px solid #ced4da;
+    height: 15rem;
+    overflow: auto;
+}
+
+/*Propiedades de la caja del boton recargar modificar*/
+#cajaTablaModificar-AdministrarSintomas #cajaBotonRecargarModificar-AdministrarSintomas {
+
+    float: right;
+}
+
+/*Propiedades de las cabeceras en tabla modificar*/
+#cajaTablaModificar-AdministrarSintomas #tablaTiposDepresion-AdministrarSintomas th {
+
+    text-align: center;
+    font-weight: 600;
+}
+
+/*Propiedades de la columna que contiene los checkbox en tabla modificar*/
+#cajaTablaModificar-AdministrarSintomas #tablaTiposDepresion-AdministrarSintomas #columnaCheckbox-AdministrarPreguntas {
+
+    text-align: center;
+    
+}
+
+/*Propiedad del checkbox en tabla modificar*/
+/*#cajaTablaModificar-AdministrarSintomas #tablaTiposDepresion-AdministrarSintomas td #checkbox-AdministrarPreguntas {
+    
+    margin-bottom: 30%;
+}*/
+
+/*Propiedad checked de la columna que contiene los checkbox en tabla modificar*/
+#cajaTablaModificar-AdministrarSintomas #tablaTiposDepresion-AdministrarSintomas td #checkbox-AgregarSintomas:checked {
+
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+/*Propiedad focus de la columna que contiene los checkbox en tabla modificar*/
+#cajaTablaModificar-AdministrarSintomas #tablaTiposDepresion-AdministrarSintomas td #checkbox-AdministrarPreguntas:focus {
+
+    box-shadow: none;
+}
+
+/*Propiedades del botón recargar en la tabla modificar*/
+#cajaBotonRecargarModificar-AdministrarSintomas #botonRecargarModificar-AdministrarSintomas {
+    margin-top: 5px;
+    background-color: #eff2f5;
+    /*padding-top: 2px;*/
+    color: #000;
+    border-color: #000;
+    margin-right: 10px;
+}
+
+/*Propiedad hover del botón recargar en la tabla modificar*/
+#cajaBotonRecargarModificar-AdministrarSintomas #botonRecargarModificar-AdministrarSintomas:hover {
+
+    background-color: #E4AC34;
+    border-color: #E4AC34;
+    color: white;
+    /*border-color: transparent;*/
+
+}
+
+/*Propiedad focus del botón recargar en la tabla modificar*/
+#cajaBotonRecargarModificar-AdministrarSintomas #botonRecargarModificar-AdministrarSintomas:focus {
+
+    box-shadow: none;
+
+}

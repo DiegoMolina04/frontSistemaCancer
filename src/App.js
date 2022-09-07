@@ -7,6 +7,7 @@ import CrearContraseña from "./js/CrearContraseña.js";
 import Preguntas from "./js/Preguntas.js";
 import AgregarPregunta from "./js/AgregarPregunta.js";
 import Sintomas from './js/Sintomas.js'
+import AgregarSintomas from "./js/AgregarSintomas.js";
 import Diagnosticar from '../src/js/Diagnosticar.js'
 import Diccionario from '../src/js/Diccionario.js'
 import Diagrama from '../src/js/Diagrama.js'
@@ -107,6 +108,13 @@ function App() {
                             <Sintomas />
                         </div>
                     </Route>
+
+                    <Route exact path="/agregarsintoma" render={() => token && es_admin ?
+                        <AgregarSintomas />
+
+                        : <Login></Login>
+
+                    }></Route>
 
                     <Route exact path="/plataforma/diccionario" >
                         <Plataforma />

@@ -355,7 +355,7 @@ form #cajaTabla-AdministrarPreguntas {
 }
 
 /*Propiedades del icono modificar en el modal de Modificar termino*/
-#modalModificar-AdministrarPreguntas #modalLabelModificar-AdministrarUsuarios i {
+#modalModificar-AdministrarPreguntas #modalLabelModificar-AdministrarPreguntas i {
     margin-right: 10px;
 }
 
@@ -535,6 +535,7 @@ form #cajaTabla-AdministrarPreguntas {
 #cajaTablaModificar-AdministrarPreguntas {
     border: 1px solid #ced4da;
     height: 15rem;
+    overflow: auto;
 }
 
 /*Propiedades de la caja del boton recargar modificar*/
