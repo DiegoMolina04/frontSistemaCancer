@@ -1,34 +1,56 @@
-
-/*Caja contenedora de toda la vista Diccionario*/
-#fondo-Diccionario{
+/*Caja contenedora de toda la vista AdministrarUsuarios*/
+#fondo-AdministrarTerminos {
     /*border: 4px solid blue;*/
     height: 92vh;
-    /*overflow-y: scroll;*/
+    /*overflow-x: scroll;*/
 }
 
-/*Propiedades caja contenedora de cabecera Terminos y Boton*/
-#cabeceraTerminosBoton-Diccionario{
+/*Propiedades caja contenedora de cabecera AdministrarUsuarioss y Boton*/
+#cabeceraAdministrarTerminos-AdministrarTerminos {
 
     /*border: 5px solid aqua;*/
     /*margin-top: 2px;*/
     height: 3rem;
-    padding: 4px;
+    /*padding: 4px;*/
     background-color: #eff2f5;
-    box-shadow: 5px 3px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+    box-shadow: 5px 3px 15px #000;
+    /*#666*/
+    /*box-shadow: x y difuminación color*/
+    /*overflow-wrap: break-word;*/
+    overflow: auto;
 }
 
-/*Propiedades caja contenedora de Terminos*/
-#cajaLabelTerminos-Diccionario{
+/*Caja contenedora de la palabra Administrar Usuarios*/
+#cabeceraAdministrarTerminos-AdministrarTerminos #cajaNombreOpcion-AdministrarTerminos {
+    /*border: 2px solid tomato;*/
+    display: inline-table;
+    width: fit-content;
+    /*width: 16%;*/
+    
+    /*margin-bottom: -50px;*/
+    /*margin-right: 3%;*/
+}
+
+/*Palabra Administrar Usuarios*/
+#cabeceraAdministrarTerminos-AdministrarTerminos #cajaNombreOpcion-AdministrarTerminos label {
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 130%;
+    padding: 5px 0px 0px 10px;
+}
+
+/*Propiedades caja contenedora de AdministrarUsuarioss*/
+#cajaLabelAdministrarUsuarioss-AdministrarUsuarios {
     /*border: 2px solid salmon;*/
     /*margin-top: 15px;*/
     /*margin-top: 0px;*/
+    display: inline-table;
     width: 40%;
     float: left;
-    
+
 }
 
-/*Propiedades del Label Terminos*/
-#cajaLabelTerminos-Diccionario label{
+/*Propiedades del Label AdministrarUsuarioss*/
+#cajaLabelAdministrarUsuarioss-AdministrarUsuarios label {
     margin-left: 2%;
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 23px;
@@ -36,131 +58,198 @@
 }
 
 /*Propiedades de la caja botón agregar termino*/
-#cabeceraTerminosBoton-Diccionario #cajaAgregarTermino-Diccionario{
+#cabeceraAdministrarTerminos-AdministrarTerminos #cajaAgregarAdministrarTerminos-AdministrarTerminos {
 
     /*border: 2px solid darkorchid;*/
+
     /*margin-top: 2px;*/
-    text-align: right;
-    
+    /*width: fit-content;*/
+    width: fit-content;
+    /*display: inline-block;*/
+
+    float: right;
+    margin: 5px 5px 0px 0px;
+    /*text-align: right;*/
+    /*display: inline;*/
+    /*display: inline;*/
+
 }
 
 /*Propiedades del label ¿Desea agregar un termino?*/
-#cajaAgregarTermino-Diccionario #labelAgregarTermino-Diccionario{
+#cajaAgregarAdministrarTerminos-AdministrarTerminos #labelAgregarTermino-AdministrarTerminos {
     font-size: 16px;
     font-style: italic;
     margin-right: 10px;
 }
 
-/*Propiedades del botón Agregar Termino*/
-#cajaAgregarTermino-Diccionario #agregarTermino-Diccionario{
-    
+/*Propiedades del botón Agregar AdministrarUsuarios*/
+#cajaAgregarAdministrarTerminos-AdministrarTerminos #agregarTermino-AdministrarTerminos {
+
     background-color: #eff2f5;
     padding-top: 2px;
     color: #000;
     border-color: #000;
     /*border-color: transparent;*/
-    
+
 }
 
-/*Propiedad hover del botón Agregar Termino*/
-#cajaAgregarTermino-Diccionario #agregarTermino-Diccionario:hover{
-    
+/*Propiedad hover del botón Agregar AdministrarUsuarios*/
+#cajaAgregarAdministrarTerminos-AdministrarTerminos #agregarTermino-AdministrarTerminos:hover {
+
     background-color: #E4AC34;
     border-color: #E4AC34;
     color: white;
     /*border-color: transparent;*/
-    
+
 }
 
-/*Propiedad focus del botón Agregar Termino*/
-#cajaAgregarTermino-Diccionario #agregarTermino-Diccionario:focus{
-    
+/*Propiedad focus del botón Agregar AdministrarUsuarios*/
+#cajaAgregarAdministrarTerminos-AdministrarTerminos #agregarTermino-AdministrarTerminos:focus {
+
     box-shadow: none;
-    
+
 }
 
-/*Propiedades del icono mas al lado del botón Agregar Termino*/
-#cajaAgregarTermino-Diccionario #agregarTermino-Diccionario i{
+/*Propiedades del icono mas al lado del botón Agregar AdministrarUsuarios*/
+#cajaAgregarAdministrarTerminos-AdministrarTerminos #agregarTermino-AdministrarTerminos i {
     margin-right: 10px;
 }
 
 /*Propiedades de la caja contenedora de la tabla*/
-#cajaTabla-Diccionario{
+form #cajaTabla-AdministrarTerminos {
     /*border: 2px solid burlywood;*/
-    height: 80%;
     width: 50%;
+    height: 20rem !important;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    overflow-x: scroll;
-    overflow-y: scroll;
-    box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+    /*overflow-x: scroll;
+    overflow-y: scroll;*/
+    overflow: auto;
+    box-shadow: 5px 10px 15px #000;
+    /*#666*/
+    /*box-shadow: x y difuminación color*/
+    /*background-color: #c00303;*/
 }
 
 /*Propiedades de toda la tabla en general*/
-#tabla-Diccionario{
-    
+#tabla-AdministrarTerminos {
+
     font-family: 'Noto Sans Display', sans-serif;
     background-color: #eff2f5;
-    
+    /*background-color: #2a5077;*/
+
 }
 
-/*Propiedades de la columna ID en la cabecera*/
-#idTablaCabecera-Diccionario{
+/*Propiedades de la cabecera que contiene los mensajes para el usuario y el botón recargar*/
+#cajaCabecera-AdministrarTerminos {
+    /*border: 2px solid burlywood;*/
+    overflow: auto;
+    /*text-align: right;*/
+}
+
+/*Propiedades caja del mensaje respuesta*/
+#cajaCabecera-AdministrarTerminos #cajaMensajeRespuesta-AdministrarTerminos {
+    /*border: 2px solid chocolate;*/
+    /*display: inline-block;*/
+    /*display: inline-block;*/
+    float: left;
+    width: 80%;
+    /*width: fit-content;*/
+    height: 3rem;
+}
+
+/*Propiedades del mensaje respuesta*/
+#cajaMensajeRespuesta-AdministrarTerminos #mensajeRespuesta-AdministrarTerminos {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+/*Propiedades caja del boton recargar*/
+#cajaCabecera-AdministrarTerminos #cajaBotonRecargar-AdministrarTerminos {
+    /*border: 2px solid blueviolet;*/
+    /*display: inline-block;*/
+    /*display: inline-block;*/
+    float: right;
+    width: 20%;
+    /*width: fit-content;*/
+    height: 3rem;
+    text-align: right;
+    /*margin-left: 5px;*/
+}
+
+/*Propiedades del botón recargar en la tabla*/
+#cajaBotonRecargar-AdministrarTerminos #botonRecargar-AdministrarTerminos {
+    margin-top: 5px;
+    background-color: #eff2f5;
+    /*padding-top: 2px;*/
+    color: #000;
+    border-color: #000;
+    margin-right: 10px;
+}
+
+/*Propiedad hover del botón recargar en la tabla*/
+#cajaBotonRecargar-AdministrarTerminos #botonRecargar-AdministrarTerminos:hover {
+
+    background-color: #E4AC34;
+    border-color: #E4AC34;
+    color: white;
+    /*border-color: transparent;*/
+
+}
+
+/*Propiedad focus del botón recargar en la tabla*/
+#cajaBotonRecargar-AdministrarTerminos #botonRecargar-AdministrarTerminos:focus {
+
+    box-shadow: none;
+
+}
+
+/*Propiedades de la columna pregunta en la cabecera*/
+#terminoTablaCabecera-AdministrarTerminos {
     /*background-color: red;*/
+    text-align: center;
+    width: 40%;
+}
+
+/*Propiedades de la columna Sintoma en la cabecera*/
+#descripcionTablaCabecera-AdministrarTerminos {
+    /*background-color: aqua;*/
+    width: 40%;
+    text-align: center;
+}
+
+/*Propiedades de la columna Modificar/Eliminar en la cabecera*/
+#modificarEliminarTablaCabecera-AdministrarTerminos {
     width: 20%;
     text-align: center;
 }
 
-/*Propiedades de la columna Palabra en la cabecera*/
-#palabraTablaCabecera-Diccionario{
-    /*background-color: aqua;*/
-    width: 30%;
+/*Propiedades de la fila Cedula*/
+#terminoTablaFila-AdministrarTerminos {
     text-align: center;
+    font-weight: lighter;
 }
 
-/*Propiedades de la columna Descripción en la cabecera*/
-#descripcionTablaCabecera-Diccionario{
-    /*background-color: pink;*/
-    width: 50%;
+/*Propiedades de la fila nombreUsuario*/
+#descripcionTablaFila-AdministrarTerminos {
     text-align: center;
-    
-}
-
-/*Propiedades de la columna Modificar/Eliminar en la cabecera*/
-#modificarEliminarTablaCabecera-Diccionario{
-    text-align: center;
-}
-
-/*Propiedades de la fila ID*/
-#idTablaFila-Diccionario{
-    text-align: center;
-}
-
-/*Propiedades de la fila Palabra*/
-#palabraTablaFila-Diccionario{
-    text-align: center;
-}
-
-/*Propiedades de la fila Descripción*/
-#descripcionTablaFila-Diccionario{
-
-    text-align: justify;
 }
 
 /*Propiedades de la fila Modificar/Eliminar*/
-#modificarEliminarTablaFila-Diccionario{
+#modificarEliminarTablaFila-AdministrarTerminos {
     text-align: center;
 }
 
 /*Propiedad hover sobre las filas de la tabla
-#tabla-Diccionario tbody tr:hover{
+#tabla-AdministrarTerminos tbody tr:hover{
     background-color: #E4AC34;
 }*/
 
 /*Propiedades de los botones de modificar y eliminar*/
-#modificarEliminarTablaFila-Diccionario button{
-    margin-top: 30%;
+#modificarEliminarTablaFila-AdministrarTerminos button {
+    margin-top: 5%;
     border-radius: 0px;
     background: transparent;
     color: #000;
@@ -169,11 +258,12 @@
     border-color: transparent;
     font-family: 'Noto Sans Display', sans-serif;
     /*width: 6rem;*/
-    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
+    box-shadow: none;
+    /*Quita la sombra verde alrededor del botón*/
 }
 
 /*Propiedad hover sobre los botones modificar y eliminar
-#modificarEliminarTablaFila-Diccionario button:hover{
+#modificarEliminarTablaFila-AdministrarTerminos button:hover{
     /*border-color: #ffc107;
     border-color: transparent;
     /*background-color: #ffc107;
@@ -182,42 +272,42 @@
 }*/
 
 /*Propiedades de los iconos en los botones modificar y eliminar*/
-#modificarEliminarTablaFila-Diccionario i{
+#modificarEliminarTablaFila-AdministrarTerminos i {
     font-size: 23px;
-    
+
 }
 
 /*Propiedad del icono modificar en el botón modificar*/
-#botonModificar-Diccionario #iconoModificar-Diccionario{
+#botonModificar-AdministrarTerminos #iconoModificar-AdministrarTerminos {
     color: rgb(83, 83, 83);
 }
 
 /*Propiedad del icono eliminar en el botón eliminar*/
-#botonEliminar-Diccionario #iconoEliminar-Diccionario{
+#botonEliminar-AdministrarTerminos #iconoEliminar-AdministrarTerminos {
     color: rgb(192, 3, 3);
 }
 
 
 /*Propiedades de los labels del modal Eliminar termino. Advertencia y ¿Realmente quiere eliminar este termino?.*/
-#modalEliminar-Diccionario #modalLabelEliminar-Diccionario label,
-#modalEliminar-Diccionario .modal-body label
-{
+#modalEliminar-AdministrarTerminos #modalLabelEliminar-AdministrarTerminos label,
+#modalEliminar-AdministrarTerminos .modal-body label {
 
     font-family: 'Noto Sans Display', sans-serif;
 }
 
 /*Propiedades del icono advertencia en el modal de Eliminar termino*/
-#modalEliminar-Diccionario #modalLabelEliminar-Diccionario i{
+#modalEliminar-AdministrarTerminos #modalLabelEliminar-AdministrarTerminos i {
     margin-right: 10px;
 }
 
 /*Propiedades del label Los cambios no se podrán revertir en modal Eliminar termino.*/
-#modalEliminar-Diccionario .modal-body #labelRevertirCambios-Diccionario{
+#modalEliminar-AdministrarTerminos .modal-body #labelRevertirCambios-AdministrarTerminos {
     font-style: italic;
 }
 
 /*Propiedades del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
-#modalEliminar-Diccionario .modal-footer #botonModalCancelar-Diccionario, #modalModificar-Diccionario .modal-footer #botonModalCancelar-Diccionario{
+#modalEliminar-AdministrarTerminos .modal-footer #botonModalCancelar-AdministrarTerminos,
+#modalModificar-AdministrarTerminos .modal-footer #botonModalCancelar-AdministrarTerminos {
     font-family: 'Noto Sans Display', sans-serif;
     background-color: transparent;
     border-color: #535353;
@@ -225,19 +315,21 @@
 }
 
 /*Propiedad hover del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
-#modalEliminar-Diccionario .modal-footer #botonModalCancelar-Diccionario:hover, #modalModificar-Diccionario .modal-footer #botonModalCancelar-Diccionario:hover{
-    
+#modalEliminar-AdministrarTerminos .modal-footer #botonModalCancelar-AdministrarTerminos:hover,
+#modalModificar-AdministrarTerminos .modal-footer #botonModalCancelar-AdministrarTerminos:hover {
+
     background-color: #535353;
     color: white;
 }
 
 /*Propiedad focus del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
-#modalEliminar-Diccionario .modal-footer #botonModalCancelar-Diccionario:focus, #modalModificar-Diccionario .modal-footer #botonModalCancelar-Diccionario:focus{
+#modalEliminar-AdministrarTerminos .modal-footer #botonModalCancelar-AdministrarTerminos:focus,
+#modalModificar-AdministrarTerminos .modal-footer #botonModalCancelar-AdministrarTerminos:focus {
     box-shadow: none;
 }
 
 /*Propiedades del boton Eliminar en modal Eliminar termino*/
-#modalEliminar-Diccionario .modal-footer #botonModalEliminar-Diccionario{
+#modalEliminar-AdministrarTerminos .modal-footer #botonModalEliminar-AdministrarTerminos {
     font-family: 'Noto Sans Display', sans-serif;
     background-color: transparent;
     border-color: #c00303;
@@ -245,151 +337,183 @@
 }
 
 /*Propiedad hover del boton Eliminar en modal Eliminar termino*/
-#modalEliminar-Diccionario .modal-footer #botonModalEliminar-Diccionario:hover{
-    
+#modalEliminar-AdministrarTerminos .modal-footer #botonModalEliminar-AdministrarTerminos:hover {
+
     background-color: #c00303;
     color: white;
 }
 
 /*Propiedad focus del boton Eliminar en modal Eliminar termino*/
-#modalEliminar-Diccionario .modal-footer #botonModalEliminar-Diccionario:focus{
+#modalEliminar-AdministrarTerminos .modal-footer #botonModalEliminar-AdministrarTerminos:focus {
     box-shadow: none;
 }
 
 /*Propiedades del botón de la X para cerrar el modal Eliminar termino*/
-.modal-header .btn-close:focus{
-    
+.modal-header .btn-close:focus {
+
     box-shadow: none;
 }
 
 /*Propiedades del icono modificar en el modal de Modificar termino*/
-#modalModificar-Diccionario #modalLabelModificar-Diccionario i{
+#modalModificar-AdministrarTerminos #modalLabelModificar-AdministrarTerminos i {
     margin-right: 10px;
 }
 
-/*Propiedades de los label Termino y Descripción en el modal de Modificar termino*/
-#modalModificar-Diccionario .modal-body label{
+/*Propiedades de los label AdministrarUsuarios y Correo en el modal de Modificar termino*/
+#modalModificar-AdministrarTerminos .modal-body label {
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
-/*Propiedades del textarea Descripción en el modal de Modificar termino*/
-#modalModificar-Diccionario .modal-body textarea{
+/*Propiedades del textarea sintomas seleccionadio en el modal de Modificar pregunta*/
+#modalModificar-AdministrarTerminos .modal-body textarea {
     resize: none;
-    height: 10rem;
+    height: 7rem;
 }
 
-/*Propiedades focus del input Termino y el textarea Descripción en el modal de Modificar termino*/
-#modalModificar-Diccionario .modal-body input:focus, #modalModificar-Diccionario .modal-body textarea:focus{
+/*Propiedades focus del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
+#modalModificar-AdministrarTerminos .modal-body input:focus,
+#modalModificar-AdministrarTerminos .modal-body textarea:focus {
     box-shadow: none;
     border-color: #ced4da;
 }
 
-/*Propiedades de los placeholder del input Termino y el textarea Descripción en el modal de Modificar termino*/
-#modalModificar-Diccionario .modal-body input::placeholder, #modalModificar-Diccionario .modal-body textarea::placeholder{
+/*Propiedades de los placeholder del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
+#modalModificar-AdministrarTerminos .modal-body input::placeholder,
+#modalModificar-AdministrarTerminos .modal-body textarea::placeholder {
     font-style: italic;
 }
 
 /*Propiedades del botón modificar en el modal Modificar termino*/
-#modalModificar-Diccionario .modal-footer #botonModalModificar-Diccionario{
+#modalModificar-AdministrarTerminos .modal-footer #botonModalModificar-AdministrarTerminos {
     background-color: transparent;
     border-color: #ffc107;
     color: #000;
 }
 
 /*Propiedad hover del botón modificar en el modal Modificar termino*/
-#modalModificar-Diccionario .modal-footer #botonModalModificar-Diccionario:hover{
+#modalModificar-AdministrarTerminos .modal-footer #botonModalModificar-AdministrarTerminos:hover {
     background-color: #ffc107;
     color: white;
 }
 
 /*Propiedad focus del botón modificar en el modal Modificar termino*/
-#modalModificar-Diccionario .modal-footer #botonModalModificar-Diccionario:focus{
+#modalModificar-AdministrarTerminos .modal-footer #botonModalModificar-AdministrarTerminos:focus {
     box-shadow: none;
 }
 
-/*Propiedades de icono mas en Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
+/*Propiedades de icono mas en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
 
-#modalAgregarTermino-Diccionario #modalLabelAgregarTermino-Diccionario i{
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios #modallabelAgregarPregunta-AdministrarPreguntas i {
     margin-right: 10px;
 }
 
-/*Propiedades de las cajas del label Termino y Descripción en Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
-#modalAgregarTermino-Diccionario .modal-body #labelTerminoAgregarTermino-Diccionario,
-#modalAgregarTermino-Diccionario .modal-body #labelDescripcionAgregarTermino-Diccionario
-{
+/*Propiedades de las cajas del label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelDescripcionModificar-AdministrarTerminos,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelTerminoModificar-AdministrarTerminos {
     text-align: left;
 }
 
-/*Propiedades de los label Termino y Descripción en Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
-#modalAgregarTermino-Diccionario .modal-body #labelTerminoAgregarTermino-Diccionario label,
-#modalAgregarTermino-Diccionario .modal-body #labelDescripcionAgregarTermino-Diccionario label
-{
+/*Propiedades de los label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalModificar-AdministrarTerminos .modal-body #labelDescripcionModificar-AdministrarTerminos label,
+#modalModificar-AdministrarTerminos .modal-body #tipoCuenta-AgregarCuenta,
+#modalModificar-AdministrarTerminos .modal-body #labelTerminoModificar-AdministrarTerminos label {
     font-size: 17px;
     font-weight: 700;
     margin-bottom: 10px;
     font-family: 'Noto Sans Display', sans-serif;
+    display: block;
 }
 
-/*Propiedades del textarea Descripción en Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
-#modalAgregarTermino-Diccionario .modal-body .input-group textarea{
+/*Propiedades del textarea Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body .input-group textarea{
     resize: none;
     height: 10rem;
-}
+}*/
 
-/*Propiedades del botón cancelar en Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
-#modalAgregarTermino-Diccionario .modal-footer #botonModalCancelar-Diccionario{
+/*Propiedades del botón cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarTerminos {
     font-family: 'Noto Sans Display', sans-serif;
     background-color: transparent;
     border-color: #535353;
     color: #000;
 }
 
-/*Propiedad hover del boton Cancelar en Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
-#modalAgregarTermino-Diccionario .modal-footer #botonModalCancelar-Diccionario:hover{
-    
+/*Propiedad hover del boton Cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarTerminos:hover {
+
     background-color: #535353;
     color: white;
 }
 
-/*Propiedad focus del boton Cancelar Agregar Nuevo Termino en el modalAgregarTermino-Diccionario*/
-#modalAgregarTermino-Diccionario .modal-footer #botonModalCancelar-Diccionario:focus{
+/*Propiedad focus del boton Cancelar Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarTerminos:focus {
     box-shadow: none;
 }
 
-/*Propiedades del botón modificar en el modalAgregarTermino-Diccionario*/
-#modalAgregarTermino-Diccionario .modal-footer #botonModalModificar-Diccionario{
+/*Propiedades del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarTerminos {
     background-color: transparent;
     border-color: #ffc107;
     color: #000;
     font-weight: 100;
 }
 
-/*Propiedad hover del botón modificar en el modalAgregarTermino-Diccionario*/
-#modalAgregarTermino-Diccionario .modal-footer #botonModalModificar-Diccionario:hover{
+/*Propiedad hover del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarTerminos:hover {
     background-color: #ffc107;
     color: white;
 }
 
-/*Propiedad focus del botón modificar en el modalAgregarTermino-Diccionario*/
-#modalAgregarTermino-Diccionario .modal-footer #botonModalModificar-Diccionario:focus{
+/*Propiedad focus del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarTerminos:focus {
     box-shadow: none;
 }
 
-/*Propiedad placeholder en el input y textarea en el modalAgregarTermino-Diccionario*/
-#modalAgregarTermino-Diccionario .input-group input::placeholder, #modalAgregarTermino-Diccionario .input-group textarea::placeholder{
+/*Propiedad placeholder en el input y textarea en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input::placeholder,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group textarea::placeholder {
     font-style: italic;
 }
 
-/*Propiedad focus en el input y textarea en el modalAgregarTermino-Diccionario*/
-#modalAgregarTermino-Diccionario .input-group input:focus, #modalAgregarTermino-Diccionario .input-group textarea:focus{
+/*Propiedad focus en el input y textarea en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input:focus,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group textarea:focus {
     box-shadow: none;
     border-color: #ced4da;
 }
 
+/*Propiedades de los p Administrador y Usuario*/
+#pAdministrador-AdministrarUsuarios,
+#pUsuario-AdministrarUsuarios {
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 18px;
+}
+
+/*Propiedad de los radio buttons*/
+.modal-body #cajaRadioButtons-AgregarCuenta {
+    text-align: left;
+}
+
+/*Propiedad focus sobre los radio buttons*/
+.modal-body .form-check #radioButtonAdministrador-AdministrarUsuarios:focus {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    box-shadow: none;
+}
+
+/*Propiedad checked sobre los radio buttton*/
+.modal-body .form-check #radioButtonAdministrador-AdministrarUsuarios:checked {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
 /*Propiedades del icono al lado de los input en los modales*/
-#modalModificar-Diccionario #btnGroupAddon, #modalAgregarTermino-Diccionario #btnGroupAddon{
-    background-color: #ffc107;/*E4AC34*/
+#modalModificar-AdministrarTerminos #btnGroupAddon {
+    background-color: #ffc107;
+    /*E4AC34*/
     color: white;
 }
+

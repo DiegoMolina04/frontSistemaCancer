@@ -232,11 +232,11 @@ function TiposDepresion() {
                     <th id="tipoDepresionTablaFila-AdministrarTipoDepresion" scope="row">{elemento.tipo_depresion}</th>
                     <td id="modificarEliminarTablaFila-AdministrarTipoDepresion">
 
-                        <button id="botonModificar-AdministrarTipoDepresion" type="button" class="btn btn-success" onClick={() => { reiniciarSetearDatos(elemento) }} title="Modificar sintoma" data-bs-toggle="modal" data-bs-target="#modalModificar-AdministrarTipoDepresion">
+                        <button id="botonModificar-AdministrarTipoDepresion" type="button" class="btn btn-success" onClick={() => { reiniciarSetearDatos(elemento) }} title="Modificar tipo depresión" data-bs-toggle="modal" data-bs-target="#modalModificar-AdministrarTipoDepresion">
                             <i id="iconoModificar-AdministrarTipoDepresion" class="fas fa-cog"></i>
                         </button>
 
-                        <button id="botonEliminar-AdministrarTipoDepresion" type="button" class="btn btn-success" onClick={() => { reiniciarSetearDatos(elemento) }} title="Eliminar sintoma" data-bs-toggle="modal" data-bs-target="#modalEliminar-AdministrarTipoDepresion">
+                        <button id="botonEliminar-AdministrarTipoDepresion" type="button" class="btn btn-success" onClick={() => { reiniciarSetearDatos(elemento) }} title="Eliminar tipo depresión" data-bs-toggle="modal" data-bs-target="#modalEliminar-AdministrarTipoDepresion">
                             <i id="iconoEliminar-AdministrarTipoDepresion" class="fas fa-times-circle"></i>
                         </button>
 
@@ -246,7 +246,7 @@ function TiposDepresion() {
         } else { /*Si codigo == listar y rol = usuario, se muestra tabla sin botones de modificar y eliminar*/
             componenteListarTipoDepresion = tipoDepresion.map(elemento => (
                 <tr>
-                    <th id="tipoDepresionTablaFila-AdministrarTipoDepresion" scope="row">{elemento.sintoma}</th>
+                    <th id="tipoDepresionTablaFila-AdministrarTipoDepresion" scope="row">{elemento.tipo_depresion}</th>
                 </tr>
             ))
         }
@@ -289,7 +289,7 @@ function TiposDepresion() {
                 console.log(preguntas);*/
                 componenteListarTipoDepresion = tipoDepresion.map(elemento => (
                     <tr>
-                        <th id="tipoDepresionTablaFila-AdministrarTipoDepresion" scope="row">{elemento.sintoma}</th>
+                        <th id="tipoDepresionTablaFila-AdministrarTipoDepresion" scope="row">{elemento.tipo_depresion}</th>
                     </tr>
                 ))
 

@@ -443,7 +443,7 @@ function Sintomas() {
                 componenteListarSintomas = sintomas.map(elemento => (
                     <tr>
                         <th id="sintomaTablaFila-AdministrarSintomas" scope="row">{elemento.sintoma}</th>
-                        <td id="tipoDepresionTablaFila-AdministrarSintomas"></td>{/*{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}*/}
+                        <td id="tipoDepresionTablaFila-AdministrarSintomas">{<ol>{elemento.depresion_types.map(tipoDepresion => (<li>{tipoDepresion.tipo_depresion}</li>))}</ol>}</td>{/*{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}*/}
                     </tr>
                 ))
 

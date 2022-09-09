@@ -24,8 +24,8 @@
 #cabeceraAdministrarPreguntas-AdministrarSintomas #cajaNombreOpcion-AdministrarSintomas {
     /*border: 2px solid tomato;*/
     display: inline-table;
-    /*width: fit-content;*/
-    width: 16%;
+    width: fit-content;
+    /*width: 16%;*/
     
     /*margin-bottom: -50px;*/
     /*margin-right: 3%;*/

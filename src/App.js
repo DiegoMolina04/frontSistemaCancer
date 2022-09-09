@@ -12,6 +12,7 @@ import TiposDepresion from "./js/TiposDepresion.js";
 import AgregarTipoDepresion from "./js/AgregarTipoDepresion.js";
 import Diagnosticar from '../src/js/Diagnosticar.js'
 import Diccionario from '../src/js/Diccionario.js'
+import AgregarDiccionario from "./js/AgregarDiccionario.js";
 import Diagrama from '../src/js/Diagrama.js'
 import Buscar from "./js/Buscar.js";
 import VerPerfil from "./js/VerPerfil.js";
@@ -138,6 +139,13 @@ function App() {
                             <Diccionario />
                         </div>
                     </Route>
+
+                    <Route exact path="/agregardiccionario" render={() => token && es_admin ?
+                        <AgregarDiccionario />
+
+                        : <Login></Login>
+
+                    }></Route>
 
                     <Route exact path="/plataforma/diagrama" >
                         <Plataforma />

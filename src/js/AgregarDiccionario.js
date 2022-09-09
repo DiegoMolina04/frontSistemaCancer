@@ -1,18 +1,16 @@
-import '../css/AgregarTipoDepresion.css';
+import '../css/AgregarDiccionario.css';
 import '../css/fontawesome-free-5.15.4-web/css/all.css'
-import logoAgregarTipoDepresion from '../image/logo.png'
+import logoAgregarDiccionario from '../image/logo.png'
 import React, { Fragment, useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 import { UserContext } from "../context/UserContext.js";
 
-function AgregarTipoDepresion() {
+function AgregarDiccionario() {
 
-    /*const [datos, setDatos] = useState({
-        pregunta: ''
-    })*/
     const [datos, setDatos] = useState({
-        tipos_depresion: ""
+        termino: "",
+        descripcion: ""
     })
 
     const {respuestaServidor, setRespuestaServidor} = useContext(UserContext);
@@ -22,6 +20,11 @@ function AgregarTipoDepresion() {
 
     console.log("Esto es lo de datos");
     console.log(datos);
+
+    /*console.log("Datos sintomas");
+    console.log((datos.sintomas).length);*/
+    /*console.log("Elemento guardado");
+    console.log(elementoGuardado);*/
 
     const handleInputChange = (event) => {
         console.log(event.target.name)
@@ -47,13 +50,13 @@ function AgregarTipoDepresion() {
         
         /*console.log("Tamaño sintoma ID");
         console.log((sintomaId).length);*/
-        if (datos.tipos_depresion !== "") { //Si los campos estan completados
+        if (datos.termino !== "" && datos.descripcion !== "" ) { //Si los campos estan completados
             console.log("Vector creado");
-            const arrayDatos = {'tipo_depresion':datos.tipos_depresion}
-            console.log(arrayDatos);
+            const arrayDatos = {'termino':datos.termino, 'descripcion':datos.descripcion}
+            //console.log(arrayDatos);
             /*console.log("Datos llenos");
             console.log(datos);*/
-            const data = await fetch("https://secure-brushlands-86892.herokuapp.com/v1/depresion-type/create-one", {
+            const data = await fetch("https://secure-brushlands-86892.herokuapp.com/v1/dictionary/create-one", {
                 method: "POST",
                 mode: "cors",
                 headers: {
@@ -71,7 +74,7 @@ function AgregarTipoDepresion() {
             
             console.log("Estos son los datos correctos " + JSON.stringify(datos));
 
-        } else if (datos.tipos_depresion == "") { //Se verifica que no existan campos vacios
+        } else if (datos.termino == "" || datos.descripcion == "" ) { //Se verifica que no existan campos vacios
 
             //Codigo seteado para respuesta de campos vacios sin intervención del servidor
             //El servidor se agotó esperando el resto de la petición del navegador
@@ -88,10 +91,11 @@ function AgregarTipoDepresion() {
 
     }
 
-    function regresarVistaSintomas(){
+
+    function regresarVistaDiccionario(){
 
         setRespuestaServidor("");
-        return <Redirect to="/plataforma/tiposdepresion" />
+        return <Redirect to="/plataforma/diccionario" />
     }
 
     switch (respuestaServidor) {
@@ -105,7 +109,7 @@ function AgregarTipoDepresion() {
             break;
 
         case 404:
-            componenteMostrarMensaje = <h5>Ocurrio un error, intente de nuevo.</h5>
+            componenteMostrarMensaje = <h5>Ocurrio un error.</h5>
             break;
 
         case 408:
@@ -124,7 +128,7 @@ function AgregarTipoDepresion() {
 
             /*setRespuestaServidor("Usuario creado");*/
             setRespuestaServidor(201);
-            return <Redirect to="/plataforma/tiposdepresion" />
+            return <Redirect to="/plataforma/diccionario" />
 
             break;
 
@@ -133,27 +137,27 @@ function AgregarTipoDepresion() {
             break;
 
     }
-    
+ 
     return (
 
-        <div id="fondo-AgregarTiposDepresion">
+        <div id="fondo-AgregarTerminos">
 
             {/*Contenedor de agregar usuario*/}
-            <div id="caja-AgregarTiposDepresion">
+            <div id="caja-AgregarTerminos">
 
                 {/*Contenedor del logo*/}
-                <div id="cajaLogo-AgregarTiposDepresion">
+                <div id="cajaLogo-AgregarTerminos">
 
-                    <img id="logo-AgregarTiposDepresion" src={logoAgregarTipoDepresion} alt="" />
+                    <img id="logo-AgregarTerminos" src={logoAgregarDiccionario} alt="" />
 
                 </div>
 
 
                 {/*Linea debajo del logo*/}
-                <hr id="linea-AgregarTiposDepresion" />
+                <hr id="linea-AgregarTerminos" />
 
-                <div id="cajaNuevoTipoDepresion-AgregarTipoDepresion">
-                    <label id="labelNuevoTipoDepresion-AgregarTipoDepresion">Nuevo tipo de depresión</label>
+                <div id="cajaNuevoTermino-AgregarTerminos">
+                    <label id="labelNuevoTermino-AgregarTerminos">Nuevo termino</label>
                 </div>
 
                 <br />
@@ -164,35 +168,43 @@ function AgregarTipoDepresion() {
                 {/*Contenedor de todo el formulario*/}
 
 
-                <div id="formulario-AgregarTipoDepresion">
+                <div id="formulario-AgregarTerminos">
 
                     {/*Sección ingrese cedula*/}
-                    <label>Ingrese el tipo de depresión</label>
+                    <label>Ingrese el termino</label>
                     <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-notes-medical"></i></div>
-                        <input id="inputIngreseTipoDepresion-AgregarTipoDepresion" type="text" className="form-control" placeholder="Ingrese el tipo de depresión" onChange={handleInputChange} name="tipos_depresion" />
+                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-question"></i></div>
+                        <input id="inputIngreseTermino-AgregarTerminos" type="text" className="form-control" placeholder="Ingrese el termino" onChange={handleInputChange} name="termino" />
                     </div>
 
                     <br />
 
                     {/*Sección ingrese nombre*/}
+                    <label>Descripción</label>
+                    <div className="input-group">
+                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-book"></i></div>
+                        <textarea class="form-control" placeholder="Ingrese la descripción del termino" onChange={handleInputChange} name="descripcion"></textarea>
+                        {/*<input id="inputSeleccionSintomas-AgregarPregunta" type="text" className="form-control" placeholder="Seleccione los sintomas" title="Digite su nombre completo" name="sintoma" readonly="readonly" value={sintomaMensaje} />*/}{/*value={sintomaSeleccionado}*/}
+                    </div>
+
+                    <br />
 
                     {/*Sección Botones Enviar y Regresar*/}
-                    <div id="cajaBotones-AgregarTiposDepresion">
+                    <div id="cajaBotones-AgregarTerminos">
 
 
-                        <div id="cajaRegresar-AgregarTiposDepresion">
+                        <div id="cajaRegresar-AgregarTerminos">
 
                             {/**/}
-                            <Link to='/plataforma/tiposdepresion'>
-                                <button id="botonRegresar-AgregarTiposDepresion" type="button" class="btn btn-primary" title="Regresar a la plataforma" onClick={regresarVistaSintomas}>Regresar</button>
+                            <Link to='/plataforma/diccionario'>
+                                <button id="botonRegresar-AgregarTerminos" type="button" class="btn btn-primary" title="Regresar a la plataforma" onClick={regresarVistaDiccionario}>Regresar</button>
                             </Link>
                             
                         </div>
 
                         <form className="row" onSubmit={enviarDatos}>
-                            <div id="cajaEnviar-AgregarTiposDepresion">
-                                <button id="botonEnviar-AgregarTiposDepresion" type="submit" class="btn btn-primary" title="Crear nuevo tipo de depresión" >Enviar</button>
+                            <div id="cajaEnviar-AgregarTerminos">
+                                <button id="botonEnviar-AgregarTerminos" type="submit" class="btn btn-primary" title="Crear nuevo termino" >Enviar</button>
                             </div>
                         </form>
 
@@ -206,4 +218,4 @@ function AgregarTipoDepresion() {
     );
 }
 
-export default AgregarTipoDepresion;
+export default AgregarDiccionario;

@@ -297,7 +297,7 @@ break;
                     {/*Sección ingrese cedula*/}
                     <label>Ingrese el sintoma</label>
                     <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-question"></i></div>
+                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-heartbeat"></i></div>
                         <input id="inputIngreseSintoma-AgregarSintomas" type="text" className="form-control" placeholder="Ingrese el sintoma" onChange={handleInputChange} name="sintoma" />
                     </div>
 

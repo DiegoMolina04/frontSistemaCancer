@@ -24,8 +24,8 @@
 #cabeceraAdministrarTiposDepresion-AdministrarTiposDepresion #cajaNombreOpcion-AdministrarTiposDepresion {
     /*border: 2px solid tomato;*/
     display: inline-table;
-    /*width: fit-content;*/
-    width: 16%;
+    width: fit-content;
+    /*width: 16%;*/
     
     /*margin-bottom: -50px;*/
     /*margin-right: 3%;*/
@@ -306,8 +306,8 @@ form #cajaTabla-AdministrarTiposDepresion {
 }
 
 /*Propiedades del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
-#modalEliminar-AdministrarTipoDepresion .modal-footer #botonModalCancelar-AdministrarSintomas,
-#modalModificar-AdministrarTipoDepresion .modal-footer #botonModalCancelar-AdministrarSintomas {
+#modalEliminar-AdministrarTipoDepresion .modal-footer #botonModalCancelar-AdministrarTiposDepresion,
+#modalModificar-AdministrarTipoDepresion .modal-footer #botonModalCancelar-AdministrarTiposDepresion {
     font-family: 'Noto Sans Display', sans-serif;
     background-color: transparent;
     border-color: #535353;
@@ -315,16 +315,16 @@ form #cajaTabla-AdministrarTiposDepresion {
 }
 
 /*Propiedad hover del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
-#modalEliminar-AdministrarTipoDepresion .modal-footer #botonModalCancelar-AdministrarSintomas:hover,
-#modalModificar-AdministrarTipoDepresion .modal-footer #botonModalCancelar-AdministrarSintomas:hover {
+#modalEliminar-AdministrarTipoDepresion .modal-footer #botonModalCancelar-AdministrarTiposDepresion:hover,
+#modalModificar-AdministrarTipoDepresion .modal-footer #botonModalCancelar-AdministrarTiposDepresion:hover {
 
     background-color: #535353;
     color: white;
 }
 
 /*Propiedad focus del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
-#modalEliminar-AdministrarTipoDepresion .modal-footer #botonModalCancelar-AdministrarSintomas:focus,
-#modalModificar-AdministrarTipoDepresion .modal-footer #botonModalCancelar-AdministrarSintomas:focus {
+#modalEliminar-AdministrarTipoDepresion .modal-footer #botonModalCancelar-AdministrarTiposDepresion:focus,
+#modalModificar-AdministrarTipoDepresion .modal-footer #botonModalCancelar-AdministrarTiposDepresion:focus {
     box-shadow: none;
 }
 
@@ -418,7 +418,7 @@ form #cajaTabla-AdministrarTiposDepresion {
 }
 
 /*Propiedades del botón cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarSintomas {
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarTiposDepresion {
     font-family: 'Noto Sans Display', sans-serif;
     background-color: transparent;
     border-color: #535353;
@@ -426,14 +426,14 @@ form #cajaTabla-AdministrarTiposDepresion {
 }
 
 /*Propiedad hover del boton Cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarSintomas:hover {
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarTiposDepresion:hover {
 
     background-color: #535353;
     color: white;
 }
 
 /*Propiedad focus del boton Cancelar Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarSintomas:focus {
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarTiposDepresion:focus {
     box-shadow: none;
 }
 
