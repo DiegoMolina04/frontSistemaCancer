@@ -1,0 +1,188 @@
+/*Color de fondo para vista agregar usuario*/
+#fondo-AgregarTiposDepresion{
+    /*height: 100vh;*/ /*vh (viewport-height) = Altura de la ventana gráfica.*/
+    height: fit-content;
+    width: 100%;
+    border: 0.01px solid #212844; /*Despliega borde en toda la pantalla*/
+    background-color: #212844; /*9a0526*/
+}
+
+/*Caja contenedora de agregar usuario*/
+#caja-AgregarTiposDepresion{
+
+    /*border: 2px solid blue;*/
+    border: 1px solid #000;
+    /*width: 50%;*/
+    max-width: 500px;
+    margin-top: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7.7%;
+    height: fit-content;
+    padding: 2rem;
+    border-radius: 7px;
+    background-color: #eff2f5;
+    box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+    
+}
+
+/*Caja de la imagen del logo*/
+#cajaLogo-AgregarTiposDepresion{
+
+    /*border: 2px solid brown;*/
+    text-align: center;
+
+}
+
+/*Imagen logo*/
+#logo-AgregarTiposDepresion{
+    
+    /*height: 13rem;*/
+    
+    height: 4rem;
+    margin: 2rem 0 2rem 0;
+}
+
+/*Caja texto Nuevo Usuario*/
+#caja-AgregarTiposDepresion #cajaNuevoTipoDepresion-AgregarTipoDepresion{
+    /*border: 2px solid skyblue;*/
+    margin-top: 10px;
+    text-align: center;
+}
+
+/*Texto informativo para el usuario en caso de error*/
+#caja-AgregarTiposDepresion h5{
+    font-family: 'Noto Sans Display', sans-serif;
+    /*color: red;*/
+    font-style: italic;
+    margin-left: 14px;
+}
+
+
+/*Label Nuevo registro*/
+#cajaNuevoTipoDepresion-AgregarTipoDepresion #labelNuevoTipoDepresion-AgregarTipoDepresion{
+
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+
+}
+
+/*Linea debajo del logo*/
+#linea-AgregarTiposDepresion{
+
+    color: #000;
+}
+
+/*Caja contenedora del formulario*/
+#formulario-AgregarTipoDepresion{
+    
+    /*border: 2px solid seagreen;*/
+    padding: 1rem;
+}
+
+/*Todos los label del formulario*/
+#formulario-AgregarTipoDepresion label{
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 20px;
+}
+
+/*Propiedades de los iconos al lado de los input*/
+#formulario-AgregarTipoDepresion .input-group #btnGroupAddon{
+    width: 42px;
+    /*background-color: rgba(62, 138, 62, 0.589);*/
+    background-color: #ffc107;
+    margin-top: 10px;
+    
+}
+
+/*Propiedades de los inputs*/
+#formulario-AgregarTipoDepresion .input-group input{
+    margin-top: 10px;
+    
+}
+
+/*Propiedad placeholder de los inputs*/
+#formulario-AgregarTipoDepresion .input-group input::placeholder{
+
+    font-style: italic;
+
+}
+
+/*Propiedad focus de los inputs*/
+#formulario-AgregarTipoDepresion .input-group input:focus{
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+/*Caja botones enviar y Regresar*/
+#formulario-AgregarTipoDepresion #cajaBotones-AgregarTiposDepresion{
+    /*border: 3px solid purple;*/
+    margin-top: 30px;
+}
+
+/*Caja contenedora del botón Enviar*/
+#formulario-AgregarTipoDepresion #cajaEnviar-AgregarTiposDepresion{
+    /*border: 3px solid red;*/
+    /*text-align: center;*/
+    text-align: center;
+    /*float: left;*/
+    /*width: 50%;*/
+    /*text-align: right;*/
+    
+}
+
+/*Caja contenedora del botón Regresar*/
+#formulario-AgregarTipoDepresion #cajaRegresar-AgregarTiposDepresion{
+    /*border: 3px solid palevioletred;*/
+    float: left;
+    width: 49%;
+    /*text-align: center;*/
+    text-align: center;
+    /*text-align: left;*/
+    /*margin-left: 30%;*/
+
+}
+
+/*Propiedades de los botones Enviar y Regresar*/
+#cajaEnviar-AgregarTiposDepresion #botonEnviar-AgregarTiposDepresion, #cajaRegresar-AgregarTiposDepresion #botonRegresar-AgregarTiposDepresion{
+    background: transparent;
+    color: #000;
+    /*border-color: rgba(62, 138, 62, 0.589);*/
+    /*border-color: #ffc107;*/
+    font-family: 'Noto Sans Display', sans-serif;
+    width: 6rem;
+    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
+}
+
+/*Propiedad del boton Enviar*/
+#cajaEnviar-AgregarTiposDepresion #botonEnviar-AgregarTiposDepresion{
+    /*margin-right: 20%;*/
+    /*margin-left: 10%;*/
+    border-color: #ffc107;
+}
+
+/*Propiedad del boton Regresar*/
+#cajaRegresar-AgregarTiposDepresion #botonRegresar-AgregarTiposDepresion{
+    /*margin-left: 10%;*/
+    /*margin-right: 2rem;*/
+    border-color: #535353;
+    
+}
+
+/*Propiedad hover sobre boton Enviar*/
+#cajaEnviar-AgregarTiposDepresion #botonEnviar-AgregarTiposDepresion:hover{
+    /*background-color: rgba(62, 138, 62, 0.589);*/
+    border-color: #ffc107 ;
+    background-color: #ffc107 ;
+    color: white;
+    
+}
+
+/*Propiedad hover sobre boton Regresar*/
+#cajaRegresar-AgregarTiposDepresion #botonRegresar-AgregarTiposDepresion:hover{
+    background-color: #535353;
+    border-color: #535353;
+    color: white;
+}
+

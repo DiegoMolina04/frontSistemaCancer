@@ -66,6 +66,13 @@ function Plataforma() {
           </button>
           </Link>
 
+          <Link to='/plataforma/tiposdepresion' >
+          <button type="button" className="btn btn-success" title="Ver tipos de depresión">
+          <i class="fas fa-notes-medical"></i>
+            Tipos Depresión
+          </button>
+          </Link>
+
           <Link to='/plataforma/diccionario' >
           <button type="button" className="btn btn-success" title="Ver diccionario de terminos">
             <i class="fas fa-book"></i>

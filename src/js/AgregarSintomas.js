@@ -12,8 +12,8 @@ function AgregarSintomas() {
         pregunta: ''
     })*/
     const [datos, setDatos] = useState({
-        pregunta: '',
-        sintomas: []
+        sintoma: "",
+        tipos_depresion: { "": "" }
     })
     {/*,
     es_admin: ''*/}
@@ -101,13 +101,13 @@ function AgregarSintomas() {
         
         /*console.log("Tamaño sintoma ID");
         console.log((sintomaId).length);*/
-        if (datos.pregunta !== "" && (tipoDepresionId).length !== 0 ) { //Si los campos estan completados
+        if (datos.sintoma !== "" && (tipoDepresionId).length !== 0 ) { //Si los campos estan completados
             console.log("Vector creado");
-            const arrayDatos = {'pregunta':datos.pregunta, 'sintomas':tipoDepresionId}
+            const arrayDatos = {'sintoma':datos.sintoma, 'tipos_depresion':tipoDepresionId}
             console.log(arrayDatos);
             /*console.log("Datos llenos");
             console.log(datos);*/
-            const data = await fetch("https://secure-brushlands-86892.herokuapp.com/v1/questions/create-one", {
+            const data = await fetch("https://secure-brushlands-86892.herokuapp.com/v1/symptoms/create-one", {
                 method: "POST",
                 mode: "cors",
                 headers: {
@@ -125,7 +125,7 @@ function AgregarSintomas() {
             
             console.log("Estos son los datos correctos " + JSON.stringify(datos));
 
-        } else if (datos.pregunta == "" || (tipoDepresionId).length == 0) { //Se verifica que no existan campos vacios
+        } else if (datos.sintoma == "" || (tipoDepresionId).length == 0) { //Se verifica que no existan campos vacios
 
             //Codigo seteado para respuesta de campos vacios sin intervención del servidor
             //El servidor se agotó esperando el resto de la petición del navegador

@@ -8,6 +8,8 @@ import Preguntas from "./js/Preguntas.js";
 import AgregarPregunta from "./js/AgregarPregunta.js";
 import Sintomas from './js/Sintomas.js'
 import AgregarSintomas from "./js/AgregarSintomas.js";
+import TiposDepresion from "./js/TiposDepresion.js";
+import AgregarTipoDepresion from "./js/AgregarTipoDepresion.js";
 import Diagnosticar from '../src/js/Diagnosticar.js'
 import Diccionario from '../src/js/Diccionario.js'
 import Diagrama from '../src/js/Diagrama.js'
@@ -111,6 +113,20 @@ function App() {
 
                     <Route exact path="/agregarsintoma" render={() => token && es_admin ?
                         <AgregarSintomas />
+
+                        : <Login></Login>
+
+                    }></Route>
+
+                    <Route exact path="/plataforma/tiposdepresion" >
+                        <Plataforma />
+                        <div>
+                            <TiposDepresion />
+                        </div>
+                    </Route>
+
+                    <Route exact path="/agregartipodepresion" render={() => token && es_admin ?
+                        <AgregarTipoDepresion />
 
                         : <Login></Login>
 

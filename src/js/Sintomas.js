@@ -18,13 +18,13 @@ function Sintomas() {
     const [tipoDepresionMensaje, setTipoDepresionMensaje] = useState([]); //Se guarda el mensaje del id para mostrarlo en el textarea
 
     const [editarSintoma, setEditarSintoma] = useState({ //Se guarda las modificaciones del modificar pregunta
-        pregunta: "",
-        symptoms: { "": "" }
+        sintoma: "",
+        tipos_depresion: { "": "" }
     });
 
     const [sintomaOriginal, setSintomaOriginal] = useState({ //Se guarda la pregunta y sintomas original al quererlos modificar
-        pregunta: "",
-        symptoms: { "": "" }
+        sintoma: "",
+        tipos_depresion: { "": "" }
     });
 
     const [id, setId] = useState({ //Se usa para guardar el id a modificar
@@ -156,7 +156,7 @@ function Sintomas() {
 
     async function enviarModificarSintoma(arrayDatos) {
 
-        const url = "https://secure-brushlands-86892.herokuapp.com/v1/questions/" + editarSintoma.id + "/update-one";
+        const url = "https://secure-brushlands-86892.herokuapp.com/v1/symptoms/" + editarSintoma.id + "/update-one";
 
         const data = await fetch(url, {
             method: "PUT",
@@ -188,100 +188,100 @@ function Sintomas() {
         setRespuestaServidor("");
 
         let sintomasNuevosOrganizados = JSON.stringify(tipoDepresionId.sort());
-        let sintomasOriginalesOrganizados = JSON.stringify((sintomaOriginal.sintomas).sort());
+        let sintomasOriginalesOrganizados = JSON.stringify((sintomaOriginal.tipos_depresion).sort());
 
-        if (editarSintoma.pregunta == "" || tipoDepresionId.length == 0) { //Si alguno de los campos esta vacio
+        if (editarSintoma.sintoma == "" || tipoDepresionId.length == 0) { //Si alguno de los campos esta vacio
 
             setRespuestaServidor(408);
 
-        } else if ((editarSintoma.pregunta == sintomaOriginal.pregunta) && (sintomasNuevosOrganizados == sintomasOriginalesOrganizados)) { //Si la pregunta y sintomas no se modificaron
+        } else if ((editarSintoma.sintoma == sintomaOriginal.sintoma) && (sintomasNuevosOrganizados == sintomasOriginalesOrganizados)) { //Si la pregunta y sintomas no se modificaron
 
             setRespuestaServidor(207);
 
-        } else if ((editarSintoma.pregunta == sintomaOriginal.pregunta) && (sintomasNuevosOrganizados != sintomasOriginalesOrganizados)) { //Si la pregunta es igual y los sintomas cambian
+        } else if ((editarSintoma.sintoma == sintomaOriginal.sintoma) && (sintomasNuevosOrganizados != sintomasOriginalesOrganizados)) { //Si la pregunta es igual y los sintomas cambian
 
             /*console.log("Pregunta igual y sintomas diferentes");
-            console.log("Este es el ID de la pregunta "+editarPregunta.id);
-            console.log("Antes !!");*/
-            let sintomasOriginales = sintomaOriginal.sintomas;
-            const sintomasNuevos = [];
-            //console.log("Sintomas originales "+sintomasOriginales);
+            console.log("Este es el ID de la pregunta "+editarPregunta.id);*/
+            console.log("Antes !!");
+            let tiposDepresionOriginales = sintomaOriginal.tipos_depresion;
+            const tiposDepresionNuevos = [];
+            console.log("Sintomas originales "+sintomasOriginalesOrganizados);
             //console.log("Sintomas organizados "+sintomasOriginales.sort());
-            //console.log("Sintomas nuevos "+sintomaId);
+            console.log("Sintomas nuevos "+sintomasNuevosOrganizados);
 
             tipoDepresionId.map(elemento => (
 
-                (sintomaOriginal.sintomas.includes(elemento)) ? (sintomasOriginales = sintomasOriginales.filter(id => id !== elemento)) : sintomasNuevos.push(elemento)//(sintomasOriginales = sintomasOriginales.filter(id => id !== elemento) && sintomasNuevos.push(elemento))
+                (sintomaOriginal.tipos_depresion.includes(elemento)) ? (tiposDepresionOriginales = tiposDepresionOriginales.filter(id => id !== elemento)) : tiposDepresionNuevos.push(elemento)//(sintomasOriginales = sintomasOriginales.filter(id => id !== elemento) && sintomasNuevos.push(elemento))
             ));
 
-            /*console.log("Despues !!");
-            console.log("Sintomas a borrar "+sintomasOriginales);
-            console.log("Sintomas nuevos "+sintomasNuevos);*/
-            if (sintomasOriginales.length == 0) { //Si solo hay que insertar sintomas
+            /*console.log("Despues !!");*/
+            console.log("Sintomas a borrar "+tiposDepresionOriginales);
+            console.log("Sintomas nuevos "+tiposDepresionNuevos);
+            if (tiposDepresionOriginales.length == 0) { //Si solo hay que insertar sintomas
                 //console.log("solo hay que insertar sintomas");
-                const arrayDatos = { 'sintomas': sintomasNuevos }
+                const arrayDatos = { 'tipos_depresion': tiposDepresionNuevos }
 
                 enviarModificarSintoma(arrayDatos);
 
-            } else if (sintomasNuevos.length == 0) { //Si solo hay que borrar sintomas
+            } else if (tiposDepresionNuevos.length == 0) { //Si solo hay que borrar sintomas
                 //console.log("solo hay que borrar sintomas");
-                const arrayDatos = { 'remover_sintomas': sintomasOriginales }
+                const arrayDatos = { 'remover_tipos_depresion': tiposDepresionOriginales }
                 enviarModificarSintoma(arrayDatos);
 
-            } else if (sintomasNuevos.length != 0 && sintomasOriginales.length != 0) { //Si hay que insertar sintomas y borrar sintomas
+            } else if (tiposDepresionNuevos.length != 0 && tiposDepresionOriginales.length != 0) { //Si hay que insertar sintomas y borrar sintomas
                 //console.log("hay que insertar sintomas y borrar sintomas");
 
-                const arrayDatos = { 'sintomas': sintomasNuevos, 'remover_sintomas': sintomasOriginales }//const arrayDatos = {'sintomas':sintomasNuevos, 'remover_sintomas':sintomasOriginales}
+                const arrayDatos = { 'tipos_depresion': tiposDepresionNuevos, 'remover_tipos_depresion': tiposDepresionOriginales }//const arrayDatos = {'sintomas':sintomasNuevos, 'remover_sintomas':sintomasOriginales}
 
                 enviarModificarSintoma(arrayDatos);
             }
 
-        } else if ((editarSintoma.pregunta !== sintomaOriginal.pregunta) && (sintomasNuevosOrganizados == sintomasOriginalesOrganizados)) { //Si pregunta diferente y sintomas iguales
+        } else if ((editarSintoma.sintoma !== sintomaOriginal.sintoma) && (sintomasNuevosOrganizados == sintomasOriginalesOrganizados)) { //Si pregunta diferente y sintomas iguales
 
             //console.log("Pregunta diferente y sintomas iguales");
-            const arrayDatos = { 'pregunta': editarSintoma.pregunta }
+            const arrayDatos = { 'sintoma': editarSintoma.sintoma }
             enviarModificarSintoma(arrayDatos);
 
-        } else if ((editarSintoma.pregunta != sintomaOriginal.pregunta) && (sintomasNuevosOrganizados != sintomasOriginalesOrganizados)) { //Si Pregunta y sintomas diferentes
+        } else if ((editarSintoma.sintoma != sintomaOriginal.sintoma) && (sintomasNuevosOrganizados != sintomasOriginalesOrganizados)) { //Si Pregunta y sintomas diferentes
 
-            /*console.log("Pregunta y sintomas diferente");
-            console.log("Antes !!");*/
-            let sintomasOriginales = sintomaOriginal.sintomas;
-            const sintomasNuevos = [];
-            /*console.log("Sintomas originales "+sintomasOriginales);
-            console.log("Sintomas nuevos "+sintomaId);*/
+            console.log("Pregunta y sintomas diferente");
+            console.log("Antes !!");
+            let tiposDepresionOriginales = sintomaOriginal.tipos_depresion;
+            const tiposDepresionNuevos = [];
+            console.log("Sintomas originales "+tiposDepresionOriginales);
+            console.log("Sintomas nuevos "+sintomasNuevosOrganizados);
 
             tipoDepresionId.map(elemento => (
 
-                (sintomaOriginal.sintomas.includes(elemento)) ? (sintomasOriginales = sintomasOriginales.filter(id => id !== elemento)) : sintomasNuevos.push(elemento)//(sintomasOriginales = sintomasOriginales.filter(id => id !== elemento) && sintomasNuevos.push(elemento))
+                (sintomaOriginal.tipos_depresion.includes(elemento)) ? (tiposDepresionOriginales = tiposDepresionOriginales.filter(id => id !== elemento)) : tiposDepresionNuevos.push(elemento)//(sintomasOriginales = sintomasOriginales.filter(id => id !== elemento) && sintomasNuevos.push(elemento))
             ));
 
-            /*console.log("Despues !!");
-            console.log("Sintomas a borrar "+sintomasOriginales);
-            console.log("Sintomas nuevos "+sintomasNuevos);*/
-            if (sintomasOriginales.length == 0) { //Si solo hay que insertar sintomas e insertar pregunta
+            console.log("Despues !!");
+            console.log("Sintomas a borrar "+tiposDepresionOriginales);
+            console.log("Sintomas nuevos "+tiposDepresionNuevos);
+            if (tiposDepresionOriginales.length == 0) { //Si solo hay que insertar sintomas e insertar pregunta
 
                 //console.log("solo hay que insertar sintomas e insertar pregunta");
-                const arrayDatos = { 'pregunta': editarSintoma.pregunta, 'sintomas': sintomasNuevos }
+                const arrayDatos = { 'sintoma': editarSintoma.sintoma, 'tipos_depresion': tiposDepresionNuevos }
                 enviarModificarSintoma(arrayDatos);
 
-            } else if (sintomasNuevos.length == 0) { //Si solo hay que borrar sintomas e insertar pregunta
+            } else if (tiposDepresionNuevos.length == 0) { //Si solo hay que borrar sintomas e insertar pregunta
 
                 //console.log("solo hay que borrar sintomas e insertar pregunta");
-                const arrayDatos = { 'pregunta': editarSintoma.pregunta, 'remover_sintomas': sintomasOriginales }
+                const arrayDatos = { 'sintoma': editarSintoma.sintoma, 'remover_tipos_depresion': tiposDepresionOriginales }
                 enviarModificarSintoma(arrayDatos);
 
-            } else if (sintomasNuevos.length != 0 && sintomasOriginales.length != 0) { //Si hay que insertar sintomas, borrar sintomas y pregunta
+            } else if (tiposDepresionNuevos.length != 0 && tiposDepresionOriginales.length != 0) { //Si hay que insertar sintomas, borrar sintomas y pregunta
 
-                //console.log("hay que insertar sintomas, borrar sintomas y pregunta");
-                const arrayDatos = { 'pregunta': editarSintoma.pregunta, 'sintomas': sintomasNuevos, 'remover_sintomas': sintomasOriginales }
+                console.log("hay que insertar sintomas, borrar sintomas y pregunta");
+                const arrayDatos = { 'sintoma': editarSintoma.sintoma, 'tipos_depresion': tiposDepresionNuevos, 'remover_tipos_depresion': tiposDepresionOriginales }
                 enviarModificarSintoma(arrayDatos);
             }
         }
 
         setEditarSintoma({ //Se reinician los valores al hacer click en modificar sintoma
-            pregunta: "",
-            symptoms: { "": "" }
+            sintoma: "",
+            tipos_depresion: { "": "" }
         });
 
     }
@@ -380,7 +380,7 @@ function Sintomas() {
             componenteListarSintomas = sintomas.map(elemento => (
                 <tr>
                     <th id="sintomaTablaFila-AdministrarSintomas" scope="row">{elemento.sintoma}</th>
-                    <td id="tipoDepresionTablaFila-AdministrarSintomas">Prueba</td> {/*Se cargan los items listandolos*/}{/*{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}*/}{/*{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}*/}
+                    <td id="tipoDepresionTablaFila-AdministrarSintomas">{<ol>{elemento.depresion_types.map(tipoDepresion => (<li>{tipoDepresion.tipo_depresion}</li>))}</ol>}</td> {/*Se cargan los items listandolos*/}{/*{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}*/}{/*{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}*/}
                     <td id="modificarEliminarTablaFila-AdministrarSintomas">
 
                         <button id="botonModificar-AdministrarSintomas" type="button" class="btn btn-success" onClick={() => { reiniciarSetearDatos(elemento) }} title="Modificar sintoma" data-bs-toggle="modal" data-bs-target="#modalModificar-AdministrarSintomas">
@@ -398,7 +398,7 @@ function Sintomas() {
             componenteListarSintomas = sintomas.map(elemento => (
                 <tr>
                     <th id="sintomaTablaFila-AdministrarSintomas" scope="row">{elemento.sintoma}</th>
-                    <td id="tipoDepresionTablaFila-AdministrarSintomas">Prueba</td>{/*Se cargan los items listandolos*/}{/*{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}*/}
+                    <td id="tipoDepresionTablaFila-AdministrarSintomas">{<ol>{elemento.depresion_types.map(tipoDepresion => (<li>{tipoDepresion.tipo_depresion}</li>))}</ol>}</td>{/*Se cargan los items listandolos*/}{/*{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}*/}
                 </tr>
             ))
         }
@@ -414,7 +414,7 @@ function Sintomas() {
                 componenteListarSintomas = sintomas.map(elemento => (
                     <tr>
                         <th id="sintomaTablaFila-AdministrarSintomas" scope="row">{elemento.sintoma}</th>
-                        <td id="tipoDepresionTablaFila-AdministrarSintomas">Prueba Filtrar</td>{/*Se cargan los items listandolos*/}{/*{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}*/}
+                        <td id="tipoDepresionTablaFila-AdministrarSintomas">{<ol>{elemento.depresion_types.map(tipoDepresion => (<li>{tipoDepresion.tipo_depresion}</li>))}</ol>}</td>{/*Se cargan los items listandolos*/}{/*{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}*/}
 
                         <td id="modificarEliminarTablaFila-AdministrarSintomas">
 
