@@ -37,6 +37,8 @@ function CrearContraseña() {
         event.preventDefault();
         
         if (datos.contraseña == datos.Recontraseña && datos.contraseña != "" && datos.Recontraseña != ""){
+
+            let arrayDatos = {"contraseña":datos.contraseña}
             
             const url = "https://secure-brushlands-86892.herokuapp.com/v1/users/"+correo+"/update-one";
             
@@ -47,7 +49,7 @@ function CrearContraseña() {
                     
                     "Content-Type":"application/json"
                 },
-                body: JSON.stringify(datos)
+                body: JSON.stringify(arrayDatos)
             })
             /*console.log(JSON.stringify(datos));*/
             

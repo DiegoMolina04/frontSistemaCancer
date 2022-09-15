@@ -129,7 +129,7 @@ function Plataforma() {
           </button>
           </Link>
           
-          <button id="cambioContraseña" type="button" className="btn btn-success" title="Cambiar contraseña" >
+          <button id="cambioContraseña" type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalCambiarContraseña-Plataforma" title="Cambiar contraseña" >
           <i class="fas fa-key"></i>
             Cambio contraseña
           </button>
