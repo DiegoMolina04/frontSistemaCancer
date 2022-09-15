@@ -55,8 +55,8 @@
     /*float: right;
     width: 89.35rem;*/
     /*overflow-x: scroll;*/
-
-    /*overflow: auto;*/
+    overflow-x: hidden;
+    overflow-y: auto;
 
     /*box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
     /*background-color: #282c34;*/
@@ -136,18 +136,26 @@
     /*box-shadow: none; /*Quita la sombra verde alrededor del botón
 }*/
 
-/*Caja contenedora superior de botones inicio y perfil*/
+/*Caja contenedora superior de botones adminUsuario, inicio, cambio contraseña y perfil*/
 #botonesSuperior{
     /*border: 5px solid darkturquoise;*/
     float: right;
     /*margin-left: 30%;*/
     /*margin-right: 15px;*/
     display: inline;
-    z-index: 1000px;
+    /*z-index: 1000px;*/
+    margin-right: 5px;
+    /*overflow: auto;*/
+}
+
+/*Se redondean todos los botones del menu superior*/
+#botonesSuperior button{
+    border-radius: 5px;
 }
 
 /*Propiedades de los botones inicio y perfil en el menu superior*/
-#botonesSuperior #expandiblePerfil, #botonesSuperior #inicio{
+/*#botonesSuperior #expandiblePerfil, */
+#botonesSuperior #inicio{
     
     width: 6rem;
     height: 37px;
@@ -159,7 +167,7 @@
     /*border-color: rgba(62, 138, 62, 0.589);*/
     /*border-color: #ffc107;*/
     border-color: #212844 ;
-
+    
     /*border-width: 0 2px 0 2px;*/
     /*border-color: transparent #138a70 transparent #E4AC34;*/
     
@@ -168,8 +176,8 @@
 
 }
 
-/*Propiedades del botón agregarUsuario en el menu superior*/
-#botonesSuperior #agregarUsuario{
+/*Propiedades del botón administrarUsuario en el menu superior*/
+#botonesSuperior #administrarUsuario{
     width: 12.5rem;
     height: 37px;
     margin-top: 5px;
@@ -189,8 +197,52 @@
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
 
-/*Propiedad hover para botones inicio, perfil y agregarUsuario*/
-#botonesSuperior #inicio:hover, #botonesSuperior #agregarUsuario:hover, #botonesSuperior #expandiblePerfil:hover{
+#botonesSuperior #cambioContraseña{
+    width: fit-content;
+    height: 37px;
+    margin-top: 5px;
+    margin-right: -1px;
+    /*background: transparent;*/
+    background-color: #eff2f5;
+    color: #000;
+    /*color: white;*/
+    /*border-color: rgba(62, 138, 62, 0.589);*/
+    /*border-color: #ffc107;*/
+    border-color: #212844 ;
+
+    /*border-width: 0 2px 0 2px;*/
+    /*border-color: transparent #138a70 transparent #E4AC34;*/
+    
+    font-family: 'Noto Sans Display', sans-serif;
+    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
+}
+
+#botonesSuperior #salir{
+    width: 6rem;
+    height: 37px;
+    margin-top: 5px;
+    margin-right: -1px;
+    /*background: transparent;*/
+    background-color: #eff2f5;
+    color: #000;
+    /*color: white;*/
+    /*border-color: rgba(62, 138, 62, 0.589);*/
+    /*border-color: #ffc107;*/
+    border-color: #212844 ;
+
+    /*border-width: 0 2px 0 2px;*/
+    /*border-color: transparent #138a70 transparent #E4AC34;*/
+    
+    font-family: 'Noto Sans Display', sans-serif;
+    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
+}
+
+/*Propiedad hover para botones inicio, perfil y administrarUsuario*/
+/*#botonesSuperior #expandiblePerfil:hover*/
+#botonesSuperior #inicio:hover, 
+#botonesSuperior #administrarUsuario:hover,
+#botonesSuperior #cambioContraseña:hover,
+#botonesSuperior #salir:hover{
     /*background-color: rgba(62, 138, 62, 0.589);*/
     /*border-color: red;*/
     /*background-color: #ffc107;*/
@@ -209,45 +261,25 @@
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
 
-/*Lista desplegada del boton perfil menu superior*/
-#botonesSuperior .dropdown-menu{
-    background-color: #E4AC34;
-    
-}
-
-/*Letras de la lista desplegada del boton perfil menu superior*/
-#botonesSuperior .dropdown-menu .dropdown-item{
-    color: white;
-    /*text-decoration: none;*/
-}
-
-/*Etiqueta a en el dropdown de perfil para quitar subrayado*/
-#botonesSuperior .dropdown-menu a{
-    text-decoration: none;
-}
-
-/*Propiedad hover de la lista desplegada del boton perfil menu superior*/
-#botonesSuperior .dropdown-menu .dropdown-item:hover{
-    background-color: #e1dfe7;
-    color: #000;
-}
-
 /*Icono flecha hacia abajo en menu superir boton perfil*/
-#botonesSuperior #expandiblePerfil i{
+/*#botonesSuperior #expandiblePerfil i{
 
     margin-left: 10px;
-}
+}*/
 
 /*Icono casa en menu superir boton inicio e Icono mas en menu superior boton agregar usuario*/
-#botonesSuperior #inicio i, #botonesSuperior #agregarUsuario i{
+#botonesSuperior #inicio i, 
+#botonesSuperior #administrarUsuario i,
+#botonesSuperior #cambioContraseña i,
+#botonesSuperior #salir i{
     margin-right: 10px;
 }
 
 /*Boton de perfil redondeamiento de las esquinas*/
-#botonesSuperior #expandiblePerfil{
+/*#botonesSuperior #expandiblePerfil{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-}
+}*/
 
 /*Caja contenedora en el Sidebar de los botones diagnosticar, reglas, diccionario y diagrama*/
 #navbar #opciones{
@@ -378,8 +410,8 @@
     color: white;
 }
 
-#botonesSuperior #expandiblePerfil::selection{
+/*#botonesSuperior #expandiblePerfil::selection{
 
     z-index: 99px;
-}
+}*/
 

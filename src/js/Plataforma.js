@@ -17,7 +17,7 @@ function Plataforma() {
 
   if(es_admin == true){
     componenteAdministrarUsuarios = <Link to="/plataforma/administrarusuarios" >
-    <button id="agregarUsuario" type="button" className="btn btn-success" title="Agregar un nuevo usuario" >
+    <button id="administrarUsuario" type="button" className="btn btn-success" title="Agregar un nuevo usuario" >
       <i className="fas fa-user"></i>
       Administrar Usuarios
     </button>
@@ -129,8 +129,18 @@ function Plataforma() {
           </button>
           </Link>
           
+          <button id="cambioContraseña" type="button" className="btn btn-success" title="Cambiar contraseña" >
+          <i class="fas fa-key"></i>
+            Cambio contraseña
+          </button>
+          <Link to='/login' >
+          <button id="salir" type="button" className="btn btn-success" title="Cerrar sesión" >
+          <i class="fas fa-sign-out-alt"></i>
+            Salir
+          </button>
+          </Link>
         
-          <button id="expandiblePerfil" type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false" title="Opciones de perfil"> {/*class="btn btn-primary dropdown-toggle"*/}
+          {/*<button id="expandiblePerfil" type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false" title="Opciones de perfil">}
             Perfil
             <i class="far fa-caret-square-down"></i>
           </button>
@@ -142,7 +152,7 @@ function Plataforma() {
             <Link to='/login' >
             <li><a class="dropdown-item" href="" >Salir</a></li>
             </Link>
-          </ul>
+      </ul>*/}
 
         </div>
 
