@@ -4,7 +4,7 @@ import logoAgregarUsuario from '../image/logo.png'
 import React, { Fragment, useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 import { Redirect } from "react-router-dom";
-import { UserContext } from "../context/UserContext.js";
+import { UserContext } from "../../../src/capaNegocio/context/UserContext.js";
 
 function AgregarUsuario() {
 

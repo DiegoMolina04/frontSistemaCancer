@@ -3,7 +3,7 @@ import '../css/fontawesome-free-5.15.4-web/css/all.css'
 import logoCrearContraseña from '../image/logo.png'
 import React, {Fragment, useState, useContext} from 'react';
 import { Link } from "react-router-dom";
-import { UserContext } from "../context/UserContext.js";
+import { UserContext } from "../../../src/capaNegocio/context/UserContext.js";
 import { Redirect } from "react-router-dom";
 
 function CrearContraseña() {

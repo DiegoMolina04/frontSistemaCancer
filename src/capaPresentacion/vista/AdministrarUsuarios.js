@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import React, { Fragment, useState, useContext } from 'react';
 import { Redirect } from "react-router-dom";
 /*import { Link } from "react-router-dom";*/
-import { UserContext } from "../context/UserContext.js";
+import { UserContext } from "../../../src/capaNegocio/context/UserContext.js";
 
 function AdministrarUsuarios() {
 

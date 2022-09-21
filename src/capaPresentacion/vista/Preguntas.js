@@ -2,7 +2,7 @@ import '../css/Preguntas.css';
 import '../css/fontawesome-free-5.15.4-web/css/all.css'
 import { Link } from "react-router-dom";
 import React, { useState, useContext } from 'react';
-import { UserContext } from "../context/UserContext.js";
+import { UserContext } from "../../../src/capaNegocio/context/UserContext.js";
 
 
 function Preguntas() {

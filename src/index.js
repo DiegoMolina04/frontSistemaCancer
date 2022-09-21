@@ -9,7 +9,7 @@ import App from '../src/App.js';
 //import Login from './js/Login'
 //import '../src/css/Loggin.css';
 
-import reportWebVitals from '../src/js/reportWebVitals';
+import reportWebVitals from '../src/capaNegocio/webVitals/reportWebVitals';
 /*import Plataforma from './js/Plataforma';
 import Reglas from './js/Reglas';*/
 
