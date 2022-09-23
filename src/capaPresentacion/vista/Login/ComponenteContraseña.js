@@ -1,10 +1,7 @@
 import useChange from "./useChange";
-import useLogin from "../../../capaNegocio/logicaNegocio/useLogin";
 
 function ComponenteContraseña() {
 
-    /*const {handleInputChange} = useChange();
-    const {estadoInicial} = useLogin();*/
     const {handleInputChange} = useChange();
 
     return (

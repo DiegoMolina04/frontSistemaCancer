@@ -1,6 +1,5 @@
 import useChange from "./useChange";
 
-
 function ComponenteCorreo (){
     
     const {handleInputChange} = useChange();

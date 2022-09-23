@@ -1,9 +1,10 @@
 
 import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";/////////////////////
 import Plataforma from '../src/capaPresentacion/vista/Plataforma.js'
-import Login from '../src/capaPresentacion/vista/Login.js'
+//import Login from '../src/capaPresentacion/vista/Login/Login.js'
+import Login from './capaPresentacion/vista/Login/Login';
 import AgregarUsuario from "../src/capaPresentacion/vista/AgregarUsuario.js";
-import CrearContraseña from "../src/capaPresentacion/vista/CrearContraseña.js";
+import CrearContraseña from "../src/capaPresentacion/vista/CrearContraseña/CrearContraseña";
 import Preguntas from "../src/capaPresentacion/vista/Preguntas.js";
 import AgregarPregunta from "../src/capaPresentacion/vista/AgregarPregunta.js";
 import Sintomas from '../src/capaPresentacion/vista/Sintomas.js'
@@ -16,7 +17,7 @@ import AgregarDiccionario from "../src/capaPresentacion/vista/AgregarDiccionario
 import Diagrama from '../src/capaPresentacion/vista/Diagrama.js'
 import Buscar from "../src/capaPresentacion/vista/Buscar.js";
 import VerPerfil from "../src/capaPresentacion/vista/VerPerfil.js";
-import AdministrarUsuarios from "../src/capaPresentacion/vista/AdministrarUsuarios.js";
+import AdministrarUsuarios from "../src/capaPresentacion/vista/AdministrarUsuarios/AdministrarUsuarios.js";
 import SeleccionAdministrador from "../src/capaPresentacion/vista/SeleccionAdministrador.js";
 
 //import LogicaLogin from "./capaNegocio/logicaNegocio/LogicaLogin.js";
@@ -38,8 +39,10 @@ function App() {
     const [respuestaServidor, setRespuestaServidor] = useState("");
 
     const [datosGuardados, setDatosGuardados] = useState("");
+
+    const [cambiarEstado, setCambiarEstado] = useState("");
     
-    const value = useMemo(() => ({ respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin, datosGuardados, setDatosGuardados }), [respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin, datosGuardados, setDatosGuardados]);
+    const value = useMemo(() => ({ respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin, datosGuardados, setDatosGuardados, cambiarEstado, setCambiarEstado }), [respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin, datosGuardados, setDatosGuardados, cambiarEstado, setCambiarEstado]);
 
 
 

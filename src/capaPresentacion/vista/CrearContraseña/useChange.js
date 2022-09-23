@@ -1,11 +1,10 @@
-import { render } from '@testing-library/react';
-import React, {Fragment, useState, useContext, useEffect} from 'react';
+import {useState, useContext, useEffect} from 'react';
 import { UserContext } from '../../../capaNegocio/context/UserContext';
 
 const useChange = () => {
 
     const {respuestaServidor, setRespuestaServidor} = useContext(UserContext);
-    const [datos, setDatos] = useState({ email:'', contraseña:''})
+    const [datos, setDatos] = useState({contraseña:'', Recontraseña:''})
     const {datosGuardados, setDatosGuardados} = useContext(UserContext);
 
     const handleInputChange = (event) => {
@@ -31,10 +30,6 @@ const useChange = () => {
 
 
     }
-
-    /*setDatosGuardados(datos)
-    console.log("datos guardados");
-    console.log(datosGuardados);*/
     
     //Cada vez que se escriben los datos, se guarda en el contexto para ser enviado a la logica de negocio.
     useEffect(() => {

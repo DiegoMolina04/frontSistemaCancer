@@ -1,10 +1,12 @@
-import '../css/AdministrarUsuarios.css';
-import '../css/fontawesome-free-5.15.4-web/css/all.css'
+import '../../css/AdministrarUsuarios.css';
+import '../../css/fontawesome-free-5.15.4-web/css/all.css'
 import { Link } from "react-router-dom";
 import React, { Fragment, useState, useContext } from 'react';
 import { Redirect } from "react-router-dom";
 /*import { Link } from "react-router-dom";*/
-import { UserContext } from "../../../src/capaNegocio/context/UserContext.js";
+import { UserContext } from "../../../../src/capaNegocio/context/UserContext.js";
+import useChange from './useChange';
+import useAdministrarUsuarios from '../../../capaNegocio/logicaNegocio/useAdministrarUsuarios';
 
 function AdministrarUsuarios() {
 
@@ -16,6 +18,8 @@ function AdministrarUsuarios() {
     const [usuario, setUsuario] = useState([]); //Se guardan todos los usuarios
     const [codigo, setCodigo] = useState(null); //Se guarda identificador si se trata del boton para listar o filtrar
     const [filtro, setFiltro] = useState([]); //Se guarda la opción del dropdown y lo ingresado en el input
+
+    const {handleInputChange} = useChange();
 
     const [editarUsuario, setEditarUsuario] = useState({
         cedula: "",

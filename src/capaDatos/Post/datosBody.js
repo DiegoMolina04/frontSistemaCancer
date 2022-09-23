@@ -1,9 +1,9 @@
 
-async function datosLogin(datos){
+async function datosBody(datos, url){
 
     console.log("Estos son mis datos "+JSON.stringify(datos));
 
-    const data = await fetch("https://secure-brushlands-86892.herokuapp.com/v1/users/login",{
+    const data = await fetch(url,{
           method:"POST",
           mode:"cors",
           headers:{
@@ -46,4 +46,4 @@ async function datosLogin(datos){
 
   }*/
 
-export default datosLogin
+export default datosBody;

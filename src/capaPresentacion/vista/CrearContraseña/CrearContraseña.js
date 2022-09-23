@@ -1,111 +1,23 @@
-import '../css/CrearContraseña.css';
-import '../css/fontawesome-free-5.15.4-web/css/all.css'
-import logoCrearContraseña from '../image/logo.png'
-import React, {Fragment, useState, useContext} from 'react';
-import { Link } from "react-router-dom";
-import { UserContext } from "../../../src/capaNegocio/context/UserContext.js";
-import { Redirect } from "react-router-dom";
+import '../../css/CrearContraseña.css'; //Estilos
+import '../../css/fontawesome-free-5.15.4-web/css/all.css' //Iconos
+import logoCrearContraseña from '../../image/logo.png' //Logo universidad.
+import React, {useContext} from 'react'; //Importación de hooks.
+import { UserContext } from "../../../../src/capaNegocio/context/UserContext.js"; //Para poder crear contextos.
+import useChange from "./useChange"; //Usado para guardar los datos ingresados.
+import useCrearContraseña from '../../../capaNegocio/logicaNegocio/useCrearContraseña'; //Logica negocio.
 
 function CrearContraseña() {
     
-    const [datos, setDatos] = useState({
+    //Contextos para globalizar datos
+    //Datos guardados desde el handleChange y enviados a logica de negocio.
+    const {datosGuardados, setDatosGuardados} = useContext(UserContext);
 
-        contraseña:''
-    })
+    //Custom hook para comunicación con lógica de negocio y useChange.
+    const {handleInputChange} = useChange();
+    const {verificarDatos, mostrarMensaje, estadoInicial} = useCrearContraseña();
     
-    const handleInputChange = (event) => {
-          /*console.log(event.target.name)
-          console.log(event.target.value)*/
-          setDatos({
-              ...datos,
-              [event.target.name] : event.target.value
-        })
-    }
-    
-    /*Contextos para globalizar respuesta de servidor, consultar correo para crear contraseña y reutilizar 
-    contexto token (sin realizar acciones referentes a este) para darle un estado a la pagina*/
-
-    const {respuestaServidor, setRespuestaServidor} = useContext(UserContext);
-    const {correo, setCorreo} = useContext(UserContext);
-    const {token, setToken} = useContext(UserContext);
-
-    /*Se inicia componente para mostrar mensajes correspondientes a errores*/
-    let componenteMostrarMensaje = <h5></h5>
-
-    const enviarDatos = async(event) => {
-        
-        event.preventDefault();
-        
-        if (datos.contraseña == datos.Recontraseña && datos.contraseña != "" && datos.Recontraseña != ""){
-
-            let arrayDatos = {"contraseña":datos.contraseña}
-            
-            const url = "https://secure-brushlands-86892.herokuapp.com/v1/users/"+correo+"/update-one";
-            
-            const data = await fetch(url,{
-                method:"PUT",
-                mode:"cors",
-                headers:{
-                    
-                    "Content-Type":"application/json"
-                },
-                body: JSON.stringify(arrayDatos)
-            })
-            /*console.log(JSON.stringify(datos));*/
-            
-            /*console.log("Creado correctamente");
-            
-            console.log("El correo es "+correo);*/
-            
-            const respuesta = await data.json();
-            /*setCorreo();*/
-            setRespuestaServidor(respuesta);
-            setRespuestaServidor(respuesta);
-            setToken("Correcto");
-            /*console.log(respuestaServidor);*/
-            /*console.log("Esta es la respuesta "+JSON.stringify(respuestaServidor, null, 2));*/
-            
-
-        }else if(datos.contraseña == "" || datos.Recontraseña == ""){ /*Se verifica que no existan campos vacios*/
-            
-            setToken("Campos vacios");
-            /*console.log(respuestaServidor);*/
-            
-
-        }else{ /*Si las contraseñas son distintas*/
-
-            /*console.log("Entre");*/
-            /*setRespuestaServidor("Incorrecto");*/
-            setToken("Incorrecto");
-
-            /*console.log(respuestaServidor);*/
-            
-        }
-        
-    }
-
-    switch (token){
-        
-        case "Campos vacios":
-            componenteMostrarMensaje = <h5>Por favor llene todos los campos.</h5>
-        break;
-        
-        case "Incorrecto":
-            componenteMostrarMensaje = <h5>Los campos no son iguales, verifique información.</h5>
-        break;
-
-        case "Correcto":
-            /*setRespuestaServidor(200);*/
-            /*console.log("Esta es la respuesta "+JSON.stringify(respuestaServidor.status, null, 2));*/
-            return <Redirect to="/login" />
-        break;
-
-        /*404 intentar actualizar con correo que no existe
-        400 falla algo en la base de datos        
-        */
-    }
-
-    /*console.log("Desde crear contraseña "+correo);*/
+    //Componente para mostrar el mensaje informativo en el lugar que se desea.
+    let componenteMostrarMensaje = <h5>{mostrarMensaje}</h5>
     
     return ( 
 
@@ -133,7 +45,7 @@ function CrearContraseña() {
                 {componenteMostrarMensaje}
 
                 {/*Contenedor de todo el formulario*/}
-                <form className="row" onSubmit={enviarDatos}>
+                <form className="row" onSubmit={(e) => verificarDatos(e, datosGuardados)}>
 
                 <div id="formulario-CrearContraseña">
 
@@ -162,9 +74,9 @@ function CrearContraseña() {
                         
                         <div id="cajaRegresar-AgregarCuenta">
 
-                            <Link to='/login'>
-                            <button id="botonRegresar-AgregarCuenta" type="button" class="btn btn-primary" title="Regresar a la plataforma">Cancelar</button>
-                            </Link>
+                            {/*<Link to='/login'></Link>*/}
+                            <button id="botonRegresar-AgregarCuenta" type="button" class="btn btn-primary" onClick={(e) => estadoInicial(e)} title="Regresar a la plataforma">Cancelar</button>
+                            
 
                         </div>
                         

@@ -1,9 +1,7 @@
-import useChange from "./useChange";
 import useLogin from "../../../capaNegocio/logicaNegocio/useLogin";
 
-function ComponenteBotonRegresar(props) {
+function ComponenteBotonRegresar() {
     
-    const {handleInputChange} = useChange();
     const {estadoInicial} = useLogin();
 
     return (
