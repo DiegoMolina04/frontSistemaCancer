@@ -9,29 +9,27 @@ import deleteAutorization from '../../capaDatos/Delete/deleteAutorization.js';
 //Componentes
 import MostrarMensaje from '../../capaPresentacion/vista/ComponentesComunes/MostrarMensaje.js';
 import ComponenteTabla from '../../capaPresentacion/vista/AdministrarUsuarios/ComponenteTabla.js';
+import ComponenteAgregarUsuario from '../../capaPresentacion/vista/AdministrarUsuarios/ComponenteAgregarUsuario.js';
 
 const useAdministrarUsuarios = () => {
 
+    //Contexto
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext);
     const { datosGuardados, setDatosGuardados } = useContext(UserContext);
     const { datosIntroducidos, setDatosIntroducidos } = useContext(UserContext);
     const { datosOriginales, setDatosOriginales } = useContext(UserContext);
     const { token, setToken } = useContext(UserContext);
+    const { es_admin, setEs_admin } = useContext(UserContext);
 
+    //Componente
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState("");
-
+    const [componenteAgregarUsuario, setComponenteBtnAgregarUsuario] = useState("");
     const [componenteListarUsuarios, setComponenteListarUsuarios] = useState([]); //Guardar resultados
+
+    //Estado
     const [codigo, setCodigo] = useState(null); //Codigo respuesta
-    const [editarUsuario, setEditarUsuario] = useState({
-        cedula: "",
-        nombre: "",
-        email: "",
-        es_admin: ''
-    });
 
-    const [rol, setRol] = useState(null);
-
-    const history = useHistory();
+    const history = useHistory(); //Redireccionar
     let respuestaServidor = "";
     let url = "";
     let datosExtraidos = "";
@@ -64,24 +62,23 @@ const useAdministrarUsuarios = () => {
     function tomarDecision(respuesta, funcion) { //Se usa para identificar si retorna un codigo o array con items
 
         try {
-  
+
             if (respuesta.code != undefined) {
                 setCodigo(respuestaServidor.code);
 
             } else {
                 datosExtraidos = respuestaServidor.result.items;
 
-                if(datosExtraidos.length > 0){ //Si hay algún resultado
-                    
-                    //cargarElementosTabla(datosExtraidos);
+                if (datosExtraidos.length > 0) { //Si hay algún resultado
+
                     setComponenteListarUsuarios(<ComponenteTabla tabla={cargarElementosTabla(datosExtraidos)} />);
 
-                }else{
-                    
-                    if(funcion == "listar"){
+                } else {
+
+                    if (funcion == "listar") {
                         setCodigo(206); //No hay nada en la BD sobre lo tratado de mostrar.
 
-                    }else if(funcion == "filtrar"){
+                    } else if (funcion == "filtrar") {
                         setCodigo(404); //No se encuentra nada en el filtro.
 
                     }
@@ -109,8 +106,6 @@ const useAdministrarUsuarios = () => {
             } else if (funcion == "filtrar") {
 
                 setCodigo("");
-                console.log("Mis datos del filtro");
-                console.log(datos);
 
                 if (datos.categoria == "Seleccione Categoria..." || datos.inputFiltro == "" || datos.categoria == undefined || datos.inputFiltro == undefined) {
                     setCodigo(408);
@@ -162,8 +157,6 @@ const useAdministrarUsuarios = () => {
 
     function setearDatos(elemento) { //Se usa para poder setear los valores en los modales
 
-        console.log("Datos a settear");
-        console.log(elemento);
         setDatosGuardados(elemento); //Datos que se modificaran y mostraran en los modales.
 
         setDatosOriginales(elemento); //Datos originales para comparar.
@@ -176,13 +169,7 @@ const useAdministrarUsuarios = () => {
 
         try {
             event.preventDefault();
-            console.log("Datos modificados");
-            console.log(datosModificados);
-            console.log("Datos originales");
-            console.log(datosOriginales);
             setDatosGuardados("");
-            console.log("Este es el correo");
-            console.log(datosModificados.es_admin);
 
             //Se valida que no existan campos vacios.
             if (datosModificados.cedula == "" || datosModificados.nombre == "" || datosModificados.correo == "" || datosModificados.es_admin == undefined) {
@@ -222,8 +209,7 @@ const useAdministrarUsuarios = () => {
 
                 let url = "https://secure-brushlands-86892.herokuapp.com/v1/users/" + datosOriginales.email + "/update-one";
                 respuestaServidor = await putBody(arrayDatos, url);
-                console.log("Mi respuesta del servidor");
-                console.log(respuestaServidor);
+
                 if (respuestaServidor.status == 404) { //Correo a modificar no encontrado
                     setCodigo(406);
 
@@ -258,10 +244,15 @@ const useAdministrarUsuarios = () => {
 
     }
 
+    function redireccionarAgregarUsuario() {
 
+        history.push("/agregarusuario");
+    }
+
+    //Muestra mensajes informativos al usuario
     useEffect(() => {
-        
-        if(cambiarEstado == "Correcto"){    
+
+        if (cambiarEstado == "Correcto") {
             setCodigo(201);
             setCambiarEstado("");
 
@@ -282,7 +273,7 @@ const useAdministrarUsuarios = () => {
                 break;
 
             case 206: //Tabla vacia
-            setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No hay datos registrados."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No hay datos registrados."} />);
                 break;
 
             case 401: //No tiene token
@@ -320,8 +311,15 @@ const useAdministrarUsuarios = () => {
     }, [codigo, cambiarEstado])
 
 
+    //Se ejecuta una sola vez al ser renderizado. Verifica si es admin y si tiene token para mostrar botones.
+    useEffect(() => {
+        if (es_admin == true && token != undefined) {
+            setComponenteBtnAgregarUsuario(<ComponenteAgregarUsuario />);
+        }
+    }, [])
 
-    return { listarUsuarios, setearDatos, componenteListarUsuarios, componenteMostrarMensaje, editarUsuario, modificarUsuario, eliminarUsuario };//verificarDatos, mostrarMensaje, estadoInicial
+
+    return { listarUsuarios, setearDatos, componenteListarUsuarios, componenteMostrarMensaje, componenteAgregarUsuario, modificarUsuario, eliminarUsuario, redireccionarAgregarUsuario };//verificarDatos, mostrarMensaje, estadoInicial
 };
 
 export default useAdministrarUsuarios;
