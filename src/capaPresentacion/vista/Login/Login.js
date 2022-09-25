@@ -3,7 +3,7 @@ import '../../css/fontawesome-free-5.15.4-web/css/all.css' //Iconos
 import logo from '../../image/logo.png' //Logo universidad.
 import React, { useContext } from 'react'; //Importación de hooks.
 import { UserContext } from "../../../../src/capaNegocio/context/UserContext.js"; //Para poder crear contextos.
-import useLogin from '../../../capaNegocio/logicaNegocio/useLogin'; //Logica negocio.
+import useLogin from '../../../capaNegocio/logicaNegocio/Login/useLogin.js';//Logica negocio.
 
 function Login() {
 

@@ -1,4 +1,4 @@
-import useAdministrarUsuarios from "../../../capaNegocio/logicaNegocio/useAdministrarUsuarios";
+import useAdministrarUsuarios from "../../../capaNegocio/logicaNegocio/AdministrarUsuarios/useAdministrarUsuarios";
 
 function ComponenteAgregarUsuario() {
 

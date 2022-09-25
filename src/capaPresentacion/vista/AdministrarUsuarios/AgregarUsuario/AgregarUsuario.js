@@ -10,7 +10,7 @@ import { UserContext } from '../../../../capaNegocio/context/UserContext';
 //HandleInput
 import useChange from '../useChange';
 //Logica negocio
-import useAgregarUsuario from '../../../../capaNegocio/logicaNegocio/useAgregarUsuario';
+import useAgregarUsuario from '../../../../capaNegocio/logicaNegocio/AdministrarUsuarios/useAgregarUsuario';
 import verificarNumeros from '../../../../capaNegocio/logicaNegocio/LogicaComun/verificarNumeros';
 
 

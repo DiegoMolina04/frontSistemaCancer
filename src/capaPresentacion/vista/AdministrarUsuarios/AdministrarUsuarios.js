@@ -8,7 +8,7 @@ import { UserContext } from "../../../../src/capaNegocio/context/UserContext.js"
 //Capturador datos ingresados
 import useChange from './useChange';
 //Logica negocio
-import useAdministrarUsuarios from '../../../capaNegocio/logicaNegocio/useAdministrarUsuarios';
+import useAdministrarUsuarios from '../../../capaNegocio/logicaNegocio/AdministrarUsuarios/useAdministrarUsuarios';
 import verificarNumeros from '../../../capaNegocio/logicaNegocio/LogicaComun/verificarNumeros';
 
 function AdministrarUsuarios() {

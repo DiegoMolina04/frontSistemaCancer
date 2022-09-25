@@ -2,11 +2,11 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 //Context
-import { UserContext } from "../context/UserContext.js";
+import { UserContext } from "../../context/UserContext.js";
 //Datos
-import postBodyAutorization from '../../capaDatos/Post/postBodyAutorization.js';
+import postBodyAutorization from '../../../capaDatos/Post/postBodyAutorization.js';
 //Componente
-import MostrarMensaje from '../../capaPresentacion/vista/ComponentesComunes/MostrarMensaje.js';
+import MostrarMensaje from '../../../capaPresentacion/vista/ComponentesComunes/MostrarMensaje.js';
 
 const useAgregarUsuario = () => {
 

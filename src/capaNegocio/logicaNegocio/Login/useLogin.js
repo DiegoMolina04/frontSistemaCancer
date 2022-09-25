@@ -2,15 +2,15 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 //Context
-import { UserContext } from "../context/UserContext.js";
+import { UserContext } from "../../context/UserContext.js";
 //Datos
-import postBody from '../../capaDatos/Post/postBody.js';
+import postBody from '../../../capaDatos/Post/postBody.js';
 //Componentes
-import ComponenteCorreo from '../../capaPresentacion/vista/Login/ComponenteCorreo.js';
-import ComponenteCorreoFijo from '../../capaPresentacion/vista/Login/ComponenteCorreoFijo.js';
-import ComponenteContraseña from '../../capaPresentacion/vista/Login/ComponenteContraseña.js';
-import ComponenteBotonRegresar from '../../capaPresentacion/vista/Login/ComponenteBotonRegresar.js';
-import MostrarMensaje from '../../capaPresentacion/vista/ComponentesComunes/MostrarMensaje.js';
+import ComponenteCorreo from '../../../capaPresentacion/vista/Login/ComponenteCorreo.js';
+import ComponenteCorreoFijo from '../../../capaPresentacion/vista/Login/ComponenteCorreoFijo.js';
+import ComponenteContraseña from '../../../capaPresentacion/vista/Login/ComponenteContraseña.js';
+import ComponenteBotonRegresar from '../../../capaPresentacion/vista/Login/ComponenteBotonRegresar.js';
+import MostrarMensaje from '../../../capaPresentacion/vista/ComponentesComunes/MostrarMensaje.js';
 
 const useLogin = () => {
   

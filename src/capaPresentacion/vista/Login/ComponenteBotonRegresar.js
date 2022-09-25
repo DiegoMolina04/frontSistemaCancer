@@ -1,4 +1,4 @@
-import useLogin from "../../../capaNegocio/logicaNegocio/useLogin";
+import useLogin from "../../../capaNegocio/logicaNegocio/Login/useLogin";
 
 function ComponenteBotonRegresar() {
     

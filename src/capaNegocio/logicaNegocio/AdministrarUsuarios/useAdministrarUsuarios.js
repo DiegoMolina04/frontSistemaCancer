@@ -1,15 +1,15 @@
 //React
 import React, { useState, useContext, useEffect } from 'react';
-import { UserContext } from "../context/UserContext.js";
+import { UserContext } from "../../context/UserContext.js";
 import { useHistory } from "react-router-dom";
 //Datos
-import getAutorization from '../../capaDatos/Get/getAutorization.js';
-import putBody from '../../capaDatos/Put/putBody.js';
-import deleteAutorization from '../../capaDatos/Delete/deleteAutorization.js';
+import getAutorization from '../../../capaDatos/Get/getAutorization.js';
+import putBody from '../../../capaDatos/Put/putBody.js';
+import deleteAutorization from '../../../capaDatos/Delete/deleteAutorization.js';
 //Componentes
-import MostrarMensaje from '../../capaPresentacion/vista/ComponentesComunes/MostrarMensaje.js';
-import ComponenteTabla from '../../capaPresentacion/vista/AdministrarUsuarios/ComponenteTabla.js';
-import ComponenteAgregarUsuario from '../../capaPresentacion/vista/AdministrarUsuarios/ComponenteAgregarUsuario.js';
+import MostrarMensaje from '../../../capaPresentacion/vista/ComponentesComunes/MostrarMensaje.js';
+import ComponenteTabla from '../../../capaPresentacion/vista/AdministrarUsuarios/ComponenteTabla.js';
+import ComponenteAgregarUsuario from '../../../capaPresentacion/vista/AdministrarUsuarios/ComponenteAgregarUsuario.js';
 
 const useAdministrarUsuarios = () => {
 
