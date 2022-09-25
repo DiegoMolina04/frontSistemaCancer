@@ -1,10 +1,10 @@
-import '../../css/CrearContraseña.css'; //Estilos
-import '../../css/fontawesome-free-5.15.4-web/css/all.css' //Iconos
-import logoCrearContraseña from '../../image/logo.png' //Logo universidad.
+import '../../../css/CrearContraseña.css'; //Estilos
+import '../../../css/fontawesome-free-5.15.4-web/css/all.css' //Iconos
+import logoCrearContraseña from '../../../image/logo.png' //Logo universidad.
 import React, {useContext} from 'react'; //Importación de hooks.
-import { UserContext } from "../../../../src/capaNegocio/context/UserContext.js"; //Para poder crear contextos.
+import { UserContext } from "../../../../../src/capaNegocio/context/UserContext.js"; //Para poder crear contextos.
 import useChange from "./useChange"; //Usado para guardar los datos ingresados.
-import useCrearContraseña from '../../../capaNegocio/logicaNegocio/useCrearContraseña'; //Logica negocio.
+import useCrearContraseña from '../../../../capaNegocio/logicaNegocio/useCrearContraseña'; //Logica negocio.
 
 function CrearContraseña() {
     

@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
 import Plataforma from '../src/capaPresentacion/vista/Plataforma.js'
 //import Login from '../src/capaPresentacion/vista/Login/Login.js'
 import Login from './capaPresentacion/vista/Login/Login';
-import AgregarUsuario from "../src/capaPresentacion/vista/AgregarUsuario/AgregarUsuario.js";
-import CrearContraseña from "../src/capaPresentacion/vista/CrearContraseña/CrearContraseña";
+import AgregarUsuario from "../src/capaPresentacion/vista/AdministrarUsuarios/AgregarUsuario/AgregarUsuario.js";
+import CrearContraseña from "../src/capaPresentacion/vista/Login/CrearContraseña/CrearContraseña";
 import Preguntas from "../src/capaPresentacion/vista/Preguntas.js";
 import AgregarPregunta from "../src/capaPresentacion/vista/AgregarPregunta.js";
 import Sintomas from '../src/capaPresentacion/vista/Sintomas.js'

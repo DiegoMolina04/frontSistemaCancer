@@ -1,17 +1,17 @@
 //Css
-import '../../css/AgregarUsuario.css';
-import '../../css/fontawesome-free-5.15.4-web/css/all.css'
+import '../../../css/AgregarUsuario.css';
+import '../../../css/fontawesome-free-5.15.4-web/css/all.css'
 //Logo
-import logoAgregarUsuario from '../../image/logo.png'
+import logoAgregarUsuario from '../../../image/logo.png'
 //React
 import React, { useState, useContext } from 'react';
 //Context
-import { UserContext } from "../../../../src/capaNegocio/context/UserContext.js";
+import { UserContext } from '../../../../capaNegocio/context/UserContext';
 //HandleInput
-import useChange from './useChange';
+import useChange from '../useChange';
 //Logica negocio
-import useAgregarUsuario from '../../../capaNegocio/logicaNegocio/useAgregarUsuario';
-import verificarNumeros from '../../../capaNegocio/logicaNegocio/LogicaComun/verificarNumeros';
+import useAgregarUsuario from '../../../../capaNegocio/logicaNegocio/useAgregarUsuario';
+import verificarNumeros from '../../../../capaNegocio/logicaNegocio/LogicaComun/verificarNumeros';
 
 
 function AgregarUsuario() {
