@@ -14,10 +14,10 @@ function CrearContraseña() {
 
     //Custom hook para comunicación con lógica de negocio y useChange.
     const {handleInputChange} = useChange();
-    const {verificarDatos, mostrarMensaje, estadoInicial} = useCrearContraseña();
+    const {verificarDatos, componenteMostrarMensaje, estadoInicial} = useCrearContraseña();
     
     //Componente para mostrar el mensaje informativo en el lugar que se desea.
-    let componenteMostrarMensaje = <h5>{mostrarMensaje}</h5>
+    //componenteMostrarMensaje
     
     return ( 
 
@@ -42,7 +42,7 @@ function CrearContraseña() {
 
                 <br />
 
-                {componenteMostrarMensaje}
+                <h5>{componenteMostrarMensaje}</h5>
 
                 {/*Contenedor de todo el formulario*/}
                 <form className="row" onSubmit={(e) => verificarDatos(e, datosGuardados)}>
@@ -67,48 +67,27 @@ function CrearContraseña() {
 
                     <br />
 
-
                     {/*Sección Botones Enviar y Regresar*/}
                     <div id="cajaBotones-AgregarCuenta">
 
-                        
                         <div id="cajaRegresar-AgregarCuenta">
 
-                            {/*<Link to='/login'></Link>*/}
                             <button id="botonRegresar-AgregarCuenta" type="button" class="btn btn-primary" onClick={(e) => estadoInicial(e)} title="Regresar a la plataforma">Cancelar</button>
                             
-
                         </div>
                         
                         <div id="cajaEnviar-AgregarCuenta">
-                            
-                            {/*<Link to='/plataforma/diagnosticar'></Link>*/}
 
                             <button id="botonEnviar-AgregarCuenta" type="submit" class="btn btn-primary" title="Crear nuevo usuario">Enviar</button>
                             
                         </div>
                         
-
                     </div>
                     
-                    {/*<button type="button" class="btn btn-primary">Primary</button>*/}
                     <br />
 
-                    {/*
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-                        <label class="form-check-label" for="inlineRadio1">1</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-                        <label class="form-check-label" for="inlineRadio2">2</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled />
-                        <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
-                    </div>
-                    */}
                 </div>
+                
                 </form>
 
             </div>
