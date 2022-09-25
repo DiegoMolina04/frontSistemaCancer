@@ -1,30 +1,23 @@
-import React, { Fragment, useState, useContext, Component, useEffect } from 'react';
-import putBody from '../../capaDatos/Put/putBody.js';
+//React
+import React, { useState, useContext, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
+//Context
 import { UserContext } from "../context/UserContext.js";
-import { Redirect, Switch, NavLink, useHistory } from "react-router-dom";
-
+//Datos
 import postBodyAutorization from '../../capaDatos/Post/postBodyAutorization.js';
-
-import ComponenteCorreo from '../../capaPresentacion/vista/Login/ComponenteCorreo.js';
-import ComponenteCorreoFijo from '../../capaPresentacion/vista/Login/ComponenteCorreoFijo.js';
-import ComponenteContraseña from '../../capaPresentacion/vista/Login/ComponenteContraseña.js';
-import ComponenteBotonRegresar from '../../capaPresentacion/vista/Login/ComponenteBotonRegresar.js';
+//Componente
 import MostrarMensaje from '../../capaPresentacion/vista/ComponentesComunes/MostrarMensaje.js';
 
 const useAgregarUsuario = () => {
 
-    const { correo, setCorreo } = useContext(UserContext);
+    //Context
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext);
     const { token, setToken } = useContext(UserContext);
 
-    const [mostrarMensaje, setMostrarMensaje] = useState("");
-    const [codigo, setCodigo] = useState(null);
+    //Componente
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState("");
 
-    let login = true;
-
-    //const navigate = useNavigate();
-    const history = useHistory();
+    const history = useHistory(); //Redirecciona
     let respuestaServidor = "";
 
     const verificarDatos = async (e, datos) => {
@@ -33,16 +26,15 @@ const useAgregarUsuario = () => {
             e.preventDefault();
 
             if (datos.cedula == "" || datos.nombre == "" || datos.email == "" || datos.es_admin == null) { //Campos vacios
-                //setMostrarMensaje(<MostrarMensaje mensaje={"Por favor llene todos los campos."} />);
                 verificarCodigo(408);
+
             } else {
                 let url = "https://secure-brushlands-86892.herokuapp.com/v1/users/create-one";
                 respuestaServidor = await postBodyAutorization(datos, token, url);
 
                 if (respuestaServidor.status == undefined) { //
-                    console.log("Es indefinido");
                     verificarCodigo(respuestaServidor.code);
-                    //console.log(respuesta.code);
+                    
                 } else { //Si es diferente
                     verificarCodigo(respuestaServidor.status);
                 }
@@ -51,9 +43,8 @@ const useAgregarUsuario = () => {
             }
 
         } catch (error) {
-            //history.push("/login");
-            //setCambiarEstado(201);
-            setMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+            setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+
         }
     };
 
@@ -61,11 +52,8 @@ const useAgregarUsuario = () => {
     const estadoInicial = async (e) => {
 
         e.preventDefault();
-
         setCambiarEstado("Estado inicial");
-        //history.push("/login");
-
-
+        
     }
 
     function verificarCodigo(codigo) {
@@ -73,12 +61,7 @@ const useAgregarUsuario = () => {
         switch (codigo) {
 
             case 201: //Correcto
-
-                //setRespuestaServidor("Usuario creado");
-                //setRespuestaServidor(201);
                 setCambiarEstado("Correcto");
-                //return <Redirect to="/plataforma/administrarusuarios" />
-
                 break;
 
             case 401: //No tiene token
@@ -116,13 +99,7 @@ const useAgregarUsuario = () => {
     }
 
     useEffect(() => {
-        console.log("Hola");
-        console.log("Estado con el que sale de crear contraseña");
-        console.log(cambiarEstado);
-
         if (cambiarEstado == "Estado inicial") {
-            //setMostrarMensaje(<MostrarMensaje mensaje={""} />);
-            //setCambiarEstado("");
             history.push("/plataforma/administrarusuarios");
 
         }else if(cambiarEstado == "Correcto"){
