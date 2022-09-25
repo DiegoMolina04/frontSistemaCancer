@@ -1,7 +1,5 @@
 async function postBody(datos, url) {
 
-  console.log("Estos son mis datos " + JSON.stringify(datos));
-
   const data = await fetch(url, {
     method: "POST",
     mode: "cors",
