@@ -1,9 +1,9 @@
 import React, { Fragment, useState, useContext, Component, useEffect } from 'react';
 //import datosBody from '../../capaDatos/Post/datosBody.js';
-import datosBody from '../../capaDatos/Post/datosBody.js';
 import { UserContext } from "../context/UserContext.js";
 import { Redirect, Switch, NavLink, useHistory } from "react-router-dom";
 //import { useNavigate } from "@reach/router"
+import postBody from '../../capaDatos/Post/postBody.js';
 
 import ComponenteCorreo from '../../capaPresentacion/vista/Login/ComponenteCorreo.js';
 import ComponenteCorreoFijo from '../../capaPresentacion/vista/Login/ComponenteCorreoFijo.js';
@@ -46,7 +46,7 @@ const useLogin = () => {
       if (correoLocal == "") { //Se verifica si el estado correoLocal esta vacia para saber si se debe guardar correo
         console.log("Es nulo");
 
-        respuestaServidor = await datosBody(datos, url);
+        respuestaServidor = await postBody(datos, url);
         if (respuestaServidor.code == 400) { //Se verifica si es un correo registrado, de serlo, se guarda
           /*console.log("Reeeeeeespuesta");
           console.log(respuestaServidor)
@@ -61,7 +61,7 @@ const useLogin = () => {
         const array = { "email": correoLocal, "contraseña": contraseña }
         console.log("Datos a enviar con contraseña");
         console.log(array);
-        respuestaServidor = await datosBody(array, url);
+        respuestaServidor = await postBody(array, url);
       }
 
       /*console.log("Datos a enviar");

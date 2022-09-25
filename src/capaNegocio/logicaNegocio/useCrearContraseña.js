@@ -1,9 +1,8 @@
 import React, { Fragment, useState, useContext, Component, useEffect } from 'react';
-//import datosBody from '../../capaDatos/Post/datosBody.js';
-import datosBody from '../../capaDatos/Put/datosBody.js';
 import { UserContext } from "../context/UserContext.js";
 import { Redirect, Switch, NavLink, useHistory } from "react-router-dom";
 //import { useNavigate } from "@reach/router"
+import putBody from '../../capaDatos/Put/putBody.js';
 
 import ComponenteCorreo from '../../capaPresentacion/vista/Login/ComponenteCorreo.js';
 import ComponenteCorreoFijo from '../../capaPresentacion/vista/Login/ComponenteCorreoFijo.js';
@@ -35,7 +34,7 @@ const useCrearContraseña = () => {
                 console.log(datos);
                 let arrayDatos = { "contraseña": datos.contraseña }
                 const url = "https://secure-brushlands-86892.herokuapp.com/v1/users/" + correo + "/update-one";
-                respuestaServidor = await datosBody(arrayDatos, url);
+                respuestaServidor = await putBody(arrayDatos, url);
                 console.log(respuestaServidor);
                 
                 if(respuestaServidor.status == 200){

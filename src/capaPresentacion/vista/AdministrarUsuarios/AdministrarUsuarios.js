@@ -7,30 +7,37 @@ import { Redirect } from "react-router-dom";
 import { UserContext } from "../../../../src/capaNegocio/context/UserContext.js";
 import useChange from './useChange';
 import useAdministrarUsuarios from '../../../capaNegocio/logicaNegocio/useAdministrarUsuarios';
+import verificarNumeros from '../../../capaNegocio/logicaNegocio/LogicaComun/verificarNumeros';
+
+import ComponenteTabla from './ComponenteTabla';
 
 function AdministrarUsuarios() {
 
     const { respuestaServidor, setRespuestaServidor } = useContext(UserContext);
     const { token, setToken } = useContext(UserContext);
-    /*console.log("Renderizado !);*/
-    /*    const userData = [{}]*/
+    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
+    const { datosOriginales, setDatosOriginales } = useContext(UserContext);
+    const { filtro, setFiltro } = useContext(UserContext);
+    
 
-    const [usuario, setUsuario] = useState([]); //Se guardan todos los usuarios
+    //const [usuario, setUsuario] = useState([]); //Se guardan todos los usuarios
     const [codigo, setCodigo] = useState(null); //Se guarda identificador si se trata del boton para listar o filtrar
-    const [filtro, setFiltro] = useState([]); //Se guarda la opción del dropdown y lo ingresado en el input
+    //const [filtro, setFiltro] = useState([]); //Se guarda la opción del dropdown y lo ingresado en el input
 
-    const {handleInputChange} = useChange();
 
-    const [editarUsuario, setEditarUsuario] = useState({
+    const { handleInputChangeModificar, handleFiltrarChange } = useChange();
+    const { listarUsuarios, componenteListarUsuarios, componenteMostrarMensaje, editarUsuario, modificarUsuario, eliminarUsuario } = useAdministrarUsuarios();
+
+    /*const [editarUsuario, setEditarUsuario] = useState({
         cedula: "",
         nombre: "",
         email: "",
         es_admin: ''
-    });
+    });*/
 
-    const [rol, setRol] = useState(null);
+    //const [rol, setRol] = useState(null);
 
-    console.log("El estado ! " + rol);
+    //console.log("El estado ! " + rol);
     console.log("Contenido del filtro " + JSON.stringify(filtro));
 
     const [correo, setCorreo] = useState({
@@ -38,46 +45,48 @@ function AdministrarUsuarios() {
 
     });
 
-    let componenteListarUsuarios = null;
+    //let componenteListarUsuarios = null;
+    //let componenteListarUsuarios = <>{usuario}</>;
 
     let componenteAgregarUsuario = null;
 
-    let componenteMensajeTabla = null;
+    //let componenteMensajeTabla = null;
+    //let componenteMensajeTabla = <h5 id="mensajeRespuesta-AdministrarUsuario">{mostrarMensaje}</h5>;
 
     let componenteFiltro = null;
 
-    console.log("El token es "+token);
+    console.log("El token es " + token);
 
     /*let componenteMensajeModal = null;*/
 
-    const handleInputChangeModificar = (event) => { //Para guardar los datos ingresados en el modificar
-        /*console.log(event.target.name)
-        console.log(event.target.value)*/
-        setEditarUsuario({
-            ...editarUsuario,
-            [event.target.name]: event.target.value
-        })
+    //const handleInputChangeModificar = (event) => { //Para guardar los datos ingresados en el modificar
+    //console.log(event.target.name)
+    //console.log(event.target.value)
+    //setEditarUsuario({
+    //    ...editarUsuario,
+    //    [event.target.name]: event.target.value
+    //})
 
-    }
+    //}
 
-    const handleRadioChangeModificar = (event) => { //Para guardar el tipo de usuario seleccionado en el modificar
+    // const handleRadioChangeModificar = (event) => { //Para guardar el tipo de usuario seleccionado en el modificar
 
-        //console.log("Este es el valor de la seleccion " + event.currentTarget.value);
-        /*const es_admin = event.currentTarget.value === 'true' ? true: false;*/
+    //     //console.log("Este es el valor de la seleccion " + event.currentTarget.value);
+    //     /*const es_admin = event.currentTarget.value === 'true' ? true: false;*/
 
-        /*setEs_Admin(event.currentTarget.value === true ? true : false);*/
+    //     /*setEs_Admin(event.currentTarget.value === true ? true : false);*/
 
-        if (event.currentTarget.value === "true") {
-            //console.log("Entre al true");
-            setRol(true);
-            //console.log("Este es el estado setteado " + rol);
-        } else if (event.currentTarget.value === "false") {
-            //console.log("Entre al false");
-            setRol(false);
-            //console.log("Este es el estado setteado " + rol);
-        }
+    //     if (event.currentTarget.value === "true") {
+    //         //console.log("Entre al true");
+    //         setRol(true);
+    //         //console.log("Este es el estado setteado " + rol);
+    //     } else if (event.currentTarget.value === "false") {
+    //         //console.log("Entre al false");
+    //         setRol(false);
+    //         //console.log("Este es el estado setteado " + rol);
+    //     }
 
-    }
+    // }
 
     const handleInputChangeFiltrar = (event) => { //Para guardar los datos ingresados en el filtrar
         /*console.log(event.target.name)
@@ -89,18 +98,18 @@ function AdministrarUsuarios() {
 
     }
 
-    const handleDropdownChangeFiltrar = (event) => { //Para guardar la categoria seleccionada en el filtrar
-        /*console.log(event.target.name)
-        console.log(event.target.value)
-        console.log("Este es el valor de la seleccion " + event.currentTarget.value);*/
+    //const handleDropdownChangeFiltrar = (event) => { //Para guardar la categoria seleccionada en el filtrar
+        //console.log(event.target.name)
+        //console.log(event.target.value)
+        //console.log("Este es el valor de la seleccion " + event.currentTarget.value);
 
-        const categoria = event.currentTarget.value;
-        setFiltro({
-            ...filtro,
-            categoria
-        })
+        //const categoria = event.currentTarget.value;
+        //setFiltro({
+        //    ...filtro,
+        //    categoria
+        //})
 
-    }
+    //}
 
     async function consultarUsuarios() {
 
@@ -119,117 +128,117 @@ function AdministrarUsuarios() {
         const respuesta = await data.json();
         //console.log(respuesta);
 
-        if(respuesta.code == 401){
+        if (respuesta.code == 401) {
             setRespuestaServidor(401);
-        }else{
-            setUsuario(respuesta.result.items);
+        } else {
+            //setUsuario(respuesta.result.items);
         }
     }
 
-    const modificarUsuario = async (event) => {
+    // const modificarUsuario = async (event) => {
 
-        event.preventDefault();
-        setRespuestaServidor("");
-        /*console.log("Entre al boton");
-        console.log("Estos son los datos del boton " + JSON.stringify(editarUsuario));*/
-        //console.log("Datos del radio button "+JSON.stringify(datos));
-        /*let excluirClave = editarUsuario.filter(datosUsuario => datosUsuario.clave);
-        console.log("Estos son los datos modificados "+JSON.stringify(excluirClave));*/
-        /*let jsonObj = JSON.parse(editarUsuario);*/
+    //     event.preventDefault();
+    //     setRespuestaServidor("");
+    //     /*console.log("Entre al boton");
+    //     console.log("Estos son los datos del boton " + JSON.stringify(editarUsuario));*/
+    //     //console.log("Datos del radio button "+JSON.stringify(datos));
+    //     /*let excluirClave = editarUsuario.filter(datosUsuario => datosUsuario.clave);
+    //     console.log("Estos son los datos modificados "+JSON.stringify(excluirClave));*/
+    //     /*let jsonObj = JSON.parse(editarUsuario);*/
 
-        /*delete editarUsuario.contraseña;
-        delete editarUsuario.es_admin;*/
+    //     /*delete editarUsuario.contraseña;
+    //     delete editarUsuario.es_admin;*/
 
-        //console.log("Estos son los datos modificados " + JSON.stringify(editarUsuario));
+    //     //console.log("Estos son los datos modificados " + JSON.stringify(editarUsuario));
 
-        if (editarUsuario.cedula != "" && editarUsuario.nombre != "" && editarUsuario.email != "" && rol != null) {
+    //     if (editarUsuario.cedula != "" && editarUsuario.nombre != "" && editarUsuario.email != "" && rol != null) {
 
-            let datos = {
-                cedula: editarUsuario.cedula,
-                nombre: editarUsuario.nombre,
-                email: editarUsuario.email,
-                es_admin: rol
-            };
-
-
-            /*JSON.stringify(datos);*/
-            //console.log(datos);
-
-            const url = "https://secure-brushlands-86892.herokuapp.com/v1/users/" + correo + "/update-one";
-
-            //console.log("Este es el usuario " + editarUsuario.email + " | el id " + editarUsuario.id + " | el rol " + rol);
+    //         let datos = {
+    //             cedula: editarUsuario.cedula,
+    //             nombre: editarUsuario.nombre,
+    //             email: editarUsuario.email,
+    //             es_admin: rol
+    //         };
 
 
-            const data = await fetch(url, {
-                method: "PUT",
-                mode: "cors",
-                headers: {
+    //         /*JSON.stringify(datos);*/
+    //         //console.log(datos);
 
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(datos)
-            })
-            /*console.log(JSON.stringify(datos));*/
+    //         const url = "https://secure-brushlands-86892.herokuapp.com/v1/users/" + correo + "/update-one";
 
-            /*console.log("Creado correctamente");
-            
-            console.log("El correo es "+correo);*/
-
-            const respuesta = await data.json();
-
-            //console.log("Este es el status " + respuesta.status);
-            /*setCorreo();*/
-
-            if (respuesta.status === undefined) { //Si el correo ya existe -> Error 404
-                //console.log("Es indefinido");
-                setRespuestaServidor(respuesta.code);
-                //console.log(respuesta.code);
-            } else { //Si es diferente
-                setRespuestaServidor(respuesta.status);
-            }
-
-            /*setRespuestaServidor(respuesta.status);*/
-
-            //setRespuestaServidor(respuesta);
-
-            /*setRespuestaServidor(respuesta);*/
-
-            //setToken("Correcto");
-
-            /*console.log(respuestaServidor);*/
-            /*console.log("Esta es la respuesta "+JSON.stringify(respuestaServidor, null, 2));*/
-
-            /*console.log("Estos son los datos correctos "+JSON.stringify(datos));*/
-            /*editarUsuario.cedula != "" || editarUsuario.nombre != "" || editarUsuario.email != "" || */
-
-            //console.log("Correcto");
-            setRol(null);
+    //         //console.log("Este es el usuario " + editarUsuario.email + " | el id " + editarUsuario.id + " | el rol " + rol);
 
 
-        } else if (editarUsuario.cedula == "" || editarUsuario.nombre == "" || editarUsuario.email == "" || rol == null) { /*Se verifica que no existan campos vacios*/
+    //         const data = await fetch(url, {
+    //             method: "PUT",
+    //             mode: "cors",
+    //             headers: {
 
-            //setToken("Campos vacios");
-            /*console.log(respuestaServidor);*/
+    //                 "Content-Type": "application/json"
+    //             },
+    //             body: JSON.stringify(datos)
+    //         })
+    //         /*console.log(JSON.stringify(datos));*/
 
-            /*console.log("Estos son los datos erroneos "+datos);*/
+    //         /*console.log("Creado correctamente");
 
-            //console.log("Campos vacios");
-            setRespuestaServidor(408);
-            setRol(null);
+    //         console.log("El correo es "+correo);*/
 
-        } else { /*Si las contraseñas son distintas*/
+    //         const respuesta = await data.json();
 
-            /*console.log("Entre");*/
-            /*setRespuestaServidor("Incorrecto");*/
-            //setToken("Incorrecto");
+    //         //console.log("Este es el status " + respuesta.status);
+    //         /*setCorreo();*/
 
-            /*console.log(respuestaServidor);*/
-            //console.log("Existe otro error");
-        }
+    //         if (respuesta.status === undefined) { //Si el correo ya existe -> Error 404
+    //             //console.log("Es indefinido");
+    //             setRespuestaServidor(respuesta.code);
+    //             //console.log(respuesta.code);
+    //         } else { //Si es diferente
+    //             setRespuestaServidor(respuesta.status);
+    //         }
 
-    }
+    //         /*setRespuestaServidor(respuesta.status);*/
 
-    const eliminarUsuario = async (event) => {
+    //         //setRespuestaServidor(respuesta);
+
+    //         /*setRespuestaServidor(respuesta);*/
+
+    //         //setToken("Correcto");
+
+    //         /*console.log(respuestaServidor);*/
+    //         /*console.log("Esta es la respuesta "+JSON.stringify(respuestaServidor, null, 2));*/
+
+    //         /*console.log("Estos son los datos correctos "+JSON.stringify(datos));*/
+    //         /*editarUsuario.cedula != "" || editarUsuario.nombre != "" || editarUsuario.email != "" || */
+
+    //         //console.log("Correcto");
+    //         setRol(null);
+
+
+    //     } else if (editarUsuario.cedula == "" || editarUsuario.nombre == "" || editarUsuario.email == "" || rol == null) { /*Se verifica que no existan campos vacios*/
+
+    //         //setToken("Campos vacios");
+    //         /*console.log(respuestaServidor);*/
+
+    //         /*console.log("Estos son los datos erroneos "+datos);*/
+
+    //         //console.log("Campos vacios");
+    //         setRespuestaServidor(408);
+    //         setRol(null);
+
+    //     } else { /*Si las contraseñas son distintas*/
+
+    //         /*console.log("Entre");*/
+    //         /*setRespuestaServidor("Incorrecto");*/
+    //         //setToken("Incorrecto");
+
+    //         /*console.log(respuestaServidor);*/
+    //         //console.log("Existe otro error");
+    //     }
+
+    // }
+
+    /*const eliminarUsuario = async (event) => {
 
         event.preventDefault();
 
@@ -256,7 +265,7 @@ function AdministrarUsuarios() {
         //console.log(respuesta.status);
         setRespuestaServidor(respuesta.status);
 
-    }
+    }*/
 
     const aux = true;
     /*Es admin ?*/
@@ -280,9 +289,9 @@ function AdministrarUsuarios() {
     /*console.log("Este es el elemento a editar: " + JSON.stringify(editarUsuario));*/
 
     /*Si no se tiene nada en el array del get*/
-    if (usuario.length == 0) {
+    /*if (usuario.length == 0) {
         console.log(usuario);
-        /*componente = <div>Entre al if</div>*/
+        //componente = <div>Entre al if</div>
     } else {
         console.log(usuario);
 
@@ -293,7 +302,7 @@ function AdministrarUsuarios() {
                     <td id="nombreUsuarioTablaFila-AdministrarUsuarios">{elemento.nombre}</td>
                     <td id="correoTablaFila-AdministrarUsuarios">{elemento.email}</td>
                     <td id="rolTablaFila-AdministrarUsuarios">{elemento.es_admin === true ? "Admin" : "Usuario"}</td>
-                    {/*elemento.es_admin = null*/}
+                    
                     <td id="modificarEliminarTablaFila-AdministrarUsuarios">
 
                         <button id="botonModificar-AdministrarUsuarios" type="button" class="btn btn-success" onClick={() => { setearDatos(elemento) }} title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-AdministrarUsuarios">
@@ -315,8 +324,8 @@ function AdministrarUsuarios() {
 
                 switch (filtro.categoria) {
                     case "cedula":
-                        /*const cedulaBuscar = filtro.inputFiltro;
-                        console.log("El valor de la cedula "+cedulaBuscar);*/
+                        //const cedulaBuscar = filtro.inputFiltro;
+                        //console.log("El valor de la cedula "+cedulaBuscar);
                         let filtroCedula = usuario.filter(user => user.cedula == filtro.inputFiltro);
                         console.log("Este es el filtro " + JSON.stringify(filtroCedula));
                         if (filtroCedula == "") {
@@ -331,7 +340,7 @@ function AdministrarUsuarios() {
                                     <td id="nombreUsuarioTablaFila-AdministrarUsuarios">{elemento.nombre}</td>
                                     <td id="correoTablaFila-AdministrarUsuarios">{elemento.email}</td>
                                     <td id="rolTablaFila-AdministrarUsuarios">{elemento.es_admin === true ? "Admin" : "Usuario"}</td>
-                                    {/*elemento.es_admin = null*/}
+                                    
                                     <td id="modificarEliminarTablaFila-AdministrarUsuarios">
 
                                         <button id="botonModificar-AdministrarUsuarios" type="button" class="btn btn-success" onClick={() => { setearDatos(elemento) }} title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-AdministrarUsuarios">
@@ -365,7 +374,7 @@ function AdministrarUsuarios() {
                                     <td id="nombreUsuarioTablaFila-AdministrarUsuarios">{elemento.nombre}</td>
                                     <td id="correoTablaFila-AdministrarUsuarios">{elemento.email}</td>
                                     <td id="rolTablaFila-AdministrarUsuarios">{elemento.es_admin === true ? "Admin" : "Usuario"}</td>
-                                    {/*elemento.es_admin = null*/}
+                                    
                                     <td id="modificarEliminarTablaFila-AdministrarUsuarios">
 
                                         <button id="botonModificar-AdministrarUsuarios" type="button" class="btn btn-success" onClick={() => { setearDatos(elemento) }} title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-AdministrarUsuarios">
@@ -399,7 +408,7 @@ function AdministrarUsuarios() {
                                     <td id="nombreUsuarioTablaFila-AdministrarUsuarios">{elemento.nombre}</td>
                                     <td id="correoTablaFila-AdministrarUsuarios">{elemento.email}</td>
                                     <td id="rolTablaFila-AdministrarUsuarios">{elemento.es_admin === true ? "Admin" : "Usuario"}</td>
-                                    {/*elemento.es_admin = null*/}
+                                    
                                     <td id="modificarEliminarTablaFila-AdministrarUsuarios">
 
                                         <button id="botonModificar-AdministrarUsuarios" type="button" class="btn btn-success" onClick={() => { setearDatos(elemento) }} title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-AdministrarUsuarios">
@@ -422,7 +431,7 @@ function AdministrarUsuarios() {
             }
         }
 
-    }
+    }*/
 
     /*Mensaje para el usuario en cabecera de la tabla*/
     /*if(respuestaServidor === 201){
@@ -432,7 +441,7 @@ function AdministrarUsuarios() {
         componenteMensajeTabla = <h5 id="mensajeRespuesta-AdministrarUsuario">Usuario modificado correctamente</h5>
     }*/
 
-    const listarUsuarios = async (event) => {
+    /*const listarUsuarios = async (event) => {
 
         event.preventDefault();
         console.log("Entre al listarUsuarios");
@@ -443,7 +452,7 @@ function AdministrarUsuarios() {
         consultarUsuarios();
 
 
-    }
+    }*/
 
     const filtrarUsuarios = async (event) => {
         event.preventDefault();
@@ -456,12 +465,12 @@ function AdministrarUsuarios() {
     }
 
     function setearDatos(elemento) {
-        setEditarUsuario(elemento);
+        //setEditarUsuario(elemento);
         setCorreo(elemento.email);
         setRespuestaServidor("");
     }
 
-    switch (respuestaServidor) {
+    /*switch (respuestaServidor) {
 
         case 200:
             componenteMensajeTabla = <h5 id="mensajeRespuesta-AdministrarUsuario">Usuario modificado correctamente, recargue para ver cambios.</h5>
@@ -495,7 +504,7 @@ function AdministrarUsuarios() {
         default:
             componenteMensajeTabla = null;
             break;
-    }
+    }*/
 
     return (
 
@@ -511,19 +520,23 @@ function AdministrarUsuarios() {
 
                 <div id="busqueda">
 
-                    <form id="formato" onSubmit={filtrarUsuarios}>
+                    <form id="formato" onSubmit={(e) => listarUsuarios(e, "filtrar", filtro)}>
 
-                        <select class="form-select" onChange={handleDropdownChangeFiltrar} name="categoria" title="Seleccione categoria para buscar palabra" >
+                        <select class="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
 
-                            <option selected >Seleccione Categoria...</option> {/*disabled*/}
+                            {/*<option selected >Seleccione Categoria...</option>
                             <option value="cedula">Cedula</option>
                             <option value="nombre">Nombre Completo</option>
+                            <option value="correo">Correo</option>*/}
+
+                            <option selected >Seleccione Categoria...</option>
                             <option value="correo">Correo</option>
+                            <option value="cuenta">Tipo Cuenta</option>
 
                         </select>
 
                         {/*<input type="text" placeholder="¿Busca algo puntual?" title="Ingrese la palabra a buscar"/>*/}
-                        <input id="filtrar" type="text" className="form-control" onChange={handleInputChangeFiltrar} name="inputFiltro" placeholder="¿Busca algo puntual?" title="Ingrese valor a buscar" />
+                        <input id="filtrar" type="text" className="form-control" onChange={handleFiltrarChange} name="inputFiltro" placeholder="¿Busca algo puntual?" title="Ingrese valor a buscar" />
 
                         {/*<Link to='/plataforma/buscar'></Link>*/}
                         <button id="enviarBuscar-Plataforma" type="submit" className="btn btn-success" title="Buscar" >
@@ -576,14 +589,14 @@ function AdministrarUsuarios() {
                             </td>
             </tr>*/}
 
-            <form id="formato" onSubmit={listarUsuarios}> {/*listarUsuarios*/}
+            <form id="formato" onSubmit={(e) => listarUsuarios(e, "listar")}> {/*listarUsuarios*/}
 
                 <div id="cajaTabla-AdministrarUsuarios">
 
                     <div id="cajaCabecera-AdministrarUsuarios">
 
                         <div id="cajaMensajeRespuesta-AdministrarUsuario">
-                            {componenteMensajeTabla}
+                            <h5 id="mensajeRespuesta-AdministrarUsuario">{componenteMostrarMensaje}</h5>
                         </div>
                         <div id="cajaBotonRecargar-AdministrarUsuario">
                             <button id="botonRecargar-AdministrarUsuario" value="Formatooooo" type='submit' className="btn btn-success" title='Recargar tabla'><i class="fas fa-redo"></i></button>
@@ -630,7 +643,7 @@ function AdministrarUsuarios() {
                 </div>
             </form>
             {/*Modal para el botón de Eliminar AdministrarUsuarios*/}
-            <form className="row" onSubmit={eliminarUsuario}>
+            <form className="row" onSubmit={(e) => eliminarUsuario(e, datosOriginales)}>
                 <div class="modal fade" id="modalEliminar-AdministrarUsuarios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -646,7 +659,7 @@ function AdministrarUsuarios() {
                             </div>
                             <div class="modal-body">
 
-                                <label>¿Realmente desea eliminar a {editarUsuario.nombre}?</label>
+                                <label>¿Realmente desea eliminar a "{datosGuardados.nombre}"?</label>
                                 <label id="labelRevertirCambios-AdministrarUsuarios">Los cambios no se podrán revertir.</label>
 
                             </div>
@@ -662,7 +675,7 @@ function AdministrarUsuarios() {
             </form>
 
             {/*Modal para el botón de Modificar AdministrarUsuarios*/}
-            <form className="row" onSubmit={modificarUsuario}>
+            <form className="row" onSubmit={(e) => modificarUsuario(e, datosGuardados, datosOriginales)}>
                 <div class="modal fade" id="modalModificar-AdministrarUsuarios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -689,14 +702,10 @@ function AdministrarUsuarios() {
                                 </div>
 
                                 <div className="input-group">
-                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-address-card"></i></div>
-                                    <input id="" type="text" className="form-control" value={editarUsuario.cedula} placeholder="Ingrese la cedula del usuario" onChange={handleInputChangeModificar}
-                                        onKeyDown={function (e) { //Funcion que evita el ingreso de letras
-                                            if ((e.keyCode < '8' || e.keyCode > '57') && (e.keyCode < '96' || e.keyCode > '105')) {
-                                                e.preventDefault()
-                                            }
-                                        }} name="cedula" title="Ingrese cedula"
-                                    />
+                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-address-card"></i></div> {/*value={editarUsuario.cedula}*/}
+                                    <input id="" type="text" className="form-control" value={datosGuardados.cedula} placeholder="Ingrese la cedula del usuario" onChange={handleInputChangeModificar}
+                                        onKeyDown={verificarNumeros} name="cedula" title="Ingrese cedula"/>
+
 
                                 </div>
 
@@ -712,7 +721,7 @@ function AdministrarUsuarios() {
 
                                 <div className="input-group">
                                     <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div>
-                                    <input id="" type="text" className="form-control" value={editarUsuario.nombre} placeholder="Ingrese el nombre de usuario completo" onChange={handleInputChangeModificar} name="nombre" title="Nuevo usuario" />
+                                    <input id="" type="text" className="form-control" value={datosGuardados.nombre} placeholder="Ingrese el nombre de usuario completo" onChange={handleInputChangeModificar} name="nombre" title="Nuevo usuario"/>
                                 </div>
 
                                 <br />
@@ -727,7 +736,7 @@ function AdministrarUsuarios() {
 
                                     <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-envelope"></i></div>
 
-                                    <input id="" type="email" className="form-control" value={editarUsuario.email} placeholder="Ingrese el correo" onChange={handleInputChangeModificar} name="email" title="Nuevo correo" />
+                                    <input id="" type="email" className="form-control" value={datosGuardados.email} placeholder="Ingrese el correo" onChange={handleInputChangeModificar} name="email" title="Nuevo correo"/>
 
 
                                 </div>
@@ -739,11 +748,11 @@ function AdministrarUsuarios() {
                                 <div id="cajaRadioButtons-AgregarCuenta">
 
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" id="radioButtonAdministrador-AdministrarUsuarios" value="true" onChange={handleRadioChangeModificar} name="es_admin" title="Cuenta para administrador" />
+                                        <input class="form-check-input" type="radio" id="radioButtonAdministrador-AdministrarUsuarios" value="true" onChange={handleInputChangeModificar} name="es_admin" title="Cuenta para administrador" />
                                         <p id="pAdministrador-AdministrarUsuarios" for="inlineRadio1">Administrador</p>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" id="radioButtonAdministrador-AdministrarUsuarios" value="false" onChange={handleRadioChangeModificar} name="es_admin" title="Cuenta para usuario" />
+                                        <input class="form-check-input" type="radio" id="radioButtonAdministrador-AdministrarUsuarios" value="false" onChange={handleInputChangeModificar} name="es_admin" title="Cuenta para usuario" />
                                         <p id="pUsuario-AdministrarUsuarios" for="inlineRadio2">Usuario</p>
                                     </div>
 

@@ -1,4 +1,4 @@
-async function datosBody(datos, url) {
+async function putBody(datos, url) {
 
     console.log("Estos son mis datos " + JSON.stringify(datos));
 
@@ -13,17 +13,11 @@ async function datosBody(datos, url) {
     })
 
     const respuesta = await data.json();
-    /*console.log("Respuesta");
-    console.log(respuesta)
-    respuestaServidor(respuesta);
-    respuestaServidor(respuesta);
-    setToken("Correcto");*/
 
-    //setRespuestaServidor(respuesta);
     return (
         await respuesta
 
     );
 };
 
-export default datosBody;
+export default putBody;

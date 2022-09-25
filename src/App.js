@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
 import Plataforma from '../src/capaPresentacion/vista/Plataforma.js'
 //import Login from '../src/capaPresentacion/vista/Login/Login.js'
 import Login from './capaPresentacion/vista/Login/Login';
-import AgregarUsuario from "../src/capaPresentacion/vista/AgregarUsuario.js";
+import AgregarUsuario from "../src/capaPresentacion/vista/AgregarUsuario/AgregarUsuario.js";
 import CrearContraseña from "../src/capaPresentacion/vista/CrearContraseña/CrearContraseña";
 import Preguntas from "../src/capaPresentacion/vista/Preguntas.js";
 import AgregarPregunta from "../src/capaPresentacion/vista/AgregarPregunta.js";
@@ -38,11 +38,17 @@ function App() {
 
     const [respuestaServidor, setRespuestaServidor] = useState("");
 
-    const [datosGuardados, setDatosGuardados] = useState("");
+    const [datosGuardados, setDatosGuardados] = useState(""); //Guarda y muestra datos modificados en modal
 
     const [cambiarEstado, setCambiarEstado] = useState("");
+
+    const [datosIntroducidos, setDatosIntroducidos] = useState(""); //Guarda datos en los handleChange
+
+    const [datosOriginales, setDatosOriginales] = useState(""); //Guarda los datos originales a modificar
     
-    const value = useMemo(() => ({ respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin, datosGuardados, setDatosGuardados, cambiarEstado, setCambiarEstado }), [respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin, datosGuardados, setDatosGuardados, cambiarEstado, setCambiarEstado]);
+    const [filtro, setFiltro] = useState(""); //Guarda valores del filtro
+    
+    const value = useMemo(() => ({ respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin, datosGuardados, setDatosGuardados, cambiarEstado, setCambiarEstado, datosIntroducidos, setDatosIntroducidos, datosOriginales, setDatosOriginales, filtro, setFiltro }), [respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin, datosGuardados, setDatosGuardados, cambiarEstado, setCambiarEstado, datosIntroducidos, setDatosIntroducidos, datosOriginales, setDatosOriginales, filtro, setFiltro]);
 
 
 

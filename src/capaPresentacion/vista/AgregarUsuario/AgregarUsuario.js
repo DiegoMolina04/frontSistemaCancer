@@ -1,10 +1,15 @@
-import '../css/AgregarUsuario.css';
-import '../css/fontawesome-free-5.15.4-web/css/all.css'
-import logoAgregarUsuario from '../image/logo.png'
+import '../../css/AgregarUsuario.css';
+import '../../css/fontawesome-free-5.15.4-web/css/all.css'
+import logoAgregarUsuario from '../../image/logo.png'
 import React, { Fragment, useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 import { Redirect } from "react-router-dom";
-import { UserContext } from "../../../src/capaNegocio/context/UserContext.js";
+import { UserContext } from "../../../../src/capaNegocio/context/UserContext.js";
+
+import useChange from './useChange';
+import useAgregarUsuario from '../../../capaNegocio/logicaNegocio/useAgregarUsuario';
+import verificarNumeros from '../../../capaNegocio/logicaNegocio/LogicaComun/verificarNumeros';
+
 
 function AgregarUsuario() {
 
@@ -22,17 +27,21 @@ function AgregarUsuario() {
     const [mensaje, setMensaje] = useState();
     const { respuestaServidor, setRespuestaServidor } = useContext(UserContext);
     const { token, setToken } = useContext(UserContext);
+    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
 
-    const handleInputChange = (event) => {
+    const { handleInputChange } = useChange();
+    const { verificarDatos, componenteMostrarMensaje, estadoInicial } = useAgregarUsuario();
+
+    /*const handleInputChange = (event) => {
         console.log(event.target.name)
         console.log(event.target.value)
         setDatos({
             ...datos,
             [event.target.name]: event.target.value
         })
-    }
+    }*/
 
-    const handleRadioChange = (event) => {
+    /*const handleRadioChange = (event) => {
 
         const es_admin = event.currentTarget.value === 'true' ? true : false;
 
@@ -40,9 +49,9 @@ function AgregarUsuario() {
             ...datos,
             es_admin
         })
-    }
+    }*/
 
-    let componenteMostrarMensaje = <h5></h5>
+    //let componenteMostrarMensaje = <h5></h5>
 
     const enviarDatos = async (event) => {
 
@@ -114,7 +123,7 @@ function AgregarUsuario() {
 
     }
 
-    switch (codigo) {
+    /*switch (codigo) {
 
         case 404:
             componenteMostrarMensaje = <h5>El correo ingresado ya esta registrado.</h5>
@@ -134,7 +143,7 @@ function AgregarUsuario() {
 
         case 201:
 
-            /*setRespuestaServidor("Usuario creado");*/
+            //setRespuestaServidor("Usuario creado");
             setRespuestaServidor(201);
             return <Redirect to="/plataforma/administrarusuarios" />
 
@@ -144,7 +153,7 @@ function AgregarUsuario() {
 
             break;
 
-    }
+    }*/
     /*switch (token){
         
         case "Campos vacios":
@@ -206,11 +215,11 @@ break;
 
                 <br />
 
-                {componenteMostrarMensaje}
+                <h5>{componenteMostrarMensaje}</h5>
 
 
                 {/*Contenedor de todo el formulario*/}
-                <form className="row" onSubmit={enviarDatos}>
+                <form className="row" onSubmit={(e) => verificarDatos(e, datosGuardados)}>
 
                     <div id="formulario-AgregarUsuario">
 
@@ -219,13 +228,7 @@ break;
                         <div className="input-group">
                             <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-address-card"></i></div>
                             <input id="cedula-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese cedula de usuario" title="Digite su numero de cedula" onChange={handleInputChange}
-                                onKeyDown={function (e) { //Funcion que evita el ingreso de letras
-                                    if ((e.keyCode < '8' || e.keyCode > '57') && (e.keyCode < '96' || e.keyCode > '105')) {
-                                        e.preventDefault()
-                                    }
-
-                                }} name="cedula" 
-                            />
+                                onKeyDown={verificarNumeros} name="cedula" required />
                         </div>
 
                         <br />
@@ -234,7 +237,7 @@ break;
                         <label>Ingrese su nombre completo</label>
                         <div className="input-group">
                             <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-user"></i></div>
-                            <input id="nombre-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese su nombre de usuario" title="Digite su nombre completo" onChange={handleInputChange} name="nombre" />
+                            <input id="nombre-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese su nombre de usuario" title="Digite su nombre completo" onChange={handleInputChange} name="nombre" required />
                         </div>
 
                         <br />
@@ -243,7 +246,7 @@ break;
                         <label>Ingrese su email</label>
                         <div className="input-group">
                             <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-envelope"></i></div>
-                            <input id="correo-AgregarUsuario" type="email" className="form-control" placeholder="Ingrese su email" title="Digite su email" onChange={handleInputChange} name="email" />
+                            <input id="correo-AgregarUsuario" type="email" className="form-control" placeholder="Ingrese su email" title="Digite su email" onChange={handleInputChange} name="email" required />
                         </div>
 
                         <br />
@@ -270,12 +273,12 @@ break;
                         <label id="tipoCuenta-AgregarCuenta">Tipo de cuenta</label>
                         <div class="form-check form-check-inline">
                             {/*<input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButton" value="true" title="Cuenta para administrador" onChange={handleRadioChange} name="es_admin"/> /* name="inlineRadioOptions" */}
-                            <input class="form-check-input" type="radio" id="radioButton" value="true" title="Cuenta para administrador" onChange={handleRadioChange} name="es_admin" /> {/* name="inlineRadioOptions" */}
+                            <input class="form-check-input" type="radio" id="radioButton" value="true" title="Cuenta para administrador" onChange={handleInputChange} name="es_admin" /> {/* name="inlineRadioOptions" */}
                             <p id="pAdministrador-AgregarCuenta" for="inlineRadio1">Administrador</p>
                         </div>
                         <div class="form-check form-check-inline">
                             {/*<input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioButton" value="option2" title="Cuenta para usuario" onChange={handleRadioChange} name="es_admin"/> /* name="inlineRadioOptions" */}
-                            <input class="form-check-input" type="radio" id="radioButton" value="false" title="Cuenta para usuario" onChange={handleRadioChange} name="es_admin" /> {/* name="inlineRadioOptions" */}
+                            <input class="form-check-input" type="radio" id="radioButton" value="false" title="Cuenta para usuario" onChange={handleInputChange} name="es_admin" /> {/* name="inlineRadioOptions" */}
                             <p id="pUsuario-AgregarCuenta" for="inlineRadio2">Usuario</p>
                         </div>
 
@@ -287,10 +290,9 @@ break;
 
                             <div id="cajaRegresar-AgregarCuenta">
 
-                                <Link to='/plataforma/administrarusuarios'>
-                                    <button id="botonRegresar-AgregarCuenta" type="button" class="btn btn-primary" title="Regresar a la plataforma">Regresar</button>
-                                </Link>
-
+                                {/*<Link to='/plataforma/administrarusuarios'> </Link>*/}
+                                    <button id="botonRegresar-AgregarCuenta" type="button" class="btn btn-primary" onClick={(e) => estadoInicial(e)} title="Regresar a la plataforma">Regresar</button>
+                                
                             </div>
 
 
