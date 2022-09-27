@@ -47,8 +47,12 @@ function App() {
     const [datosOriginales, setDatosOriginales] = useState(""); //Guarda los datos originales a modificar
     
     const [filtro, setFiltro] = useState(""); //Guarda valores del filtro
+
+    const [datosTablaModificar, setDatosTablaModificar] = useState(""); //Muestra los datos que se van seleccionando en el modificar
+
+    const [guardarID, setGuardarID] = useState(""); //Guarda ID seleccionados en el modificar
     
-    const value = useMemo(() => ({ respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin, datosGuardados, setDatosGuardados, cambiarEstado, setCambiarEstado, datosIntroducidos, setDatosIntroducidos, datosOriginales, setDatosOriginales, filtro, setFiltro }), [respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin, datosGuardados, setDatosGuardados, cambiarEstado, setCambiarEstado, datosIntroducidos, setDatosIntroducidos, datosOriginales, setDatosOriginales, filtro, setFiltro]);
+    const value = useMemo(() => ({ respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin, datosGuardados, setDatosGuardados, cambiarEstado, setCambiarEstado, datosIntroducidos, setDatosIntroducidos, datosOriginales, setDatosOriginales, filtro, setFiltro, datosTablaModificar, setDatosTablaModificar, guardarID, setGuardarID }), [respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin, datosGuardados, setDatosGuardados, cambiarEstado, setCambiarEstado, datosIntroducidos, setDatosIntroducidos, datosOriginales, setDatosOriginales, filtro, setFiltro, datosTablaModificar, setDatosTablaModificar, guardarID, setGuardarID]);
 
 
 
