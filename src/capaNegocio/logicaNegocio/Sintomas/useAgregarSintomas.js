@@ -9,7 +9,7 @@ import postBodyAutorization from '../../../capaDatos/Post/postBodyAutorization.j
 import MostrarMensaje from '../../../capaPresentacion/vista/ComponentesComunes/MostrarMensaje.js';
 import ComponenteTabla from '../../../capaPresentacion/vista/ComponentesComunes/ComponenteTabla.js';
 
-const useAgregarPregunta = () => {
+const useAgregarSintomas = () => {
 
     //Contexto
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext); //Se guardan los estados
@@ -20,7 +20,7 @@ const useAgregarPregunta = () => {
 
     //Componente
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState(""); //Mensaje informativo para el usuario
-    const [componenteListarSintomas, setComponenteListarSintomas] = useState([]); //Guardar para tabla con sintomas
+    const [componenteListarTiposDepresion, setComponenteListarTiposDepresion] = useState([]); //Guardar para tabla con sintomas
 
     //Estado
     const [codigo, setCodigo] = useState(null); //Codigo respuesta
@@ -42,9 +42,9 @@ const useAgregarPregunta = () => {
 
             tabla = datosExtraidos.map(elemento => ( //Se recorren todos los datos
                 <tr>
-                    <td scope="row">{elemento.sintoma}</td>
-                    <td id="columnaCheckbox-AgregarPreguntas">
-                        <input id="checkbox-AgregarPreguntas" class="form-check-input" type="checkbox" value={elemento.sintoma} onChange={(e) => handleChange(e, elemento)} name="checkBox"></input>
+                    <td scope="row">{elemento.tipo_depresion}</td>
+                    <td id="columnaCheckbox-AgregarSintomas">
+                        <input id="checkbox-AgregarSintomas" class="form-check-input" type="checkbox" value={elemento.tipo_depresion} onChange={(e) => handleChange(e, elemento)} name="checkBox"></input>
                     </td>
                 </tr>
             ))
@@ -59,11 +59,11 @@ const useAgregarPregunta = () => {
 
     }
 
-    const cargarSintomas = async (event) => {
+    const cargarTiposDepresion = async (event) => {
 
         try {
             event.preventDefault();
-            url = "https://secure-brushlands-86892.herokuapp.com/v1/symptoms/get-all";
+            url = "https://secure-brushlands-86892.herokuapp.com/v1/depresion-type/get-all";
             respuestaServidor = await getAutorization(token, url);
 
             if (respuestaServidor.code !== undefined) {
@@ -74,7 +74,7 @@ const useAgregarPregunta = () => {
 
                 if (datosExtraidos.length > 0) { //Si hay algún resultado
 
-                    setComponenteListarSintomas(<ComponenteTabla tabla={cargarElementosTabla(datosExtraidos)} />);
+                    setComponenteListarTiposDepresion(<ComponenteTabla tabla={cargarElementosTabla(datosExtraidos)} />);
 
                 } else {
 
@@ -94,10 +94,9 @@ const useAgregarPregunta = () => {
         try {
             event.preventDefault();
 
-            if (datos.pregunta !== "" && (idSintoma).length !== 0 && datos !== "") { //Si los campos estan completos
-
-                const arrayDatos = { 'pregunta': datos.pregunta, 'sintomas': idSintoma }
-                url = "https://secure-brushlands-86892.herokuapp.com/v1/questions/create-one";
+            if (datos.sintoma !== "" && (idSintoma).length !== 0 && datos !== "") { //Si los campos estan completos
+                const arrayDatos = { 'sintoma': datos.sintoma, 'tipos_depresion': idSintoma }
+                url = "https://secure-brushlands-86892.herokuapp.com/v1/symptoms/create-one";
 
                 respuestaServidor = await postBodyAutorization(arrayDatos, token, url);
 
@@ -117,16 +116,13 @@ const useAgregarPregunta = () => {
 
                 }
 
-            } else if (datos.pregunta === "" || idSintoma.length === 0 || datos === "") { //Se verifica que no existan campos vacios
-
+            } else if (datos.sintoma === "" || idSintoma.length === 0 || datos === "") { //Se verifica que no existan campos vacios
                 //Codigo seteado para respuesta de campos vacios sin intervención del servidor
                 //El servidor se agotó esperando el resto de la petición del navegador
                 setCodigo(408);
 
             } else { //Si sucede algo inesperado
-
                 setCodigo(504);
-
             }
 
         } catch (error) {
@@ -164,7 +160,7 @@ const useAgregarPregunta = () => {
         setDatosTablaModificar(""); //Se reinicia el textarea con los datos del checkbox
         setDatosGuardados(""); //Se reinicia el valor del input
         setGuardarID(""); //Se reinicia los id guardados
-        history.push("/plataforma/preguntas");
+        history.push("/plataforma/sintomas");
 
     }
 
@@ -197,7 +193,7 @@ const useAgregarPregunta = () => {
                 break;
 
             case 500: //Error de almacenamiento
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"La pregunta ya esta registrada."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El sintoma ya esta registrado."} />);
                 break;
 
             case 504: //Error en el try catch
@@ -211,7 +207,7 @@ const useAgregarPregunta = () => {
         }
     }, [codigo, cambiarEstado])
 
-    return { cargarSintomas, enviarDatos, componenteListarSintomas, componenteMostrarMensaje, handleChange, reiniciarDatos };
+    return { cargarTiposDepresion, enviarDatos, componenteListarTiposDepresion, componenteMostrarMensaje, handleChange, reiniciarDatos };
 };
 
-export default useAgregarPregunta;
+export default useAgregarSintomas;

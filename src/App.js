@@ -7,8 +7,8 @@ import AgregarUsuario from "../src/capaPresentacion/vista/AdministrarUsuarios/Ag
 import CrearContraseña from "../src/capaPresentacion/vista/Login/CrearContraseña/CrearContraseña";
 import Preguntas from "../src/capaPresentacion/vista/Preguntas/Preguntas.js";
 import AgregarPregunta from "../src/capaPresentacion/vista/Preguntas/AgregarPregunta/AgregarPregunta.js";
-import Sintomas from '../src/capaPresentacion/vista/Sintomas.js'
-import AgregarSintomas from "../src/capaPresentacion/vista/AgregarSintomas.js";
+import Sintomas from '../src/capaPresentacion/vista/Sintomas/Sintomas.js';
+import AgregarSintomas from "../src/capaPresentacion/vista/Sintomas/AgregarSintomas/AgregarSintomas.js";
 import TiposDepresion from "../src/capaPresentacion/vista/TiposDepresion.js";
 import AgregarTipoDepresion from "../src/capaPresentacion/vista/AgregarTipoDepresion.js";
 import Diagnosticar from '../src/capaPresentacion/vista/Diagnosticar.js'
@@ -137,12 +137,16 @@ function App() {
                         </div>
                     </Route>
 
-                    <Route exact path="/agregarsintoma" render={() => token && es_admin ?
+                    {/*<Route exact path="/agregarsintoma" render={() => token && es_admin ?
                         <AgregarSintomas />
 
                         : <Login></Login>
 
-                    }></Route>
+                    }></Route>*/}
+
+                    <Route exact path="/agregarsintoma">
+                        <AgregarSintomas />
+                    </Route>
 
                     <Route exact path="/plataforma/tiposdepresion" >
                         <Plataforma />
