@@ -9,8 +9,8 @@ import Preguntas from "../src/capaPresentacion/vista/Preguntas/Preguntas.js";
 import AgregarPregunta from "../src/capaPresentacion/vista/Preguntas/AgregarPregunta/AgregarPregunta.js";
 import Sintomas from '../src/capaPresentacion/vista/Sintomas/Sintomas.js';
 import AgregarSintomas from "../src/capaPresentacion/vista/Sintomas/AgregarSintomas/AgregarSintomas.js";
-import TiposDepresion from "../src/capaPresentacion/vista/TiposDepresion.js";
-import AgregarTipoDepresion from "../src/capaPresentacion/vista/AgregarTipoDepresion.js";
+import TiposDepresion from "../src/capaPresentacion/vista/TiposDepresion/TiposDepresion.js";
+import AgregarTipoDepresion from "../src/capaPresentacion/vista/TiposDepresion/AgregarTipoDepresion/AgregarTipoDepresion.js";
 import Diagnosticar from '../src/capaPresentacion/vista/Diagnosticar.js'
 import Diccionario from '../src/capaPresentacion/vista/Diccionario.js'
 import AgregarDiccionario from "../src/capaPresentacion/vista/AgregarDiccionario.js";
@@ -155,12 +155,18 @@ function App() {
                         </div>
                     </Route>
 
-                    <Route exact path="/agregartipodepresion" render={() => token && es_admin ?
+                    {/*<Route exact path="/agregartipodepresion" render={() => token && es_admin ?
                         <AgregarTipoDepresion />
 
                         : <Login></Login>
 
-                    }></Route>
+                    }></Route>*/}
+
+                    <Route exact path="/agregartipodepresion">
+                        
+                        <AgregarTipoDepresion />    
+
+                    </Route>
 
                     <Route exact path="/plataforma/diccionario" >
                         <Plataforma />

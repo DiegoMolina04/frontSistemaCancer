@@ -34,7 +34,7 @@
 /*Palabra Administrar Usuarios*/
 #cabeceraAdministrarTiposDepresion-AdministrarTiposDepresion #cajaNombreOpcion-AdministrarTiposDepresion label {
     font-family: 'Noto Sans Display', sans-serif;
-    font-size: 130%;
+    font-size: 117%;
     padding: 5px 0px 0px 10px;
 }
 
@@ -213,11 +213,9 @@ form #cajaTabla-AdministrarTiposDepresion {
     width: 40%;
 }
 
-/*Propiedades de la columna Sintoma en la cabecera*/
-#tipoDepresionTablaCabecera-AdministrarSintomas {
-    /*background-color: aqua;*/
-    width: 40%;
+#cantidadSintomasTablaCabecera-AdministrarTiposDepresion{
     text-align: center;
+    width: 40%;
 }
 
 /*Propiedades de la columna Modificar/Eliminar en la cabecera*/
@@ -232,10 +230,10 @@ form #cajaTabla-AdministrarTiposDepresion {
     font-weight: lighter;
 }
 
-/*Propiedades de la fila nombreUsuario*/
-/*#tipoDepresionTablaFila-AdministrarSintomas {
+#cantidadSintomasFila-AdministrarTipoDepresion {
     text-align: center;
-}*/
+    font-weight: lighter;
+}
 
 /*Propiedades de la fila Modificar/Eliminar*/
 #modificarEliminarTablaFila-AdministrarTipoDepresion {
@@ -403,13 +401,15 @@ form #cajaTabla-AdministrarTiposDepresion {
 
 /*Propiedades de las cajas del label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
 #modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelTipoDepresionModificar-AdministrarTipoDepresion {
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelTipoDepresionModificar-AdministrarTipoDepresion,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelCantidadSintomasModificar-AdministrarTipoDepresion {
     text-align: left;
 }
 
 /*Propiedades de los label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
 #modalModificar-AdministrarTipoDepresion .modal-body #tipoCuenta-AgregarCuenta,
-#modalModificar-AdministrarTipoDepresion .modal-body #labelTipoDepresionModificar-AdministrarTipoDepresion label {
+#modalModificar-AdministrarTipoDepresion .modal-body #labelTipoDepresionModificar-AdministrarTipoDepresion label,
+#modalModificar-AdministrarTipoDepresion .modal-body #labelCantidadSintomasModificar-AdministrarTipoDepresion {
     font-size: 17px;
     font-weight: 700;
     margin-bottom: 10px;
