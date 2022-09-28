@@ -5,13 +5,12 @@ import { UserContext } from '../../../../capaNegocio/context/UserContext';
 
 const useChange = () => {
 
-    //Estados para guardar datos
-    const [datos, setDatos] = useState({ cedula: '', nombre: '', email: '', es_admin: null });
-
-    //Context
+    //Estado para guardar datos
+    const [datos, setDatos] = useState({ pregunta: '' });
+    //Contexto
     const { datosGuardados, setDatosGuardados } = useContext(UserContext);
 
-    const handleInputChange = (event) => { //Captura los datos ingresados
+    const handleInputChange = (event) => { //Captura datos ingresados
 
         event.preventDefault();
         setDatos({
@@ -26,7 +25,7 @@ const useChange = () => {
         setDatosGuardados(datos);
     }, [datos])
 
-    return { handleInputChange }; //Se regresa el handleInput para poder ser usado desde donde se desea
+    return { handleInputChange };
 
 };
 

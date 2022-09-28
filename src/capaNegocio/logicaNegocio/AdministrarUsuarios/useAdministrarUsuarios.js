@@ -8,7 +8,7 @@ import putBody from '../../../capaDatos/Put/putBody.js';
 import deleteAutorization from '../../../capaDatos/Delete/deleteAutorization.js';
 //Componentes
 import MostrarMensaje from '../../../capaPresentacion/vista/ComponentesComunes/MostrarMensaje.js';
-import ComponenteTabla from '../../../capaPresentacion/vista/AdministrarUsuarios/ComponenteTabla.js';
+import ComponenteTabla from '../../../capaPresentacion/vista/ComponentesComunes/ComponenteTabla.js';
 import ComponenteAgregarUsuario from '../../../capaPresentacion/vista/AdministrarUsuarios/ComponenteAgregarUsuario.js';
 
 const useAdministrarUsuarios = () => {

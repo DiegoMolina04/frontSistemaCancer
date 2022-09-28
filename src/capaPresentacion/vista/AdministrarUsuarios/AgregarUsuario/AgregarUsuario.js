@@ -8,7 +8,7 @@ import React, { useState, useContext } from 'react';
 //Context
 import { UserContext } from '../../../../capaNegocio/context/UserContext';
 //HandleInput
-import useChange from '../useChange';
+import useChange from './useChange.js';
 //Logica negocio
 import useAgregarUsuario from '../../../../capaNegocio/logicaNegocio/AdministrarUsuarios/useAgregarUsuario';
 import verificarNumeros from '../../../../capaNegocio/logicaNegocio/LogicaComun/verificarNumeros';

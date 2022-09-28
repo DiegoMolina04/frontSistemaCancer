@@ -1,11 +1,12 @@
-async function putBody(datos, url) {
+async function putBodyAutorization(datos, token, url) {
 
     const data = await fetch(url, {
         method: "PUT",
         mode: "cors",
         headers: {
 
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
         },
         body: JSON.stringify(datos)
     })
@@ -18,4 +19,4 @@ async function putBody(datos, url) {
     );
 };
 
-export default putBody;
+export default putBodyAutorization;
