@@ -1,7 +1,6 @@
 
 import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";/////////////////////
 import Plataforma from '../src/capaPresentacion/vista/Plataforma.js'
-//import Login from '../src/capaPresentacion/vista/Login/Login.js'
 import Login from './capaPresentacion/vista/Login/Login';
 import AgregarUsuario from "../src/capaPresentacion/vista/AdministrarUsuarios/AgregarUsuario/AgregarUsuario.js";
 import CrearContraseña from "../src/capaPresentacion/vista/Login/CrearContraseña/CrearContraseña";
@@ -15,12 +14,7 @@ import Diagnosticar from '../src/capaPresentacion/vista/Diagnosticar.js'
 import Diccionario from '../src/capaPresentacion/vista/Diccionario/Diccionario.js'
 import AgregarDiccionario from "../src/capaPresentacion/vista/Diccionario/AgregarDiccionario/AgregarDiccionario.js";
 import Diagrama from '../src/capaPresentacion/vista/Diagrama.js'
-import Buscar from "../src/capaPresentacion/vista/Buscar.js";
-import VerPerfil from "../src/capaPresentacion/vista/VerPerfil.js";
 import AdministrarUsuarios from "../src/capaPresentacion/vista/AdministrarUsuarios/AdministrarUsuarios.js";
-import SeleccionAdministrador from "../src/capaPresentacion/vista/SeleccionAdministrador.js";
-
-//import LogicaLogin from "./capaNegocio/logicaNegocio/LogicaLogin.js";
 
 import { UserContext } from "../src/capaNegocio/context/UserContext.js";
 import { useMemo, useState } from "react";
@@ -193,26 +187,11 @@ function App() {
                         </div>
                     </Route>
 
-                    <Route exact path="/plataforma/buscar" >
-                        <Plataforma />
-                        <div>
-                            <Buscar />
-                        </div>
-                    </Route>
-
                     <Route exact path="/plataforma/administrarusuarios" >
                         <Plataforma />
                         <div>
                             <AdministrarUsuarios />
                         </div>
-                    </Route>
-
-                    <Route exact path="/verperfil" >
-                        <VerPerfil />
-                    </Route>
-
-                    <Route exact path="/seleccionadministrador" >
-                        <SeleccionAdministrador />
                     </Route>
 
                 </UserContext.Provider>
