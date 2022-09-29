@@ -57,9 +57,10 @@ const useLogin = () => {
 
       /*Se verifica si tiene token, si lo tiene, se redirecciona a la aplicación*/
       if (respuestaServidor.message == undefined && respuestaServidor.result.token !== undefined) {
+        //Se setean datos a usar durante toda la aplicación
         setToken(respuestaServidor.result.token);
         setEs_admin(respuestaServidor.result.es_admin);
-        setCorreo(datoCorreo);
+        setCorreo(correoLocal);
         setDatosGuardados("");
         history.push("/plataforma/diagnosticar");
 
@@ -72,7 +73,7 @@ const useLogin = () => {
           /*Muestra campo contraseña cuando contraseña vacia y verificación de email -> Please verify your credentials*/
           case 400:
             if (datos.email == "") {
-              setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Debe ingresar un correo."} />);
+              setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Debe ingresar un correo/contraseña valido."} />);
 
             } else {
               setCorreo(datos.email);
@@ -107,6 +108,7 @@ const useLogin = () => {
             } else {
               setCorreo(datos.email);
               setDatosGuardados("");
+              setCambiarEstado("Crear contraseña");
               history.push("/crearcontraseña");
 
             }
@@ -144,7 +146,7 @@ const useLogin = () => {
 
   //Cada vez que se ejecute cambiarEstado, se ejecuta el useEffect
   useEffect(() => {
-    if (cambiarEstado == "Estado inicial") {
+    if (cambiarEstado == "Estado inicial") { //Se reinician los datos
       setCorreo("");
       setCorreoLocal("");
       setCambiarEstado("");
@@ -153,8 +155,11 @@ const useLogin = () => {
       setComponenteContraseña("");
       setComponenteBtnRegresar("");
 
-    } else if (cambiarEstado == "Contraseña creada correctamente") {
+    } else if (cambiarEstado == "Contraseña creada correctamente") { //Se setea mensaje informativo
       setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Contraseña creada correctamente"} />);
+
+    } else if(cambiarEstado == "Contraseña modificada correctamente"){
+      setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Contraseña modificada correctamente"} />);
 
     }
   }, [cambiarEstado])

@@ -1,21 +1,18 @@
-//import logo from './logo.svg';
+//Css
 import '../../css/Plataforma.css';
 import '../../css/Filtro.css';
 import '../../css/fontawesome-free-5.15.4-web/css/all.css';
+//Logo
 import logo from '../../image/logo.png';
-import { UserContext } from "../../../../src/capaNegocio/context/UserContext.js";
-import React, { Fragment, useState, useContext } from 'react';
-import { Link } from "react-router-dom";
-import verificarNumeros from '../../../capaNegocio/logicaNegocio/LogicaComun/verificarNumeros';
-import useChange from './useChange';
+//React
+import React from 'react';
+//Logica negocio
 import usePlataforma from '../../../capaNegocio/logicaNegocio/Plataforma/usePlataforma';
 
 function Plataforma() {
 
-  const { datosGuardados, setDatosGuardados } = useContext(UserContext); //Muestra dato en el input del modificar
-  const { correo, setCorreo } = useContext(UserContext); //Envia correo para actualizar contraseña
-  const { handleInputChangeModificar } = useChange()
-  const { componenteAdministrarUsuarios, redireccionarDiagnosticar, redireccionarPreguntas, redireccionarSintomas, redireccionarTiposDepresion, redireccionarDiccionario, redireccionarDiagrama, redireccionarSalir, cambiarContraseña, reiniciarModal } = usePlataforma(); //Logica de negocio
+  //Logica negocio
+  const { componenteAdministrarUsuarios, redireccionarDiagnosticar, redireccionarPreguntas, redireccionarSintomas, redireccionarTiposDepresion, redireccionarDiccionario, redireccionarDiagrama, redireccionarSalir, cambiarContraseña } = usePlataforma(); //Logica de negocio
 
   return (
 
@@ -86,7 +83,7 @@ function Plataforma() {
             Inicio
           </button>
 
-          <button id="cambioContraseña" type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalCambiarContraseña-Plataforma" title="Cambiar contraseña" >
+          <button id="cambioContraseña" type="button" className="btn btn-success" onClick={cambiarContraseña} title="Cambiar contraseña" >
             <i class="fas fa-key"></i>
             Cambio contraseña
           </button>
@@ -99,65 +96,7 @@ function Plataforma() {
         </div>
 
       </div>
-      <form className="row" onSubmit={(e) => cambiarContraseña(e, datosGuardados, correo)}>
-        <div class="modal fade" id="modalCambiarContraseña-Plataforma" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
-          <div class="modal-dialog">
-            <div class="modal-content">
-
-              <div class="modal-header">
-
-                <h5 class="modal-title" id="modalLabelCambiarContraseña-Plataforma">
-
-                  <i class="fas fa-cog"></i>
-                  <label >Cambiar Contraseña</label>
-
-                </h5>
-
-              </div>
-
-              <div class="modal-body">
-
-                <div id="labelNuevaContraseña-Plataforma">
-                  <label id="labelNuevaContraseña-Plataforma">Ingrese la nueva contraseña</label>
-                </div>
-
-                <div className="input-group">
-
-                  <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-key"></i></div>
-
-                  <input id="" type="text" className="form-control" placeholder="Ingrese la nueva contraseña" value={datosGuardados.contraseña}
-                    onKeyDown={verificarNumeros} onChange={handleInputChangeModificar} title="Nueva contraseña" name="contraseña" />
-
-
-                </div>
-
-                <br />
-
-                <label id="labelRectificacionContraseña-Plataforma">Ingrese nuevamente la nueva contraseña</label>
-
-                <div className="input-group">
-
-                  <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-key"></i></div>
-
-                  <input id="" type="text" className="form-control" placeholder="Ingrese nuevamente la nueva contraseña" value={datosGuardados.Recontraseña}
-                    onKeyDown={verificarNumeros} onChange={handleInputChangeModificar} title="Rectificación nueva contraseña" name="Recontraseña" />
-
-                </div>
-
-                <br />
-
-              </div>
-              <div class="modal-footer">
-
-                <button type="button" id="botonModalCancelar-Plataforma" class="btn btn-secondary" data-bs-dismiss="modal" onClick={reiniciarModal} title="Cancelar">Cancelar</button>
-                <button type="submit" id="botonModalModificar-Plataforma" class="btn btn-primary" title="Modificar contraseña">Modificar</button>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </form>
     </div>
 
   );

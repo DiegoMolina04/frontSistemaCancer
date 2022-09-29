@@ -188,17 +188,8 @@
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
 
-
-/*Propiedades del icono del modal Cambiar contraseña*/
-.modal #modalLabelCambiarContraseña-Plataforma i{
-    margin-right: 10px;
-
-}
-
 /*Propiedades de todos los label del modal Cambiar contraseña*/
-.modal .modal-body #labelContraseñaActual-Plataforma,
-.modal .modal-body #labelNuevaContraseña-Plataforma,
-.modal .modal-body #labelRectificacionContraseña-Plataforma
+.modal .modal-body #labelContraseñaActual-Plataforma
 {
     font-size: 17px;
     font-weight: 700;
@@ -217,48 +208,3 @@
 .modal .modal-body input::placeholder{
     font-style: italic;
 }
-
-/*Propiedades del botón cancelar en modal Cambiar contraseña*/
-.modal .modal-footer #botonModalCancelar-Plataforma{
-    font-family: 'Noto Sans Display', sans-serif;
-    background-color: transparent;
-    border-color: #535353;
-    color: #000;
-}
-
-/*Propiedades del botón modificar en modal Cambiar contraseña*/
-.modal .modal-footer #botonModalModificar-Plataforma{
-    font-family: 'Noto Sans Display', sans-serif;
-    background-color: transparent;
-    border-color: #ffc107;
-    color: #000;
-}
-
-/*Propiedad hover del botón cancelar en modal Cambiar contraseña*/
-.modal .modal-footer #botonModalCancelar-Plataforma:hover{
-    background-color: #535353;
-    color: white;
-}
-
-/*Propiedad hover del botón modificar en modal Cambiar contraseña*/
-.modal .modal-footer #botonModalModificar-Plataforma:hover{
-    background-color: #ffc107;
-    color: white;
-}
-
-/*Propiedad focus del botón cancelar en modal Cambiar contraseña*/
-.modal .modal-footer #botonModalCancelar-Plataforma:focus{
-    box-shadow: none;
-}
-
-/*Propiedad focus del botón modificar en modal Cambiar contraseña*/
-.modal .modal-footer #botonModalModificar-Plataforma:focus{
-    box-shadow: none;
-}
-
-/*Propiedades del icono al lado de los input en los modales*/
-#modalCambiarContraseña-Plataforma #btnGroupAddon{
-    background-color: #ffc107;/*E4AC34*/
-    color: white;
-}
-

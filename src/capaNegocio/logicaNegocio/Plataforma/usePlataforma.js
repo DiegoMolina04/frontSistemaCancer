@@ -59,23 +59,15 @@ const usePlataforma = () => {
         setToken("");
         setEs_admin("");
         setCorreo("");
+        setCambiarEstado("");
         history.push("/login");
     }
 
-    const cambiarContraseña = async (event, datos, correo) => { //Carga las tablas
+    function cambiarContraseña () { //Redirecciona a vista crear contraseña para modificarla
 
-        try {
-            
-        } catch (error) {
-            
-        }
+        setCambiarEstado("Modificar Contraseña");
+        history.push("/crearcontraseña");
     
-    }
-
-    function reiniciarModal() { //Reinicia el modal.
-        
-        setCambiarEstado("Reiniciar modal");
-        setDatosGuardados("");
     }
 
     useEffect(() => {
@@ -98,7 +90,7 @@ const usePlataforma = () => {
 
         }
     }, [])
-    return { componenteAdministrarUsuarios, redireccionarAdministrarUsuarios, redireccionarDiagnosticar, redireccionarPreguntas, redireccionarSintomas, redireccionarTiposDepresion, redireccionarDiccionario, redireccionarDiagrama, redireccionarSalir, cambiarContraseña, reiniciarModal };
+    return { componenteAdministrarUsuarios, redireccionarAdministrarUsuarios, redireccionarDiagnosticar, redireccionarPreguntas, redireccionarSintomas, redireccionarTiposDepresion, redireccionarDiccionario, redireccionarDiagrama, redireccionarSalir, cambiarContraseña };
 };
 
 export default usePlataforma;

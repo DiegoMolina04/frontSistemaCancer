@@ -13,9 +13,13 @@ const useCrearContraseña = () => {
     //Contextos
     const { correo, setCorreo } = useContext(UserContext);
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext);
+    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
+    const { token, setToken } = useContext(UserContext); //Token para saber si esta logeado
+    const { es_admin, setEs_admin } = useContext(UserContext); //Para saber roles tienen
 
     //Componentes
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState("");
+    const [componenteMostrarTitulo, setComponenteMostrarTitulo] = useState("");
 
     const history = useHistory(); //Redirección de pestañas
     let respuestaServidor = ""; //Guarda las respuestas del servidor
@@ -26,14 +30,25 @@ const useCrearContraseña = () => {
 
         try {
             if (datos.contraseña == datos.Recontraseña && datos.contraseña != "" && datos.Recontraseña != "") {
-                
+
                 let arrayDatos = { "contraseña": datos.contraseña }
                 const url = "https://secure-brushlands-86892.herokuapp.com/v1/users/" + correo + "/update-one";
                 respuestaServidor = await putBody(arrayDatos, url);
 
                 if (respuestaServidor.status == 200) {
-                    setCambiarEstado("Contraseña creada correctamente");
-                    history.push("/login");
+
+                    if (cambiarEstado === "Crear contraseña") {
+                        setCambiarEstado("Contraseña creada correctamente");
+                        history.push("/login");
+
+                    } else if (cambiarEstado === "Modificar Contraseña") {
+                        //Se reinician datos para tener que iniciar sesión con nueva contraseña
+                        setCambiarEstado("Contraseña modificada correctamente");
+                        setToken("");
+                        setEs_admin("");
+                        history.push("/login");
+
+                    }
 
                 } else if (respuestaServidor.code == 500 || respuestaServidor.code == 404 || respuestaServidor.code == 400) {
 
@@ -59,18 +74,47 @@ const useCrearContraseña = () => {
     const estadoInicial = async (e) => {
 
         e.preventDefault();
-        setCambiarEstado("Estado inicial");
-        
-    }
+        setDatosGuardados("");
 
-    useEffect(() => {
-        if (cambiarEstado == "Estado inicial") {
-            history.push("/login");
+        if (cambiarEstado === "Crear contraseña") {
+            setCorreo("");
+            setCambiarEstado("Estado inicial");
+
+        } else if (cambiarEstado === "Modificar Contraseña") {
+            setCambiarEstado("Regresar plataforma");
 
         }
+
+    }
+
+    //Efecto para regresar a las respectivas plataformas
+    useEffect(() => {
+        if (cambiarEstado == "Estado inicial") {
+            setCambiarEstado("");
+            history.push("/login");
+
+        } else if (cambiarEstado == "Regresar plataforma") {
+            setCambiarEstado("");
+            history.push("/plataforma/diagnosticar");
+
+        }
+
     }, [cambiarEstado])
 
-    return { verificarDatos, componenteMostrarMensaje, estadoInicial };
+    //Efecto para saber que titulo mostrar
+    useEffect(() => {
+
+        if (cambiarEstado === "Crear contraseña") {
+            setComponenteMostrarTitulo("Registro Contraseña Primera Vez");
+
+        } else if (cambiarEstado === "Modificar Contraseña") {
+            setComponenteMostrarTitulo("Modificar Contraseña");
+
+        }
+
+    }, [])
+
+    return { verificarDatos, componenteMostrarMensaje, estadoInicial, componenteMostrarTitulo };
 };
 
 export default useCrearContraseña;
