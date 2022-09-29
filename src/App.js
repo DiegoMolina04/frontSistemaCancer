@@ -12,8 +12,8 @@ import AgregarSintomas from "../src/capaPresentacion/vista/Sintomas/AgregarSinto
 import TiposDepresion from "../src/capaPresentacion/vista/TiposDepresion/TiposDepresion.js";
 import AgregarTipoDepresion from "../src/capaPresentacion/vista/TiposDepresion/AgregarTipoDepresion/AgregarTipoDepresion.js";
 import Diagnosticar from '../src/capaPresentacion/vista/Diagnosticar.js'
-import Diccionario from '../src/capaPresentacion/vista/Diccionario.js'
-import AgregarDiccionario from "../src/capaPresentacion/vista/AgregarDiccionario.js";
+import Diccionario from '../src/capaPresentacion/vista/Diccionario/Diccionario.js'
+import AgregarDiccionario from "../src/capaPresentacion/vista/Diccionario/AgregarDiccionario/AgregarDiccionario.js";
 import Diagrama from '../src/capaPresentacion/vista/Diagrama.js'
 import Buscar from "../src/capaPresentacion/vista/Buscar.js";
 import VerPerfil from "../src/capaPresentacion/vista/VerPerfil.js";
@@ -163,7 +163,7 @@ function App() {
                     }></Route>*/}
 
                     <Route exact path="/agregartipodepresion">
-                        
+
                         <AgregarTipoDepresion />    
 
                     </Route>
@@ -175,12 +175,16 @@ function App() {
                         </div>
                     </Route>
 
-                    <Route exact path="/agregardiccionario" render={() => token && es_admin ?
+                    {/*<Route exact path="/agregardiccionario" render={() => token && es_admin ?
                         <AgregarDiccionario />
 
                         : <Login></Login>
 
-                    }></Route>
+                    }></Route>*/}
+
+                    <Route exact path="/agregardiccionario">
+                        <AgregarDiccionario />
+                    </Route>
 
                     <Route exact path="/plataforma/diagrama" >
                         <Plataforma />

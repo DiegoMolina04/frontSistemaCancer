@@ -100,6 +100,7 @@ const useAgregarUsuario = () => {
 
     useEffect(() => {
         if (cambiarEstado == "Estado inicial") {
+            setCambiarEstado("");
             history.push("/plataforma/administrarusuarios");
 
         }else if(cambiarEstado == "Correcto"){

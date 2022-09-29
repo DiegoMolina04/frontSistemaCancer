@@ -8,7 +8,7 @@ import postBodyAutorization from '../../../capaDatos/Post/postBodyAutorization.j
 //Componente
 import MostrarMensaje from '../../../capaPresentacion/vista/ComponentesComunes/MostrarMensaje.js';
 
-const useAgregarTiposDepresion = () => {
+const useAgregarDiccionario = () => {
 
     //Context
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext);
@@ -25,12 +25,12 @@ const useAgregarTiposDepresion = () => {
         try {
             e.preventDefault();
 
-            if (datos.tipos_depresion == "" || datos.cantidad_sintomas == "") { //Campos vacios
+            if (datos.termino == "" || datos.descripcion == "") { //Campos vacios
                 verificarCodigo(408);
 
             } else {
 
-                let url = "https://secure-brushlands-86892.herokuapp.com/v1/depresion-type/create-one";
+                let url = "https://secure-brushlands-86892.herokuapp.com/v1/dictionary/create-one";
                 respuestaServidor = await postBodyAutorization(datos, token, url);
 
                 if (respuestaServidor.status == undefined) { //
@@ -101,10 +101,10 @@ const useAgregarTiposDepresion = () => {
     useEffect(() => {
         if (cambiarEstado == "Estado inicial") {
             setCambiarEstado("");
-            history.push("/plataforma/tiposdepresion");
+            history.push("/plataforma/diccionario");
 
         } else if (cambiarEstado == "Correcto") {
-            history.push("/plataforma/tiposdepresion");
+            history.push("/plataforma/diccionario");
 
         }
     }, [cambiarEstado])
@@ -112,4 +112,4 @@ const useAgregarTiposDepresion = () => {
     return { verificarDatos, componenteMostrarMensaje, estadoInicial };
 };
 
-export default useAgregarTiposDepresion;
+export default useAgregarDiccionario;

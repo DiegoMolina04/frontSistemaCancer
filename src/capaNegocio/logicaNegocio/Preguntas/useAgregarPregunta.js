@@ -108,7 +108,7 @@ const useAgregarPregunta = () => {
 
                     if (respuestaServidor.status == 201) {
                         setCambiarEstado("Correcto");
-                        reiniciarDatos(); //Se reinician datos y se redirecciona
+                        redireccionar(); //Se reinician datos y se redirecciona
 
                     } else {
                         setCodigo(respuestaServidor.status);
@@ -160,6 +160,16 @@ const useAgregarPregunta = () => {
     };
 
     function reiniciarDatos() { //Regresa vacios los datos globales
+
+        setDatosTablaModificar(""); //Se reinicia el textarea con los datos del checkbox
+        setDatosGuardados(""); //Se reinicia el valor del input
+        setGuardarID(""); //Se reinicia los id guardados
+        setCambiarEstado("");
+        history.push("/plataforma/preguntas");
+
+    }
+
+    function redireccionar(){
 
         setDatosTablaModificar(""); //Se reinicia el textarea con los datos del checkbox
         setDatosGuardados(""); //Se reinicia el valor del input
