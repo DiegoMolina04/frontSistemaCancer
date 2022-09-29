@@ -1,6 +1,6 @@
 
 import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";/////////////////////
-import Plataforma from '../src/capaPresentacion/vista/Plataforma.js'
+import Plataforma from '../src/capaPresentacion/vista/Plataforma/Plataforma.js'
 import Login from './capaPresentacion/vista/Login/Login';
 import AgregarUsuario from "../src/capaPresentacion/vista/AdministrarUsuarios/AgregarUsuario/AgregarUsuario.js";
 import CrearContraseña from "../src/capaPresentacion/vista/Login/CrearContraseña/CrearContraseña";

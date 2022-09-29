@@ -1,104 +1,45 @@
-
-/*Min widht 783*/
-/*#fondo{*/
-    /*height: 100vh; /*vh (viewport-height) = Altura de la ventana gráfica.*/
-    /*min-height: 100vh;
-    width: 100%;*/
-    /*border: 0.01px solid #9a0526; /*Despliega borde en toda la pantalla*/
-    
-    /*border: 5px solid purple;*/
-/*}*/
-
-/*header{
-    border: 2px solid red;
-    padding: 13px;
-}*/
-
-/*Sidebar*/
 #navbar{
-    
-    /*border: 2px solid blue;*/
 
-    /*margin-right: 80rem;*/
-    /*height: 44.5rem;*/
-    /*height: 92vh;*/
     display: inline;
     float: left;
     width: 10rem;
     max-width: 30%;
-    /*min-width: 10rem;
-    max-width: 10%;*/
     min-height: 100vh;
-    /*background-color: #9a0526;*/
-    /*background-color: #9c7079;*/
-    /*background-color: #282c34ab;*/
-    /*background-color: #d33658;*/
-    
-    /*background-color: #212844 ;*/
-
-    background-color: #212844 ;
-    
+    background-color: #212844 ;    
     z-index: 99px;
-    /*background-color: rgb(224, 224, 224);*/
 }
-
-/*#sideBar{
-    border: 2px solid green;
-}*/
 
 /*Caja menu superior*/
 #menuSuperior{
 
-    /*border: 4px solid saddlebrown;*/
     height: 3rem;
-
-    /*float: right;
-    width: 89.35rem;*/
-    /*overflow-x: scroll;*/
     overflow-x: hidden;
     overflow-y: auto;
-
-    /*box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
-    /*background-color: #282c34;*/
-    /*background-color: rgb(223, 223, 223);*/
-    /*background-color: #cd0c36;*/
     background-color: #212844 ;
     box-shadow: 5px 2px 5px;
     
-
 }
 
 /*Caja general donde van las vistas */
 #contenido{
-    /*display: block;*/
-    /*border: 2px solid green;*/
-    /*float: right;*/
+
     height: 92.5vh;
+
 }
 
 /*Caja texto menu*/
 #menu{
     
     text-align: center;
-    
-    /*border: 2px solid red;*/
-
-    
-    /*margin-top: -10px;*/
-    
     height: 3rem;
-    /*background-color: rgb(224, 224, 224);*/
     background-color: #3B4962;
-
     box-shadow: -5px 2px 5px;
     
-
 }
 
 /*Texto menu*/
 #menu p{
     margin-top: 5px;
-    /*margin-top: 10px;*/
     font-family: 'Noto Sans Display', sans-serif;
     font-weight: 700;
     letter-spacing: 2px;/*Separar las letras*/
@@ -109,43 +50,27 @@
 
 /*Caja logo*/
 #imagen{
-    /*border: 3px solid salmon;*/
+
     border: 5px solid #212844 ;
     border-top: 10px solid #212844 ;
     margin-top: -10px;
     text-align: center;
-    /*background-color: aliceblue;*/
     background-color: #eff2f5;
+
 }
 
 /*Tamaño logo*/
 #imagen #logo{
 
-    /*width: 8rem;*/
     height: 1.5rem;
     max-width: 100%;
 }
 
-
-/*Contenedor de botones de inicio y perfil
-.btn-group{
-    float: right;
-    /*margin-right: 2rem;
-    border-color: #ffc107;
-    margin: 1px 2px 0px 0px;
-    /*box-shadow: none; /*Quita la sombra verde alrededor del botón
-}*/
-
 /*Caja contenedora superior de botones adminUsuario, inicio, cambio contraseña y perfil*/
 #botonesSuperior{
-    /*border: 5px solid darkturquoise;*/
     float: right;
-    /*margin-left: 30%;*/
-    /*margin-right: 15px;*/
     display: inline;
-    /*z-index: 1000px;*/
     margin-right: 5px;
-    /*overflow: auto;*/
 }
 
 /*Se redondean todos los botones del menu superior*/
@@ -153,24 +78,14 @@
     border-radius: 5px;
 }
 
-/*Propiedades de los botones inicio y perfil en el menu superior*/
-/*#botonesSuperior #expandiblePerfil, */
 #botonesSuperior #inicio{
     
     width: 6rem;
     height: 37px;
     margin-top: 5px;
-    /*background: transparent;*/
     background-color: #eff2f5;
     color: #000;
-    /*color: white;*/
-    /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #ffc107;*/
-    border-color: #212844 ;
-    
-    /*border-width: 0 2px 0 2px;*/
-    /*border-color: transparent #138a70 transparent #E4AC34;*/
-    
+    border-color: #212844 ;   
     font-family: 'Noto Sans Display', sans-serif;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 
@@ -182,17 +97,9 @@
     height: 37px;
     margin-top: 5px;
     margin-right: -1px;
-    /*background: transparent;*/
     background-color: #eff2f5;
     color: #000;
-    /*color: white;*/
-    /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #ffc107;*/
-    border-color: #212844 ;
-
-    /*border-width: 0 2px 0 2px;*/
-    /*border-color: transparent #138a70 transparent #E4AC34;*/
-    
+    border-color: #212844 ;   
     font-family: 'Noto Sans Display', sans-serif;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
@@ -202,17 +109,9 @@
     height: 37px;
     margin-top: 5px;
     margin-right: -1px;
-    /*background: transparent;*/
     background-color: #eff2f5;
     color: #000;
-    /*color: white;*/
-    /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #ffc107;*/
     border-color: #212844 ;
-
-    /*border-width: 0 2px 0 2px;*/
-    /*border-color: transparent #138a70 transparent #E4AC34;*/
-    
     font-family: 'Noto Sans Display', sans-serif;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
@@ -222,30 +121,18 @@
     height: 37px;
     margin-top: 5px;
     margin-right: -1px;
-    /*background: transparent;*/
     background-color: #eff2f5;
     color: #000;
-    /*color: white;*/
-    /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #ffc107;*/
     border-color: #212844 ;
-
-    /*border-width: 0 2px 0 2px;*/
-    /*border-color: transparent #138a70 transparent #E4AC34;*/
-    
     font-family: 'Noto Sans Display', sans-serif;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
 
 /*Propiedad hover para botones inicio, perfil y administrarUsuario*/
-/*#botonesSuperior #expandiblePerfil:hover*/
 #botonesSuperior #inicio:hover, 
 #botonesSuperior #administrarUsuario:hover,
 #botonesSuperior #cambioContraseña:hover,
 #botonesSuperior #salir:hover{
-    /*background-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: red;*/
-    /*background-color: #ffc107;*/
 
     background-color: #E4AC34;
     color: white;
@@ -253,19 +140,11 @@
 
 /*Propiedad focus para botones inicio, perfil y categoria*/
 #botonesSuperior button:focus{
-    /*background-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: red;*/
-    /*background-color: #ffc107;*/
+
     background-color: #E4AC34;
     color: white;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
-
-/*Icono flecha hacia abajo en menu superir boton perfil*/
-/*#botonesSuperior #expandiblePerfil i{
-
-    margin-left: 10px;
-}*/
 
 /*Icono casa en menu superir boton inicio e Icono mas en menu superior boton agregar usuario*/
 #botonesSuperior #inicio i, 
@@ -275,39 +154,23 @@
     margin-right: 10px;
 }
 
-/*Boton de perfil redondeamiento de las esquinas*/
-/*#botonesSuperior #expandiblePerfil{
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}*/
-
 /*Caja contenedora en el Sidebar de los botones diagnosticar, reglas, diccionario y diagrama*/
 #navbar #opciones{
     margin-top: 20px;
     text-align: left;
-    
-    
-    
+       
 }
 
 /*Botones en el Sidebar (diagnosticar, reglas, diccionaro y diagrama)*/
 #navbar #opciones button{
-    /*float: right;*/
-
     width: 100%;
     height: 50px;
     border-radius: 0%; /*Para que el botón sea totalmente cuadrado*/
     background: transparent;
-    /*color: #000;*/
     color: white;
-    /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #ffc107;*/
     border-color: transparent;
     text-align: left;
-    
-
     font-family: 'Noto Sans Display', sans-serif;
-    /*font-weight: 700;*/
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
 
@@ -319,26 +182,15 @@
 
 /*Propiedad hover para botones en el Sidebar (diagnosticar, reglas, diccionaro y diagrama)*/
 #navbar #opciones button:hover{
-    /*float: right;*/
-    /*background-color: #ffc107;*/
-
-    /*background-color: rgb(80, 80, 80);*/
-
-    /*background-color: #149176;*/
-
     background-color: #E4AC34;
-
     color: white;
-    /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #ffc107;*/
-    /*border-color: transparent;*/
     font-family: 'Noto Sans Display', sans-serif;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
 
 
 /*Propiedades del icono del modal Cambiar contraseña*/
-.modal #modalLabelAgregarAdministrarUsuarios-AdministrarUsuarios i{
+.modal #modalLabelCambiarContraseña-Plataforma i{
     margin-right: 10px;
 
 }
@@ -367,7 +219,7 @@
 }
 
 /*Propiedades del botón cancelar en modal Cambiar contraseña*/
-.modal .modal-footer #botonModalCancelar-AdministrarUsuarios{
+.modal .modal-footer #botonModalCancelar-Plataforma{
     font-family: 'Noto Sans Display', sans-serif;
     background-color: transparent;
     border-color: #535353;
@@ -375,7 +227,7 @@
 }
 
 /*Propiedades del botón modificar en modal Cambiar contraseña*/
-.modal .modal-footer #botonModalModificar-AdministrarUsuarios{
+.modal .modal-footer #botonModalModificar-Plataforma{
     font-family: 'Noto Sans Display', sans-serif;
     background-color: transparent;
     border-color: #ffc107;
@@ -383,24 +235,24 @@
 }
 
 /*Propiedad hover del botón cancelar en modal Cambiar contraseña*/
-.modal .modal-footer #botonModalCancelar-AdministrarUsuarios:hover{
+.modal .modal-footer #botonModalCancelar-Plataforma:hover{
     background-color: #535353;
     color: white;
 }
 
 /*Propiedad hover del botón modificar en modal Cambiar contraseña*/
-.modal .modal-footer #botonModalModificar-AdministrarUsuarios:hover{
+.modal .modal-footer #botonModalModificar-Plataforma:hover{
     background-color: #ffc107;
     color: white;
 }
 
 /*Propiedad focus del botón cancelar en modal Cambiar contraseña*/
-.modal .modal-footer #botonModalCancelar-AdministrarUsuarios:focus{
+.modal .modal-footer #botonModalCancelar-Plataforma:focus{
     box-shadow: none;
 }
 
 /*Propiedad focus del botón modificar en modal Cambiar contraseña*/
-.modal .modal-footer #botonModalModificar-AdministrarUsuarios:focus{
+.modal .modal-footer #botonModalModificar-Plataforma:focus{
     box-shadow: none;
 }
 
@@ -409,9 +261,4 @@
     background-color: #ffc107;/*E4AC34*/
     color: white;
 }
-
-/*#botonesSuperior #expandiblePerfil::selection{
-
-    z-index: 99px;
-}*/
 

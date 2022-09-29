@@ -59,6 +59,8 @@ const useLogin = () => {
       if (respuestaServidor.message == undefined && respuestaServidor.result.token !== undefined) {
         setToken(respuestaServidor.result.token);
         setEs_admin(respuestaServidor.result.es_admin);
+        setCorreo(datoCorreo);
+        setDatosGuardados("");
         history.push("/plataforma/diagnosticar");
 
       } else if (respuestaServidor.status !== undefined && respuestaServidor.status === 200) {

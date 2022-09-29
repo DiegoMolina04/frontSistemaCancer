@@ -1,68 +1,33 @@
 /*Caja superior barra busqueda y desplegable categoria*/
 #busqueda{
     
-    /*border: 2px solid #E4AC34;*/
-    
-    /*padding: 10px;*/
-    /*border: 2px solid green;*/
-    /*margin-right: 50px;*/
-    /*width: 50rem;*/
-
-    /*display: inline;*/
-
-    /*width: 40%;*/
-
     width: fit-content;
-
-    display: inline-table;
-    
+    display: inline-table;    
     margin: 0% 0% 0% 1%;
     
-    /*align-items: flex-end;*/
-    /*display: inline-block;*/
-    
-    /*padding: 10px;*/
-    /*margin-left: 48rem;*/
-    /*float: right;*/
-    /*margin-right: 30rem;*/
-    
-    /*margin-left: 40%;*/
-    /*margin-right: 10%;*/
 }
 
 /*Propiedades del desplegable select categoria en el menu superior*/
 #busqueda select{
-    /*width: 13rem;/*8rem*/
+    
     width: fit-content;
     max-width: 94%;
     height: 37px;
-    /*margin-bottom: 5px;*/
-    /*background: transparent;*/
     background-color: #eff2f5;
     color: #000;
-    /*color: white;*/
-    /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #ffc107;*/
-
-    /*border-color: transparent #138a70 transparent #E4AC34;*/
     border-color: #212844 ;
-
     font-family: 'Noto Sans Display', sans-serif;
-    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
+    box-shadow: none; 
 
 }
 
 /*Propiedad hover del desplegable select categoria en el menu superior*/
 #busqueda select:hover{
 
-    /*background-color: #ffc107;*/
-
     background-color: #E4AC34;
     transition:all .2s ease-out;
     color: white;
     
-    
-
 }
 
 
@@ -76,33 +41,19 @@
 
     display: inline;
     width: 14rem;
-    /*border: 2px solid red;*/
     height: 37px;
-    /*background: transparent;*/
     background-color: #eff2f5;
     margin-top: 5px;
-    /*margin: 1px 0 0 0;*/
     color: #000;
-    /*color: white;*/
-    /*border-color: #ffc107 #ffc107 #ffc107 transparent;*/
-
-    /*border-color: transparent #212844  transparent #212844 ;*/
-
     border-color: #212844;
-
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
-    
-    /*border-color: #ffc107;*/
     font-family: 'Noto Sans Display', sans-serif;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
 
 /*Propiedades del input categoria en el menu superior*/
 #busqueda input:focus{
-    /*border-color: #ffc107 #ffc107 #ffc107 transparent;*/
-    /*border-color: #ffc107!important;*/
-    /*border-color: #ffc107;*/
     font-family: 'Noto Sans Display', sans-serif;
     box-shadow: none!important; /*Quita la sombra verde alrededor del botón*/
     color: #000;
