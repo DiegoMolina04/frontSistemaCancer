@@ -53,7 +53,7 @@ function CrearContraseña() {
                         <label>Ingrese su contraseña</label>
                         <div className="input-group">
                             <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-key"></i></div>
-                            <input id="contraseña-CrearContraseña" type="text" className="form-control" placeholder="Ingrese su contraseña" title="Digite su contraseña" onChange={handleInputChange} name="contraseña" />
+                            <input id="contraseña-CrearContraseña" type="text" className="form-control" placeholder="Ingrese su contraseña" title="Digite su contraseña" onChange={handleInputChange} name="contraseña" required/>
                         </div>
 
                         <br />
@@ -62,7 +62,7 @@ function CrearContraseña() {
                         <label>Ingrese nuevamente su contraseña</label>
                         <div className="input-group">
                             <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-key"></i></div>
-                            <input id="contraseñaRe-CrearContraseña" type="text" className="form-control" placeholder="Ingrese nuevamente su contraseña" title="Reingrese su contraseña" onChange={handleInputChange} name="Recontraseña" />
+                            <input id="contraseñaRe-CrearContraseña" type="text" className="form-control" placeholder="Ingrese nuevamente su contraseña" title="Reingrese su contraseña" onChange={handleInputChange} name="Recontraseña" required/>
                         </div>
 
                         <br />

@@ -172,7 +172,7 @@ const useAdministrarUsuarios = () => {
             setDatosGuardados("");
 
             //Se valida que no existan campos vacios.
-            if (datosModificados.cedula == "" || datosModificados.nombre == "" || datosModificados.correo == "" || datosModificados.es_admin == undefined) {
+            if (datosModificados.cedula == "" || datosModificados.nombre == "" || datosModificados.email == "" || datosModificados.es_admin == undefined) {
                 setCodigo(408);
             } else {
 
@@ -192,7 +192,7 @@ const useAdministrarUsuarios = () => {
                 }
 
                 if (varCorreo == undefined) {
-                    varCorreo = datosOriginales.correo;
+                    varCorreo = datosOriginales.email;
                 }
 
                 if (varCuenta == undefined) {
@@ -213,9 +213,11 @@ const useAdministrarUsuarios = () => {
                 if (respuestaServidor.status == 404) { //Correo a modificar no encontrado
                     setCodigo(406);
 
-                } else { //Si es diferente
+                } else if(respuestaServidor.status !== undefined) { //Si es diferente
                     setCodigo(respuestaServidor.status);
 
+                } else if(respuestaServidor.code !== undefined){
+                    setCodigo(respuestaServidor.code);
                 }
             }
         } catch (error) {
@@ -274,6 +276,10 @@ const useAdministrarUsuarios = () => {
 
             case 206: //Tabla vacia
                 setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No hay datos registrados."} />);
+                break;
+
+            case 400: //Error de almacenamiento
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El correo/cedula ya esta registrado."} />);
                 break;
 
             case 401: //No tiene token
