@@ -13,7 +13,6 @@ import AgregarTipoDepresion from "../src/capaPresentacion/vista/TiposDepresion/A
 import Diagnosticar from '../src/capaPresentacion/vista/Diagnosticar.js'
 import Diccionario from '../src/capaPresentacion/vista/Diccionario/Diccionario.js'
 import AgregarDiccionario from "../src/capaPresentacion/vista/Diccionario/AgregarDiccionario/AgregarDiccionario.js";
-import Diagrama from '../src/capaPresentacion/vista/Diagrama.js'
 import AdministrarUsuarios from "../src/capaPresentacion/vista/AdministrarUsuarios/AdministrarUsuarios.js";
 
 import { UserContext } from "../src/capaNegocio/context/UserContext.js";
@@ -178,13 +177,6 @@ function App() {
 
                     <Route exact path="/agregardiccionario">
                         <AgregarDiccionario />
-                    </Route>
-
-                    <Route exact path="/plataforma/diagrama" >
-                        <Plataforma />
-                        <div>
-                            <Diagrama />
-                        </div>
                     </Route>
 
                     <Route exact path="/plataforma/administrarusuarios" >

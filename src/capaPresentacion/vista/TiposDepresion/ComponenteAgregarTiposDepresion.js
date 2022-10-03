@@ -8,7 +8,7 @@ function ComponenteAgregarTipoDepresion() {
 
         <div>
             <label id="labelAgregarTipoDepresion-AdministrarTipoDepresion">
-                ¿Desea agregar un nuevo sintoma?
+                ¿Desea agregar un tipo depresión?
             </label>
 
             <button id="agregarTipoDepresion-AdministrarTipoDepresion" type="button" className="btn btn-success" onClick={redireccionarAgregarTiposDepresion} title="Agregar nuevo tipo depresión">

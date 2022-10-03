@@ -112,7 +112,7 @@ function Diccionario() {
                             </div>
                             <div class="modal-body">
 
-                                <label>¿Realmente desea eliminar el sintoma "{datosGuardados.termino}" ?</label>
+                                <label>¿Realmente desea eliminar el termino "{datosGuardados.termino}" ?</label>
                                 <label id="labelRevertirCambios-AdministrarTerminos">Los cambios no se podrán revertir.</label>
 
                             </div>

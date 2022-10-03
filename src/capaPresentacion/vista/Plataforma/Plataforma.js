@@ -12,7 +12,7 @@ import usePlataforma from '../../../capaNegocio/logicaNegocio/Plataforma/usePlat
 function Plataforma() {
 
   //Logica negocio
-  const { componenteAdministrarUsuarios, redireccionarDiagnosticar, redireccionarPreguntas, redireccionarSintomas, redireccionarTiposDepresion, redireccionarDiccionario, redireccionarDiagrama, redireccionarSalir, cambiarContraseña } = usePlataforma(); //Logica de negocio
+  const { componenteAdministrarUsuarios, redireccionarDiagnosticar, redireccionarPreguntas, redireccionarSintomas, redireccionarTiposDepresion, redireccionarDiccionario, redireccionarSalir, cambiarContraseña } = usePlataforma(); //Logica de negocio
 
   return (
 
@@ -58,11 +58,6 @@ function Plataforma() {
           <button type="button" className="btn btn-success" onClick={redireccionarDiccionario} title="Ver diccionario de terminos">
             <i class="fas fa-book"></i>
             Diccionario
-          </button>
-
-          <button type="button" className="btn btn-success" onClick={redireccionarDiagrama} title="Ver diagrama de flujo">
-            <i class="fas fa-project-diagram"></i>
-            Diagrama
           </button>
 
         </div>

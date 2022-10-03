@@ -49,11 +49,6 @@ const usePlataforma = () => {
         history.push("/plataforma/diccionario");
     }
 
-    function redireccionarDiagrama() { //Redirecciona
-
-        history.push("/plataforma/diagrama");
-    }
-
     function redireccionarSalir() { //Redirecciona
 
         setToken("");
@@ -90,7 +85,7 @@ const usePlataforma = () => {
 
         }
     }, [])
-    return { componenteAdministrarUsuarios, redireccionarAdministrarUsuarios, redireccionarDiagnosticar, redireccionarPreguntas, redireccionarSintomas, redireccionarTiposDepresion, redireccionarDiccionario, redireccionarDiagrama, redireccionarSalir, cambiarContraseña };
+    return { componenteAdministrarUsuarios, redireccionarAdministrarUsuarios, redireccionarDiagnosticar, redireccionarPreguntas, redireccionarSintomas, redireccionarTiposDepresion, redireccionarDiccionario, redireccionarSalir, cambiarContraseña };
 };
 
 export default usePlataforma;

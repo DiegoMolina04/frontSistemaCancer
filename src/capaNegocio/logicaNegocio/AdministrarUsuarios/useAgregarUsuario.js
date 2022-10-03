@@ -73,7 +73,7 @@ const useAgregarUsuario = () => {
                 break;
 
             case 404:
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El correo ingresado ya esta registrado."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El correo/contraseña ingresado ya esta registrado."} />);
                 break;
 
             case 408:
