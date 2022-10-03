@@ -29,6 +29,11 @@ const usePlataforma = () => {
         history.push("/plataforma/diagnosticar");
     }
 
+    function redireccionarResultadoDiagnostico() { //Redirecciona
+
+        history.push("/plataforma/resultadodiagnostico");
+    }
+
     function redireccionarPreguntas() { //Redirecciona
 
         history.push("/plataforma/preguntas");
@@ -85,7 +90,7 @@ const usePlataforma = () => {
 
         }
     }, [])
-    return { componenteAdministrarUsuarios, redireccionarAdministrarUsuarios, redireccionarDiagnosticar, redireccionarPreguntas, redireccionarSintomas, redireccionarTiposDepresion, redireccionarDiccionario, redireccionarSalir, cambiarContraseña };
+    return { componenteAdministrarUsuarios, redireccionarAdministrarUsuarios, redireccionarDiagnosticar, redireccionarResultadoDiagnostico, redireccionarPreguntas, redireccionarSintomas, redireccionarTiposDepresion, redireccionarDiccionario, redireccionarSalir, cambiarContraseña };
 };
 
 export default usePlataforma;

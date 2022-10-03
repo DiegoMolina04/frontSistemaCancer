@@ -1,0 +1,436 @@
+
+/*Caja contenedora de toda la vista AdministrarUsuarios*/
+#fondo-ResultadoDiagnostico{
+    /*border: 4px solid blue;*/
+    height: 92vh;
+    /*overflow-x: scroll;*/
+}
+
+/*Propiedades caja contenedora de cabecera AdministrarUsuarioss y Boton*/
+#cabecera-ResultadoDiagnostico{
+
+    /*border: 5px solid aqua;*/
+    /*margin-top: 2px;*/
+    height: 3rem;
+    /*padding: 4px;*/
+    background-color: #eff2f5;
+    box-shadow: 5px 3px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+    /*overflow-wrap: break-word;*/
+    overflow: auto;
+}
+
+/*Caja contenedora de la palabra Administrar Usuarios*/
+#cabecera-ResultadoDiagnostico #cajaNombreOpcion-ResultadoDiagnostico{
+    /*border: 2px solid tomato;*/
+    display: inline-table;
+    width: fit-content;
+    /*margin-right: 3%;*/
+}
+
+/*Palabra Administrar Usuarios*/
+#cabecera-ResultadoDiagnostico #cajaNombreOpcion-ResultadoDiagnostico label{
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 130%;
+    padding: 5px 0px 0px 10px;
+}
+
+/*Propiedades caja contenedora de AdministrarUsuarioss*/
+#cajaLabelAdministrarUsuarioss-AdministrarUsuarios{
+    /*border: 2px solid salmon;*/
+    /*margin-top: 15px;*/
+    /*margin-top: 0px;*/
+    display: inline-table;
+    width: 40%;
+    float: left;
+    
+}
+
+/*Propiedades del Label AdministrarUsuarioss*/
+#cajaLabelAdministrarUsuarioss-AdministrarUsuarios label{
+    margin-left: 2%;
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+/*Propiedades de la caja contenedora de la tabla*/
+form #cajaTabla-ResultadoDiagnostico{
+    /*border: 2px solid burlywood;*/
+    width: 50%;
+    height: 20rem !important;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    /*overflow-x: scroll;
+    overflow-y: scroll;*/
+    overflow: auto;
+    box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+    /*background-color: #c00303;*/
+}
+
+/*Propiedades de toda la tabla en general*/
+#tabla-ResultadoDiagnostico{
+    
+    font-family: 'Noto Sans Display', sans-serif;
+    background-color: #eff2f5;
+    /*background-color: #2a5077;*/
+    
+}
+
+/*Propiedades de la cabecera que contiene los mensajes para el usuario y el botón recargar*/
+#cajaCabecera-ResultadoDiagnostico{
+    /*border: 2px solid burlywood;*/
+    overflow: auto;
+    /*text-align: right;*/
+}
+
+/*Propiedades caja del mensaje respuesta*/
+#cajaCabecera-ResultadoDiagnostico #cajaMensajeRespuesta-ResultadoDiagnostico{
+    /*border: 2px solid chocolate;*/
+    /*display: inline-block;*/
+    /*display: inline-block;*/
+    float: left;
+    width: 80%;
+    /*width: fit-content;*/
+    height: 3rem;
+}
+
+/*Propiedades del mensaje respuesta*/
+#cajaMensajeRespuesta-ResultadoDiagnostico #mensajeRespuesta-ResultadoDiagnostico{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+/*Propiedades caja del boton recargar*/
+#cajaCabecera-ResultadoDiagnostico #cajaBotonRecargar-ResultadoDiagnostico{
+    /*border: 2px solid blueviolet;*/
+    /*display: inline-block;*/
+    /*display: inline-block;*/
+    float: right;
+    width: 20%;
+    /*width: fit-content;*/
+    height: 3rem;
+    text-align: right;
+    /*margin-left: 5px;*/
+}
+
+/*Propiedades del botón recargar en la tabla*/
+#cajaBotonRecargar-ResultadoDiagnostico #botonRecargar-ResultadoDiagnostico{
+    margin-top: 5px;
+    background-color: #eff2f5;
+    /*padding-top: 2px;*/
+    color: #000;
+    border-color: #000;
+    margin-right: 10px;
+}
+
+/*Propiedad hover del botón recargar en la tabla*/
+#cajaBotonRecargar-ResultadoDiagnostico #botonRecargar-ResultadoDiagnostico:hover{
+    
+    background-color: #E4AC34;
+    border-color: #E4AC34;
+    color: white;
+    /*border-color: transparent;*/
+    
+}
+
+/*Propiedad focus del botón recargar en la tabla*/
+#cajaBotonRecargar-ResultadoDiagnostico #botonRecargar-ResultadoDiagnostico:focus{
+    
+    box-shadow: none;
+    
+}
+
+/*Propiedades de la columna ID en la cabecera*/
+#cedulaTablaCabecera-ResultadoDiagnostico{
+    /*background-color: red;*/
+    text-align: center;
+    width: 25%;
+}
+
+/*Propiedades de la columna nombreUsuario en la cabecera*/
+#nombrePacienteTablaCabecera-ResultadoDiagnostico{
+    /*background-color: aqua;*/
+    width: 25%;
+    text-align: center;
+}
+
+/*Propiedades de la columna Correo en la cabecera*/
+#resultadoTablaCabecera-ResultadoDiagnostico{
+    /*background-color: pink;*/
+    width: 25%;
+    text-align: center;
+    
+}
+
+/*Propiedades de la columna Modificar/Eliminar en la cabecera*/
+#modificarEliminarTablaCabecera-ResultadoDiagnostico{
+    width: 25%;
+    text-align: center;
+}
+
+/*Propiedades de la fila Cedula*/
+#cedulaTablaFila-ResultadoDiagnostico{
+    text-align: center;
+    font-weight: lighter;
+}
+
+/*Propiedades de la fila nombreUsuario*/
+#nombrePacienteTablaFila-ResultadoDiagnostico{
+    text-align: center;
+}
+
+/*Propiedades de la fila Correo*/
+#resultadoTablaFila-ResultadoDiagnostico{
+
+    text-align: center;
+}
+
+/*Propiedades de la fila Modificar/Eliminar*/
+#modificarEliminarTablaFila-ResultadoDiagnostico{
+    text-align: center;
+}
+
+/*Propiedad hover sobre las filas de la tabla
+#tabla-ResultadoDiagnostico tbody tr:hover{
+    background-color: #E4AC34;
+}*/
+
+/*Propiedades de los botones de modificar y eliminar*/
+#modificarEliminarTablaFila-ResultadoDiagnostico button{
+    margin-top: 5%;
+    border-radius: 0px;
+    background: transparent;
+    color: #000;
+    /*border-color: rgba(62, 138, 62, 0.589);*/
+    /*border-color: #ffc107;*/
+    border-color: transparent;
+    font-family: 'Noto Sans Display', sans-serif;
+    /*width: 6rem;*/
+    box-shadow: none; /*Quita la sombra verde alrededor del botón*/
+}
+
+/*Propiedad hover sobre los botones modificar y eliminar
+#modificarEliminarTablaFila-ResultadoDiagnostico button:hover{
+    /*border-color: #ffc107;
+    border-color: transparent;
+    /*background-color: #ffc107;
+    background-color: transparent;
+    /*color: white;
+}*/
+
+/*Propiedades de los iconos en los botones modificar y eliminar*/
+#modificarEliminarTablaFila-ResultadoDiagnostico i{
+    font-size: 23px;
+    
+}
+
+/*Propiedad del icono modificar en el botón modificar*/
+#botonModificar-ResultadoDiagnostico #iconoModificar-ResultadoDiagnostico{
+    color: rgb(83, 83, 83);
+}
+
+/*Propiedad del icono eliminar en el botón eliminar*/
+#botonEliminar-ResultadoDiagnostico #iconoEliminar-ResultadoDiagnostico{
+    color: rgb(192, 3, 3);
+}
+
+
+/*Propiedades de los labels del modal Eliminar termino. Advertencia y ¿Realmente quiere eliminar este termino?.*/
+#modalEliminar-ResultadoDiagnostico #modalLabelEliminar-ResultadoDiagnostico label,
+#modalEliminar-ResultadoDiagnostico .modal-body label
+{
+
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+/*Propiedades del icono advertencia en el modal de Eliminar termino*/
+#modalEliminar-ResultadoDiagnostico #modalLabelEliminar-ResultadoDiagnostico i{
+    margin-right: 10px;
+}
+
+/*Propiedades del label Los cambios no se podrán revertir en modal Eliminar termino.*/
+#modalEliminar-ResultadoDiagnostico .modal-body #labelRevertirCambios-ResultadoDiagnostico{
+    font-style: italic;
+}
+
+/*Propiedades del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
+#modalEliminar-ResultadoDiagnostico .modal-footer #botonModalCancelar-ResultadoDiagnostico, #modalModificar-ResultadoDiagnostico .modal-footer #botonModalCancelar-ResultadoDiagnostico{
+    font-family: 'Noto Sans Display', sans-serif;
+    background-color: transparent;
+    border-color: #535353;
+    color: #000;
+}
+
+/*Propiedad hover del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
+#modalEliminar-ResultadoDiagnostico .modal-footer #botonModalCancelar-ResultadoDiagnostico:hover, #modalModificar-ResultadoDiagnostico .modal-footer #botonModalCancelar-ResultadoDiagnostico:hover{
+    
+    background-color: #535353;
+    color: white;
+}
+
+/*Propiedad focus del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
+#modalEliminar-ResultadoDiagnostico .modal-footer #botonModalCancelar-ResultadoDiagnostico:focus, #modalModificar-ResultadoDiagnostico .modal-footer #botonModalCancelar-ResultadoDiagnostico:focus{
+    box-shadow: none;
+}
+
+/*Propiedades del boton Eliminar en modal Eliminar termino*/
+#modalEliminar-ResultadoDiagnostico .modal-footer #botonModalEliminar-ResultadoDiagnostico{
+    font-family: 'Noto Sans Display', sans-serif;
+    background-color: transparent;
+    border-color: #c00303;
+    color: #000;
+}
+
+/*Propiedad hover del boton Eliminar en modal Eliminar termino*/
+#modalEliminar-ResultadoDiagnostico .modal-footer #botonModalEliminar-ResultadoDiagnostico:hover{
+    
+    background-color: #c00303;
+    color: white;
+}
+
+/*Propiedad focus del boton Eliminar en modal Eliminar termino*/
+#modalEliminar-ResultadoDiagnostico .modal-footer #botonModalEliminar-ResultadoDiagnostico:focus{
+    box-shadow: none;
+}
+
+/*Propiedades del botón de la X para cerrar el modal Eliminar termino*/
+.modal-header .btn-close:focus{
+    
+    box-shadow: none;
+}
+
+/*Propiedades del icono modificar en el modal de Modificar termino*/
+#modalModificar-ResultadoDiagnostico #modalLabelModificar-ResultadoDiagnostico i{
+    margin-right: 10px;
+}
+
+/*Propiedades de los label AdministrarUsuarios y Correo en el modal de Modificar termino*/
+#modalModificar-ResultadoDiagnostico .modal-body label{
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/*Propiedades del textarea Correo en el modal de Modificar termino*/
+#modalModificar-ResultadoDiagnostico .modal-body textarea{
+    resize: none;
+    height: 10rem;
+}
+
+/*Propiedades focus del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
+#modalModificar-ResultadoDiagnostico .modal-body input:focus, #modalModificar-ResultadoDiagnostico .modal-body textarea:focus{
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+/*Propiedades de los placeholder del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
+#modalModificar-ResultadoDiagnostico .modal-body input::placeholder, #modalModificar-ResultadoDiagnostico .modal-body textarea::placeholder{
+    font-style: italic;
+}
+
+/*Propiedades del botón modificar en el modal Modificar termino*/
+#modalModificar-ResultadoDiagnostico .modal-footer #botonModalModificar-ResultadoDiagnostico{
+    background-color: transparent;
+    border-color: #ffc107;
+    color: #000;
+}
+
+/*Propiedad hover del botón modificar en el modal Modificar termino*/
+#modalModificar-ResultadoDiagnostico .modal-footer #botonModalModificar-ResultadoDiagnostico:hover{
+    background-color: #ffc107;
+    color: white;
+}
+
+/*Propiedad focus del botón modificar en el modal Modificar termino*/
+#modalModificar-ResultadoDiagnostico .modal-footer #botonModalModificar-ResultadoDiagnostico:focus{
+    box-shadow: none;
+}
+
+/*Propiedades de icono mas en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios #modalLabelAgregarAdministrarUsuarios-AdministrarUsuarios i{
+    margin-right: 10px;
+}
+
+/*Propiedades de las cajas del label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelNombrePacienteModificarAdministrarResultado-ResultadoDiagnostico,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelCedulaModificarAdministrarResultado-ResultadoDiagnostico
+{
+    text-align: left;
+}
+
+/*Propiedades de los label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelNombrePacienteModificarAdministrarResultado-ResultadoDiagnostico label,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelCedulaModificarAdministrarResultado-ResultadoDiagnostico label
+{
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'Noto Sans Display', sans-serif;
+    display: block;
+}
+
+/*Propiedades del textarea Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body .input-group textarea{
+    resize: none;
+    height: 10rem;
+}*/
+
+/*Propiedades del botón cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-ResultadoDiagnostico{
+    font-family: 'Noto Sans Display', sans-serif;
+    background-color: transparent;
+    border-color: #535353;
+    color: #000;
+}
+
+/*Propiedad hover del boton Cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-ResultadoDiagnostico:hover{
+    
+    background-color: #535353;
+    color: white;
+}
+
+/*Propiedad focus del boton Cancelar Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-ResultadoDiagnostico:focus{
+    box-shadow: none;
+}
+
+/*Propiedades del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-ResultadoDiagnostico{
+    background-color: transparent;
+    border-color: #ffc107;
+    color: #000;
+    font-weight: 100;
+}
+
+/*Propiedad hover del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-ResultadoDiagnostico:hover{
+    background-color: #ffc107;
+    color: white;
+}
+
+/*Propiedad focus del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-ResultadoDiagnostico:focus{
+    box-shadow: none;
+}
+
+/*Propiedad placeholder en el input y textarea en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input::placeholder, #modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group textarea::placeholder{
+    font-style: italic;
+}
+
+/*Propiedad focus en el input y textarea en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input:focus, #modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group textarea:focus{
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+/*Propiedades del icono al lado de los input en los modales*/
+#modalModificar-ResultadoDiagnostico #btnGroupAddon{
+    background-color: #ffc107;/*E4AC34*/
+    color: white;
+}
+

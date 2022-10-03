@@ -1,5 +1,5 @@
-import '../css/Diagnosticar.css';
-import '../css/fontawesome-free-5.15.4-web/css/all.css'
+import '../../css/Diagnosticar.css';
+import '../../css/fontawesome-free-5.15.4-web/css/all.css'
 import { Link } from "react-router-dom";
 
 function Diagnosticar() {

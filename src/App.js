@@ -10,10 +10,11 @@ import Sintomas from '../src/capaPresentacion/vista/Sintomas/Sintomas.js';
 import AgregarSintomas from "../src/capaPresentacion/vista/Sintomas/AgregarSintomas/AgregarSintomas.js";
 import TiposDepresion from "../src/capaPresentacion/vista/TiposDepresion/TiposDepresion.js";
 import AgregarTipoDepresion from "../src/capaPresentacion/vista/TiposDepresion/AgregarTipoDepresion/AgregarTipoDepresion.js";
-import Diagnosticar from '../src/capaPresentacion/vista/Diagnosticar.js'
+import Diagnosticar from '../src/capaPresentacion/vista/Diagnosticar/Diagnosticar.js'
 import Diccionario from '../src/capaPresentacion/vista/Diccionario/Diccionario.js'
 import AgregarDiccionario from "../src/capaPresentacion/vista/Diccionario/AgregarDiccionario/AgregarDiccionario.js";
 import AdministrarUsuarios from "../src/capaPresentacion/vista/AdministrarUsuarios/AdministrarUsuarios.js";
+import ResultadoDiagnostico from "./capaPresentacion/vista/ResultadoDiagnostico/ResultadoDiagnostico.js";
 
 import { UserContext } from "../src/capaNegocio/context/UserContext.js";
 import { useMemo, useState } from "react";
@@ -38,13 +39,13 @@ function App() {
     const [datosIntroducidos, setDatosIntroducidos] = useState(""); //Guarda datos en los handleChange
 
     const [datosOriginales, setDatosOriginales] = useState(""); //Guarda los datos originales a modificar
-    
+
     const [filtro, setFiltro] = useState(""); //Guarda valores del filtro
 
     const [datosTablaModificar, setDatosTablaModificar] = useState(""); //Muestra los datos que se van seleccionando en el modificar
 
     const [guardarID, setGuardarID] = useState(""); //Guarda ID seleccionados en el modificar
-    
+
     const value = useMemo(() => ({ respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin, datosGuardados, setDatosGuardados, cambiarEstado, setCambiarEstado, datosIntroducidos, setDatosIntroducidos, datosOriginales, setDatosOriginales, filtro, setFiltro, datosTablaModificar, setDatosTablaModificar, guardarID, setGuardarID }), [respuestaServidor, setRespuestaServidor, correo, setCorreo, token, setToken, es_admin, setEs_admin, datosGuardados, setDatosGuardados, cambiarEstado, setCambiarEstado, datosIntroducidos, setDatosIntroducidos, datosOriginales, setDatosOriginales, filtro, setFiltro, datosTablaModificar, setDatosTablaModificar, guardarID, setGuardarID]);
 
 
@@ -59,16 +60,16 @@ function App() {
                 <UserContext.Provider value={value}>
 
                     <Route exact path="/login" >
-                        
-                        
+
+
                         <Login />
-                        
+
                     </Route>
 
                     {/*<Route exact path="/agregarusuario" render={() => token && es_admin ? <AgregarUsuario /> : <Login />}>*/}
                     <Route exact path="/agregarusuario" >
                         <AgregarUsuario />
-                        
+
                     </Route>
 
                     <Route exact path="/crearcontraseña" >
@@ -123,6 +124,30 @@ function App() {
 
                     </Route>
 
+                    {/*<Route exact path="/plataforma/resultadodiagnostico" render={() => token ? //Si tiene token redirecciona a la pagina deseada
+                        <div>
+                            <Plataforma />
+                            <div>
+                                <ResultadoDiagnostico />
+                            </div>
+                        </div>
+                        : <Login /> //Si no, redirecciona al Login
+                    }>
+
+                    </Route>*/}
+
+                    <Route exact path="/plataforma/resultadodiagnostico"> 
+                        <div>
+                            <Plataforma />
+                            <div>
+                                <ResultadoDiagnostico />
+                            </div>
+                        </div>
+                      
+                    
+
+                    </Route>
+
                     <Route exact path="/plataforma/sintomas" >
                         <Plataforma />
                         <div>
@@ -157,7 +182,7 @@ function App() {
 
                     <Route exact path="/agregartipodepresion">
 
-                        <AgregarTipoDepresion />    
+                        <AgregarTipoDepresion />
 
                     </Route>
 

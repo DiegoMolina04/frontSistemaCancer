@@ -12,7 +12,7 @@ import usePlataforma from '../../../capaNegocio/logicaNegocio/Plataforma/usePlat
 function Plataforma() {
 
   //Logica negocio
-  const { componenteAdministrarUsuarios, redireccionarDiagnosticar, redireccionarPreguntas, redireccionarSintomas, redireccionarTiposDepresion, redireccionarDiccionario, redireccionarSalir, cambiarContraseña } = usePlataforma(); //Logica de negocio
+  const { componenteAdministrarUsuarios, redireccionarDiagnosticar, redireccionarResultadoDiagnostico, redireccionarPreguntas, redireccionarSintomas, redireccionarTiposDepresion, redireccionarDiccionario, redireccionarSalir, cambiarContraseña } = usePlataforma(); //Logica de negocio
 
   return (
 
@@ -38,6 +38,11 @@ function Plataforma() {
           <button type="button" className="btn btn-success" onClick={redireccionarDiagnosticar} title="Iniciar diagnostico del paciente">
             <i class="fas fa-diagnoses"></i>
             Diagnosticar
+          </button>
+
+          <button type="button" className="btn btn-success" onClick={redireccionarResultadoDiagnostico} title="Ver resultados de diagnostico">
+            <i class="fas fa-file-alt"></i>
+            Resultados
           </button>
 
           <button type="button" className="btn btn-success" onClick={redireccionarPreguntas} title="Ver preguntas de diagnostico">

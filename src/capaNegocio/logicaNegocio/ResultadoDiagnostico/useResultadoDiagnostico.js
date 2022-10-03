@@ -4,14 +4,15 @@ import { UserContext } from "../../context/UserContext.js";
 import { useHistory } from "react-router-dom";
 //Datos
 import getAutorization from '../../../capaDatos/Get/getAutorization.js';
-import putBody from '../../../capaDatos/Put/putBody.js';
+import putBodyAutorization from '../../../capaDatos/Put/putBodyAutorization.js';
 import deleteAutorization from '../../../capaDatos/Delete/deleteAutorization.js';
 //Componentes
 import MostrarMensaje from '../../../capaPresentacion/vista/ComponentesComunes/MostrarMensaje.js';
 import ComponenteTabla from '../../../capaPresentacion/vista/ComponentesComunes/ComponenteTabla.js';
-import ComponenteAgregarUsuario from '../../../capaPresentacion/vista/AdministrarUsuarios/ComponenteAgregarUsuario.js';
+import NombreOpcion from '../../../capaPresentacion/vista/ComponentesComunes/NombreOpcion.js';
+import ColumnaModificarEliminar from '../../../capaPresentacion/vista/ComponentesComunes/ColumnaModificarEliminar.js';
 
-const useAdministrarUsuarios = () => {
+const useResultadoDiagnostico = () => {
 
     //Contexto
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext);
@@ -23,8 +24,9 @@ const useAdministrarUsuarios = () => {
 
     //Componente
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState("");
-    const [componenteAgregarUsuario, setComponenteBtnAgregarUsuario] = useState("");
-    const [componenteListarUsuarios, setComponenteListarUsuarios] = useState([]); //Guardar resultados
+    const [componenteListarResultados, setComponenteListarResultados] = useState([]); //Guardar resultados
+    const [componenteNombreOpcion, setComponenteNombreOpcion] = useState(""); //Nombre opcion
+    const [componenteCabeceraModificarEliminar, setComponenteCabeceraModificarEliminar] = useState(""); //Columna modificar/eliminar
 
     //Estado
     const [codigo, setCodigo] = useState(null); //Codigo respuesta
@@ -34,29 +36,45 @@ const useAdministrarUsuarios = () => {
     let url = "";
     let datosExtraidos = "";
 
-    function cargarElementosTabla(datosExtraidos) {
-        const tabla = datosExtraidos.map(elemento => (
-            <tr>
-                <th id="cedulaTablaFila-AdministrarUsuarios" scope="row">{elemento.cedula}</th>
-                <td id="nombreUsuarioTablaFila-AdministrarUsuarios">{elemento.nombre}</td>
-                <td id="correoTablaFila-AdministrarUsuarios">{elemento.email}</td>
-                <td id="rolTablaFila-AdministrarUsuarios">{elemento.es_admin === true ? "Admin" : "Usuario"}</td>
+    function cargarElementosTabla(datosExtraidos, funcion, es_admin) {
+        try {
+            let tabla = "";
+            if ((es_admin == true && funcion == "listar") || (es_admin == true && funcion == "filtrar")) { //Se muestra tabla con botones de modificar y eliminar*/
+                tabla = datosExtraidos.map(elemento => (
+                    <tr>                
+                        <th id="cedulaTablaFila-ResultadoDiagnostico" scope="row">{elemento.cedula}</th>
+                        <td id="nombrePacienteTablaFila-ResultadoDiagnostico">{elemento.nombre}</td>
+                        <td id="resultadoTablaFila-ResultadoDiagnostico">{elemento.resultado}</td>
+            
+                        <td id="modificarEliminarTablaFila-ResultadoDiagnostico">
+            
+                            <button id="botonModificar-ResultadoDiagnostico" type="button" class="btn btn-success" onClick={() => { setearDatos(elemento) }} title="Modificar resultado" data-bs-toggle="modal" data-bs-target="#modalModificar-ResultadoDiagnostico">
+                                <i id="iconoModificar-ResultadoDiagnostico" class="fas fa-cog"></i>
+                            </button>
+            
+                            <button id="botonEliminar-ResultadoDiagnostico" type="button" class="btn btn-success" onClick={() => { setearDatos(elemento) }} title="Eliminar resultado" data-bs-toggle="modal" data-bs-target="#modalEliminar-ResultadoDiagnostico">
+                                <i id="iconoEliminar-ResultadoDiagnostico" class="fas fa-times-circle"></i>
+                            </button>
+            
+                        </td>
+                    </tr>
+                ))
+            } else if ((es_admin == false && funcion == "listar") || (es_admin == false && funcion == "filtrar")) { //Se muestra tabla sin botones de modificar y eliminar
+                tabla = datosExtraidos.map(elemento => (
+                    <tr>
+                        <th id="cedulaTablaFila-ResultadoDiagnostico" scope="row">{elemento.cedula}</th>
+                        <td id="nombrePacienteTablaFila-ResultadoDiagnostico">{elemento.nombre}</td>
+                        <td id="resultadoTablaFila-ResultadoDiagnostico">{elemento.resultado}</td>
+                    </tr>
+                ))
+            }
 
-                <td id="modificarEliminarTablaFila-AdministrarUsuarios">
+            return tabla;
 
-                    <button id="botonModificar-AdministrarUsuarios" type="button" class="btn btn-success" onClick={() => { setearDatos(elemento) }} title="Modificar termino" data-bs-toggle="modal" data-bs-target="#modalModificar-AdministrarUsuarios">
-                        <i id="iconoModificar-AdministrarUsuarios" class="fas fa-cog"></i>
-                    </button>
+        } catch (error) {
+            setCodigo(504);
 
-                    <button id="botonEliminar-AdministrarUsuarios" type="button" class="btn btn-success" onClick={() => { setearDatos(elemento) }} title="Eliminar termino" data-bs-toggle="modal" data-bs-target="#modalEliminar-AdministrarUsuarios">
-                        <i id="iconoEliminar-AdministrarUsuarios" class="fas fa-times-circle"></i>
-                    </button>
-
-                </td>
-            </tr>
-        ))
-
-        return tabla;
+        }
     }
 
     function tomarDecision(respuesta, funcion) { //Se usa para identificar si retorna un codigo o array con items
@@ -71,7 +89,7 @@ const useAdministrarUsuarios = () => {
 
                 if (datosExtraidos.length > 0) { //Si hay algún resultado
 
-                    setComponenteListarUsuarios(<ComponenteTabla tabla={cargarElementosTabla(datosExtraidos)} />);
+                    setComponenteListarResultados(<ComponenteTabla tabla={cargarElementosTabla(datosExtraidos, funcion, es_admin)} />);
 
                 } else {
 
@@ -90,7 +108,7 @@ const useAdministrarUsuarios = () => {
         }
     }
 
-    const listarUsuarios = async (event, funcion, datos) => {
+    const listarResultados = async (event, funcion, datos) => {
 
         try {
             event.preventDefault();
@@ -98,7 +116,7 @@ const useAdministrarUsuarios = () => {
             if (funcion == "listar") {
 
                 setCodigo(""); //Se reinicia el mensaje de la tabla
-                url = "https://secure-brushlands-86892.herokuapp.com/v1/users/get-all";
+                url = "https://secure-brushlands-86892.herokuapp.com/v1/diagnosis/get-all";
                 respuestaServidor = await getAutorization(token, url);
                 tomarDecision(respuestaServidor, funcion);
 
@@ -114,31 +132,17 @@ const useAdministrarUsuarios = () => {
 
                     switch (datos.categoria) {
 
-                        case "correo":
-                            url = "https://secure-brushlands-86892.herokuapp.com/v1/users/get-all?email=" + datos.inputFiltro;
+                        case "cedula":
+                            url = "https://secure-brushlands-86892.herokuapp.com/v1/diagnosis/get-all?cedula=" + datos.inputFiltro;
                             respuestaServidor = await getAutorization(token, url);
                             tomarDecision(respuestaServidor, funcion);
 
                             break;
 
-                        case "cuenta":
-                            let datoIngresado = datos.inputFiltro.toLowerCase();
-                            if (datoIngresado == "usuario") {
-                                url = "https://secure-brushlands-86892.herokuapp.com/v1/users/get-all?es_admin=false";
-
-                            } else if (datoIngresado == "admin") {
-                                url = "https://secure-brushlands-86892.herokuapp.com/v1/users/get-all?es_admin=true";
-
-                            }
-
-                            if (url == "") {
-                                setCodigo(404);
-
-                            } else {
-                                respuestaServidor = await getAutorization(token, url);
-                                tomarDecision(respuestaServidor, funcion);
-
-                            }
+                        case "nombre":
+                            url = "https://secure-brushlands-86892.herokuapp.com/v1/diagnosis/get-all?nombre=" + datos.inputFiltro;
+                            respuestaServidor = await getAutorization(token, url);
+                            tomarDecision(respuestaServidor, funcion);
 
                             break;
                     }
@@ -165,14 +169,14 @@ const useAdministrarUsuarios = () => {
 
     }
 
-    const modificarUsuario = async (event, datosModificados, datosOriginales) => {
+    const modificarResultados = async (event, datosModificados, datosOriginales) => {
 
         try {
             event.preventDefault();
             setDatosGuardados("");
 
             //Se valida que no existan campos vacios.
-            if (datosModificados.cedula == "" || datosModificados.nombre == "" || datosModificados.email == "" || datosModificados.es_admin == undefined) {
+            if (datosModificados.cedula == "" || datosModificados.nombre == "") {
                 setCodigo(408);
             } else {
 
@@ -180,8 +184,6 @@ const useAdministrarUsuarios = () => {
                 se setean los datos originales*/
                 let varCedula = datosModificados.cedula;
                 let varNombre = datosModificados.nombre;
-                let varCorreo = datosModificados.email;
-                let varCuenta = datosModificados.es_admin;
 
                 if (varCedula == undefined) {
                     varCedula = datosOriginales.cedula;
@@ -191,24 +193,14 @@ const useAdministrarUsuarios = () => {
                     varNombre = datosOriginales.nombre;
                 }
 
-                if (varCorreo == undefined) {
-                    varCorreo = datosOriginales.email;
-                }
-
-                if (varCuenta == undefined) {
-                    varCuenta = datosOriginales.es_admin;
-                }
-
                 //Se crea el array con los datos
                 let arrayDatos = {
                     cedula: varCedula,
                     nombre: varNombre,
-                    email: varCorreo,
-                    es_admin: varCuenta
                 };
 
-                let url = "https://secure-brushlands-86892.herokuapp.com/v1/users/" + datosOriginales.email + "/update-one";
-                respuestaServidor = await putBody(arrayDatos, url);
+                let url = "https://secure-brushlands-86892.herokuapp.com/v1/diagnosis/" + datosOriginales.id + "/update-one";
+                respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
 
                 if (respuestaServidor.status == 404) { //Correo a modificar no encontrado
                     setCodigo(406);
@@ -226,12 +218,12 @@ const useAdministrarUsuarios = () => {
 
     }
 
-    const eliminarUsuario = async (event, datosOriginales) => {
+    const eliminarResultados = async (event, datosOriginales) => {
 
         try {
             event.preventDefault();
 
-            let url = "https://secure-brushlands-86892.herokuapp.com/v1/users/" + datosOriginales.id + "/delete-one";
+            let url = "https://secure-brushlands-86892.herokuapp.com/v1/diagnosis/" + datosOriginales.id + "/delete-one";
             respuestaServidor = await deleteAutorization(token, url);
 
             if (respuestaServidor.status == undefined) {
@@ -246,11 +238,6 @@ const useAdministrarUsuarios = () => {
 
     }
 
-    function redireccionarAgregarUsuario() {
-
-        history.push("/agregarusuario");
-    }
-
     //Muestra mensajes informativos al usuario
     useEffect(() => {
 
@@ -263,15 +250,15 @@ const useAdministrarUsuarios = () => {
         switch (codigo) {
 
             case 200: //Se modifica correctamente
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Usuario modificado correctamente, recargue para ver cambios."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Resultado modificado correctamente, recargue para ver cambios."} />);
                 break;
 
             case 201: //Se crea correctamente
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Usuario creado correctamente, recargue para ver cambios."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Resultado guardado correctamente, recargue para ver cambios."} />);
                 break;
 
             case 204: //Se elimina correctamente
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Usuario eliminado correctamente, recargue para ver cambios."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Resultado eliminado correctamente, recargue para ver cambios."} />);
                 break;
 
             case 206: //Tabla vacia
@@ -279,7 +266,7 @@ const useAdministrarUsuarios = () => {
                 break;
 
             case 400: //Error de almacenamiento
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El correo/cedula ya esta registrado."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
                 break;
 
             case 401: //No tiene token
@@ -295,7 +282,7 @@ const useAdministrarUsuarios = () => {
                 break;
 
             case 406: //No se a encontrado correo para actualizar/eliminar
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se a encontrado el correo a actualizar."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se a encontrado el resultado a actualizar."} />);
                 break;
 
             case 408: //Campos vacios
@@ -303,7 +290,7 @@ const useAdministrarUsuarios = () => {
                 break;
 
             case 500: //Error de almacenamiento
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El correo/cedula ya esta registrado."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
                 break;
 
             case 504: //Error en el try catch
@@ -320,12 +307,20 @@ const useAdministrarUsuarios = () => {
     //Se ejecuta una sola vez al ser renderizado. Verifica si es admin y si tiene token para mostrar botones.
     useEffect(() => {
         if (es_admin == true && token != undefined) {
-            setComponenteBtnAgregarUsuario(<ComponenteAgregarUsuario />);
+            
+            setComponenteNombreOpcion(<NombreOpcion opcion={"Administrar Resultados"} />);
+            setComponenteCabeceraModificarEliminar(<ColumnaModificarEliminar
+                id={"modificarEliminarTablaCabecera-ResultadoDiagnostico"}
+                title={"Modificar/Eliminar el resultado"} />);
+        }else{
+
+            setComponenteNombreOpcion(<NombreOpcion opcion={"Resultados"} />);
+            setComponenteCabeceraModificarEliminar("");
         }
     }, [])
 
 
-    return { listarUsuarios, setearDatos, componenteListarUsuarios, componenteMostrarMensaje, componenteAgregarUsuario, modificarUsuario, eliminarUsuario, redireccionarAgregarUsuario };
+    return { listarResultados, setearDatos, componenteListarResultados, componenteNombreOpcion, componenteCabeceraModificarEliminar, componenteMostrarMensaje, modificarResultados, eliminarResultados };
 };
 
-export default useAdministrarUsuarios;
+export default useResultadoDiagnostico;
