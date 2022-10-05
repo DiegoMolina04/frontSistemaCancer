@@ -20,7 +20,7 @@ function Preguntas() {
     const { filtro, setFiltro } = useContext(UserContext); //Se guarda información del filtro
 
     const { handleInputChangeModificar, handleFiltrarChange } = useChange(); //Onchange para capturar datos en los inputs
-    const { listarElementos, componenteListarPreguntas, componenteListarSintomas, componenteMostrarMensaje, componenteNombreOpcion, componenteCabeceraModificarEliminar, componenteAgregarPregunta, modificarPregunta, eliminarPregunta, handleChange, reiniciarModal} = usePreguntas(); //Logica de negocio
+    const { listarElementos, componenteListarPreguntas, componenteListarSintomas, componenteMostrarMensaje, componenteNombreOpcion, componenteCabeceraModificarEliminar, componenteAgregarPregunta, modificarPregunta, eliminarPregunta, handleChange, reiniciarModal } = usePreguntas(); //Logica de negocio
 
     return (
 
@@ -30,7 +30,7 @@ function Preguntas() {
 
                 <div id="cajaNombreOpcion-AdministrarPreguntas">
 
-                {componenteNombreOpcion}
+                    {componenteNombreOpcion}
 
                 </div>
 
@@ -96,7 +96,7 @@ function Preguntas() {
                 </div>
             </form>
             {/*Modal para el botón de Eliminar*/}
-            <form className="row" onSubmit={(e)=>eliminarPregunta(e, datosOriginales)}> 
+            <form className="row" onSubmit={(e) => eliminarPregunta(e, datosOriginales)}>
                 <div class="modal fade" id="modalEliminar-AdministrarPreguntas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -161,11 +161,11 @@ function Preguntas() {
                                 <div id="labelSintomaModificar-AdministrarPreguntas">
 
                                     <label>Seleccione el/los sintomas</label>
-                                    
+
                                 </div>
 
                                 <div className="input-group">
-                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div> 
+                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div>
                                     <textarea class="form-control" placeholder="Seleccione los sintomas" readonly="readonly" value={datosTablaModificar} onChange={handleChange} title="Sintomas seleccionados"></textarea>
                                 </div>
 

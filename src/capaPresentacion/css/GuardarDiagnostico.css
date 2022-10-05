@@ -1,18 +1,14 @@
-/*Color de fondo para vista agregar usuario*/
+/*Color de fondo para vista*/
 #fondo-GuardarDiagnostico{
-    /*height: 100vh;*/ /*vh (viewport-height) = Altura de la ventana gráfica.*/
     height: fit-content;
     width: 100%;
     border: 0.01px solid #212844; /*Despliega borde en toda la pantalla*/
-    background-color: #212844; /*9a0526*/
+    background-color: #212844; 
 }
 
-/*Caja contenedora de agregar usuario*/
+/*Caja contenedora*/
 #caja-GuardarDiagnostico{
-
-    /*border: 2px solid blue;*/
     border: 1px solid #000;
-    /*width: 50%;*/
     max-width: 500px;
     margin-top: 8%;
     margin-left: auto;
@@ -22,30 +18,25 @@
     padding: 2rem;
     border-radius: 7px;
     background-color: #eff2f5;
-    box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+    box-shadow: 5px 10px 15px #000;/*box-shadow: x y difuminación color*/
     
 }
 
 /*Caja de la imagen del logo*/
 #cajaLogo-GuardarDiagnostico{
-
-    /*border: 2px solid brown;*/
     text-align: center;
 
 }
 
 /*Imagen logo*/
 #logo-GuardarDiagnostico{
-    
-    /*height: 13rem;*/
-    
     height: 4rem;
     margin: 2rem 0 2rem 0;
+
 }
 
-/*Caja texto Nuevo Usuario*/
+/*Caja texto GuardarDiagnostico*/
 #caja-GuardarDiagnostico #cajaGuardarDiagnostico-GuardarDiagnostico{
-    /*border: 2px solid skyblue;*/
     margin-top: 10px;
     text-align: center;
 }
@@ -53,15 +44,13 @@
 /*Texto informativo para el usuario en caso de error*/
 #caja-GuardarDiagnostico h5{
     font-family: 'Noto Sans Display', sans-serif;
-    /*color: red;*/
     font-style: italic;
     margin-left: 14px;
+
 }
 
-
-/*Label Nuevo registro*/
+/*Label GuardarDiagnostico*/
 #cajaGuardarDiagnostico-GuardarDiagnostico #labelGuardarDiagnostico-GuardarDiagnostico{
-
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 25px;
     font-weight: 700;
@@ -70,27 +59,26 @@
 
 /*Linea debajo del logo*/
 #linea-GuardarDiagnostico{
-
     color: #000;
+
 }
 
 /*Caja contenedora del formulario*/
 #formulario-GuardarDiagnostico{
-    
-    /*border: 2px solid seagreen;*/
     padding: 1rem;
+
 }
 
 /*Todos los label del formulario*/
 #formulario-GuardarDiagnostico label{
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 20px;
+
 }
 
 /*Propiedades de los iconos al lado de los input*/
 #formulario-GuardarDiagnostico .input-group #btnGroupAddon{
     width: 42px;
-    /*background-color: rgba(62, 138, 62, 0.589);*/
     background-color: #ffc107;
     margin-top: 10px;
     
@@ -112,7 +100,6 @@
 /*Propiedad placeholder de los inputs*/
 #formulario-GuardarDiagnostico .input-group input::placeholder,
 #formulario-GuardarDiagnostico .input-group textarea::placeholder{
-
     font-style: italic;
 
 }
@@ -122,66 +109,52 @@
 #formulario-GuardarDiagnostico .input-group textarea:focus{
     box-shadow: none;
     border-color: #ced4da;
+
 }
 
 /*Caja botones enviar y Regresar*/
 #formulario-GuardarDiagnostico #cajaBotones-GuardarDiagnostico{
-    /*border: 3px solid purple;*/
     margin-top: 30px;
+
 }
 
-/*Caja contenedora del botón Enviar*/
+/*Caja contenedora del botón Guardar*/
 #formulario-GuardarDiagnostico #cajaGuardar-GuardarDiagnostico{
-    /*border: 3px solid red;*/
-    /*text-align: center;*/
     text-align: center;
-    /*float: left;*/
-    /*width: 50%;*/
-    /*text-align: right;*/
     
 }
 
 /*Caja contenedora del botón Regresar*/
 #formulario-GuardarDiagnostico #cajaRegresar-GuardarDiagnostico{
-    /*border: 3px solid palevioletred;*/
     float: left;
     width: 49%;
-    /*text-align: center;*/
     text-align: center;
-    /*text-align: left;*/
-    /*margin-left: 30%;*/
 
 }
 
-/*Propiedades de los botones Enviar y Regresar*/
+/*Propiedades de los botones Guardar y Regresar*/
 #cajaGuardar-GuardarDiagnostico #botonGuardar-GuardarDiagnostico, #cajaRegresar-GuardarDiagnostico #botonRegresar-GuardarDiagnostico{
     background: transparent;
     color: #000;
-    /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #ffc107;*/
     font-family: 'Noto Sans Display', sans-serif;
     width: 6rem;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
 }
 
-/*Propiedad del boton Enviar*/
+/*Propiedad del boton Guardar*/
 #cajaGuardar-GuardarDiagnostico #botonGuardar-GuardarDiagnostico{
-    /*margin-right: 20%;*/
-    /*margin-left: 10%;*/
     border-color: #ffc107;
+
 }
 
 /*Propiedad del boton Regresar*/
 #cajaRegresar-GuardarDiagnostico #botonRegresar-GuardarDiagnostico{
-    /*margin-left: 10%;*/
-    /*margin-right: 2rem;*/
     border-color: #535353;
     
 }
 
-/*Propiedad hover sobre boton Enviar*/
+/*Propiedad hover sobre boton Guardar*/
 #cajaGuardar-GuardarDiagnostico #botonGuardar-GuardarDiagnostico:hover{
-    /*background-color: rgba(62, 138, 62, 0.589);*/
     border-color: #ffc107 ;
     background-color: #ffc107 ;
     color: white;

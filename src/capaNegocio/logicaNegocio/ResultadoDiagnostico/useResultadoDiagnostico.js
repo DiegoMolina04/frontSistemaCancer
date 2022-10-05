@@ -1,7 +1,6 @@
 //React
 import React, { useState, useContext, useEffect } from 'react';
 import { UserContext } from "../../context/UserContext.js";
-import { useHistory } from "react-router-dom";
 //Datos
 import getAutorization from '../../../capaDatos/Get/getAutorization.js';
 import putBodyAutorization from '../../../capaDatos/Put/putBodyAutorization.js';
@@ -31,7 +30,6 @@ const useResultadoDiagnostico = () => {
     //Estado
     const [codigo, setCodigo] = useState(null); //Codigo respuesta
 
-    const history = useHistory(); //Redireccionar
     let respuestaServidor = "";
     let url = "";
     let datosExtraidos = "";
@@ -41,21 +39,21 @@ const useResultadoDiagnostico = () => {
             let tabla = "";
             if ((es_admin == true && funcion == "listar") || (es_admin == true && funcion == "filtrar")) { //Se muestra tabla con botones de modificar y eliminar*/
                 tabla = datosExtraidos.map(elemento => (
-                    <tr>                
+                    <tr>
                         <th id="cedulaTablaFila-ResultadoDiagnostico" scope="row">{elemento.cedula}</th>
                         <td id="nombrePacienteTablaFila-ResultadoDiagnostico">{elemento.nombre}</td>
-                        <td id="resultadoTablaFila-ResultadoDiagnostico">{elemento.resultado}</td>{/*elemento.resultado*/}{/*{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}*/}
-                        
+                        <td id="resultadoTablaFila-ResultadoDiagnostico">{elemento.resultado}</td>
+
                         <td id="modificarEliminarTablaFila-ResultadoDiagnostico">
-            
+
                             <button id="botonModificar-ResultadoDiagnostico" type="button" class="btn btn-success" onClick={() => { setearDatos(elemento) }} title="Modificar resultado" data-bs-toggle="modal" data-bs-target="#modalModificar-ResultadoDiagnostico">
                                 <i id="iconoModificar-ResultadoDiagnostico" class="fas fa-cog"></i>
                             </button>
-            
+
                             <button id="botonEliminar-ResultadoDiagnostico" type="button" class="btn btn-success" onClick={() => { setearDatos(elemento) }} title="Eliminar resultado" data-bs-toggle="modal" data-bs-target="#modalEliminar-ResultadoDiagnostico">
                                 <i id="iconoEliminar-ResultadoDiagnostico" class="fas fa-times-circle"></i>
                             </button>
-            
+
                         </td>
                     </tr>
                 ))
@@ -205,10 +203,10 @@ const useResultadoDiagnostico = () => {
                 if (respuestaServidor.status == 404) { //Correo a modificar no encontrado
                     setCodigo(406);
 
-                } else if(respuestaServidor.status !== undefined) { //Si es diferente
+                } else if (respuestaServidor.status !== undefined) { //Si es diferente
                     setCodigo(respuestaServidor.status);
 
-                } else if(respuestaServidor.code !== undefined){
+                } else if (respuestaServidor.code !== undefined) {
                     setCodigo(respuestaServidor.code);
                 }
             }
@@ -307,12 +305,12 @@ const useResultadoDiagnostico = () => {
     //Se ejecuta una sola vez al ser renderizado. Verifica si es admin y si tiene token para mostrar botones.
     useEffect(() => {
         if (es_admin == true && token != undefined) {
-            
+
             setComponenteNombreOpcion(<NombreOpcion opcion={"Administrar Resultados"} />);
             setComponenteCabeceraModificarEliminar(<ColumnaModificarEliminar
                 id={"modificarEliminarTablaCabecera-ResultadoDiagnostico"}
                 title={"Modificar/Eliminar el resultado"} />);
-        }else{
+        } else {
 
             setComponenteNombreOpcion(<NombreOpcion opcion={"Resultados"} />);
             setComponenteCabeceraModificarEliminar("");

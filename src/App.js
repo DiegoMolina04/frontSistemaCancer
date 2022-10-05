@@ -113,16 +113,25 @@ function App() {
                         </div>
                     </Route>*/}
 
-                    <Route exact path="/plataforma/diagnosticar" render={() => token ? /*Si tiene token redirecciona a la pagina deseada*/
+                    {/*<Route exact path="/plataforma/diagnosticar" render={() => token ? //Si tiene token redirecciona a la pagina deseada
                         <div>
                             <Plataforma />
                             <div>
                                 <Diagnosticar />
                             </div>
                         </div>
-                        : <Login /> /*Si no, redirecciona al Login*/
+                        : <Login /> //Si no, redirecciona al Login
                     }>
 
+                    </Route>*/}
+
+                    <Route exact path="/plataforma/diagnosticar">
+                    <div>
+                            <Plataforma />
+                            <div>
+                                <Diagnosticar />
+                            </div>
+                        </div>
                     </Route>
 
                     {/*<Route exact path="/plataforma/resultadodiagnostico" render={() => token ? //Si tiene token redirecciona a la pagina deseada

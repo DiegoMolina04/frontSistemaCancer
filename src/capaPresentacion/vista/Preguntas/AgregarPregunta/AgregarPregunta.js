@@ -26,7 +26,7 @@ function AgregarPregunta() {
 
         <div id="fondo-AgregarPregunta">
 
-            {/*Contenedor de agregar usuario*/}
+            {/*Contenedor de agregar pregunta*/}
             <div id="caja-AgregarPregunta">
 
                 {/*Contenedor del logo*/}

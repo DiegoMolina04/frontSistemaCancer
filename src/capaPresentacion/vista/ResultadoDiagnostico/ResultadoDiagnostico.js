@@ -92,7 +92,7 @@ function ResultadoDiagnostico() {
                 </div>
             </form>
 
-            {/*Modal para el botón de Eliminar AdministrarUsuarios*/}
+            {/*Modal para el botón de Eliminar*/}
             <form className="row" onSubmit={(e) => eliminarResultados(e, datosOriginales)}>
                 <div class="modal fade" id="modalEliminar-ResultadoDiagnostico" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -124,7 +124,7 @@ function ResultadoDiagnostico() {
                 </div>
             </form>
 
-            {/*Modal para el botón de Modificar AdministrarUsuarios*/}
+            {/*Modal para el botón de Modificar*/}
             <form className="row" onSubmit={(e) => modificarResultados(e, datosGuardados, datosOriginales)}>
                 <div class="modal fade" id="modalModificar-ResultadoDiagnostico" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">

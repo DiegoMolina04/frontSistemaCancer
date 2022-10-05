@@ -56,7 +56,6 @@ const useAgregarPregunta = () => {
 
         }
 
-
     }
 
     const cargarSintomas = async (event) => {
@@ -169,7 +168,7 @@ const useAgregarPregunta = () => {
 
     }
 
-    function redireccionar(){
+    function redireccionar() {
 
         setDatosTablaModificar(""); //Se reinicia el textarea con los datos del checkbox
         setDatosGuardados(""); //Se reinicia el valor del input

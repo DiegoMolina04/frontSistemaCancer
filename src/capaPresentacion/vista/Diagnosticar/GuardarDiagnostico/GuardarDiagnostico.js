@@ -26,7 +26,6 @@ function GuardarDiagnostico() {
 
         <div id="fondo-GuardarDiagnostico">
 
-            {/*Contenedor de agregar usuario*/}
             <div id="caja-GuardarDiagnostico">
 
                 {/*Contenedor del logo*/}
@@ -66,7 +65,7 @@ function GuardarDiagnostico() {
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-clipboard-check"></i></div>
                         <input id="inputGuardarDiagnostico-GuardarDiagnostico" type="text" className="form-control" placeholder="Ingrese la cédula del paciente"
-                            onKeyDown={verificarNumeros} onChange={handleInputChange} name="cedula" required/>
+                            onKeyDown={verificarNumeros} onChange={handleInputChange} name="cedula" required />
                     </div>
 
                     <br />
@@ -74,7 +73,7 @@ function GuardarDiagnostico() {
                     <label>Nombre del paciente</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-clipboard-check"></i></div>
-                        <input id="inputGuardarDiagnostico-GuardarDiagnostico" type="text" className="form-control" placeholder="Ingrese el nombre del paciente" onChange={handleInputChange} name="nombre" required/>
+                        <input id="inputGuardarDiagnostico-GuardarDiagnostico" type="text" className="form-control" placeholder="Ingrese el nombre del paciente" onChange={handleInputChange} name="nombre" required />
                     </div>
 
                     <br />

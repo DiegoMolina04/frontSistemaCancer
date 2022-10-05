@@ -31,17 +31,16 @@ const useGuardarDiagnostico = () => {
 
             } else {
 
-                let arrayDatos = {'cedula': datos.cedula, 'nombre': datos.nombre, 'resultado': datosOriginales};
+                let arrayDatos = { 'cedula': datos.cedula, 'nombre': datos.nombre, 'resultado': datosOriginales };
                 let url = "https://secure-brushlands-86892.herokuapp.com/v1/diagnosis/create-one";
                 respuestaServidor = await postBodyAutorization(arrayDatos, token, url);
 
                 if (respuestaServidor.status == undefined) { //
                     verificarCodigo(respuestaServidor.code);
-                    
+
                 } else { //Si es diferente
                     verificarCodigo(respuestaServidor.status);
                 }
-
 
             }
 
@@ -56,7 +55,7 @@ const useGuardarDiagnostico = () => {
 
         e.preventDefault();
         setCambiarEstado("Estado inicial");
-        
+
     }
 
     function verificarCodigo(codigo) {
@@ -107,7 +106,7 @@ const useGuardarDiagnostico = () => {
             setDatosOriginales("");
             history.push("/plataforma/diagnosticar");
 
-        }else if(cambiarEstado === "Correcto"){
+        } else if (cambiarEstado === "Correcto") {
             history.push("/plataforma/resultadodiagnostico");
 
         }
