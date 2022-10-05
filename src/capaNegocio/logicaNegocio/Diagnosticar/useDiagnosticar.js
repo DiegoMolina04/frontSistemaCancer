@@ -52,9 +52,11 @@ const useDiagnosticar = () => {
 
             if (respuestaServidor.code !== undefined) { //
                 setDatosGuardados(respuestaServidor.code);
+                setCambiarEstado("Error");
 
             } else if (respuestaServidor.status !== 200) { //Si es diferente
                 setDatosGuardados(respuestaServidor.status);
+                setCambiarEstado("Error");
 
             } else {
                 setDatosOriginales(respuestaServidor);
@@ -64,6 +66,7 @@ const useDiagnosticar = () => {
 
         } catch (error) {
             setDatosGuardados(504);
+            setCambiarEstado("Error");
 
         }
 
@@ -104,6 +107,7 @@ const useDiagnosticar = () => {
 
         } catch (error) {
             setDatosGuardados(504);
+            setCambiarEstado("Error");
 
         }
 
@@ -123,6 +127,7 @@ const useDiagnosticar = () => {
 
         } catch (error) {
             setDatosGuardados(504);
+            setCambiarEstado("Error");
         }
     }
 
@@ -150,7 +155,8 @@ const useDiagnosticar = () => {
             setComponentePregunta(<ComponentePreguntaDiagnostico pregunta={""} />);
             setComponenteMensajeGuardar("");
             setDatosOriginales("");
-        } else {
+            
+        } else if(cambiarEstado === "Error"){
 
             switch (datosGuardados) {
 
@@ -186,10 +192,12 @@ const useDiagnosticar = () => {
                     setComponenteMostrarMensaje(<MostrarMensaje mensaje={""} />);
                     break;
             }
+            setCambiarEstado("");
+            setDatosGuardados("");
 
         }
 
-    }, [cambiarEstado, datosGuardados])
+    }, [cambiarEstado])
 
     //Se ejecuta una sola vez al ser renderizado. Muestra mensaje inicial y botón para iniciar.
     useEffect(() => {
