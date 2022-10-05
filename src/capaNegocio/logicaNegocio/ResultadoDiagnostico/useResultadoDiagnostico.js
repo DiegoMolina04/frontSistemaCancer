@@ -44,8 +44,8 @@ const useResultadoDiagnostico = () => {
                     <tr>                
                         <th id="cedulaTablaFila-ResultadoDiagnostico" scope="row">{elemento.cedula}</th>
                         <td id="nombrePacienteTablaFila-ResultadoDiagnostico">{elemento.nombre}</td>
-                        <td id="resultadoTablaFila-ResultadoDiagnostico">{elemento.resultado}</td>
-            
+                        <td id="resultadoTablaFila-ResultadoDiagnostico">{elemento.resultado}</td>{/*elemento.resultado*/}{/*{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}*/}
+                        
                         <td id="modificarEliminarTablaFila-ResultadoDiagnostico">
             
                             <button id="botonModificar-ResultadoDiagnostico" type="button" class="btn btn-success" onClick={() => { setearDatos(elemento) }} title="Modificar resultado" data-bs-toggle="modal" data-bs-target="#modalModificar-ResultadoDiagnostico">

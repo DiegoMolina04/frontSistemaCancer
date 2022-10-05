@@ -134,7 +134,7 @@ function ResultadoDiagnostico() {
                                 <h5 class="modal-title" id="modalLabelModificar-ResultadoDiagnostico">
 
                                     <i class="fas fa-cog"></i>
-                                    <label >Modificar Resultado</label>
+                                    <label >Modificar Resultado Diagnóstico</label>
 
                                 </h5>
 
@@ -160,7 +160,7 @@ function ResultadoDiagnostico() {
 
                                 <div id="labelNombrePacienteModificarAdministrarResultado-ResultadoDiagnostico">
 
-                                    <label>Nombre paciente</label>
+                                    <label>Nombre del paciente</label>
 
                                 </div>
 

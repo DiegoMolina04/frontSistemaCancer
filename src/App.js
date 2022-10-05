@@ -15,6 +15,7 @@ import Diccionario from '../src/capaPresentacion/vista/Diccionario/Diccionario.j
 import AgregarDiccionario from "../src/capaPresentacion/vista/Diccionario/AgregarDiccionario/AgregarDiccionario.js";
 import AdministrarUsuarios from "../src/capaPresentacion/vista/AdministrarUsuarios/AdministrarUsuarios.js";
 import ResultadoDiagnostico from "./capaPresentacion/vista/ResultadoDiagnostico/ResultadoDiagnostico.js";
+import GuardarDiagnostico from "./capaPresentacion/vista/Diagnosticar/GuardarDiagnostico/GuardarDiagnostico.js";
 
 import { UserContext } from "../src/capaNegocio/context/UserContext.js";
 import { useMemo, useState } from "react";
@@ -144,8 +145,10 @@ function App() {
                             </div>
                         </div>
                       
-                    
+                    </Route>
 
+                    <Route exact path="/guardardiagnostico">
+                        <GuardarDiagnostico />
                     </Route>
 
                     <Route exact path="/plataforma/sintomas" >

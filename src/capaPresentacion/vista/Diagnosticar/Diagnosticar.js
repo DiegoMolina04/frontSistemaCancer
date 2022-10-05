@@ -1,8 +1,17 @@
+//Css
 import '../../css/Diagnosticar.css';
 import '../../css/fontawesome-free-5.15.4-web/css/all.css'
-import { Link } from "react-router-dom";
+//React
+import React, { useContext } from 'react';
+//Context
+import { UserContext } from "../../../../src/capaNegocio/context/UserContext.js";
+//Logica negocio
+import useDiagnosticar from '../../../capaNegocio/logicaNegocio/Diagnosticar/useDiagnosticar';
 
 function Diagnosticar() {
+
+    const { datosGuardados, setDatosGuardados } = useContext(UserContext); //Preguntas para mostrar en el textarea
+    const { componenteMostrarMensaje, componentePregunta, componenteMensajeGuardar, componenteBotones, handleChange } = useDiagnosticar();
 
     return ( 
 
@@ -20,7 +29,7 @@ function Diagnosticar() {
 
             <div id="cajalabelSintoma-Diagnosticar">
 
-                <label id="labelSintoma-Diagnosticar">Sintomas o señales</label>
+                <label id="labelSintoma-Diagnosticar">{componenteMostrarMensaje}</label>{/*Sintomas o señales*/}
 
             </div>
 
@@ -28,33 +37,29 @@ function Diagnosticar() {
 
             <div id="cajaRegla-Diagnosticar">
 
-                <label>1.¿La mitad de un lunar de nacimiento no es igual a la otra mitad?</label>
+                {/*<label>1.¿La mitad de un lunar de nacimiento no es igual a la otra mitad?</label>*/}
+                {componentePregunta}
 
             </div>
 
             <hr />
 
+            <div id="cajaMensajeGuardar-Diagnosticar">
+                <label>{componenteMensajeGuardar}</label>
+            </div>
+
+            <br />
+
             <div id="cajaBotones-Diagnosticar">
 
-                <div id="botonNegativo-Diagnosticar">
-                    
-                    <button type="button" class="btn btn-primary" title="No corresponde">
-                        <i class="fas fa-times"></i>
-                    </button>
-
-                </div>
-                
-                <div id="botonPositivo-Diagnosticar">
-
-                    <button type="button" class="btn btn-secondary" title="Si corresponde">
-                        <i class="fas fa-check"></i>
-                    </button>
-
-                </div>
-                
+                {componenteBotones}
 
             </div>
 
+        </div>
+
+        <div id="cajaTextarea-Diagnosticar">
+            <textarea class="form-control" value={datosGuardados} onChange={handleChange} placeholder="Preguntas seleccionadas..." readOnly></textarea>
         </div>
 
     </div>
