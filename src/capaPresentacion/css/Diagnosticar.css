@@ -135,7 +135,7 @@
 #cajaBotones-Diagnosticar #botonIniciar-Diagnosticar button {
     color: #64af54;
     border-color: #64af54;
-
+    
 }
 
 /*Propiedad hover del botón iniciar diagnóstico*/
@@ -149,7 +149,7 @@
 #cajaBotones-Diagnosticar #botonNegativo-Diagnosticar button {
     color: #c00303;
     border-color: #c00303;
-
+    width: 70px;
 }
 
 /*Propiedad hover del botón Negativo*/
@@ -163,7 +163,7 @@
 #cajaBotones-Diagnosticar #botonPositivo-Diagnosticar button {
     color: #64af54;
     border-color: #64af54;
-
+    width: 70px;
 }
 
 /*Propiedad hover del botón Positivo*/
