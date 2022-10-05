@@ -29,7 +29,7 @@ function Plataforma() {
 
         <div id="menu">
 
-          <p>Menu</p>
+          <p>Menú</p>
 
         </div>
 
@@ -52,7 +52,7 @@ function Plataforma() {
 
           <button type="button" className="btn btn-success" onClick={redireccionarSintomas} title="Ver reglas de diagnostico">
             <i class="fas fa-heartbeat"></i>
-            Sintomas
+            Síntomas
           </button>
 
           <button type="button" className="btn btn-success" onClick={redireccionarTiposDepresion} title="Ver tipos de depresión">
@@ -75,7 +75,7 @@ function Plataforma() {
         {/*Contenedor botón inicio perfil*/}
         <div id="botonesSuperior" className="btn-group" role="group" >
 
-          {/*Botón para agregar nuevo usuario*/}
+          {/*Botón para administrar usuarios*/}
           {componenteAdministrarUsuarios}
 
           <button id="inicio" type="button" className="btn btn-success" onClick={redireccionarDiagnosticar} title="Regresar a la pagina de inicio" >

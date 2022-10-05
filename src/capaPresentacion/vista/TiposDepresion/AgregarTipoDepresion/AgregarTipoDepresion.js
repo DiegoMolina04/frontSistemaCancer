@@ -62,7 +62,7 @@ function AgregarTipoDepresion() {
 
                     <br />
 
-                    <label>Sintomas a cumplir</label>
+                    <label>Síntomas a cumplir</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-clipboard-check"></i></div>
                         <input id="inputIngreseTipoDepresion-AgregarTipoDepresion" type="text" className="form-control" placeholder="Ingrese el número de sintomas a cumplir"

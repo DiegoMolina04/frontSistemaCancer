@@ -41,7 +41,7 @@ function Sintomas() {
 
                         <select class="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
 
-                            <option selected >Seleccione Categoria...</option>
+                            <option selected >Seleccione Categoría...</option>
                             <option value="sintoma">Sintoma</option>
 
                         </select>
@@ -81,7 +81,7 @@ function Sintomas() {
                     <table id="tabla-AdministrarSintomas" class="table table-bordered">
                         <thead> {/*Cabeceras*/}
                             <tr>
-                                <th id="sintomaTablaCabecera-AdministrarSintomas" scope="col" title="Sintomas ligados a tipo depresión">Sintoma</th>
+                                <th id="sintomaTablaCabecera-AdministrarSintomas" scope="col" title="Sintomas ligados a tipo depresión">Síntoma</th>
                                 <th id="tipoDepresionTablaCabecera-AdministrarSintomas" scope="col" title="Clasificación depresión">Tipo Depresión</th>
 
                                 {/*Columna para agregar o elimina*/}
@@ -112,7 +112,7 @@ function Sintomas() {
                             </div>
                             <div class="modal-body">
 
-                                <label>¿Realmente desea eliminar el sintoma "{datosOriginales.sintoma}" ?</label>
+                                <label>¿Realmente desea eliminar el síntoma "{datosOriginales.sintoma}" ?</label>
                                 <label id="labelRevertirCambios-AdministrarSintomas">Los cambios no se podrán revertir.</label>
 
                             </div>
@@ -137,7 +137,7 @@ function Sintomas() {
                                 <h5 class="modal-title" id="modalLabelModificar-AdministrarSintomas">
 
                                     <i class="fas fa-cog"></i>
-                                    <label >Modificar Sintomas</label>
+                                    <label >Modificar Síntomas</label>
 
                                 </h5>
                             </div>
@@ -145,7 +145,7 @@ function Sintomas() {
 
                                 <div id="labelSintomaModificar-AdministrarSintomas">
 
-                                    <label>Sintoma</label>
+                                    <label>Síntoma</label>
 
                                 </div>
 

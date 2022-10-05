@@ -40,7 +40,7 @@ function GuardarDiagnostico() {
                 <hr id="linea-GuardarDiagnostico" />
 
                 <div id="cajaGuardarDiagnostico-GuardarDiagnostico">
-                    <label id="labelGuardarDiagnostico-GuardarDiagnostico">Guardar Diagnostico</label>
+                    <label id="labelGuardarDiagnostico-GuardarDiagnostico">Guardar Diagnóstico</label>
                 </div>
 
                 <br />
@@ -53,7 +53,7 @@ function GuardarDiagnostico() {
 
                 <div id="formulario-GuardarDiagnostico">
 
-                    <label>Diagnostico resultante</label>
+                    <label>Diagnóstico resultante</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-notes-medical"></i></div>
                         <textarea class="form-control" placeholder="Diagnostico resultante" value={componenteDiagnostico} name="diagnostico" readOnly></textarea>

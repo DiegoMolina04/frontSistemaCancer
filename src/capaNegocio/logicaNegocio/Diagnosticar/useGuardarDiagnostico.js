@@ -45,7 +45,7 @@ const useGuardarDiagnostico = () => {
             }
 
         } catch (error) {
-            setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+            setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
 
         }
     };
@@ -67,15 +67,15 @@ const useGuardarDiagnostico = () => {
                 break;
 
             case 401: //No tiene token
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrio un error, debe iniciar sesión."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrió un error, debe iniciar sesión."} />);
                 break;
 
             case 403: //No autenicado
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrio un error, debe iniciar sesión."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrió un error, debe iniciar sesión."} />);
                 break;
 
             case 404:
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
                 break;
 
             case 408:
@@ -83,15 +83,15 @@ const useGuardarDiagnostico = () => {
                 break;
 
             case 410:
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Sucedio algo inesperado, vuelva a intentar."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Sucedió algo inesperado, vuelva a intentar."} />);
                 break;
 
             case 500:
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
                 break;
 
             case 504: //Error en el try catch
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
                 break;
 
             default: //Si no coincide con ninguno

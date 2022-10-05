@@ -362,15 +362,15 @@ const useSintomas = () => {
         switch (codigo) {
 
             case 200: //Se modifica correctamente
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Sintoma modificado correctamente, recargue para ver cambios."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Síntoma modificado correctamente, recargue para ver cambios."} />);
                 break;
 
             case 201: //Se crea correctamente
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Sintoma creado correctamente, recargue para ver cambios."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Síntoma creado correctamente, recargue para ver cambios."} />);
                 break;
 
             case 204: //Se elimina correctamente
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Sintoma eliminado correctamente, recargue para ver cambios."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Síntoma eliminado correctamente, recargue para ver cambios."} />);
                 break;
 
             case 206: //Tabla vacia
@@ -378,23 +378,23 @@ const useSintomas = () => {
                 break;
 
             case 207: //No se modifica nada
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se realizaron modificaciones en la sintoma."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se realizaron modificaciones en la síntoma."} />);
                 break;
 
             case 401: //No tiene token
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrio un error, debe iniciar sesión."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrió un error, debe iniciar sesión."} />);
                 break;
 
             case 403: //No autenicado
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrio un error, debe iniciar sesión."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrió un error, debe iniciar sesión."} />);
                 break;
 
             case 404: //No encontrado en filtro
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se a encontrado resultado, detalle más la busqueda."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se ha encontrado resultado, detalle más la búsqueda."} />);
                 break;
 
             case 406: //No se a encontrado correo para actualizar/eliminar
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se a encontrado el sintoma a actualizar."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se ha encontrado el síntoma a actualizar."} />);
                 break;
 
             case 408: //Campos vacios
@@ -402,11 +402,11 @@ const useSintomas = () => {
                 break;
 
             case 500: //Error de almacenamiento
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El sintoma ya esta registrada."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El síntoma ya está registrado."} />);
                 break;
 
             case 504: //Error en el try catch
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
                 break;
 
             default:
@@ -421,7 +421,7 @@ const useSintomas = () => {
         if (es_admin == true && token != undefined) { //Si es admin
 
             setComponenteBtnAgregarSintoma(<ComponenteAgregarSintoma />);
-            setComponenteNombreOpcion(<NombreOpcion opcion={"Administrar Sintomas"} />);
+            setComponenteNombreOpcion(<NombreOpcion opcion={"Administrar Síntomas"} />);
             setComponenteCabeceraModificarEliminar(<ColumnaModificarEliminar
                 id={"modificarEliminarTablaCabecera-AdministrarSintomas"}
                 title={"Modificar/Eliminar sintomas"} />);
@@ -429,7 +429,7 @@ const useSintomas = () => {
         } else { //Si no lo es
 
             setComponenteBtnAgregarSintoma("");
-            setComponenteNombreOpcion(<NombreOpcion opcion={"Sintomas"} />);
+            setComponenteNombreOpcion(<NombreOpcion opcion={"Síntomas"} />);
             setComponenteCabeceraModificarEliminar("");
 
         }

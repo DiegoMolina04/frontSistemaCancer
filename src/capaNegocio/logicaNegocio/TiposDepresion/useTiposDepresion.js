@@ -273,11 +273,11 @@ const useTiposDepresion = () => {
                 break;
 
             case 404: //No encontrado en filtro
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se a encontrado resultado, detalle más la busqueda."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se ha encontrado resultado, detalle más la búsqueda."} />);
                 break;
 
             case 406: //No se a encontrado correo para actualizar/eliminar
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se a encontrado el tipo depresión a actualizar."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se ha encontrado el tipo depresión a actualizar."} />);
                 break;
 
             case 408: //Campos vacios
@@ -285,7 +285,7 @@ const useTiposDepresion = () => {
                 break;
 
             case 500: //Error de almacenamiento
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El tipo depresión ya esta registrado."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El tipo depresión ya está registrado."} />);
                 break;
 
             case 504: //Error en el try catch

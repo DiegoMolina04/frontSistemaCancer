@@ -69,14 +69,6 @@ const usePlataforma = () => {
         history.push("/crearcontraseña");
     
     }
-
-    useEffect(() => {
-        
-        if(cambiarEstado === "Reiniciar modal"){
-            console.log("DATOS GUARDADOS");
-            console.log(datosGuardados);
-        }
-    }, [cambiarEstado])
     
     useEffect(() => {
 

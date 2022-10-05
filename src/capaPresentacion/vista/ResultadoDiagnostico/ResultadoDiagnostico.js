@@ -40,7 +40,7 @@ function ResultadoDiagnostico() {
 
                         <select class="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
 
-                            <option selected >Seleccione Categoria...</option>
+                            <option selected >Seleccione Categoría...</option>
                             <option value="cedula">Cedula Paciente</option>
                             <option value="nombre">Nombre Paciente</option>
 
@@ -74,7 +74,7 @@ function ResultadoDiagnostico() {
                     <table id="tabla-ResultadoDiagnostico" class="table table-bordered">
                         <thead> {/*Cabeceras*/}
                             <tr>
-                                <th id="cedulaTablaCabecera-ResultadoDiagnostico" scope="col" title="Cedula del paciente">Cedula Paciente</th>
+                                <th id="cedulaTablaCabecera-ResultadoDiagnostico" scope="col" title="Cedula del paciente">Cédula Paciente</th>
                                 <th id="nombrePacienteTablaCabecera-ResultadoDiagnostico" scope="col" title="Nombre del paciente">Nombre Paciente</th>
                                 <th id="resultadoTablaCabecera-ResultadoDiagnostico" scope="col" title="Resultado guardado">Resultado</th>
 
@@ -144,7 +144,7 @@ function ResultadoDiagnostico() {
                                 <br />
                                 <div id="labelCedulaModificarAdministrarResultado-ResultadoDiagnostico">
 
-                                    <label>Cedula del paciente</label>
+                                    <label>Cédula del paciente</label>
 
                                 </div>
 

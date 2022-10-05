@@ -40,7 +40,7 @@ function Preguntas() {
 
                         <select class="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
 
-                            <option selected >Seleccione Categoria...</option>
+                            <option selected >Seleccione Categoría...</option>
                             <option value="pregunta">Pregunta</option>
 
                         </select>
@@ -81,7 +81,7 @@ function Preguntas() {
                         <thead> {/*Cabeceras*/}
                             <tr>
                                 <th id="preguntaTablaCabecera-AdministrarPreguntas" scope="col" title="Preguntas del sistema">Pregunta</th>
-                                <th id="sintomaTablaCabecera-AdministrarPreguntas" scope="col" title="Sintomas ligados a preguntas">Sintoma</th>
+                                <th id="sintomaTablaCabecera-AdministrarPreguntas" scope="col" title="Sintomas ligados a preguntas">Síntoma</th>
 
                                 {/*Columna para agregar o elimina*/}
                                 {componenteCabeceraModificarEliminar}
@@ -180,11 +180,12 @@ function Preguntas() {
                                         <button id="botonRecargarModificar-AdministrarPreguntas" type='button' onClick={(e) => listarElementos(e, "sintomas")} className="btn btn-success" title='Recargar tabla'><i class="fas fa-redo"></i></button>
 
                                     </div>
+
                                     <table id="tablaSintomas-AdministrarPreguntas" class="table table-bordered">
 
                                         <thead> {/*Cabeceras*/}
                                             <tr>
-                                                <th id="sintomaTablaCabeceraModificar-AdministrarPreguntas" scope="col" title="Sintomas">Sintoma</th>
+                                                <th id="sintomaTablaCabeceraModificar-AdministrarPreguntas" scope="col" title="Sintomas">Síntoma</th>
                                                 <th id="seleccionTablaCabeceraModificar-AdministrarPreguntas" scope="col" title="Selecciones">Elegir</th>
 
                                             </tr>

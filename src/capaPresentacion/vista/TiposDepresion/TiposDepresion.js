@@ -40,7 +40,7 @@ function TiposDepresion() {
 
                         <select class="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
 
-                            <option selected >Seleccione Categoria...</option>
+                            <option selected >Seleccione Categoría...</option>
                             <option value="tipoDepresion">Tipo Depresión</option>
 
                         </select>
@@ -81,7 +81,7 @@ function TiposDepresion() {
                         <thead> {/*Cabeceras*/}
                             <tr>
                                 <th id="tipoDepresionTablaCabecera-AdministrarTiposDepresion" scope="col" title="Tipos de depresión">Tipo Depresión</th>
-                                <th id="cantidadSintomasTablaCabecera-AdministrarTiposDepresion" scope="col" title="Cantidad de sintomas">Sintomas A Cumplir</th>
+                                <th id="cantidadSintomasTablaCabecera-AdministrarTiposDepresion" scope="col" title="Cantidad de sintomas">Síntomas A Cumplir</th>
 
                                 {/*Columna para agregar o elimina*/}
                                 {componenteCabeceraModificarEliminar}
@@ -150,7 +150,7 @@ function TiposDepresion() {
 
                                 <div className="input-group">
                                     <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-notes-medical"></i></div>
-                                    <input id="" type="text" className="form-control" value={datosGuardados.tipo_depresion} placeholder="Ingrese el tipo de depresión" onChange={handleInputChangeModificar} name="tipo_depresion" title="Sintoma a modificar" />
+                                    <input id="" type="text" className="form-control" value={datosGuardados.tipo_depresion} placeholder="Ingrese el tipo de depresión" onChange={handleInputChangeModificar} name="tipo_depresion" title="Tipo depresión" />
 
                                 </div>
 

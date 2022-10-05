@@ -264,23 +264,23 @@ const useResultadoDiagnostico = () => {
                 break;
 
             case 400: //Error de almacenamiento
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
                 break;
 
             case 401: //No tiene token
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrio un error, debe iniciar sesión."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrió un error, debe iniciar sesión."} />);
                 break;
 
             case 403: //No autenicado
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrio un error, debe iniciar sesión."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrió un error, debe iniciar sesión."} />);
                 break;
 
             case 404: //No encontrado en filtro
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se a encontrado resultado, detalle más la busqueda."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se ha encontrado resultado, detalle más la búsqueda."} />);
                 break;
 
             case 406: //No se a encontrado correo para actualizar/eliminar
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se a encontrado el resultado a actualizar."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se ha encontrado el resultado a actualizar."} />);
                 break;
 
             case 408: //Campos vacios
@@ -288,11 +288,11 @@ const useResultadoDiagnostico = () => {
                 break;
 
             case 500: //Error de almacenamiento
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
                 break;
 
             case 504: //Error en el try catch
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
                 break;
 
             default:

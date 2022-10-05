@@ -40,8 +40,8 @@ function Diccionario() {
 
                         <select class="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
 
-                            <option selected >Seleccione Categoria...</option>
-                            <option value="termino">Termino</option>
+                            <option selected >Seleccione Categoría...</option>
+                            <option value="termino">Término</option>
                             <option value="descripcion">Descripción</option>
 
                         </select>
@@ -81,7 +81,7 @@ function Diccionario() {
                     <table id="tabla-AdministrarTerminos" class="table table-bordered">
                         <thead> {/*Cabeceras*/}
                             <tr>
-                                <th id="terminoTablaCabecera-AdministrarTerminos" scope="col" title="Palabras">Termino</th>
+                                <th id="terminoTablaCabecera-AdministrarTerminos" scope="col" title="Palabras">Término</th>
                                 <th id="descripcionTablaCabecera-AdministrarTerminos" scope="col" title="Descripción del termino">Descripción</th>
 
                                 {/*Columna para agregar o elimina*/}
@@ -112,7 +112,7 @@ function Diccionario() {
                             </div>
                             <div class="modal-body">
 
-                                <label>¿Realmente desea eliminar el termino "{datosGuardados.termino}" ?</label>
+                                <label>¿Realmente desea eliminar el término "{datosGuardados.termino}" ?</label>
                                 <label id="labelRevertirCambios-AdministrarTerminos">Los cambios no se podrán revertir.</label>
 
                             </div>
@@ -137,7 +137,7 @@ function Diccionario() {
                                 <h5 class="modal-title" id="modalLabelModificar-AdministrarTerminos">
 
                                     <i class="fas fa-cog"></i>
-                                    <label >Modificar Termino</label>
+                                    <label >Modificar Término</label>
 
                                 </h5>
                             </div>
@@ -145,13 +145,13 @@ function Diccionario() {
 
                                 <div id="labelTerminoModificar-AdministrarTerminos">
 
-                                    <label>Termino</label>
+                                    <label>Término</label>
 
                                 </div>
 
                                 <div className="input-group">
                                     <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-address-card"></i></div>
-                                    <input id="" type="text" className="form-control" value={datosGuardados.termino} placeholder="Ingrese el termino" onChange={handleInputChangeModificar} name="termino" title="Termino a modificar" />
+                                    <input id="" type="text" className="form-control" value={datosGuardados.termino} placeholder="Ingrese el término" onChange={handleInputChangeModificar} name="termino" title="Termino a modificar" />
 
                                 </div>
 
@@ -165,7 +165,7 @@ function Diccionario() {
 
                                 <div className="input-group">
                                     <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div>
-                                    <textarea class="form-control" placeholder="Ingrese la descripción del termino" value={datosGuardados.descripcion} onChange={handleInputChangeModificar} name="descripcion" title="Descripción del termino"></textarea>
+                                    <textarea class="form-control" placeholder="Ingrese la descripción del termino" value={datosGuardados.descripcion} onChange={handleInputChangeModificar} name="descripcion" title="Descripción del término"></textarea>
                                 </div>
 
                                 <br />

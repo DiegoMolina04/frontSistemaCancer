@@ -27,7 +27,7 @@ function AgregarSintomas() {
 
         <div id="fondo-AgregarSintomas">
 
-            {/*Contenedor de agregar usuario*/}
+            {/*Contenedor de agregar sintomas*/}
             <div id="caja-AgregarSintomas">
 
                 {/*Contenedor del logo*/}
@@ -42,7 +42,7 @@ function AgregarSintomas() {
                 <hr id="linea-AgregarSintomas" />
 
                 <div id="cajaNuevoSintoma-AgregarSintomas">
-                    <label id="labelNuevoSintoma-AgregarSintomas">Nuevo sintoma</label>
+                    <label id="labelNuevoSintoma-AgregarSintomas">Nuevo síntoma</label>
                 </div>
 
                 <br />
@@ -56,7 +56,7 @@ function AgregarSintomas() {
                 <div id="formulario-AgregarSintomas">
 
                     {/*Sección ingrese cedula*/}
-                    <label>Ingrese el sintoma</label>
+                    <label>Ingrese el síntoma</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-heartbeat"></i></div>
                         <input id="inputIngreseSintoma-AgregarSintomas" type="text" className="form-control" placeholder="Ingrese el sintoma" onChange={handleInputChange} name="sintoma" required />

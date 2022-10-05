@@ -56,11 +56,11 @@ function AgregarUsuario() {
                     <div id="formulario-AgregarUsuario">
 
                         {/*Sección ingrese cedula*/}
-                        <label>Ingrese cedula de usuario</label>
+                        <label>Ingrese cédula de usuario</label>
                         <div className="input-group">
 
                             <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-address-card"></i></div>
-                            <input id="cedula-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese cedula de usuario" title="Digite su numero de cedula" onChange={handleInputChange}
+                            <input id="cedula-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese cédula de usuario" title="Digite su numero de cedula" onChange={handleInputChange}
                                 onKeyDown={verificarNumeros} name="cedula" required />
                         </div>
 

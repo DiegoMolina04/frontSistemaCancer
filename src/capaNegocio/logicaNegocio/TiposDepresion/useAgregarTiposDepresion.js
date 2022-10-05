@@ -43,7 +43,7 @@ const useAgregarTiposDepresion = () => {
             }
 
         } catch (error) {
-            setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+            setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
 
         }
     };
@@ -73,7 +73,7 @@ const useAgregarTiposDepresion = () => {
                 break;
 
             case 404:
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El tipo depresión ingresado ya esta registrado."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El tipo depresión ingresado ya está registrado."} />);
                 break;
 
             case 408:
@@ -85,7 +85,7 @@ const useAgregarTiposDepresion = () => {
                 break;
 
             case 500:
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El tipo depresión ingresado ya esta registrado."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El tipo depresión ingresado ya está registrado."} />);
                 break;
 
             case 504: //Error en el try catch

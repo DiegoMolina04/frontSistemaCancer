@@ -52,7 +52,7 @@ const useCrearContraseña = () => {
 
                 } else if (respuestaServidor.code == 500 || respuestaServidor.code == 404 || respuestaServidor.code == 400) {
 
-                    setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+                    setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
 
                 }
 
@@ -65,7 +65,7 @@ const useCrearContraseña = () => {
 
             }
         } catch (error) {
-            setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+            setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
 
         }
     };

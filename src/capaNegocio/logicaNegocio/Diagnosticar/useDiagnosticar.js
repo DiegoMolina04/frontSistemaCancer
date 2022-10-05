@@ -159,27 +159,27 @@ const useDiagnosticar = () => {
                     break;
 
                 case 400: //Error de almacenamiento
-                    setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+                    setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
                     break;
 
                 case 401: //No tiene token
-                    setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrio un error, debe iniciar sesión."} />);
+                    setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrió un error, debe iniciar sesión."} />);
                     break;
 
                 case 403: //No autenticado
-                    setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrio un error, debe iniciar sesión."} />);
+                    setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrió un error, debe iniciar sesión."} />);
                     break;
 
                 case 404: //Error no encontrado
-                    setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se a encontrado preguntas para diagnóstico."} />);
+                    setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se ha encontrado preguntas para diagnóstico."} />);
                     break;
 
                 case 500: //Error de almacenamiento
-                    setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+                    setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
                     break;
 
                 case 504: //Error en el try catch
-                    setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+                    setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
                     break;
 
                 default:

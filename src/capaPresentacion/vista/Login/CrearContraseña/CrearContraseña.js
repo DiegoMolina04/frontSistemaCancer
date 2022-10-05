@@ -23,7 +23,6 @@ function CrearContraseña() {
 
         <div id="fondo-CrearContraseña">
 
-            {/*Contenedor de agregar usuario*/}
             <div id="caja-CrearContraseña">
 
                 {/*Contenedor del logo*/}

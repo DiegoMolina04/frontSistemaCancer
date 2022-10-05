@@ -263,15 +263,15 @@ const useAdministrarUsuarios = () => {
         switch (codigo) {
 
             case 200: //Se modifica correctamente
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Usuario modificado correctamente, recargue para ver cambios."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Usuario modificado correctamente, recargué para ver cambios."} />);
                 break;
 
             case 201: //Se crea correctamente
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Usuario creado correctamente, recargue para ver cambios."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Usuario creado correctamente, recargué para ver cambios."} />);
                 break;
 
             case 204: //Se elimina correctamente
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Usuario eliminado correctamente, recargue para ver cambios."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Usuario eliminado correctamente, recargué para ver cambios."} />);
                 break;
 
             case 206: //Tabla vacia
@@ -279,23 +279,23 @@ const useAdministrarUsuarios = () => {
                 break;
 
             case 400: //Error de almacenamiento
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El correo/cedula ya esta registrado."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El correo/cédula ya está registrado."} />);
                 break;
 
             case 401: //No tiene token
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrio un error, debe iniciar sesión."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrió un error, debe iniciar sesión."} />);
                 break;
 
             case 403: //No autenicado
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrio un error, debe iniciar sesión."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrió un error, debe iniciar sesión."} />);
                 break;
 
             case 404: //No encontrado en filtro
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se a encontrado resultado, detalle más la busqueda."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se ha encontrado resultado, detalle más la búsqueda."} />);
                 break;
 
             case 406: //No se a encontrado correo para actualizar/eliminar
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se a encontrado el correo a actualizar."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se ha encontrado el correo a actualizar."} />);
                 break;
 
             case 408: //Campos vacios
@@ -303,11 +303,11 @@ const useAdministrarUsuarios = () => {
                 break;
 
             case 500: //Error de almacenamiento
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El correo/cedula ya esta registrado."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El correo/cédula ya está registrado."} />);
                 break;
 
             case 504: //Error en el try catch
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
                 break;
 
             default:

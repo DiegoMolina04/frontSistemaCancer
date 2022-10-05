@@ -253,15 +253,15 @@ const useDiccionario = () => {
         switch (codigo) {
 
             case 200: //Se modifica correctamente
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Termino modificado correctamente, recargue para ver cambios."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Término modificado correctamente, recargue para ver cambios."} />);
                 break;
 
             case 201: //Se crea correctamente
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Termino creado correctamente, recargue para ver cambios."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Término creado correctamente, recargue para ver cambios."} />);
                 break;
 
             case 204: //Se elimina correctamente
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Termino eliminado correctamente, recargue para ver cambios."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Término eliminado correctamente, recargue para ver cambios."} />);
                 break;
 
             case 206: //Tabla vacia
@@ -269,19 +269,19 @@ const useDiccionario = () => {
                 break;
 
             case 401: //No tiene token
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrio un error, debe iniciar sesión."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrió un error, debe iniciar sesión."} />);
                 break;
 
             case 403: //No autenicado
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrio un error, debe iniciar sesión."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ocurrió un error, debe iniciar sesión."} />);
                 break;
 
             case 404: //No encontrado en filtro
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se a encontrado resultado, detalle más la busqueda."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se ha encontrado resultado, detalle más la búsqueda."} />);
                 break;
 
             case 406: //No se a encontrado correo para actualizar/eliminar
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se a encontrado el tipo depresión a actualizar."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"No se ha encontrado el tipo depresión a actualizar."} />);
                 break;
 
             case 408: //Campos vacios
@@ -289,11 +289,11 @@ const useDiccionario = () => {
                 break;
 
             case 500: //Error de almacenamiento
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El termino ya esta registrado."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"El término ya está registrado."} />);
                 break;
 
             case 504: //Error en el try catch
-                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error a sucedido, regrese e intente de nuevo."} />);
+                setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
                 break;
 
             default:
@@ -307,14 +307,14 @@ const useDiccionario = () => {
     useEffect(() => {
         if (es_admin == true && token != undefined) { //Si es admin
             setComponenteBtnAgregarTermino(<ComponenteAgregarDiccionario />);
-            setComponenteNombreOpcion(<NombreOpcion opcion={"Administrar Terminos"} />);
+            setComponenteNombreOpcion(<NombreOpcion opcion={"Administrar Términos"} />);
             setComponenteCabeceraModificarEliminar(<ColumnaModificarEliminar
                 id={"modificarEliminarTablaCabecera-AdministrarTerminos"}
                 title={"Modificar/Eliminar terminos"} />);
 
         } else { //Si no lo es
             setComponenteBtnAgregarTermino("");
-            setComponenteNombreOpcion(<NombreOpcion opcion={"Terminos"} />);
+            setComponenteNombreOpcion(<NombreOpcion opcion={"Términos"} />);
             setComponenteCabeceraModificarEliminar("");
         }
     }, [])

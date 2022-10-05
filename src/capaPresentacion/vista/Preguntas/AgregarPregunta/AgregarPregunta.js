@@ -53,7 +53,6 @@ function AgregarPregunta() {
 
                 <div id="formulario-AgregarPregunta">
 
-                    {/*Sección ingrese cedula*/}
                     <label>Ingrese la pregunta</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-question"></i></div>
@@ -62,8 +61,7 @@ function AgregarPregunta() {
 
                     <br />
 
-                    {/*Sección ingrese nombre*/}
-                    <label>Seleccione el/los sintomas</label>
+                    <label>Seleccione el/los síntomas</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-book"></i></div>
                         <textarea class="form-control" placeholder="Seleccione los sintomas" readonly="readonly" value={datosTablaModificar} onChange={handleChange}></textarea>
@@ -81,7 +79,7 @@ function AgregarPregunta() {
 
                             <thead> {/*Cabeceras*/}
                                 <tr>
-                                    <th id="sintomaTablaCabecera-AgregarPreguntas" scope="col" title="Sintomas">Sintoma</th>
+                                    <th id="sintomaTablaCabecera-AgregarPreguntas" scope="col" title="Sintomas">Síntoma</th>
                                     <th id="seleccionTablaCabecera-AgregarPreguntas" scope="col" title="Selecciones">Elegir</th>
 
                                 </tr>

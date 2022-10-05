@@ -26,7 +26,7 @@ function AgregarDiccionario() {
 
         <div id="fondo-AgregarTerminos">
 
-            {/*Contenedor de agregar usuario*/}
+            {/*Contenedor de agregar termino*/}
             <div id="caja-AgregarTerminos">
 
                 {/*Contenedor del logo*/}
@@ -41,7 +41,7 @@ function AgregarDiccionario() {
                 <hr id="linea-AgregarTerminos" />
 
                 <div id="cajaNuevoTermino-AgregarTerminos">
-                    <label id="labelNuevoTermino-AgregarTerminos">Nuevo termino</label>
+                    <label id="labelNuevoTermino-AgregarTerminos">Nuevo término</label>
                 </div>
 
                 <br />
@@ -54,20 +54,18 @@ function AgregarDiccionario() {
 
                 <div id="formulario-AgregarTerminos">
 
-                    {/*Sección ingrese cedula*/}
-                    <label>Ingrese el termino</label>
+                    <label>Ingrese el término</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-question"></i></div>
-                        <input id="inputIngreseTermino-AgregarTerminos" type="text" className="form-control" placeholder="Ingrese el termino" onChange={handleInputChange} name="termino" />
+                        <input id="inputIngreseTermino-AgregarTerminos" type="text" className="form-control" placeholder="Ingrese el término" onChange={handleInputChange} name="termino" />
                     </div>
 
                     <br />
 
-                    {/*Sección ingrese nombre*/}
                     <label>Descripción</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-book"></i></div>
-                        <textarea class="form-control" placeholder="Ingrese la descripción del termino" onChange={handleInputChange} name="descripcion"></textarea>
+                        <textarea class="form-control" placeholder="Ingrese la descripción del término" onChange={handleInputChange} name="descripcion"></textarea>
                     </div>
 
                     <br />

@@ -7,12 +7,12 @@ function ComponenteAgregarSintoma() {
     return (
 
         <div><label id="labelAgregarSintoma-AdministrarSintomas">
-            ¿Desea agregar un nuevo sintoma?
+            ¿Desea agregar un nuevo síntoma?
         </label>
 
             <button id="agregarSintoma-AdministrarSintomas" type="button" className="btn btn-success" onClick={redireccionarAgregarSintoma} title="Agregar nuevo sintoma">
                 <i class="fas fa-plus-circle"></i>
-                Agregar Sintoma
+                Agregar Síntoma
             </button>
 
         </div>

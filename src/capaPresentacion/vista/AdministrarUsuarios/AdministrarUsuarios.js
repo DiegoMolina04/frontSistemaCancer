@@ -40,7 +40,7 @@ function AdministrarUsuarios() {
 
                         <select class="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
 
-                            <option selected >Seleccione Categoria...</option>
+                            <option selected >Seleccione Categoría...</option>
                             <option value="correo">Correo</option>
                             <option value="cuenta">Tipo Cuenta</option>
 
@@ -80,7 +80,7 @@ function AdministrarUsuarios() {
                     <table id="tabla-AdministrarUsuarios" class="table table-bordered">
                         <thead> {/*Cabeceras*/}
                             <tr>
-                                <th id="cedulaTablaCabecera-AdministrarUsuarios" scope="col" title="Cedula del usuario">Cedula</th>
+                                <th id="cedulaTablaCabecera-AdministrarUsuarios" scope="col" title="Cedula del usuario">Cédula</th>
                                 <th id="nombreUsuarioTablaCabecera-AdministrarUsuarios" scope="col" title="Nombre del usuario">Nombre Usuario</th>
                                 <th id="correoTablaCabecera-AdministrarUsuarios" scope="col" title="Correo del usuario">Correo</th>
                                 <th id="rolTablaCabecera-AdministrarUsuarios" scope="col" title="Tipo de cuenta de usuario">Tipo De Cuenta</th>
@@ -150,13 +150,13 @@ function AdministrarUsuarios() {
                                 <br />
                                 <div id="labelCedulaAgregarAdministrarUsuarios-AdministrarUsuarios">
 
-                                    <label>Cedula del usuario</label>
+                                    <label>Cédula del usuario</label>
 
                                 </div>
 
                                 <div className="input-group">
                                     <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-address-card"></i></div>
-                                    <input id="" type="text" className="form-control" value={datosGuardados.cedula} placeholder="Ingrese la cedula del usuario" onChange={handleInputChangeModificar}
+                                    <input id="" type="text" className="form-control" value={datosGuardados.cedula} placeholder="Ingrese la cédula del usuario" onChange={handleInputChangeModificar}
                                         onKeyDown={verificarNumeros} name="cedula" title="Ingrese cedula" />
 
 
