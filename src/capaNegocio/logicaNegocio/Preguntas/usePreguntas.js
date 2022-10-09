@@ -343,7 +343,7 @@ const usePreguntas = () => {
     function reiniciarModal() { //Reinicia el modal.
         setComponenteListarSintomas();
         setGuardarID("");
-
+        setDatosTablaModificar("");
     }
 
     //Muestra mensajes informativos al usuario y cambia estado

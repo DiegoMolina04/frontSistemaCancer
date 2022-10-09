@@ -340,6 +340,7 @@ const useSintomas = () => {
     }
 
     function reiniciarModal() { //Reinicia el modal.
+        setDatosTablaModificar("");
         setComponenteListarTiposDepresion();
         setGuardarID("");
 
