@@ -54,7 +54,6 @@ function Preguntas() {
                     </form>
                 </div>
 
-
                 <div id="cajaAgregarAdministrarPreguntas-AdministrarPreguntas">
 
                     {componenteAgregarPregunta}
@@ -150,8 +149,7 @@ function Preguntas() {
 
                                 <div className="input-group">
                                     <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-address-card"></i></div>
-                                    <input id="" type="text" className="form-control" value={datosGuardados.pregunta} placeholder="Ingrese la pregunta" onChange={handleInputChangeModificar} name="pregunta" title="Pregunta a modificar" />
-
+                                    <textarea class="form-control" placeholder="Ingrese la pregunta" value={datosGuardados.pregunta} onChange={handleInputChangeModificar} name="pregunta" title="Pregunta a modificar"></textarea>
                                 </div>
 
                                 <br />

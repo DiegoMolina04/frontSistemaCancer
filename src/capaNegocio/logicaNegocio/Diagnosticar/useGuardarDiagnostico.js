@@ -26,12 +26,12 @@ const useGuardarDiagnostico = () => {
 
         try {
             e.preventDefault();
-            if (datos.cedula == "" || datos.nombre == "") { //Campos vacios
+            if (datos.cedula == "" || datos.nombre == "" || datos.observaciones == "") { //Campos vacios
                 verificarCodigo(408);
 
             } else {
 
-                let arrayDatos = { 'cedula': datos.cedula, 'nombre': datos.nombre, 'resultado': datosOriginales };
+                let arrayDatos = { 'cedula': datos.cedula, 'nombre': datos.nombre, 'resultado': datosOriginales, 'observaciones': datos.observaciones };
                 let url = "https://secure-brushlands-86892.herokuapp.com/v1/diagnosis/create-one";
                 respuestaServidor = await postBodyAutorization(arrayDatos, token, url);
 

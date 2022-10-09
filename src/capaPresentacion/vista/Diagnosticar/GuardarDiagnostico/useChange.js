@@ -6,7 +6,7 @@ import { UserContext } from '../../../../capaNegocio/context/UserContext';
 const useChange = () => {
 
     //Estados para guardar datos
-    const [datos, setDatos] = useState({ cedula: '', nombre: '' });
+    const [datos, setDatos] = useState({ cedula: '', nombre: '', observaciones: '' });
 
     //Context
     const { datosGuardados, setDatosGuardados } = useContext(UserContext);

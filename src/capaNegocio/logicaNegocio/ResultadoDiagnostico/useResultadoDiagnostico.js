@@ -10,6 +10,7 @@ import MostrarMensaje from '../../../capaPresentacion/vista/ComponentesComunes/M
 import ComponenteTabla from '../../../capaPresentacion/vista/ComponentesComunes/ComponenteTabla.js';
 import NombreOpcion from '../../../capaPresentacion/vista/ComponentesComunes/NombreOpcion.js';
 import ColumnaModificarEliminar from '../../../capaPresentacion/vista/ComponentesComunes/ColumnaModificarEliminar.js';
+import ComponenteGenerarPDF from '../../../capaPresentacion/vista/ResultadoDiagnostico/ComponenteGenerarPDF.js';
 
 const useResultadoDiagnostico = () => {
 
@@ -26,6 +27,7 @@ const useResultadoDiagnostico = () => {
     const [componenteListarResultados, setComponenteListarResultados] = useState([]); //Guardar resultados
     const [componenteNombreOpcion, setComponenteNombreOpcion] = useState(""); //Nombre opcion
     const [componenteCabeceraModificarEliminar, setComponenteCabeceraModificarEliminar] = useState(""); //Columna modificar/eliminar
+    const [componenteGenerarPDF, setComponenteGenerarPDF] = useState(""); //Muestra el botón PDF
 
     //Estado
     const [codigo, setCodigo] = useState(null); //Codigo respuesta
@@ -43,6 +45,8 @@ const useResultadoDiagnostico = () => {
                         <th id="cedulaTablaFila-ResultadoDiagnostico" scope="row">{elemento.cedula}</th>
                         <td id="nombrePacienteTablaFila-ResultadoDiagnostico">{elemento.nombre}</td>
                         <td id="resultadoTablaFila-ResultadoDiagnostico">{elemento.resultado}</td>
+                        <td id="observacionesTablaFila-ResultadoDiagnostico">{elemento.observaciones}</td>
+                        <td id="fechaTablaFila-ResultadoDiagnostico">{elemento.fecha_creacion}</td>
 
                         <td id="modificarEliminarTablaFila-ResultadoDiagnostico">
 
@@ -63,6 +67,14 @@ const useResultadoDiagnostico = () => {
                         <th id="cedulaTablaFila-ResultadoDiagnostico" scope="row">{elemento.cedula}</th>
                         <td id="nombrePacienteTablaFila-ResultadoDiagnostico">{elemento.nombre}</td>
                         <td id="resultadoTablaFila-ResultadoDiagnostico">{elemento.resultado}</td>
+                        <td id="observacionesTablaFila-ResultadoDiagnostico">{elemento.observaciones}</td>
+                        <td id="fechaTablaFila-ResultadoDiagnostico">{elemento.fecha_creacion}</td>
+
+                        <td id="modificarEliminarTablaFila-ResultadoDiagnostico">
+                            <button id="botonModificar-ResultadoDiagnostico" type="button" class="btn btn-success" onClick={() => { setearDatos(elemento) }} title="Modificar resultado" data-bs-toggle="modal" data-bs-target="#modalModificar-ResultadoDiagnostico">
+                                <i id="iconoModificar-ResultadoDiagnostico" class="fas fa-cog"></i>
+                            </button>
+                        </td>
                     </tr>
                 ))
             }
@@ -88,6 +100,7 @@ const useResultadoDiagnostico = () => {
                 if (datosExtraidos.length > 0) { //Si hay algún resultado
 
                     setComponenteListarResultados(<ComponenteTabla tabla={cargarElementosTabla(datosExtraidos, funcion, es_admin)} />);
+                    setComponenteGenerarPDF(<ComponenteGenerarPDF />);
 
                 } else {
 
@@ -174,7 +187,7 @@ const useResultadoDiagnostico = () => {
             setDatosGuardados("");
 
             //Se valida que no existan campos vacios.
-            if (datosModificados.cedula == "" || datosModificados.nombre == "") {
+            if (datosModificados.cedula == "" || datosModificados.nombre == "" || datosModificados.observaciones == "") {
                 setCodigo(408);
             } else {
 
@@ -182,6 +195,7 @@ const useResultadoDiagnostico = () => {
                 se setean los datos originales*/
                 let varCedula = datosModificados.cedula;
                 let varNombre = datosModificados.nombre;
+                let varObservaciones = datosModificados.observaciones;
 
                 if (varCedula == undefined) {
                     varCedula = datosOriginales.cedula;
@@ -191,10 +205,15 @@ const useResultadoDiagnostico = () => {
                     varNombre = datosOriginales.nombre;
                 }
 
+                if (varObservaciones == undefined) {
+                    varObservaciones = datosOriginales.observaciones;
+                }
+
                 //Se crea el array con los datos
                 let arrayDatos = {
                     cedula: varCedula,
                     nombre: varNombre,
+                    observaciones: varObservaciones
                 };
 
                 let url = "https://secure-brushlands-86892.herokuapp.com/v1/diagnosis/" + datosOriginales.id + "/update-one";
@@ -310,15 +329,20 @@ const useResultadoDiagnostico = () => {
             setComponenteCabeceraModificarEliminar(<ColumnaModificarEliminar
                 id={"modificarEliminarTablaCabecera-ResultadoDiagnostico"}
                 title={"Modificar/Eliminar el resultado"} />);
+            setComponenteGenerarPDF("");
         } else {
 
             setComponenteNombreOpcion(<NombreOpcion opcion={"Resultados"} />);
-            setComponenteCabeceraModificarEliminar("");
+            setComponenteCabeceraModificarEliminar(<th 
+                id="modificarEliminarTablaCabecera-ResultadoDiagnostico" 
+                scope="col" 
+                title="Modificar el resultado">Modificar</th>);
+            setComponenteGenerarPDF("");
         }
     }, [])
 
 
-    return { listarResultados, setearDatos, componenteListarResultados, componenteNombreOpcion, componenteCabeceraModificarEliminar, componenteMostrarMensaje, modificarResultados, eliminarResultados };
+    return { listarResultados, setearDatos, componenteListarResultados, componenteNombreOpcion, componenteCabeceraModificarEliminar, componenteMostrarMensaje, componenteGenerarPDF, modificarResultados, eliminarResultados };
 };
 
 export default useResultadoDiagnostico;

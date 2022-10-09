@@ -20,7 +20,7 @@ function ResultadoDiagnostico() {
     //Capturador datos ingresados
     const { handleInputChangeModificar, handleFiltrarChange } = useChange();
     //Logica negocio
-    const { listarResultados, componenteListarResultados, componenteNombreOpcion, componenteCabeceraModificarEliminar, componenteMostrarMensaje, modificarResultados, eliminarResultados } = useResultadoDiagnostico();
+    const { listarResultados, componenteListarResultados, componenteNombreOpcion, componenteCabeceraModificarEliminar, componenteMostrarMensaje, componenteGenerarPDF, modificarResultados, eliminarResultados } = useResultadoDiagnostico();
 
     return (
 
@@ -55,6 +55,12 @@ function ResultadoDiagnostico() {
                     </form>
                 </div>
 
+                <div id="cajaGenerarPDF-ResultadoDiagnostico">
+
+                    {componenteGenerarPDF}
+
+                </div>
+
             </div>
 
             <form id="formato" onSubmit={(e) => listarResultados(e, "listar")}>
@@ -77,6 +83,8 @@ function ResultadoDiagnostico() {
                                 <th id="cedulaTablaCabecera-ResultadoDiagnostico" scope="col" title="Cedula del paciente">Cédula Paciente</th>
                                 <th id="nombrePacienteTablaCabecera-ResultadoDiagnostico" scope="col" title="Nombre del paciente">Nombre Paciente</th>
                                 <th id="resultadoTablaCabecera-ResultadoDiagnostico" scope="col" title="Resultado guardado">Resultado</th>
+                                <th id="observacionesTablaCabecera-ResultadoDiagnostico" scope="col" title="Observaciones realizadas">Observaciones</th>
+                                <th id="fechaTablaCabecera-ResultadoDiagnostico" scope="col" title="Fecha guardado diagnóstico">Fecha</th>
 
                                 {/*Columna para agregar o elimina*/}
                                 {componenteCabeceraModificarEliminar}
@@ -167,6 +175,19 @@ function ResultadoDiagnostico() {
                                 <div className="input-group">
                                     <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-user"></i></div>
                                     <input id="" type="text" className="form-control" value={datosGuardados.nombre} placeholder="Ingrese el nombre del paciente" onChange={handleInputChangeModificar} name="nombre" title="Nombre paciente" />
+                                </div>
+
+                                <br />
+
+                                <div id="labelObservacionesModificarAdministrarResultado-ResultadoDiagnostico">
+
+                                    <label>Observaciones realizadas</label>
+
+                                </div>
+
+                                <div className="input-group">
+                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-user"></i></div>
+                                    <textarea class="form-control" placeholder="Ingrese observaciones del paciente" value={datosGuardados.observaciones} onChange={handleInputChangeModificar} name="observaciones"></textarea>
                                 </div>
 
                                 <br />

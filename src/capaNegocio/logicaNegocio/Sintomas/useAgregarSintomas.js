@@ -170,7 +170,7 @@ const useAgregarSintomas = () => {
         setDatosTablaModificar(""); //Se reinicia el textarea con los datos del checkbox
         setDatosGuardados(""); //Se reinicia el valor del input
         setGuardarID(""); //Se reinicia los id guardados
-        history.push("/plataforma/preguntas");
+        history.push("/plataforma/sintomas");
 
     }
 

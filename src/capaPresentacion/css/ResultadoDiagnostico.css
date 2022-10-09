@@ -68,6 +68,64 @@ form #cajaTabla-ResultadoDiagnostico{
     /*background-color: #c00303;*/
 }
 
+/*Propiedades de la caja botón agregar termino*/
+#cabecera-ResultadoDiagnostico #cajaGenerarPDF-ResultadoDiagnostico {
+
+    /*border: 2px solid darkorchid;*/
+
+    /*margin-top: 2px;*/
+    /*width: fit-content;*/
+    width: fit-content;
+    /*display: inline-block;*/
+
+    float: right;
+    margin: 5px 5px 0px 0px;
+    /*text-align: right;*/
+    /*display: inline;*/
+    /*display: inline;*/
+
+}
+
+/*Propiedades del label ¿Desea agregar un termino?*/
+#cajaGenerarPDF-ResultadoDiagnostico #labelGenerarPDF-ResultadoDiagnostico {
+    font-size: 16px;
+    font-style: italic;
+    margin-right: 10px;
+}
+
+/*Propiedades del botón Agregar AdministrarUsuarios*/
+#cajaGenerarPDF-ResultadoDiagnostico #generarDiagnostico-ResultadoDiagnostico {
+
+    background-color: #eff2f5;
+    padding-top: 2px;
+    color: #000;
+    border-color: #000;
+    /*border-color: transparent;*/
+
+}
+
+/*Propiedad hover del botón Agregar AdministrarUsuarios*/
+#cajaGenerarPDF-ResultadoDiagnostico #generarDiagnostico-ResultadoDiagnostico:hover {
+
+    background-color: #E4AC34;
+    border-color: #E4AC34;
+    color: white;
+    /*border-color: transparent;*/
+
+}
+
+/*Propiedad focus del botón Agregar AdministrarUsuarios*/
+#cajaGenerarPDF-ResultadoDiagnostico #generarDiagnostico-ResultadoDiagnostico:focus {
+
+    box-shadow: none;
+
+}
+
+/*Propiedades del icono mas al lado del botón Agregar AdministrarUsuarios*/
+#cajaGenerarPDF-ResultadoDiagnostico #generarDiagnostico-ResultadoDiagnostico i {
+    margin-right: 10px;
+}
+
 /*Propiedades de toda la tabla en general*/
 #tabla-ResultadoDiagnostico{
     
@@ -142,31 +200,47 @@ form #cajaTabla-ResultadoDiagnostico{
     
 }
 
-/*Propiedades de la columna ID en la cabecera*/
+/*Propiedades de la columna cedula en la cabecera*/
 #cedulaTablaCabecera-ResultadoDiagnostico{
     /*background-color: red;*/
     text-align: center;
-    width: 25%;
+    width: 16.66%;
 }
 
-/*Propiedades de la columna nombreUsuario en la cabecera*/
+/*Propiedades de la columna nombrePaciente en la cabecera*/
 #nombrePacienteTablaCabecera-ResultadoDiagnostico{
     /*background-color: aqua;*/
-    width: 25%;
+    width: 16.66%;
     text-align: center;
 }
 
 /*Propiedades de la columna Correo en la cabecera*/
 #resultadoTablaCabecera-ResultadoDiagnostico{
     /*background-color: pink;*/
-    width: 25%;
+    width: 16.66%;
+    text-align: center;
+    
+}
+
+/*Propiedades de la columna resultado en la cabecera*/
+#observacionesTablaCabecera-ResultadoDiagnostico{
+    /*background-color: pink;*/
+    width: 16.66%;
+    text-align: center;
+    
+}
+
+/*Propiedades de la columna resultado en la cabecera*/
+#fechaTablaCabecera-ResultadoDiagnostico{
+    /*background-color: pink;*/
+    width: 16.66%;
     text-align: center;
     
 }
 
 /*Propiedades de la columna Modificar/Eliminar en la cabecera*/
 #modificarEliminarTablaCabecera-ResultadoDiagnostico{
-    width: 25%;
+    width: 16.66%;
     text-align: center;
 }
 
@@ -185,6 +259,19 @@ form #cajaTabla-ResultadoDiagnostico{
 #resultadoTablaFila-ResultadoDiagnostico{
 
     text-align: center;
+}
+
+/*Propiedades de la fila observaciones*/
+#observacionesTablaFila-ResultadoDiagnostico{
+
+    text-align: center;
+    
+}
+
+/*Propiedades de la fila fecha*/
+#fechaTablaFila-ResultadoDiagnostico{
+    text-align: center;
+    
 }
 
 /*Propiedades de la fila Modificar/Eliminar*/
@@ -316,7 +403,7 @@ form #cajaTabla-ResultadoDiagnostico{
 /*Propiedades del textarea Correo en el modal de Modificar termino*/
 #modalModificar-ResultadoDiagnostico .modal-body textarea{
     resize: none;
-    height: 10rem;
+    height: 7rem;
 }
 
 /*Propiedades focus del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
@@ -356,14 +443,16 @@ form #cajaTabla-ResultadoDiagnostico{
 
 /*Propiedades de las cajas del label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
 #modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelNombrePacienteModificarAdministrarResultado-ResultadoDiagnostico,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelCedulaModificarAdministrarResultado-ResultadoDiagnostico
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelCedulaModificarAdministrarResultado-ResultadoDiagnostico,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelObservacionesModificarAdministrarResultado-ResultadoDiagnostico
 {
     text-align: left;
 }
 
 /*Propiedades de los label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
 #modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelNombrePacienteModificarAdministrarResultado-ResultadoDiagnostico label,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelCedulaModificarAdministrarResultado-ResultadoDiagnostico label
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelCedulaModificarAdministrarResultado-ResultadoDiagnostico label,
+#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelObservacionesModificarAdministrarResultado-ResultadoDiagnostico label
 {
     font-size: 17px;
     font-weight: 700;

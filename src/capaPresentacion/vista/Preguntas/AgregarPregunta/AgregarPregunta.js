@@ -56,7 +56,7 @@ function AgregarPregunta() {
                     <label>Ingrese la pregunta</label>
                     <div className="input-group">
                         <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-question"></i></div>
-                        <input id="inputIngresePregunta-AgregarPregunta" type="text" className="form-control" placeholder="Ingrese la pregunta" onChange={handleInputChange} name="pregunta" required />
+                        <textarea class="form-control" placeholder="Ingrese la pregunta" onChange={handleInputChange} name="pregunta" required></textarea>
                     </div>
 
                     <br />

@@ -78,6 +78,14 @@ function GuardarDiagnostico() {
 
                     <br />
 
+                    <label>Observaciones del diagnóstico</label>
+                    <div className="input-group">
+                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-notes-medical"></i></div>
+                        <textarea class="form-control" placeholder="Ingrese observaciones del diagnóstico" onChange={handleInputChange} name="observaciones" required></textarea>
+                    </div>
+
+                    <br />
+
                     {/*Sección Botones Enviar y Regresar*/}
                     <div id="cajaBotones-GuardarDiagnostico">
 
