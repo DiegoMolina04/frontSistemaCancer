@@ -151,8 +151,7 @@ function Sintomas() {
 
                                 <div className="input-group">
                                     <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-address-card"></i></div>
-                                    <input id="" type="text" className="form-control" value={datosGuardados.sintoma} placeholder="Ingrese el sintoma" onChange={handleInputChangeModificar} name="sintoma" title="Sintoma a modificar" />
-
+                                    <textarea class="form-control" placeholder="Ingrese el sintoma" value={datosGuardados.sintoma} onChange={handleInputChangeModificar} name="sintoma" title="Sintoma a modificar"></textarea>
                                 </div>
 
                                 <br />
