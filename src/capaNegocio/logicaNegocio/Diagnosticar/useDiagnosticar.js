@@ -40,6 +40,7 @@ const useDiagnosticar = () => {
             arrayDatos = { //Datos iniciales para que el motor inicie con el funcionamiento
                 "id_pregunta_respondida": 0,
                 "respuesta": false,
+                "tipos_depresion_pregunta_a_responder":[],
                 "sintomas_pregunta_a_responder": [],
                 "preguntas_respondidas": [],
                 "preguntas_a_responder": [],
@@ -81,6 +82,7 @@ const useDiagnosticar = () => {
 
             arrayDatos = {
                 'respuesta': respuestaUsuario,
+                'tipos_depresion_pregunta_a_responder': datosExtraidos.tipos_depresion_pregunta_a_responder,
                 'id_pregunta_respondida': datosExtraidos.pregunta_a_responder.id,
                 'sintomas_pregunta_a_responder': datosExtraidos.sintomas_pregunta_a_responder,
                 'preguntas_respondidas': datosExtraidos.preguntas_respondidas,
