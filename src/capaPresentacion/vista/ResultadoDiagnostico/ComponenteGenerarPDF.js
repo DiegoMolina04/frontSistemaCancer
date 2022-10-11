@@ -1,17 +1,12 @@
-//import usePreguntas from "../../../capaNegocio/logicaNegocio/Preguntas/usePreguntas";
-
-function ComponenteGenerarPDF() {
-
-    //const { redireccionarAgregarPregunta } = usePreguntas();
-    /*onClick={redireccionarAgregarPregunta}*/
+function ComponenteGenerarPDF(props) {
 
     return (
   
         <div>
             <label id="labelGenerarPDF-ResultadoDiagnostico">
-            ¿Desea generar reporte en PDF?
+            {props.mensaje}
         </label>
-                <button id="generarDiagnostico-ResultadoDiagnostico" type="button" className="btn btn-success"  title="Generar PDF">
+                <button id="generarDiagnostico-ResultadoDiagnostico" type="button" className="btn btn-success" onClick={props.funcion} title="Generar PDF">
                     <i class="fas fa-file-pdf"></i>
                     Generar PDF
                 </button>

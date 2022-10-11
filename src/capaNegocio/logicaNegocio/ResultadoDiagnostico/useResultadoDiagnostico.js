@@ -3,6 +3,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { UserContext } from "../../context/UserContext.js";
 //Datos
 import getAutorization from '../../../capaDatos/Get/getAutorization.js';
+import getAutorizationPDF from '../../../capaDatos/Get/getAutorizationPDF.js';
 import putBodyAutorization from '../../../capaDatos/Put/putBodyAutorization.js';
 import deleteAutorization from '../../../capaDatos/Delete/deleteAutorization.js';
 //Componentes
@@ -21,6 +22,7 @@ const useResultadoDiagnostico = () => {
     const { datosOriginales, setDatosOriginales } = useContext(UserContext);
     const { token, setToken } = useContext(UserContext);
     const { es_admin, setEs_admin } = useContext(UserContext);
+    const { filtro, setFiltro } = useContext(UserContext);
 
     //Componente
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState("");
@@ -100,7 +102,14 @@ const useResultadoDiagnostico = () => {
                 if (datosExtraidos.length > 0) { //Si hay algún resultado
 
                     setComponenteListarResultados(<ComponenteTabla tabla={cargarElementosTabla(datosExtraidos, funcion, es_admin)} />);
-                    setComponenteGenerarPDF(<ComponenteGenerarPDF />);
+
+                    if (funcion === "listar") { //Se decide si se debe mostrar el botón de generar para listar o filtrar
+                        setComponenteGenerarPDF(<ComponenteGenerarPDF mensaje={"¿Desea generar reporte general en PDF?"} funcion={(e) => generarPDF(e, funcion)} />);
+
+                    } else if (funcion === "filtrar") {
+                        setComponenteGenerarPDF(<ComponenteGenerarPDF mensaje={"¿Desea generar reporte del filtro en PDF?"} funcion={(e) => generarPDF(e, funcion, filtro)} />);
+
+                    }
 
                 } else {
 
@@ -255,6 +264,55 @@ const useResultadoDiagnostico = () => {
 
     }
 
+    const construccionPDF = (datosConstruir, nombrePDF) => { //Se construye el PDF para ser mostrado y descargado
+        
+        const pdf = window.URL.createObjectURL(datosConstruir);
+        const a = document.createElement('a');
+        a.style.display = 'none';
+        a.href = pdf;
+        a.download = "reporte"+nombrePDF;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(pdf);
+
+    }
+
+    //Se reciben los datos pertenecientes del PDF desde el back-end
+    const generarPDF = async (event, funcion, datosFiltro) => { 
+
+        event.preventDefault();
+
+        try {
+            if (funcion === "listar") {
+                let url = "https://secure-brushlands-86892.herokuapp.com/v1/diagnosis/generate-pdf";
+                respuestaServidor = await getAutorizationPDF(token, url);
+                let datosObtenidos = await respuestaServidor.blob();
+                construccionPDF(datosObtenidos, "_General");
+
+            } else if (funcion === "filtrar") {
+
+                if (datosFiltro.categoria === "cedula") {
+                    let url = "https://secure-brushlands-86892.herokuapp.com/v1/diagnosis/generate-pdf?cedula="+datosFiltro.inputFiltro;
+                    respuestaServidor = await getAutorizationPDF(token, url);
+                    let datosObtenidos = await respuestaServidor.blob();
+                    construccionPDF(datosObtenidos, "_Filtrado");
+
+                } else if (datosFiltro.categoria === "nombre") {
+                    let url = "https://secure-brushlands-86892.herokuapp.com/v1/diagnosis/generate-pdf?nombre="+datosFiltro.inputFiltro;
+                    respuestaServidor = await getAutorizationPDF(token, url);
+                    let datosObtenidos = await respuestaServidor.blob();
+                    construccionPDF(datosObtenidos, "_Filtrado");
+
+                }
+            }
+
+        } catch (error) {
+            setCodigo(504);
+        }
+
+    }
+
     //Muestra mensajes informativos al usuario
     useEffect(() => {
 
@@ -330,19 +388,21 @@ const useResultadoDiagnostico = () => {
                 id={"modificarEliminarTablaCabecera-ResultadoDiagnostico"}
                 title={"Modificar/Eliminar el resultado"} />);
             setComponenteGenerarPDF("");
+
         } else {
 
             setComponenteNombreOpcion(<NombreOpcion opcion={"Resultados"} />);
-            setComponenteCabeceraModificarEliminar(<th 
-                id="modificarEliminarTablaCabecera-ResultadoDiagnostico" 
-                scope="col" 
+            setComponenteCabeceraModificarEliminar(<th
+                id="modificarEliminarTablaCabecera-ResultadoDiagnostico"
+                scope="col"
                 title="Modificar el resultado">Modificar</th>);
             setComponenteGenerarPDF("");
+            
         }
     }, [])
 
 
-    return { listarResultados, setearDatos, componenteListarResultados, componenteNombreOpcion, componenteCabeceraModificarEliminar, componenteMostrarMensaje, componenteGenerarPDF, modificarResultados, eliminarResultados };
+    return { listarResultados, setearDatos, componenteListarResultados, componenteNombreOpcion, componenteCabeceraModificarEliminar, componenteMostrarMensaje, componenteGenerarPDF, modificarResultados, eliminarResultados, generarPDF };
 };
 
 export default useResultadoDiagnostico;
