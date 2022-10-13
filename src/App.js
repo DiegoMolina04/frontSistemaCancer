@@ -60,8 +60,13 @@ function App() {
 
                 <UserContext.Provider value={value}>
 
-                    <Route exact path="/login" >
+                    <Route exact path="/" >
 
+                        <Login />
+
+                    </Route>
+
+                    <Route exact path="/login" >
 
                         <Login />
 
@@ -126,7 +131,7 @@ function App() {
                     </Route>*/}
 
                     <Route exact path="/plataforma/diagnosticar">
-                    <div>
+                        <div>
                             <Plataforma />
                             <div>
                                 <Diagnosticar />
@@ -146,14 +151,14 @@ function App() {
 
                     </Route>*/}
 
-                    <Route exact path="/plataforma/resultadodiagnostico"> 
+                    <Route exact path="/plataforma/resultadodiagnostico">
                         <div>
                             <Plataforma />
                             <div>
                                 <ResultadoDiagnostico />
                             </div>
                         </div>
-                      
+
                     </Route>
 
                     <Route exact path="/guardardiagnostico">
