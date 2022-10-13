@@ -54,6 +54,7 @@
 /*Propiedades de la caja contenedora del sintoma en la caja principal*/
 #cajaDiagnostico-Diagnosticar #cajaRegla-Diagnosticar {
     text-align: center;
+    overflow-x: auto;
     
 }
 
