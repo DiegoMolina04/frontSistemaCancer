@@ -33,6 +33,7 @@
     box-shadow: 5px 10px 15px #000;
     padding: 1rem;
     overflow-y: auto;
+    overflow-x: hidden;
 
 }
 
@@ -53,8 +54,7 @@
 /*Propiedades de la caja contenedora del sintoma en la caja principal*/
 #cajaDiagnostico-Diagnosticar #cajaRegla-Diagnosticar {
     text-align: center;
-    padding: 1.5rem;
-
+    
 }
 
 /*Propiedades del label del sintoma*/
