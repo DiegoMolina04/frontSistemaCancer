@@ -1,22 +1,17 @@
 
 /*Caja contenedora de toda la vista AdministrarUsuarios*/
 #fondo-AdministrarUsuarios{
-    /*border: 4px solid blue;*/
     height: 92vh;
-    /*overflow-x: scroll;*/
+
 }
 
 /*Propiedades caja contenedora de cabecera AdministrarUsuarioss y Boton*/
 #cabeceraAdministrarUsuarios-AdministrarUsuarios{
-
-    /*border: 5px solid aqua;*/
-    /*margin-top: 2px;*/
     height: 3rem;
-    /*padding: 4px;*/
     background-color: #eff2f5;
-    box-shadow: 5px 3px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
-    /*overflow-wrap: break-word;*/
+    box-shadow: 5px 3px 15px #000;/*box-shadow: x y difuminación color*/
     overflow: auto;
+
 }
 
 /*Caja contenedora de la palabra Administrar Usuarios*/
