@@ -8,7 +8,7 @@ const useChange = () => {
     //Estado para guardar datos
     const [datos, setDatos] = useState({ pregunta: '' });
     //Contexto
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
+    const { setDatosGuardados } = useContext(UserContext);
 
     const handleInputChange = (event) => { //Captura datos ingresados
 

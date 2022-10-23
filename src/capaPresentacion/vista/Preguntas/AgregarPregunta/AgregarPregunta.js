@@ -13,9 +13,9 @@ import useAgregarPregunta from '../../../../capaNegocio/logicaNegocio/Preguntas/
 
 function AgregarPregunta() {
 
-    const { datosTablaModificar, setDatosTablaModificar } = useContext(UserContext);//Se muestran datos del textarea
-    const { guardarID, setGuardarID } = useContext(UserContext);//Se envia los id de los elementos seleccionados con los checkbox
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext); //Se envia el cambio del input
+    const { datosTablaModificar } = useContext(UserContext);//Se muestran datos del textarea
+    const { guardarID } = useContext(UserContext);//Se envia los id de los elementos seleccionados con los checkbox
+    const { datosGuardados } = useContext(UserContext); //Se envia el cambio del input
 
     //Se llama al inputChange
     const { handleInputChange } = useChange();
