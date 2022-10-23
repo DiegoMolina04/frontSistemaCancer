@@ -12,12 +12,12 @@ import usePreguntas from '../../../capaNegocio/logicaNegocio/Preguntas/usePregun
 
 function Preguntas() {
 
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext); //Muestra dato en el input del modificar
-    const { datosOriginales, setDatosOriginales } = useContext(UserContext); //Datos originales al ser seteados al hacer click en modificar
+    const { datosGuardados } = useContext(UserContext); //Muestra dato en el input del modificar
+    const { datosOriginales } = useContext(UserContext); //Datos originales al ser seteados al hacer click en modificar
 
-    const { datosTablaModificar, setDatosTablaModificar } = useContext(UserContext); //Datos al seleccionar checkbox se muestra en textarea
-    const { guardarID, setGuardarID } = useContext(UserContext); //Se guarda id del elemento seleccionado con el checkbox
-    const { filtro, setFiltro } = useContext(UserContext); //Se guarda información del filtro
+    const { datosTablaModificar } = useContext(UserContext); //Datos al seleccionar checkbox se muestra en textarea
+    const { guardarID } = useContext(UserContext); //Se guarda id del elemento seleccionado con el checkbox
+    const { filtro } = useContext(UserContext); //Se guarda información del filtro
 
     const { handleInputChangeModificar, handleFiltrarChange } = useChange(); //Onchange para capturar datos en los inputs
     const { listarElementos, componenteListarPreguntas, componenteListarSintomas, componenteMostrarMensaje, componenteNombreOpcion, componenteCabeceraModificarEliminar, componenteAgregarPregunta, modificarPregunta, eliminarPregunta, handleChange, reiniciarModal } = usePreguntas(); //Logica de negocio
