@@ -16,10 +16,9 @@
 
 /*Caja contenedora de la palabra Administrar Usuarios*/
 #cabeceraAdministrarUsuarios-AdministrarUsuarios #cajaNombreOpcion-AdministrarUsuarios{
-    /*border: 2px solid tomato;*/
     display: inline-table;
     width: fit-content;
-    /*margin-right: 3%;*/
+    
 }
 
 /*Palabra Administrar Usuarios*/
@@ -27,13 +26,11 @@
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 130%;
     padding: 5px 0px 0px 10px;
+
 }
 
 /*Propiedades caja contenedora de AdministrarUsuarioss*/
 #cajaLabelAdministrarUsuarioss-AdministrarUsuarios{
-    /*border: 2px solid salmon;*/
-    /*margin-top: 15px;*/
-    /*margin-top: 0px;*/
     display: inline-table;
     width: 40%;
     float: left;
@@ -48,55 +45,41 @@
     font-weight: 700;
 }
 
-/*Propiedades de la caja botón agregar termino*/
+/*Propiedades de la caja botón agregar usuario*/
 #cabeceraAdministrarUsuarios-AdministrarUsuarios #cajaAgregarAdministrarUsuarios-AdministrarUsuarios{
-
-    /*border: 2px solid darkorchid;*/
-    
-    /*margin-top: 2px;*/
-    /*width: fit-content;*/
     width: fit-content;
-    /*display: inline-block;*/
-
     float: right;
     margin: 5px 5px 0px 0px;
-    /*text-align: right;*/
-    /*display: inline;*/
-    /*display: inline;*/
     
 }
 
-/*Propiedades del label ¿Desea agregar un termino?*/
+/*Propiedades del label ¿Desea agregar un usuario?*/
 #cajaAgregarAdministrarUsuarios-AdministrarUsuarios #labelAgregarAdministrarUsuarios-AdministrarUsuarios{
     font-size: 16px;
     font-style: italic;
     margin-right: 10px;
+
 }
 
 /*Propiedades del botón Agregar AdministrarUsuarios*/
 #cajaAgregarAdministrarUsuarios-AdministrarUsuarios #agregarAdministrarUsuarios-AdministrarUsuarios{
-    
     background-color: #eff2f5;
     padding-top: 2px;
     color: #000;
     border-color: #000;
-    /*border-color: transparent;*/
     
 }
 
 /*Propiedad hover del botón Agregar AdministrarUsuarios*/
 #cajaAgregarAdministrarUsuarios-AdministrarUsuarios #agregarAdministrarUsuarios-AdministrarUsuarios:hover{
-    
     background-color: #E4AC34;
     border-color: #E4AC34;
     color: white;
-    /*border-color: transparent;*/
     
 }
 
 /*Propiedad focus del botón Agregar AdministrarUsuarios*/
 #cajaAgregarAdministrarUsuarios-AdministrarUsuarios #agregarAdministrarUsuarios-AdministrarUsuarios:focus{
-    
     box-shadow: none;
     
 }
@@ -104,48 +87,40 @@
 /*Propiedades del icono mas al lado del botón Agregar AdministrarUsuarios*/
 #cajaAgregarAdministrarUsuarios-AdministrarUsuarios #agregarAdministrarUsuarios-AdministrarUsuarios i{
     margin-right: 10px;
+
 }
 
 /*Propiedades de la caja contenedora de la tabla*/
 form #cajaTabla-AdministrarUsuarios{
-    /*border: 2px solid burlywood;*/
     width: 50%;
     height: 20rem !important;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    /*overflow-x: scroll;
-    overflow-y: scroll;*/
     overflow: auto;
-    box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
-    /*background-color: #c00303;*/
+    box-shadow: 5px 10px 15px #000;
+
 }
 
 /*Propiedades de toda la tabla en general*/
 #tabla-AdministrarUsuarios{
-    
     font-family: 'Noto Sans Display', sans-serif;
     background-color: #eff2f5;
-    /*background-color: #2a5077;*/
     
 }
 
 /*Propiedades de la cabecera que contiene los mensajes para el usuario y el botón recargar*/
 #cajaCabecera-AdministrarUsuarios{
-    /*border: 2px solid burlywood;*/
     overflow: auto;
-    /*text-align: right;*/
+
 }
 
 /*Propiedades caja del mensaje respuesta*/
 #cajaCabecera-AdministrarUsuarios #cajaMensajeRespuesta-AdministrarUsuario{
-    /*border: 2px solid chocolate;*/
-    /*display: inline-block;*/
-    /*display: inline-block;*/
     float: left;
     width: 80%;
-    /*width: fit-content;*/
     height: 3rem;
+
 }
 
 /*Propiedades del mensaje respuesta*/
@@ -153,65 +128,58 @@ form #cajaTabla-AdministrarUsuarios{
     margin-top: 10px;
     margin-left: 10px;
     font-style: italic;
+
 }
 
 /*Propiedades caja del boton recargar*/
 #cajaCabecera-AdministrarUsuarios #cajaBotonRecargar-AdministrarUsuario{
-    /*border: 2px solid blueviolet;*/
-    /*display: inline-block;*/
-    /*display: inline-block;*/
     float: right;
     width: 20%;
-    /*width: fit-content;*/
     height: 3rem;
     text-align: right;
-    /*margin-left: 5px;*/
+    
 }
 
 /*Propiedades del botón recargar en la tabla*/
 #cajaBotonRecargar-AdministrarUsuario #botonRecargar-AdministrarUsuario{
     margin-top: 5px;
     background-color: #eff2f5;
-    /*padding-top: 2px;*/
     color: #000;
     border-color: #000;
     margin-right: 10px;
+
 }
 
 /*Propiedad hover del botón recargar en la tabla*/
 #cajaBotonRecargar-AdministrarUsuario #botonRecargar-AdministrarUsuario:hover{
-    
     background-color: #E4AC34;
     border-color: #E4AC34;
     color: white;
-    /*border-color: transparent;*/
     
 }
 
 /*Propiedad focus del botón recargar en la tabla*/
 #cajaBotonRecargar-AdministrarUsuario #botonRecargar-AdministrarUsuario:focus{
-    
     box-shadow: none;
     
 }
 
 /*Propiedades de la columna ID en la cabecera*/
 #cedulaTablaCabecera-AdministrarUsuarios{
-    /*background-color: red;*/
     text-align: center;
     width: 10%;
+
 }
 
 /*Propiedades de la columna nombreUsuario en la cabecera*/
 #nombreUsuarioTablaCabecera-AdministrarUsuarios{
-    /*background-color: aqua;*/
     width: 30%;
     text-align: center;
+
 }
 
 /*Propiedades de la columna Correo en la cabecera*/
 #correoTablaCabecera-AdministrarUsuarios{
-    /*background-color: pink;*/
     width: 0%;
     text-align: center;
     
@@ -219,7 +187,6 @@ form #cajaTabla-AdministrarUsuarios{
 
 /*Propiedades de la columna Correo en la cabecera*/
 #rolTablaCabecera-AdministrarUsuarios{
-    /*background-color: pink;*/
     width: 18%;
     text-align: center;
     
@@ -229,40 +196,39 @@ form #cajaTabla-AdministrarUsuarios{
 #modificarEliminarTablaCabecera-AdministrarUsuarios{
     width: 0%;
     text-align: center;
+
 }
 
 /*Propiedades de la fila Cedula*/
 #cedulaTablaFila-AdministrarUsuarios{
     text-align: center;
     font-weight: lighter;
+
 }
 
 /*Propiedades de la fila nombreUsuario*/
 #nombreUsuarioTablaFila-AdministrarUsuarios{
     text-align: center;
+
 }
 
 /*Propiedades de la fila Correo*/
 #correoTablaFila-AdministrarUsuarios{
-
     text-align: justify;
+
 }
 
 /*Propiedades de la fila Correo*/
 #rolTablaFila-AdministrarUsuarios{
-
     text-align: center;
+
 }
 
 /*Propiedades de la fila Modificar/Eliminar*/
 #modificarEliminarTablaFila-AdministrarUsuarios{
     text-align: center;
-}
 
-/*Propiedad hover sobre las filas de la tabla
-#tabla-AdministrarUsuarios tbody tr:hover{
-    background-color: #E4AC34;
-}*/
+}
 
 /*Propiedades de los botones de modificar y eliminar*/
 #modificarEliminarTablaFila-AdministrarUsuarios button{
@@ -270,22 +236,11 @@ form #cajaTabla-AdministrarUsuarios{
     border-radius: 0px;
     background: transparent;
     color: #000;
-    /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #ffc107;*/
     border-color: transparent;
     font-family: 'Noto Sans Display', sans-serif;
-    /*width: 6rem;*/
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
-}
 
-/*Propiedad hover sobre los botones modificar y eliminar
-#modificarEliminarTablaFila-AdministrarUsuarios button:hover{
-    /*border-color: #ffc107;
-    border-color: transparent;
-    /*background-color: #ffc107;
-    background-color: transparent;
-    /*color: white;
-}*/
+}
 
 /*Propiedades de los iconos en los botones modificar y eliminar*/
 #modificarEliminarTablaFila-AdministrarUsuarios i{
@@ -296,207 +251,136 @@ form #cajaTabla-AdministrarUsuarios{
 /*Propiedad del icono modificar en el botón modificar*/
 #botonModificar-AdministrarUsuarios #iconoModificar-AdministrarUsuarios{
     color: rgb(83, 83, 83);
+
 }
 
 /*Propiedad del icono eliminar en el botón eliminar*/
 #botonEliminar-AdministrarUsuarios #iconoEliminar-AdministrarUsuarios{
     color: rgb(192, 3, 3);
+
 }
 
 
-/*Propiedades de los labels del modal Eliminar termino. Advertencia y ¿Realmente quiere eliminar este termino?.*/
+/*Propiedades de los labels del modal Eliminar usuario. Advertencia y ¿Realmente quiere eliminar este usuario?.*/
 #modalEliminar-AdministrarUsuarios #modalLabelEliminar-AdministrarUsuarios label,
 #modalEliminar-AdministrarUsuarios .modal-body label
 {
-
     font-family: 'Noto Sans Display', sans-serif;
+
 }
 
-/*Propiedades del icono advertencia en el modal de Eliminar termino*/
+/*Propiedades del icono advertencia en el modal de Eliminar usuario*/
 #modalEliminar-AdministrarUsuarios #modalLabelEliminar-AdministrarUsuarios i{
     margin-right: 10px;
+
 }
 
-/*Propiedades del label Los cambios no se podrán revertir en modal Eliminar termino.*/
+/*Propiedades del label Los cambios no se podrán revertir en modal Eliminar usuario.*/
 #modalEliminar-AdministrarUsuarios .modal-body #labelRevertirCambios-AdministrarUsuarios{
     font-style: italic;
+
 }
 
-/*Propiedades del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
+/*Propiedades del boton Cancelar en modal Eliminar usuario y en el modal Modificar usuario*/
 #modalEliminar-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarUsuarios, #modalModificar-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarUsuarios{
     font-family: 'Noto Sans Display', sans-serif;
     background-color: transparent;
     border-color: #535353;
     color: #000;
+
 }
 
-/*Propiedad hover del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
+/*Propiedad hover del boton Cancelar en modal Eliminar usuario y en el modal Modificar usuario*/
 #modalEliminar-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarUsuarios:hover, #modalModificar-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarUsuarios:hover{
-    
     background-color: #535353;
     color: white;
+
 }
 
-/*Propiedad focus del boton Cancelar en modal Eliminar termino y en el modal Modificar termino*/
+/*Propiedad focus del boton Cancelar en modal Eliminar usuario y en el modal Modificar usuario*/
 #modalEliminar-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarUsuarios:focus, #modalModificar-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarUsuarios:focus{
     box-shadow: none;
+
 }
 
-/*Propiedades del boton Eliminar en modal Eliminar termino*/
+/*Propiedades del boton Eliminar en modal Eliminar usuario*/
 #modalEliminar-AdministrarUsuarios .modal-footer #botonModalEliminar-AdministrarUsuarios{
     font-family: 'Noto Sans Display', sans-serif;
     background-color: transparent;
     border-color: #c00303;
     color: #000;
+
 }
 
-/*Propiedad hover del boton Eliminar en modal Eliminar termino*/
+/*Propiedad hover del boton Eliminar en modal Eliminar usuario*/
 #modalEliminar-AdministrarUsuarios .modal-footer #botonModalEliminar-AdministrarUsuarios:hover{
-    
     background-color: #c00303;
     color: white;
+
 }
 
-/*Propiedad focus del boton Eliminar en modal Eliminar termino*/
+/*Propiedad focus del boton Eliminar en modal Eliminar usuario*/
 #modalEliminar-AdministrarUsuarios .modal-footer #botonModalEliminar-AdministrarUsuarios:focus{
     box-shadow: none;
+
 }
 
-/*Propiedades del botón de la X para cerrar el modal Eliminar termino*/
+/*Propiedades del botón de la X para cerrar el modal Eliminar usuario*/
 .modal-header .btn-close:focus{
-    
     box-shadow: none;
+
 }
 
-/*Propiedades del icono modificar en el modal de Modificar termino*/
+/*Propiedades del icono modificar en el modal de Modificar usuario*/
 #modalModificar-AdministrarUsuarios #modalLabelModificar-AdministrarUsuarios i{
     margin-right: 10px;
+
 }
 
-/*Propiedades de los label AdministrarUsuarios y Correo en el modal de Modificar termino*/
+/*Propiedades de los label AdministrarUsuarios y Correo en el modal de Modificar usuario*/
 #modalModificar-AdministrarUsuarios .modal-body label{
     font-size: 17px;
     font-weight: 600;
     margin-bottom: 10px;
+
 }
 
-/*Propiedades del textarea Correo en el modal de Modificar termino*/
+/*Propiedades del textarea Correo en el modal de Modificar usuario*/
 #modalModificar-AdministrarUsuarios .modal-body textarea{
     resize: none;
     height: 10rem;
+
 }
 
-/*Propiedades focus del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
+/*Propiedades focus del input AdministrarUsuarios y el textarea Correo en el modal de Modificar usuario*/
 #modalModificar-AdministrarUsuarios .modal-body input:focus, #modalModificar-AdministrarUsuarios .modal-body textarea:focus{
     box-shadow: none;
     border-color: #ced4da;
+
 }
 
-/*Propiedades de los placeholder del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
+/*Propiedades de los placeholder del input AdministrarUsuarios y el textarea Correo en el modal de Modificar usuario*/
 #modalModificar-AdministrarUsuarios .modal-body input::placeholder, #modalModificar-AdministrarUsuarios .modal-body textarea::placeholder{
     font-style: italic;
+
 }
 
-/*Propiedades del botón modificar en el modal Modificar termino*/
+/*Propiedades del botón modificar en el modal Modificar usuario*/
 #modalModificar-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarUsuarios{
     background-color: transparent;
     border-color: #ffc107;
     color: #000;
 }
 
-/*Propiedad hover del botón modificar en el modal Modificar termino*/
+/*Propiedad hover del botón modificar en el modal Modificar usuario*/
 #modalModificar-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarUsuarios:hover{
     background-color: #ffc107;
     color: white;
 }
 
-/*Propiedad focus del botón modificar en el modal Modificar termino*/
+/*Propiedad focus del botón modificar en el modal Modificar usuario*/
 #modalModificar-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarUsuarios:focus{
     box-shadow: none;
-}
-
-/*Propiedades de icono mas en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios #modalLabelAgregarAdministrarUsuarios-AdministrarUsuarios i{
-    margin-right: 10px;
-}
-
-/*Propiedades de las cajas del label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelAdministrarUsuariosAgregarAdministrarUsuarios-AdministrarUsuarios,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelcorreoAgregarAdministrarUsuarios-AdministrarUsuarios,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelCedulaAgregarAdministrarUsuarios-AdministrarUsuarios
-{
-    text-align: left;
-}
-
-/*Propiedades de los label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelAdministrarUsuariosAgregarAdministrarUsuarios-AdministrarUsuarios label,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelcorreoAgregarAdministrarUsuarios-AdministrarUsuarios label,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelCedulaAgregarAdministrarUsuarios-AdministrarUsuarios label
-{
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    font-family: 'Noto Sans Display', sans-serif;
-    display: block;
-}
-
-/*Propiedades del textarea Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body .input-group textarea{
-    resize: none;
-    height: 10rem;
-}*/
-
-/*Propiedades del botón cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarUsuarios{
-    font-family: 'Noto Sans Display', sans-serif;
-    background-color: transparent;
-    border-color: #535353;
-    color: #000;
-}
-
-/*Propiedad hover del boton Cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarUsuarios:hover{
-    
-    background-color: #535353;
-    color: white;
-}
-
-/*Propiedad focus del boton Cancelar Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarUsuarios:focus{
-    box-shadow: none;
-}
-
-/*Propiedades del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarUsuarios{
-    background-color: transparent;
-    border-color: #ffc107;
-    color: #000;
-    font-weight: 100;
-}
-
-/*Propiedad hover del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarUsuarios:hover{
-    background-color: #ffc107;
-    color: white;
-}
-
-/*Propiedad focus del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarUsuarios:focus{
-    box-shadow: none;
-}
-
-/*Propiedad placeholder en el input y textarea en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input::placeholder, #modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group textarea::placeholder{
-    font-style: italic;
-}
-
-/*Propiedad focus en el input y textarea en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input:focus, #modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group textarea:focus{
-    box-shadow: none;
-    border-color: #ced4da;
 }
 
 /*Propiedades de los p Administrador y Usuario*/
@@ -525,7 +409,7 @@ form #cajaTabla-AdministrarUsuarios{
 
 /*Propiedades del icono al lado de los input en los modales*/
 #modalModificar-AdministrarUsuarios #btnGroupAddon{
-    background-color: #ffc107;/*E4AC34*/
+    background-color: #ffc107;
     color: white;
 }
 

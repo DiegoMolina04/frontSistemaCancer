@@ -1,77 +1,34 @@
-/*Caja contenedora de toda la vista AdministrarUsuarios*/
+/*Caja contenedora de toda la vista preguntas*/
 #fondo-AdministrarPreguntas {
-    /*border: 4px solid blue;*/
     height: 92vh;
-    /*overflow-x: scroll;*/
 }
 
-/*Propiedades caja contenedora de cabecera AdministrarUsuarioss y Boton*/
+/*Propiedades caja contenedora de cabecera preguntas y Boton*/
 #cabeceraAdministrarPreguntas-AdministrarPreguntas {
-
-    /*border: 5px solid aqua;*/
-    /*margin-top: 2px;*/
     height: 3rem;
-    /*padding: 4px;*/
     background-color: #eff2f5;
     box-shadow: 5px 3px 15px #000;
-    /*#666*/
-    /*box-shadow: x y difuminación color*/
-    /*overflow-wrap: break-word;*/
     overflow: auto;
 }
 
-/*Caja contenedora de la palabra Administrar Usuarios*/
+/*Caja contenedora de la palabra preguntas*/
 #cabeceraAdministrarPreguntas-AdministrarPreguntas #cajaNombreOpcion-AdministrarPreguntas {
-    /*border: 2px solid tomato;*/
     display: inline-table;
     width: fit-content;
-    /*width: 16%;*/
-    
-    /*margin-bottom: -50px;*/
-    /*margin-right: 3%;*/
 }
 
-/*Palabra Administrar Usuarios*/
+/*Palabra preguntas*/
 #cabeceraAdministrarPreguntas-AdministrarPreguntas #cajaNombreOpcion-AdministrarPreguntas label {
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 130%;
     padding: 5px 0px 0px 10px;
 }
 
-/*Propiedades caja contenedora de AdministrarUsuarioss*/
-#cajaLabelAdministrarUsuarioss-AdministrarUsuarios {
-    /*border: 2px solid salmon;*/
-    /*margin-top: 15px;*/
-    /*margin-top: 0px;*/
-    display: inline-table;
-    width: 40%;
-    float: left;
-
-}
-
-/*Propiedades del Label AdministrarUsuarioss*/
-#cajaLabelAdministrarUsuarioss-AdministrarUsuarios label {
-    margin-left: 2%;
-    font-family: 'Noto Sans Display', sans-serif;
-    font-size: 23px;
-    font-weight: 700;
-}
-
 /*Propiedades de la caja botón agregar termino*/
 #cabeceraAdministrarPreguntas-AdministrarPreguntas #cajaAgregarAdministrarPreguntas-AdministrarPreguntas {
-
-    /*border: 2px solid darkorchid;*/
-
-    /*margin-top: 2px;*/
-    /*width: fit-content;*/
     width: fit-content;
-    /*display: inline-block;*/
-
     float: right;
     margin: 5px 5px 0px 0px;
-    /*text-align: right;*/
-    /*display: inline;*/
-    /*display: inline;*/
 
 }
 
@@ -82,54 +39,46 @@
     margin-right: 10px;
 }
 
-/*Propiedades del botón Agregar AdministrarUsuarios*/
+/*Propiedades del botón Agregar preguntas*/
 #cajaAgregarAdministrarPreguntas-AdministrarPreguntas #agregarPregunta-AdministrarPreguntas {
 
     background-color: #eff2f5;
     padding-top: 2px;
     color: #000;
     border-color: #000;
-    /*border-color: transparent;*/
 
 }
 
-/*Propiedad hover del botón Agregar AdministrarUsuarios*/
+/*Propiedad hover del botón Agregar preguntas*/
 #cajaAgregarAdministrarPreguntas-AdministrarPreguntas #agregarPregunta-AdministrarPreguntas:hover {
 
     background-color: #E4AC34;
     border-color: #E4AC34;
     color: white;
-    /*border-color: transparent;*/
 
 }
 
-/*Propiedad focus del botón Agregar AdministrarUsuarios*/
+/*Propiedad focus del botón Agregar preguntas*/
 #cajaAgregarAdministrarPreguntas-AdministrarPreguntas #agregarPregunta-AdministrarPreguntas:focus {
 
     box-shadow: none;
 
 }
 
-/*Propiedades del icono mas al lado del botón Agregar AdministrarUsuarios*/
+/*Propiedades del icono mas al lado del botón Agregar preguntas*/
 #cajaAgregarAdministrarPreguntas-AdministrarPreguntas #agregarPregunta-AdministrarPreguntas i {
     margin-right: 10px;
 }
 
 /*Propiedades de la caja contenedora de la tabla*/
 form #cajaTabla-AdministrarPreguntas {
-    /*border: 2px solid burlywood;*/
     width: 50%;
     height: 20rem !important;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    /*overflow-x: scroll;
-    overflow-y: scroll;*/
     overflow: auto;
     box-shadow: 5px 10px 15px #000;
-    /*#666*/
-    /*box-shadow: x y difuminación color*/
-    /*background-color: #c00303;*/
 }
 
 /*Propiedades de toda la tabla en general*/
@@ -137,25 +86,18 @@ form #cajaTabla-AdministrarPreguntas {
 
     font-family: 'Noto Sans Display', sans-serif;
     background-color: #eff2f5;
-    /*background-color: #2a5077;*/
 
 }
 
 /*Propiedades de la cabecera que contiene los mensajes para el usuario y el botón recargar*/
 #cajaCabecera-AdministrarPreguntas {
-    /*border: 2px solid burlywood;*/
     overflow: auto;
-    /*text-align: right;*/
 }
 
 /*Propiedades caja del mensaje respuesta*/
 #cajaCabecera-AdministrarPreguntas #cajaMensajeRespuesta-AdministrarPreguntas {
-    /*border: 2px solid chocolate;*/
-    /*display: inline-block;*/
-    /*display: inline-block;*/
     float: left;
     width: 80%;
-    /*width: fit-content;*/
     height: 3rem;
 }
 
@@ -168,22 +110,16 @@ form #cajaTabla-AdministrarPreguntas {
 
 /*Propiedades caja del boton recargar*/
 #cajaCabecera-AdministrarPreguntas #cajaBotonRecargar-AdministrarPreguntas {
-    /*border: 2px solid blueviolet;*/
-    /*display: inline-block;*/
-    /*display: inline-block;*/
     float: right;
     width: 20%;
-    /*width: fit-content;*/
     height: 3rem;
     text-align: right;
-    /*margin-left: 5px;*/
 }
 
 /*Propiedades del botón recargar en la tabla*/
 #cajaBotonRecargar-AdministrarPreguntas #botonRecargar-AdministrarPreguntas {
     margin-top: 5px;
     background-color: #eff2f5;
-    /*padding-top: 2px;*/
     color: #000;
     border-color: #000;
     margin-right: 10px;
@@ -191,11 +127,9 @@ form #cajaTabla-AdministrarPreguntas {
 
 /*Propiedad hover del botón recargar en la tabla*/
 #cajaBotonRecargar-AdministrarPreguntas #botonRecargar-AdministrarPreguntas:hover {
-
     background-color: #E4AC34;
     border-color: #E4AC34;
     color: white;
-    /*border-color: transparent;*/
 
 }
 
@@ -208,14 +142,12 @@ form #cajaTabla-AdministrarPreguntas {
 
 /*Propiedades de la columna pregunta en la cabecera*/
 #preguntaTablaCabecera-AdministrarPreguntas {
-    /*background-color: red;*/
     text-align: center;
     width: 40%;
 }
 
 /*Propiedades de la columna Sintoma en la cabecera*/
 #sintomaTablaCabecera-AdministrarPreguntas {
-    /*background-color: aqua;*/
     width: 40%;
     text-align: center;
 }
@@ -242,34 +174,16 @@ form #cajaTabla-AdministrarPreguntas {
     text-align: center;
 }
 
-/*Propiedad hover sobre las filas de la tabla
-#tabla-AdministrarPreguntas tbody tr:hover{
-    background-color: #E4AC34;
-}*/
-
 /*Propiedades de los botones de modificar y eliminar*/
 #modificarEliminarTablaFila-AdministrarPreguntas button {
     margin-top: 5%;
     border-radius: 0px;
     background: transparent;
     color: #000;
-    /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #ffc107;*/
     border-color: transparent;
     font-family: 'Noto Sans Display', sans-serif;
-    /*width: 6rem;*/
     box-shadow: none;
-    /*Quita la sombra verde alrededor del botón*/
 }
-
-/*Propiedad hover sobre los botones modificar y eliminar
-#modificarEliminarTablaFila-AdministrarPreguntas button:hover{
-    /*border-color: #ffc107;
-    border-color: transparent;
-    /*background-color: #ffc107;
-    background-color: transparent;
-    /*color: white;
-}*/
 
 /*Propiedades de los iconos en los botones modificar y eliminar*/
 #modificarEliminarTablaFila-AdministrarPreguntas i {
@@ -359,7 +273,7 @@ form #cajaTabla-AdministrarPreguntas {
     margin-right: 10px;
 }
 
-/*Propiedades de los label AdministrarUsuarios y Correo en el modal de Modificar termino*/
+/*Propiedades de los label preguntas y Correo en el modal de Modificar termino*/
 #modalModificar-AdministrarPreguntas .modal-body label {
     font-size: 17px;
     font-weight: 600;
@@ -386,14 +300,14 @@ form #cajaTabla-AdministrarPreguntas {
     text-align: center;
 }
 
-/*Propiedades focus del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
+/*Propiedades focus del input preguntas y el textarea Correo en el modal de Modificar termino*/
 #modalModificar-AdministrarPreguntas .modal-body input:focus,
 #modalModificar-AdministrarPreguntas .modal-body textarea:focus {
     box-shadow: none;
     border-color: #ced4da;
 }
 
-/*Propiedades de los placeholder del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
+/*Propiedades de los placeholder del input preguntas y el textarea Correo en el modal de Modificar termino*/
 #modalModificar-AdministrarPreguntas .modal-body input::placeholder,
 #modalModificar-AdministrarPreguntas .modal-body textarea::placeholder {
     font-style: italic;
@@ -417,111 +331,9 @@ form #cajaTabla-AdministrarPreguntas {
     box-shadow: none;
 }
 
-/*Propiedades de icono mas en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios #modallabelAgregarPregunta-AdministrarPreguntas i {
-    margin-right: 10px;
-}
-
-/*Propiedades de las cajas del label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelSintomaModificar-AdministrarPreguntas,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelPreguntaModificar-AdministrarPreguntas {
-    text-align: left;
-}
-
-/*Propiedades de los label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalModificar-AdministrarPreguntas .modal-body #labelSintomaModificar-AdministrarPreguntas label,
-#modalModificar-AdministrarPreguntas .modal-body #tipoCuenta-AgregarCuenta,
-#modalModificar-AdministrarPreguntas .modal-body #labelPreguntaModificar-AdministrarPreguntas label {
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    font-family: 'Noto Sans Display', sans-serif;
-    display: block;
-}
-
-/*Propiedades del textarea Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body .input-group textarea{
-    resize: none;
-    height: 10rem;
-}*/
-
-/*Propiedades del botón cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarPreguntas {
-    font-family: 'Noto Sans Display', sans-serif;
-    background-color: transparent;
-    border-color: #535353;
-    color: #000;
-}
-
-/*Propiedad hover del boton Cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarPreguntas:hover {
-
-    background-color: #535353;
-    color: white;
-}
-
-/*Propiedad focus del boton Cancelar Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarPreguntas:focus {
-    box-shadow: none;
-}
-
-/*Propiedades del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarPreguntas {
-    background-color: transparent;
-    border-color: #ffc107;
-    color: #000;
-    font-weight: 100;
-}
-
-/*Propiedad hover del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarPreguntas:hover {
-    background-color: #ffc107;
-    color: white;
-}
-
-/*Propiedad focus del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarPreguntas:focus {
-    box-shadow: none;
-}
-
-/*Propiedad placeholder en el input y textarea en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input::placeholder,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group textarea::placeholder {
-    font-style: italic;
-}
-
-/*Propiedad focus en el input y textarea en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input:focus,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group textarea:focus {
-    box-shadow: none;
-    border-color: #ced4da;
-}
-
-/*Propiedades de los p Administrador y Usuario*/
-#pAdministrador-AdministrarUsuarios,
-#pUsuario-AdministrarUsuarios {
-    font-family: 'Noto Sans Display', sans-serif;
-    font-size: 18px;
-}
-
 /*Propiedad de los radio buttons*/
 .modal-body #cajaRadioButtons-AgregarCuenta {
     text-align: left;
-}
-
-/*Propiedad focus sobre los radio buttons*/
-.modal-body .form-check #radioButtonAdministrador-AdministrarUsuarios:focus {
-    background-color: #ffc107;
-    border-color: #ffc107;
-    box-shadow: none;
-}
-
-/*Propiedad checked sobre los radio buttton*/
-.modal-body .form-check #radioButtonAdministrador-AdministrarUsuarios:checked {
-    background-color: #ffc107;
-    border-color: #ffc107;
 }
 
 /*Propiedades del icono al lado de los input en los modales*/
@@ -558,12 +370,6 @@ form #cajaTabla-AdministrarPreguntas {
     
 }
 
-/*Propiedad del checkbox en tabla modificar*/
-/*#cajaTablaModificar-AdministrarPreguntas #tablaSintomas-AdministrarPreguntas td #checkbox-AdministrarPreguntas {
-    
-    margin-bottom: 30%;
-}*/
-
 /*Propiedad checked de la columna que contiene los checkbox en tabla modificar*/
 #cajaTablaModificar-AdministrarPreguntas #tablaSintomas-AdministrarPreguntas td #checkbox-AgregarPreguntas:checked {
 
@@ -581,7 +387,6 @@ form #cajaTabla-AdministrarPreguntas {
 #cajaBotonRecargarModificar-AdministrarPreguntas #botonRecargarModificar-AdministrarPreguntas {
     margin-top: 5px;
     background-color: #eff2f5;
-    /*padding-top: 2px;*/
     color: #000;
     border-color: #000;
     margin-right: 10px;
@@ -593,7 +398,6 @@ form #cajaTabla-AdministrarPreguntas {
     background-color: #E4AC34;
     border-color: #E4AC34;
     color: white;
-    /*border-color: transparent;*/
 
 }
 

@@ -1,77 +1,34 @@
-/*Caja contenedora de toda la vista AdministrarUsuarios*/
+/*Caja contenedora de toda la vista tipos depresión*/
 #fondo-AdministrarTiposDepresion {
-    /*border: 4px solid blue;*/
     height: 92vh;
-    /*overflow-x: scroll;*/
 }
 
-/*Propiedades caja contenedora de cabecera AdministrarUsuarioss y Boton*/
+/*Propiedades caja contenedora de cabecera tipos depresión y Boton*/
 #cabeceraAdministrarTiposDepresion-AdministrarTiposDepresion {
-
-    /*border: 5px solid aqua;*/
-    /*margin-top: 2px;*/
     height: 3rem;
-    /*padding: 4px;*/
     background-color: #eff2f5;
     box-shadow: 5px 3px 15px #000;
-    /*#666*/
-    /*box-shadow: x y difuminación color*/
-    /*overflow-wrap: break-word;*/
     overflow: auto;
 }
 
-/*Caja contenedora de la palabra Administrar Usuarios*/
+/*Caja contenedora de la palabra tipos depresión*/
 #cabeceraAdministrarTiposDepresion-AdministrarTiposDepresion #cajaNombreOpcion-AdministrarTiposDepresion {
-    /*border: 2px solid tomato;*/
     display: inline-table;
     width: fit-content;
-    /*width: 16%;*/
-    
-    /*margin-bottom: -50px;*/
-    /*margin-right: 3%;*/
 }
 
-/*Palabra Administrar Usuarios*/
+/*Palabra tipos depresión*/
 #cabeceraAdministrarTiposDepresion-AdministrarTiposDepresion #cajaNombreOpcion-AdministrarTiposDepresion label {
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 117%;
     padding: 5px 0px 0px 10px;
 }
 
-/*Propiedades caja contenedora de AdministrarUsuarioss*/
-#cajaLabelAdministrarUsuarioss-AdministrarUsuarios {
-    /*border: 2px solid salmon;*/
-    /*margin-top: 15px;*/
-    /*margin-top: 0px;*/
-    display: inline-table;
-    width: 40%;
-    float: left;
-
-}
-
-/*Propiedades del Label AdministrarUsuarioss*/
-#cajaLabelAdministrarUsuarioss-AdministrarUsuarios label {
-    margin-left: 2%;
-    font-family: 'Noto Sans Display', sans-serif;
-    font-size: 23px;
-    font-weight: 700;
-}
-
 /*Propiedades de la caja botón agregar termino*/
 #cabeceraAdministrarTiposDepresion-AdministrarTiposDepresion #cajaAgregarAdministrarTiposDepresion-AdministrarTiposDepresion {
-
-    /*border: 2px solid darkorchid;*/
-
-    /*margin-top: 2px;*/
-    /*width: fit-content;*/
     width: fit-content;
-    /*display: inline-block;*/
-
     float: right;
     margin: 5px 5px 0px 0px;
-    /*text-align: right;*/
-    /*display: inline;*/
-    /*display: inline;*/
 
 }
 
@@ -82,54 +39,47 @@
     margin-right: 10px;
 }
 
-/*Propiedades del botón Agregar AdministrarUsuarios*/
+/*Propiedades del botón Agregar tipos depresión*/
 #cajaAgregarAdministrarTiposDepresion-AdministrarTiposDepresion #agregarTipoDepresion-AdministrarTipoDepresion {
 
     background-color: #eff2f5;
     padding-top: 2px;
     color: #000;
     border-color: #000;
-    /*border-color: transparent;*/
 
 }
 
-/*Propiedad hover del botón Agregar AdministrarUsuarios*/
+/*Propiedad hover del botón Agregar tipos depresión*/
 #cajaAgregarAdministrarTiposDepresion-AdministrarTiposDepresion #agregarTipoDepresion-AdministrarTipoDepresion:hover {
 
     background-color: #E4AC34;
     border-color: #E4AC34;
     color: white;
-    /*border-color: transparent;*/
 
 }
 
-/*Propiedad focus del botón Agregar AdministrarUsuarios*/
+/*Propiedad focus del botón Agregar tipos depresión*/
 #cajaAgregarAdministrarTiposDepresion-AdministrarTiposDepresion #agregarTipoDepresion-AdministrarTipoDepresion:focus {
 
     box-shadow: none;
 
 }
 
-/*Propiedades del icono mas al lado del botón Agregar AdministrarUsuarios*/
+/*Propiedades del icono mas al lado del botón Agregar tipos depresión*/
 #cajaAgregarAdministrarTiposDepresion-AdministrarTiposDepresion #agregarTipoDepresion-AdministrarTipoDepresion i {
     margin-right: 10px;
 }
 
 /*Propiedades de la caja contenedora de la tabla*/
 form #cajaTabla-AdministrarTiposDepresion {
-    /*border: 2px solid burlywood;*/
     width: 50%;
     height: 20rem !important;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    /*overflow-x: scroll;
-    overflow-y: scroll;*/
     overflow: auto;
     box-shadow: 5px 10px 15px #000;
-    /*#666*/
-    /*box-shadow: x y difuminación color*/
-    /*background-color: #c00303;*/
+    
 }
 
 /*Propiedades de toda la tabla en general*/
@@ -137,25 +87,18 @@ form #cajaTabla-AdministrarTiposDepresion {
 
     font-family: 'Noto Sans Display', sans-serif;
     background-color: #eff2f5;
-    /*background-color: #2a5077;*/
 
 }
 
 /*Propiedades de la cabecera que contiene los mensajes para el usuario y el botón recargar*/
 #cajaCabecera-AdministrarTiposDepresion {
-    /*border: 2px solid burlywood;*/
     overflow: auto;
-    /*text-align: right;*/
 }
 
 /*Propiedades caja del mensaje respuesta*/
 #cajaCabecera-AdministrarTiposDepresion #cajamensajeRespuesta-AdministrarTiposDepresion {
-    /*border: 2px solid chocolate;*/
-    /*display: inline-block;*/
-    /*display: inline-block;*/
     float: left;
     width: 80%;
-    /*width: fit-content;*/
     height: 3rem;
 }
 
@@ -168,22 +111,16 @@ form #cajaTabla-AdministrarTiposDepresion {
 
 /*Propiedades caja del boton recargar*/
 #cajaCabecera-AdministrarTiposDepresion #cajaBotonRecargar-AdministrarTiposDepresion {
-    /*border: 2px solid blueviolet;*/
-    /*display: inline-block;*/
-    /*display: inline-block;*/
     float: right;
     width: 20%;
-    /*width: fit-content;*/
     height: 3rem;
     text-align: right;
-    /*margin-left: 5px;*/
 }
 
 /*Propiedades del botón recargar en la tabla*/
 #cajaBotonRecargar-AdministrarTiposDepresion #botonRecargar-AdministrarTiposDepresion {
     margin-top: 5px;
     background-color: #eff2f5;
-    /*padding-top: 2px;*/
     color: #000;
     border-color: #000;
     margin-right: 10px;
@@ -195,7 +132,6 @@ form #cajaTabla-AdministrarTiposDepresion {
     background-color: #E4AC34;
     border-color: #E4AC34;
     color: white;
-    /*border-color: transparent;*/
 
 }
 
@@ -208,7 +144,6 @@ form #cajaTabla-AdministrarTiposDepresion {
 
 /*Propiedades de la columna pregunta en la cabecera*/
 #tipoDepresionTablaCabecera-AdministrarTiposDepresion {
-    /*background-color: red;*/
     text-align: center;
     width: 40%;
 }
@@ -240,34 +175,16 @@ form #cajaTabla-AdministrarTiposDepresion {
     text-align: center;
 }
 
-/*Propiedad hover sobre las filas de la tabla
-#tabla-AdministrarTiposDepresion tbody tr:hover{
-    background-color: #E4AC34;
-}*/
-
 /*Propiedades de los botones de modificar y eliminar*/
 #modificarEliminarTablaFila-AdministrarTipoDepresion button {
     margin-top: 5%;
     border-radius: 0px;
     background: transparent;
     color: #000;
-    /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #ffc107;*/
     border-color: transparent;
     font-family: 'Noto Sans Display', sans-serif;
-    /*width: 6rem;*/
     box-shadow: none;
-    /*Quita la sombra verde alrededor del botón*/
 }
-
-/*Propiedad hover sobre los botones modificar y eliminar
-#modificarEliminarTablaFila-AdministrarTipoDepresion button:hover{
-    /*border-color: #ffc107;
-    border-color: transparent;
-    /*background-color: #ffc107;
-    background-color: transparent;
-    /*color: white;
-}*/
 
 /*Propiedades de los iconos en los botones modificar y eliminar*/
 #modificarEliminarTablaFila-AdministrarTipoDepresion i {
@@ -357,20 +274,20 @@ form #cajaTabla-AdministrarTiposDepresion {
     margin-right: 10px;
 }
 
-/*Propiedades de los label AdministrarUsuarios y Correo en el modal de Modificar termino*/
+/*Propiedades de los label tipos depresión y Correo en el modal de Modificar termino*/
 #modalModificar-AdministrarTipoDepresion .modal-body label {
     font-size: 17px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-/*Propiedades focus del input AdministrarUsuarios en el modal de Modificar termino*/
+/*Propiedades focus del input tipos depresión en el modal de Modificar termino*/
 #modalModificar-AdministrarTipoDepresion .modal-body input:focus{
     box-shadow: none;
     border-color: #ced4da;
 }
 
-/*Propiedades de los placeholder del input AdministrarUsuarios en el modal de Modificar termino*/
+/*Propiedades de los placeholder del input tipos depresión en el modal de Modificar termino*/
 #modalModificar-AdministrarTipoDepresion .modal-body input::placeholder {
     font-style: italic;
 }
@@ -393,20 +310,8 @@ form #cajaTabla-AdministrarTiposDepresion {
     box-shadow: none;
 }
 
-/*Propiedades de icono mas en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
 
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios #modallabelAgregarPregunta-AdministrarPreguntas i {
-    margin-right: 10px;
-}
-
-/*Propiedades de las cajas del label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelTipoDepresionModificar-AdministrarTipoDepresion,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelCantidadSintomasModificar-AdministrarTipoDepresion {
-    text-align: left;
-}
-
-/*Propiedades de los label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+/*Propiedades de los label tipos depresión y Correo en Agregar Nuevo tipos depresión en el modalAgregarAdministrarUsuarios-tipos depresión*/
 #modalModificar-AdministrarTipoDepresion .modal-body #tipoCuenta-AgregarCuenta,
 #modalModificar-AdministrarTipoDepresion .modal-body #labelTipoDepresionModificar-AdministrarTipoDepresion label,
 #modalModificar-AdministrarTipoDepresion .modal-body #labelCantidadSintomasModificar-AdministrarTipoDepresion {
@@ -417,85 +322,14 @@ form #cajaTabla-AdministrarTiposDepresion {
     display: block;
 }
 
-/*Propiedades del botón cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarTiposDepresion {
-    font-family: 'Noto Sans Display', sans-serif;
-    background-color: transparent;
-    border-color: #535353;
-    color: #000;
-}
-
-/*Propiedad hover del boton Cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarTiposDepresion:hover {
-
-    background-color: #535353;
-    color: white;
-}
-
-/*Propiedad focus del boton Cancelar Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarTiposDepresion:focus {
-    box-shadow: none;
-}
-
-/*Propiedades del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonmodalModificar-AdministrarTipoDepresion {
-    background-color: transparent;
-    border-color: #ffc107;
-    color: #000;
-    font-weight: 100;
-}
-
-/*Propiedad hover del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonmodalModificar-AdministrarTipoDepresion:hover {
-    background-color: #ffc107;
-    color: white;
-}
-
-/*Propiedad focus del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonmodalModificar-AdministrarTipoDepresion:focus {
-    box-shadow: none;
-}
-
-/*Propiedad placeholder en el input en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input::placeholder {
-    font-style: italic;
-}
-
-/*Propiedad focus en el input en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input:focus {
-    box-shadow: none;
-    border-color: #ced4da;
-}
-
-/*Propiedades de los p Administrador y Usuario*/
-#pAdministrador-AdministrarUsuarios,
-#pUsuario-AdministrarUsuarios {
-    font-family: 'Noto Sans Display', sans-serif;
-    font-size: 18px;
-}
-
 /*Propiedad de los radio buttons*/
 .modal-body #cajaRadioButtons-AgregarCuenta {
     text-align: left;
 }
 
-/*Propiedad focus sobre los radio buttons*/
-.modal-body .form-check #radioButtonAdministrador-AdministrarUsuarios:focus {
-    background-color: #ffc107;
-    border-color: #ffc107;
-    box-shadow: none;
-}
-
-/*Propiedad checked sobre los radio buttton*/
-.modal-body .form-check #radioButtonAdministrador-AdministrarUsuarios:checked {
-    background-color: #ffc107;
-    border-color: #ffc107;
-}
-
 /*Propiedades del icono al lado de los input en los modales*/
 #modalModificar-AdministrarTipoDepresion #btnGroupAddon {
     background-color: #ffc107;
-    /*E4AC34*/
     color: white;
 }
 

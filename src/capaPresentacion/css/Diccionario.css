@@ -1,77 +1,36 @@
-/*Caja contenedora de toda la vista AdministrarUsuarios*/
+/*Caja contenedora de toda la vista crear diccionario*/
 #fondo-AdministrarTerminos {
-    /*border: 4px solid blue;*/
     height: 92vh;
-    /*overflow-x: scroll;*/
 }
 
-/*Propiedades caja contenedora de cabecera AdministrarUsuarioss y Boton*/
+/*Propiedades caja contenedora de cabecera diccionario y Boton*/
 #cabeceraAdministrarTerminos-AdministrarTerminos {
 
-    /*border: 5px solid aqua;*/
-    /*margin-top: 2px;*/
     height: 3rem;
-    /*padding: 4px;*/
     background-color: #eff2f5;
     box-shadow: 5px 3px 15px #000;
-    /*#666*/
-    /*box-shadow: x y difuminación color*/
-    /*overflow-wrap: break-word;*/
     overflow: auto;
 }
 
-/*Caja contenedora de la palabra Administrar Usuarios*/
+/*Caja contenedora de la palabra diccionario*/
 #cabeceraAdministrarTerminos-AdministrarTerminos #cajaNombreOpcion-AdministrarTerminos {
-    /*border: 2px solid tomato;*/
     display: inline-table;
     width: fit-content;
-    /*width: 16%;*/
-    
-    /*margin-bottom: -50px;*/
-    /*margin-right: 3%;*/
+
 }
 
-/*Palabra Administrar Usuarios*/
+/*Palabra diccionario*/
 #cabeceraAdministrarTerminos-AdministrarTerminos #cajaNombreOpcion-AdministrarTerminos label {
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 130%;
     padding: 5px 0px 0px 10px;
 }
 
-/*Propiedades caja contenedora de AdministrarUsuarioss*/
-#cajaLabelAdministrarUsuarioss-AdministrarUsuarios {
-    /*border: 2px solid salmon;*/
-    /*margin-top: 15px;*/
-    /*margin-top: 0px;*/
-    display: inline-table;
-    width: 40%;
-    float: left;
-
-}
-
-/*Propiedades del Label AdministrarUsuarioss*/
-#cajaLabelAdministrarUsuarioss-AdministrarUsuarios label {
-    margin-left: 2%;
-    font-family: 'Noto Sans Display', sans-serif;
-    font-size: 23px;
-    font-weight: 700;
-}
-
 /*Propiedades de la caja botón agregar termino*/
 #cabeceraAdministrarTerminos-AdministrarTerminos #cajaAgregarAdministrarTerminos-AdministrarTerminos {
-
-    /*border: 2px solid darkorchid;*/
-
-    /*margin-top: 2px;*/
-    /*width: fit-content;*/
     width: fit-content;
-    /*display: inline-block;*/
-
     float: right;
     margin: 5px 5px 0px 0px;
-    /*text-align: right;*/
-    /*display: inline;*/
-    /*display: inline;*/
 
 }
 
@@ -82,80 +41,63 @@
     margin-right: 10px;
 }
 
-/*Propiedades del botón Agregar AdministrarUsuarios*/
+/*Propiedades del botón Agregar crear diccionario*/
 #cajaAgregarAdministrarTerminos-AdministrarTerminos #agregarTermino-AdministrarTerminos {
-
     background-color: #eff2f5;
     padding-top: 2px;
     color: #000;
     border-color: #000;
-    /*border-color: transparent;*/
 
 }
 
-/*Propiedad hover del botón Agregar AdministrarUsuarios*/
+/*Propiedad hover del botón Agregar crear diccionario*/
 #cajaAgregarAdministrarTerminos-AdministrarTerminos #agregarTermino-AdministrarTerminos:hover {
-
     background-color: #E4AC34;
     border-color: #E4AC34;
     color: white;
-    /*border-color: transparent;*/
 
 }
 
-/*Propiedad focus del botón Agregar AdministrarUsuarios*/
+/*Propiedad focus del botón Agregar crear diccionario*/
 #cajaAgregarAdministrarTerminos-AdministrarTerminos #agregarTermino-AdministrarTerminos:focus {
-
     box-shadow: none;
 
 }
 
-/*Propiedades del icono mas al lado del botón Agregar AdministrarUsuarios*/
+/*Propiedades del icono mas al lado del botón Agregar crear diccionario*/
 #cajaAgregarAdministrarTerminos-AdministrarTerminos #agregarTermino-AdministrarTerminos i {
     margin-right: 10px;
 }
 
 /*Propiedades de la caja contenedora de la tabla*/
 form #cajaTabla-AdministrarTerminos {
-    /*border: 2px solid burlywood;*/
     width: 50%;
     height: 20rem !important;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    /*overflow-x: scroll;
-    overflow-y: scroll;*/
     overflow: auto;
     box-shadow: 5px 10px 15px #000;
-    /*#666*/
-    /*box-shadow: x y difuminación color*/
-    /*background-color: #c00303;*/
+
 }
 
 /*Propiedades de toda la tabla en general*/
 #tabla-AdministrarTerminos {
-
     font-family: 'Noto Sans Display', sans-serif;
     background-color: #eff2f5;
-    /*background-color: #2a5077;*/
 
 }
 
 /*Propiedades de la cabecera que contiene los mensajes para el usuario y el botón recargar*/
 #cajaCabecera-AdministrarTerminos {
-    /*border: 2px solid burlywood;*/
     overflow: auto;
-    /*text-align: right;*/
+
 }
 
 /*Propiedades caja del mensaje respuesta*/
 #cajaCabecera-AdministrarTerminos #cajaMensajeRespuesta-AdministrarTerminos {
-    /*border: 2px solid chocolate;*/
-    /*display: inline-block;*/
-    /*display: inline-block;*/
     float: left;
     width: 80%;
-    /*width: fit-content;*/
     height: 3rem;
 }
 
@@ -168,22 +110,17 @@ form #cajaTabla-AdministrarTerminos {
 
 /*Propiedades caja del boton recargar*/
 #cajaCabecera-AdministrarTerminos #cajaBotonRecargar-AdministrarTerminos {
-    /*border: 2px solid blueviolet;*/
-    /*display: inline-block;*/
-    /*display: inline-block;*/
     float: right;
     width: 20%;
-    /*width: fit-content;*/
     height: 3rem;
     text-align: right;
-    /*margin-left: 5px;*/
+
 }
 
 /*Propiedades del botón recargar en la tabla*/
 #cajaBotonRecargar-AdministrarTerminos #botonRecargar-AdministrarTerminos {
     margin-top: 5px;
     background-color: #eff2f5;
-    /*padding-top: 2px;*/
     color: #000;
     border-color: #000;
     margin-right: 10px;
@@ -191,31 +128,26 @@ form #cajaTabla-AdministrarTerminos {
 
 /*Propiedad hover del botón recargar en la tabla*/
 #cajaBotonRecargar-AdministrarTerminos #botonRecargar-AdministrarTerminos:hover {
-
     background-color: #E4AC34;
     border-color: #E4AC34;
     color: white;
-    /*border-color: transparent;*/
 
 }
 
 /*Propiedad focus del botón recargar en la tabla*/
 #cajaBotonRecargar-AdministrarTerminos #botonRecargar-AdministrarTerminos:focus {
-
     box-shadow: none;
 
 }
 
 /*Propiedades de la columna pregunta en la cabecera*/
 #terminoTablaCabecera-AdministrarTerminos {
-    /*background-color: red;*/
     text-align: center;
     width: 40%;
 }
 
 /*Propiedades de la columna Sintoma en la cabecera*/
 #descripcionTablaCabecera-AdministrarTerminos {
-    /*background-color: aqua;*/
     width: 40%;
     text-align: center;
 }
@@ -242,34 +174,17 @@ form #cajaTabla-AdministrarTerminos {
     text-align: center;
 }
 
-/*Propiedad hover sobre las filas de la tabla
-#tabla-AdministrarTerminos tbody tr:hover{
-    background-color: #E4AC34;
-}*/
-
 /*Propiedades de los botones de modificar y eliminar*/
 #modificarEliminarTablaFila-AdministrarTerminos button {
     margin-top: 5%;
     border-radius: 0px;
     background: transparent;
     color: #000;
-    /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #ffc107;*/
     border-color: transparent;
     font-family: 'Noto Sans Display', sans-serif;
-    /*width: 6rem;*/
     box-shadow: none;
-    /*Quita la sombra verde alrededor del botón*/
-}
 
-/*Propiedad hover sobre los botones modificar y eliminar
-#modificarEliminarTablaFila-AdministrarTerminos button:hover{
-    /*border-color: #ffc107;
-    border-color: transparent;
-    /*background-color: #ffc107;
-    background-color: transparent;
-    /*color: white;
-}*/
+}
 
 /*Propiedades de los iconos en los botones modificar y eliminar*/
 #modificarEliminarTablaFila-AdministrarTerminos i {
@@ -359,7 +274,7 @@ form #cajaTabla-AdministrarTerminos {
     margin-right: 10px;
 }
 
-/*Propiedades de los label AdministrarUsuarios y Correo en el modal de Modificar termino*/
+/*Propiedades de los label crear diccionario y Correo en el modal de Modificar termino*/
 #modalModificar-AdministrarTerminos .modal-body label {
     font-size: 17px;
     font-weight: 600;
@@ -372,14 +287,14 @@ form #cajaTabla-AdministrarTerminos {
     height: 7rem;
 }
 
-/*Propiedades focus del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
+/*Propiedades focus del input crear diccionario y el textarea Correo en el modal de Modificar termino*/
 #modalModificar-AdministrarTerminos .modal-body input:focus,
 #modalModificar-AdministrarTerminos .modal-body textarea:focus {
     box-shadow: none;
     border-color: #ced4da;
 }
 
-/*Propiedades de los placeholder del input AdministrarUsuarios y el textarea Correo en el modal de Modificar termino*/
+/*Propiedades de los placeholder del input crear diccionario y el textarea Correo en el modal de Modificar termino*/
 #modalModificar-AdministrarTerminos .modal-body input::placeholder,
 #modalModificar-AdministrarTerminos .modal-body textarea::placeholder {
     font-style: italic;
@@ -403,20 +318,7 @@ form #cajaTabla-AdministrarTerminos {
     box-shadow: none;
 }
 
-/*Propiedades de icono mas en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios #modallabelAgregarPregunta-AdministrarPreguntas i {
-    margin-right: 10px;
-}
-
-/*Propiedades de las cajas del label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelDescripcionModificar-AdministrarTerminos,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #tipoCuenta-AgregarCuenta,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body #labelTerminoModificar-AdministrarTerminos {
-    text-align: left;
-}
-
-/*Propiedades de los label AdministrarUsuarios y Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
+/*Propiedades de los label crear diccionario y Correo en Agregar Nuevo crear diccionario en el modalAgregarAdministrarUsuarios-crear diccionario*/
 #modalModificar-AdministrarTerminos .modal-body #labelDescripcionModificar-AdministrarTerminos label,
 #modalModificar-AdministrarTerminos .modal-body #tipoCuenta-AgregarCuenta,
 #modalModificar-AdministrarTerminos .modal-body #labelTerminoModificar-AdministrarTerminos label {
@@ -427,93 +329,14 @@ form #cajaTabla-AdministrarTerminos {
     display: block;
 }
 
-/*Propiedades del textarea Correo en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-body .input-group textarea{
-    resize: none;
-    height: 10rem;
-}*/
-
-/*Propiedades del botón cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarTerminos {
-    font-family: 'Noto Sans Display', sans-serif;
-    background-color: transparent;
-    border-color: #535353;
-    color: #000;
-}
-
-/*Propiedad hover del boton Cancelar en Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarTerminos:hover {
-
-    background-color: #535353;
-    color: white;
-}
-
-/*Propiedad focus del boton Cancelar Agregar Nuevo AdministrarUsuarios en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalCancelar-AdministrarTerminos:focus {
-    box-shadow: none;
-}
-
-/*Propiedades del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarTerminos {
-    background-color: transparent;
-    border-color: #ffc107;
-    color: #000;
-    font-weight: 100;
-}
-
-/*Propiedad hover del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarTerminos:hover {
-    background-color: #ffc107;
-    color: white;
-}
-
-/*Propiedad focus del botón modificar en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .modal-footer #botonModalModificar-AdministrarTerminos:focus {
-    box-shadow: none;
-}
-
-/*Propiedad placeholder en el input y textarea en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input::placeholder,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group textarea::placeholder {
-    font-style: italic;
-}
-
-/*Propiedad focus en el input y textarea en el modalAgregarAdministrarUsuarios-AdministrarUsuarios*/
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group input:focus,
-#modalAgregarAdministrarUsuarios-AdministrarUsuarios .input-group textarea:focus {
-    box-shadow: none;
-    border-color: #ced4da;
-}
-
-/*Propiedades de los p Administrador y Usuario*/
-#pAdministrador-AdministrarUsuarios,
-#pUsuario-AdministrarUsuarios {
-    font-family: 'Noto Sans Display', sans-serif;
-    font-size: 18px;
-}
-
 /*Propiedad de los radio buttons*/
 .modal-body #cajaRadioButtons-AgregarCuenta {
     text-align: left;
 }
 
-/*Propiedad focus sobre los radio buttons*/
-.modal-body .form-check #radioButtonAdministrador-AdministrarUsuarios:focus {
-    background-color: #ffc107;
-    border-color: #ffc107;
-    box-shadow: none;
-}
-
-/*Propiedad checked sobre los radio buttton*/
-.modal-body .form-check #radioButtonAdministrador-AdministrarUsuarios:checked {
-    background-color: #ffc107;
-    border-color: #ffc107;
-}
-
 /*Propiedades del icono al lado de los input en los modales*/
 #modalModificar-AdministrarTerminos #btnGroupAddon {
     background-color: #ffc107;
-    /*E4AC34*/
     color: white;
 }
 

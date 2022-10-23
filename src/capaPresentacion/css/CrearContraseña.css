@@ -1,21 +1,16 @@
 
-/*Color de fondo para vista agregar usuario*/
+/*Color de fondo para vista crear contraseña*/
 #fondo-CrearContraseña{
-    /*height: 100vh;*/ /*vh (viewport-height) = Altura de la ventana gráfica.*/
     height: fit-content;
     width: 100%;
     border: 0.01px solid #212844; /*Despliega borde en toda la pantalla*/
-    background-color: #212844; /*9a0526*/
+    background-color: #212844;
 }
 
-/*Caja contenedora de agregar usuario*/
+/*Caja contenedora de crear contraseña*/
 #caja-CrearContraseña{
-
-    /*border: 2px solid blue;*/
     border: 1px solid #000;
-    /*width: 50%;*/
     max-width: 500px;
-    /*width: 30%;*/
     margin-top: 8%;
     margin-left: auto;
     margin-right: auto;
@@ -24,44 +19,36 @@
     padding: 2rem;
     border-radius: 7px;
     background-color: #eff2f5;
-    box-shadow: 5px 10px 15px #000;/*#666*/ /*box-shadow: x y difuminación color*/
+    box-shadow: 5px 10px 15px #000;
     
 }
 
 /*Caja de la imagen del logo*/
 #cajaLogo-CrearContraseña{
-
-    /*border: 2px solid brown;*/
     text-align: center;
 
 }
 
 /*Imagen logo*/
 #logo-CrearContraseña{
-    
-    /*height: 13rem;*/
-    
-    height: 4rem;/*4rem*/
+    height: 4rem;
     margin: 2rem 0 2rem 0;
 }
 
-/*Mensajes informativos para el usuario*/
+/*Mensajes informativos para el crear contraseña*/
 #caja-CrearContraseña h5{
     font-family: 'Noto Sans Display', sans-serif;
-    /*color: red;*/
     font-style: italic;
 }
 
 /*Caja texto Nuevo Usuario*/
 #caja-CrearContraseña #cajaNuevoUsuario-CrearContraseña{
-    /*border: 2px solid skyblue;*/
     margin-top: 10px;
     text-align: center;
 }
 
 /*Label Nuevo registro*/
 #cajaNuevoUsuario-CrearContraseña #labelNuevoUsuario-CrearContraseña{
-
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 25px;
     font-weight: 700;
@@ -70,14 +57,11 @@
 
 /*Linea debajo del logo*/
 #linea-CrearContraseña{
-
     color: #000;
 }
 
 /*Caja contenedora del formulario*/
 #formulario-CrearContraseña{
-    
-    /*border: 2px solid seagreen;*/
     padding: 1rem;
 }
 
@@ -90,7 +74,6 @@
 /*Propiedades de los iconos al lado de los input*/
 #formulario-CrearContraseña .input-group #btnGroupAddon{
     width: 42px;
-    /*background-color: rgba(62, 138, 62, 0.589);*/
     background-color: #ffc107;
     margin-top: 10px;
     
@@ -115,7 +98,6 @@
 
 /*Propiedad placeholder de los inputs*/
 #formulario-CrearContraseña .input-group input::placeholder{
-
     font-style: italic;
 
 }
@@ -141,30 +123,20 @@
 
 /*Caja botones enviar y Regresar*/
 #formulario-CrearContraseña #cajaBotones-AgregarCuenta{
-    /*border: 3px solid purple;*/
     margin-top: 30px;
 }
 
 /*Caja contenedora del botón Enviar*/
 #formulario-CrearContraseña #cajaEnviar-AgregarCuenta{
-    /*border: 3px solid red;*/
-    /*text-align: center;*/
     text-align: center;
-    /*float: left;*/
-    /*width: 50%;*/
-    /*text-align: right;*/
     
 }
 
 /*Caja contenedora del botón Regresar*/
 #formulario-CrearContraseña #cajaRegresar-AgregarCuenta{
-    /*border: 3px solid palevioletred;*/
     float: left;
     width: 49%;
-    /*text-align: center;*/
     text-align: center;
-    /*text-align: left;*/
-    /*margin-left: 30%;*/
 
 }
 
@@ -172,8 +144,6 @@
 #cajaEnviar-AgregarCuenta #botonEnviar-AgregarCuenta, #cajaRegresar-AgregarCuenta #botonRegresar-AgregarCuenta{
     background: transparent;
     color: #000;
-    /*border-color: rgba(62, 138, 62, 0.589);*/
-    /*border-color: #ffc107;*/
     font-family: 'Noto Sans Display', sans-serif;
     width: 6rem;
     box-shadow: none; /*Quita la sombra verde alrededor del botón*/
@@ -181,22 +151,17 @@
 
 /*Propiedad del boton Enviar*/
 #cajaEnviar-AgregarCuenta #botonEnviar-AgregarCuenta{
-    /*margin-right: 20%;*/
-    /*margin-left: 10%;*/
     border-color: #ffc107;
 }
 
 /*Propiedad del boton Regresar*/
 #cajaRegresar-AgregarCuenta #botonRegresar-AgregarCuenta{
-    /*margin-left: 10%;*/
-    /*margin-right: 2rem;*/
     border-color: #535353;
     
 }
 
 /*Propiedad hover sobre boton Enviar*/
 #cajaEnviar-AgregarCuenta #botonEnviar-AgregarCuenta:hover{
-    /*background-color: rgba(62, 138, 62, 0.589);*/
     border-color: #ffc107 ;
     background-color: #ffc107 ;
     color: white;
