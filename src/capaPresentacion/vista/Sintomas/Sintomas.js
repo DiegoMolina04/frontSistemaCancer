@@ -12,12 +12,12 @@ import useSintomas from '../../../capaNegocio/logicaNegocio/Sintomas/useSintomas
 
 function Sintomas() {
 
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext); //Muestra dato en el input del modificar
-    const { datosOriginales, setDatosOriginales } = useContext(UserContext); //Datos originales al ser seteados al hacer click en modificar
+    const { datosGuardados } = useContext(UserContext); //Muestra dato en el input del modificar
+    const { datosOriginales } = useContext(UserContext); //Datos originales al ser seteados al hacer click en modificar
 
-    const { datosTablaModificar, setDatosTablaModificar } = useContext(UserContext); //Datos al seleccionar checkbox se muestra en textarea
-    const { guardarID, setGuardarID } = useContext(UserContext); //Se guarda id del elemento seleccionado con el checkbox
-    const { filtro, setFiltro } = useContext(UserContext); //Se guarda información del filtro
+    const { datosTablaModificar } = useContext(UserContext); //Datos al seleccionar checkbox se muestra en textarea
+    const { guardarID } = useContext(UserContext); //Se guarda id del elemento seleccionado con el checkbox
+    const { filtro } = useContext(UserContext); //Se guarda información del filtro
 
     const { handleInputChangeModificar, handleFiltrarChange } = useChange(); //Onchange para capturar datos en los inputs
     const { listarElementos, componenteListarSintomas, componenteListarTiposDepresion, componenteMostrarMensaje, componenteNombreOpcion, componenteCabeceraModificarEliminar, componenteAgregarSintoma, modificarSintoma, eliminarSintoma, handleChange, reiniciarModal } = useSintomas(); //Logica de negocio
