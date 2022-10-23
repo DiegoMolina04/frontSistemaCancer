@@ -11,9 +11,8 @@ const usePlataforma = () => {
     //Contexto
     const { token, setToken } = useContext(UserContext); //Token para saber si esta logeado
     const { es_admin, setEs_admin } = useContext(UserContext); //Para saber roles tienen
-    const { correo, setCorreo } = useContext(UserContext); //Correo del usuario
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext); //Muestra dato en el input del modificar
-    const { cambiarEstado, setCambiarEstado } = useContext(UserContext);
+    const { setCorreo } = useContext(UserContext); //Correo del usuario
+    const { setCambiarEstado } = useContext(UserContext);
     //Componente
     const [componenteAdministrarUsuarios, setComponenteAdministrarUsuarios] = useState(""); //Boton agregar si es admin
 
@@ -72,7 +71,7 @@ const usePlataforma = () => {
     
     useEffect(() => {
 
-        if (es_admin == true && token != undefined) { //Si es admin
+        if (es_admin === true && token !== undefined) { //Si es admin
 
             setComponenteAdministrarUsuarios(<ComponenteAdministrarUsuarios />);
 
