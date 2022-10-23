@@ -15,11 +15,11 @@ const useAdministrarUsuarios = () => {
 
     //Contexto
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext);
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
-    const { datosIntroducidos, setDatosIntroducidos } = useContext(UserContext);
-    const { datosOriginales, setDatosOriginales } = useContext(UserContext);
-    const { token, setToken } = useContext(UserContext);
-    const { es_admin, setEs_admin } = useContext(UserContext);
+    const { setDatosGuardados } = useContext(UserContext);
+    const { setDatosIntroducidos } = useContext(UserContext);
+    const { setDatosOriginales } = useContext(UserContext);
+    const { token } = useContext(UserContext);
+    const { es_admin } = useContext(UserContext);
 
     //Componente
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState("");
@@ -63,7 +63,7 @@ const useAdministrarUsuarios = () => {
 
         try {
 
-            if (respuesta.code != undefined) {
+            if (respuesta.code !== undefined) {
                 setCodigo(respuestaServidor.code);
 
             } else {
@@ -75,10 +75,10 @@ const useAdministrarUsuarios = () => {
 
                 } else {
 
-                    if (funcion == "listar") {
+                    if (funcion === "listar") {
                         setCodigo(206); //No hay nada en la BD sobre lo tratado de mostrar.
 
-                    } else if (funcion == "filtrar") {
+                    } else if (funcion === "filtrar") {
                         setCodigo(404); //No se encuentra nada en el filtro.
 
                     }
@@ -95,7 +95,7 @@ const useAdministrarUsuarios = () => {
         try {
             event.preventDefault();
 
-            if (funcion == "listar") {
+            if (funcion === "listar") {
 
                 setCodigo(""); //Se reinicia el mensaje de la tabla
                 url = "https://secure-brushlands-86892.herokuapp.com/v1/users/get-all";
@@ -103,11 +103,11 @@ const useAdministrarUsuarios = () => {
                 tomarDecision(respuestaServidor, funcion);
 
 
-            } else if (funcion == "filtrar") {
+            } else if (funcion === "filtrar") {
 
                 setCodigo("");
 
-                if (datos.categoria == "Seleccione Categoria..." || datos.inputFiltro == "" || datos.categoria == undefined || datos.inputFiltro == undefined) {
+                if (datos.categoria === "Seleccione Categoria..." || datos.inputFiltro === "" || datos.categoria === undefined || datos.inputFiltro === undefined) {
                     setCodigo(408);
 
                 } else {
@@ -123,15 +123,15 @@ const useAdministrarUsuarios = () => {
 
                         case "cuenta":
                             let datoIngresado = datos.inputFiltro.toLowerCase();
-                            if (datoIngresado == "usuario") {
+                            if (datoIngresado === "usuario") {
                                 url = "https://secure-brushlands-86892.herokuapp.com/v1/users/get-all?es_admin=false";
 
-                            } else if (datoIngresado == "admin") {
+                            } else if (datoIngresado === "admin") {
                                 url = "https://secure-brushlands-86892.herokuapp.com/v1/users/get-all?es_admin=true";
 
                             }
 
-                            if (url == "") {
+                            if (url === "") {
                                 setCodigo(404);
 
                             } else {
@@ -141,6 +141,10 @@ const useAdministrarUsuarios = () => {
                             }
 
                             break;
+
+                        default:
+
+                        break;
                     }
                 }
 
@@ -172,7 +176,7 @@ const useAdministrarUsuarios = () => {
             setDatosGuardados("");
 
             //Se valida que no existan campos vacios.
-            if (datosModificados.cedula == "" || datosModificados.nombre == "" || datosModificados.email == "" || datosModificados.es_admin == undefined) {
+            if (datosModificados.cedula === "" || datosModificados.nombre === "" || datosModificados.email === "" || datosModificados.es_admin === undefined) {
                 setCodigo(408);
             } else {
 
@@ -183,19 +187,19 @@ const useAdministrarUsuarios = () => {
                 let varCorreo = datosModificados.email;
                 let varCuenta = datosModificados.es_admin;
 
-                if (varCedula == undefined) {
+                if (varCedula === undefined) {
                     varCedula = datosOriginales.cedula;
                 }
 
-                if (varNombre == undefined) {
+                if (varNombre === undefined) {
                     varNombre = datosOriginales.nombre;
                 }
 
-                if (varCorreo == undefined) {
+                if (varCorreo === undefined) {
                     varCorreo = datosOriginales.email;
                 }
 
-                if (varCuenta == undefined) {
+                if (varCuenta === undefined) {
                     varCuenta = datosOriginales.es_admin;
                 }
 
@@ -210,7 +214,7 @@ const useAdministrarUsuarios = () => {
                 let url = "https://secure-brushlands-86892.herokuapp.com/v1/users/" + datosOriginales.email + "/update-one";
                 respuestaServidor = await putBody(arrayDatos, url);
 
-                if (respuestaServidor.status == 404) { //Correo a modificar no encontrado
+                if (respuestaServidor.status === 404) { //Correo a modificar no encontrado
                     setCodigo(406);
 
                 } else if(respuestaServidor.status !== undefined) { //Si es diferente
@@ -234,7 +238,7 @@ const useAdministrarUsuarios = () => {
             let url = "https://secure-brushlands-86892.herokuapp.com/v1/users/" + datosOriginales.id + "/delete-one";
             respuestaServidor = await deleteAutorization(token, url);
 
-            if (respuestaServidor.status == undefined) {
+            if (respuestaServidor.status === undefined) {
                 setCodigo(respuestaServidor.code);
             } else {
                 setCodigo(respuestaServidor.status);
@@ -254,7 +258,7 @@ const useAdministrarUsuarios = () => {
     //Muestra mensajes informativos al usuario
     useEffect(() => {
 
-        if (cambiarEstado == "Correcto") {
+        if (cambiarEstado === "Correcto") {
             setCodigo(201);
             setCambiarEstado("");
 
@@ -319,7 +323,7 @@ const useAdministrarUsuarios = () => {
 
     //Se ejecuta una sola vez al ser renderizado. Verifica si es admin y si tiene token para mostrar botones.
     useEffect(() => {
-        if (es_admin == true && token != undefined) {
+        if (es_admin === true && token !== undefined) {
             setComponenteBtnAgregarUsuario(<ComponenteAgregarUsuario />);
         }
     }, [])
