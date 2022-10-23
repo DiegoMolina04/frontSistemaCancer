@@ -12,7 +12,7 @@ const useGuardarDiagnostico = () => {
 
     //Context
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext);
-    const { token, setToken } = useContext(UserContext);
+    const { token } = useContext(UserContext);
     const { datosOriginales, setDatosOriginales } = useContext(UserContext);
 
     //Componente
@@ -26,7 +26,7 @@ const useGuardarDiagnostico = () => {
 
         try {
             e.preventDefault();
-            if (datos.cedula == "" || datos.nombre == "" || datos.observaciones == "") { //Campos vacios
+            if (datos.cedula === "" || datos.nombre === "" || datos.observaciones === "") { //Campos vacios
                 verificarCodigo(408);
 
             } else {
@@ -35,7 +35,7 @@ const useGuardarDiagnostico = () => {
                 let url = "https://secure-brushlands-86892.herokuapp.com/v1/diagnosis/create-one";
                 respuestaServidor = await postBodyAutorization(arrayDatos, token, url);
 
-                if (respuestaServidor.status == undefined) { //
+                if (respuestaServidor.status === undefined) { //
                     verificarCodigo(respuestaServidor.code);
 
                 } else { //Si es diferente
