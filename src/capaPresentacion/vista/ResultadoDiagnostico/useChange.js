@@ -1,12 +1,12 @@
 //React
-import { useState, useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 //Context
 import { UserContext } from '../../../capaNegocio/context/UserContext';
 
 const useChange = () => {
 
     //Contexto
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
+    const { setDatosGuardados } = useContext(UserContext);
     const { datosIntroducidos, setDatosIntroducidos } = useContext(UserContext);
     const { filtro, setFiltro } = useContext(UserContext);
 
