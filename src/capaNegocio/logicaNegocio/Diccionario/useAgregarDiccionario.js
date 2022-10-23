@@ -12,7 +12,7 @@ const useAgregarDiccionario = () => {
 
     //Context
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext);
-    const { token, setToken } = useContext(UserContext);
+    const { token } = useContext(UserContext);
 
     //Componente
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState("");
@@ -25,7 +25,7 @@ const useAgregarDiccionario = () => {
         try {
             e.preventDefault();
 
-            if (datos.termino == "" || datos.descripcion == "") { //Campos vacios
+            if (datos.termino === "" || datos.descripcion === "") { //Campos vacios
                 verificarCodigo(408);
 
             } else {
@@ -33,7 +33,7 @@ const useAgregarDiccionario = () => {
                 let url = "https://secure-brushlands-86892.herokuapp.com/v1/dictionary/create-one";
                 respuestaServidor = await postBodyAutorization(datos, token, url);
 
-                if (respuestaServidor.status == undefined) { //
+                if (respuestaServidor.status === undefined) { //
                     verificarCodigo(respuestaServidor.code);
 
                 } else { //Si es diferente
@@ -99,11 +99,11 @@ const useAgregarDiccionario = () => {
     }
 
     useEffect(() => {
-        if (cambiarEstado == "Estado inicial") {
+        if (cambiarEstado === "Estado inicial") {
             setCambiarEstado("");
             history.push("/plataforma/diccionario");
 
-        } else if (cambiarEstado == "Correcto") {
+        } else if (cambiarEstado === "Correcto") {
             history.push("/plataforma/diccionario");
 
         }
