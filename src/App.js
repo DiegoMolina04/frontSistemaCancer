@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";/////////////////////
+import { BrowserRouter, Route, Switch } from "react-router-dom";/////////////////////
 import Plataforma from '../src/capaPresentacion/vista/Plataforma/Plataforma.js'
 import Login from './capaPresentacion/vista/Login/Login';
 import AgregarUsuario from "../src/capaPresentacion/vista/AdministrarUsuarios/AgregarUsuario/AgregarUsuario.js";
@@ -22,20 +22,17 @@ import { useMemo, useState } from "react";
 
 function App() {
 
-    const [correo, setCorreo] = useState("");
-    const email = useMemo(() => ({ correo, setCorreo }), [correo, setCorreo]);
+    const [correo, setCorreo] = useState(""); //Guarda correo del usuario
 
-    const [token, setToken] = useState("");
-    const mostrarToken = useMemo(() => ({ token, setToken }), [token, setToken]);
+    const [token, setToken] = useState(""); //Guarda token de usuario
 
-    const [es_admin, setEs_admin] = useState("");
-    const mostrarEs_admin = useMemo(() => ({ es_admin, setEs_admin }), [es_admin, setEs_admin]);
+    const [es_admin, setEs_admin] = useState(""); //Guarda permisos de usuario
 
-    const [respuestaServidor, setRespuestaServidor] = useState("");
+    const [respuestaServidor, setRespuestaServidor] = useState(""); //Guarda diferentes respuestas del servidor
 
     const [datosGuardados, setDatosGuardados] = useState(""); //Guarda y muestra datos modificados en modal
 
-    const [cambiarEstado, setCambiarEstado] = useState("");
+    const [cambiarEstado, setCambiarEstado] = useState(""); //Guarda cambios de estado
 
     const [datosIntroducidos, setDatosIntroducidos] = useState(""); //Guarda datos en los handleChange
 
