@@ -17,14 +17,14 @@ const useSintomas = () => {
 
     //Contexto
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext); //Cambia estado
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext); //Datos para mostrar en modal
-    const { datosIntroducidos, setDatosIntroducidos } = useContext(UserContext); //Datos que se van modificando en el handleChange.
-    const { datosOriginales, setDatosOriginales } = useContext(UserContext); //Datos originales para comparar.
-    const { token, setToken } = useContext(UserContext); //Token para saber si esta logeado
-    const { es_admin, setEs_admin } = useContext(UserContext); //Para saber roles tienen
+    const { setDatosGuardados } = useContext(UserContext); //Datos para mostrar en modal
+    const { setDatosIntroducidos } = useContext(UserContext); //Datos que se van modificando en el handleChange.
+    const { setDatosOriginales } = useContext(UserContext); //Datos originales para comparar.
+    const { token } = useContext(UserContext); //Token para saber si esta logeado
+    const { es_admin } = useContext(UserContext); //Para saber roles tienen
 
-    const { datosTablaModificar, setDatosTablaModificar } = useContext(UserContext); //Elementos del textarea
-    const { guardarID, setGuardarID } = useContext(UserContext); //Se guarda el id del elemento seleccionado en el checkbox
+    const { setDatosTablaModificar } = useContext(UserContext); //Elementos del textarea
+    const { setGuardarID } = useContext(UserContext); //Se guarda el id del elemento seleccionado en el checkbox
 
     //Componente
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState(""); //Mensajes informativos
@@ -51,7 +51,7 @@ const useSintomas = () => {
 
         try {
             let tabla = "";
-            if ((es_admin == true && funcion == "listar") || (es_admin == true && funcion == "filtrar")) { //Se muestra tabla con botones de modificar y eliminar*/
+            if ((es_admin === true && funcion === "listar") || (es_admin === true && funcion === "filtrar")) { //Se muestra tabla con botones de modificar y eliminar*/
                 tabla = datosExtraidos.map(elemento => (
                     <tr>
                         <th id="sintomaTablaFila-AdministrarSintomas" scope="row">{elemento.sintoma}</th>
@@ -69,14 +69,14 @@ const useSintomas = () => {
                         </td>
                     </tr>
                 ))
-            } else if ((es_admin == false && funcion == "listar") || (es_admin == false && funcion == "filtrar")) { //Se muestra tabla sin botones de modificar y eliminar
+            } else if ((es_admin === false && funcion === "listar") || (es_admin === false && funcion === "filtrar")) { //Se muestra tabla sin botones de modificar y eliminar
                 tabla = datosExtraidos.map(elemento => (
                     <tr>
                         <th id="sintomaTablaFila-AdministrarSintomas" scope="row">{elemento.sintoma}</th>
                         <td id="tipoDepresionTablaFila-AdministrarSintomas">{<ol>{elemento.depresion_types.map(tipoDepresion => (<li>{tipoDepresion.tipo_depresion}</li>))}</ol>}</td> {/*Se cargan los items listandolos*/}
                     </tr>
                 ))
-            } else if (funcion == "tipos depresion") {
+            } else if (funcion === "tipos depresion") {
                 tabla = datosExtraidos.map(elemento => (
                     <tr>
                         <td scope="row">{elemento.tipo_depresion}</td>
@@ -109,20 +109,20 @@ const useSintomas = () => {
 
                 if (datosExtraidos.length > 0) { //Si hay algún resultado
 
-                    if (funcion == "listar" || funcion == "filtrar") {
+                    if (funcion === "listar" || funcion === "filtrar") {
                         setComponenteListarSintomas(<ComponenteTabla tabla={cargarElementosTabla(datosExtraidos, funcion, es_admin)} />);
 
-                    } else if (funcion == "tipos depresion") {
+                    } else if (funcion === "tipos depresion") {
                         setComponenteListarTiposDepresion(<ComponenteTabla tabla={cargarElementosTabla(datosExtraidos, funcion, es_admin)} />);
 
                     }
 
                 } else {
 
-                    if (funcion == "listar") {
+                    if (funcion === "listar") {
                         setCodigo(206); //No hay nada en la BD sobre lo tratado de mostrar.
 
-                    } else if (funcion == "filtrar") {
+                    } else if (funcion === "filtrar") {
                         setCodigo(404); //No se encuentra nada en el filtro.
 
                     }
@@ -140,7 +140,7 @@ const useSintomas = () => {
 
             event.preventDefault();
 
-            if (funcion == "listar") {
+            if (funcion === "listar") {
 
                 setCodigo(""); //Se reinicia el mensaje de la tabla
                 url = "https://secure-brushlands-86892.herokuapp.com/v1/symptoms/get-all";
@@ -148,7 +148,7 @@ const useSintomas = () => {
                 tomarDecision(respuestaServidor, funcion);
 
 
-            } else if (funcion == "filtrar") {
+            } else if (funcion === "filtrar") {
 
                 setCodigo("");
 
@@ -166,10 +166,13 @@ const useSintomas = () => {
 
                             break;
 
+                        default:
+                            break;
+
                     }
                 }
 
-            } else if (funcion == "tipos depresion") {
+            } else if (funcion === "tipos depresion") {
                 setCodigo(""); //Se reinicia el mensaje de la tabla
                 url = "https://secure-brushlands-86892.herokuapp.com/v1/depresion-type/get-all";
                 respuestaServidor = await getAutorization(token, url);
@@ -235,10 +238,10 @@ const useSintomas = () => {
             let tiposDepresionOriginalesOrganizados = JSON.stringify((sintomaOriginal.tipos_depresion).sort());
             let url = "https://secure-brushlands-86892.herokuapp.com/v1/symptoms/" + sintomaOriginal.id + "/update-one";
 
-            if ((sintomaModificado.sintoma == sintomaOriginal.sintoma) && (tiposDepresionNuevosOrganizados == tiposDepresionOriginalesOrganizados)) { //Si el sintoma y tipos depresion no se modificaron
+            if ((sintomaModificado.sintoma === sintomaOriginal.sintoma) && (tiposDepresionNuevosOrganizados === tiposDepresionOriginalesOrganizados)) { //Si el sintoma y tipos depresion no se modificaron
                 setCodigo(207);
 
-            } else if ((sintomaModificado.sintoma == sintomaOriginal.sintoma) && (tiposDepresionNuevosOrganizados != tiposDepresionOriginalesOrganizados)) { //Si el sintoma es igual y los tipos depresion cambian
+            } else if ((sintomaModificado.sintoma === sintomaOriginal.sintoma) && (tiposDepresionNuevosOrganizados !== tiposDepresionOriginalesOrganizados)) { //Si el sintoma es igual y los tipos depresion cambian
 
                 let tiposDepresionOriginales = sintomaOriginal.tipos_depresion;
                 const tiposDepresionNuevos = [];
@@ -248,17 +251,17 @@ const useSintomas = () => {
                     (sintomaOriginal.tipos_depresion.includes(elemento)) ? (tiposDepresionOriginales = tiposDepresionOriginales.filter(id => id !== elemento)) : tiposDepresionNuevos.push(elemento)
                 ));
 
-                if (tiposDepresionOriginales.length == 0) { //Si solo hay que insertar tipos depresion
+                if (tiposDepresionOriginales.length === 0) { //Si solo hay que insertar tipos depresion
 
                     const arrayDatos = { 'tipos_depresion': tiposDepresionNuevos }
                     respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
 
-                } else if (tiposDepresionNuevos.length == 0) { //Si solo hay que borrar tipos depresion
+                } else if (tiposDepresionNuevos.length === 0) { //Si solo hay que borrar tipos depresion
 
                     const arrayDatos = { 'remover_tipos_depresion': tiposDepresionOriginales }
                     respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
 
-                } else if (tiposDepresionNuevos.length != 0 && tiposDepresionOriginales.length != 0) { //Si hay que insertar tipos depresion y borrar tipos depresion
+                } else if (tiposDepresionNuevos.length !== 0 && tiposDepresionOriginales.length !== 0) { //Si hay que insertar tipos depresion y borrar tipos depresion
 
                     const arrayDatos = { 'tipos_depresion': tiposDepresionNuevos, 'remover_tipos_depresion': tiposDepresionOriginales }
                     respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
@@ -267,12 +270,12 @@ const useSintomas = () => {
 
 
 
-            } else if ((sintomaModificado.sintoma !== sintomaOriginal.sintoma) && (tiposDepresionNuevosOrganizados == tiposDepresionOriginalesOrganizados)) { //Si sintoma diferente y tipos depresion iguales
+            } else if ((sintomaModificado.sintoma !== sintomaOriginal.sintoma) && (tiposDepresionNuevosOrganizados === tiposDepresionOriginalesOrganizados)) { //Si sintoma diferente y tipos depresion iguales
 
                 const arrayDatos = { 'sintoma': sintomaModificado.sintoma }
                 respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
 
-            } else if ((sintomaModificado.sintoma != sintomaOriginal.sintoma) && (tiposDepresionNuevosOrganizados != tiposDepresionOriginalesOrganizados)) { //Si sintoma y tipos depresion diferentes
+            } else if ((sintomaModificado.sintoma !== sintomaOriginal.sintoma) && (tiposDepresionNuevosOrganizados !== tiposDepresionOriginalesOrganizados)) { //Si sintoma y tipos depresion diferentes
 
                 let tiposDepresionOriginales = sintomaOriginal.tipos_depresion;
                 const tiposDepresionNuevos = [];
@@ -282,17 +285,17 @@ const useSintomas = () => {
                     (sintomaOriginal.tipos_depresion.includes(elemento)) ? (tiposDepresionOriginales = tiposDepresionOriginales.filter(id => id !== elemento)) : tiposDepresionNuevos.push(elemento)
                 ));
 
-                if (tiposDepresionOriginales.length == 0) { //Si solo hay que insertar tipos_depresion e insertar sintoma
+                if (tiposDepresionOriginales.length === 0) { //Si solo hay que insertar tipos_depresion e insertar sintoma
 
                     const arrayDatos = { 'sintoma': sintomaModificado.sintoma, 'tipos_depresion': tiposDepresionNuevos }
                     respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
 
-                } else if (tiposDepresionNuevos.length == 0) { //Si solo hay que borrar tipos depresion e insertar sintoma
+                } else if (tiposDepresionNuevos.length === 0) { //Si solo hay que borrar tipos depresion e insertar sintoma
 
                     const arrayDatos = { 'sintoma': sintomaModificado.sintoma, 'remover_tipos_depresion': tiposDepresionOriginales }
                     respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
 
-                } else if (tiposDepresionNuevos.length != 0 && tiposDepresionOriginales.length != 0) { //Si hay que insertar tipos depresion, borrar tipos depresion y sintoma
+                } else if (tiposDepresionNuevos.length !== 0 && tiposDepresionOriginales.length !== 0) { //Si hay que insertar tipos depresion, borrar tipos depresion y sintoma
                     const arrayDatos = { 'sintoma': sintomaModificado.sintoma, 'tipos_depresion': tiposDepresionNuevos, 'remover_tipos_depresion': tiposDepresionOriginales }
                     respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
 
@@ -322,7 +325,7 @@ const useSintomas = () => {
             let url = "https://secure-brushlands-86892.herokuapp.com/v1/symptoms/" + datosOriginales.id + "/delete-one";
             respuestaServidor = await deleteAutorization(token, url);
 
-            if (respuestaServidor.status == undefined) {
+            if (respuestaServidor.status === undefined) {
                 setCodigo(respuestaServidor.code);
             } else {
                 setCodigo(respuestaServidor.status);
@@ -349,11 +352,11 @@ const useSintomas = () => {
     //Muestra mensajes informativos al usuario y cambia estado
     useEffect(() => {
 
-        if (cambiarEstado == "Correcto") {
+        if (cambiarEstado === "Correcto") {
             setCodigo(201);
             setCambiarEstado("");
 
-        } else if (cambiarEstado == "Lista seleccionada") {
+        } else if (cambiarEstado === "Lista seleccionada") {
 
             setGuardarID(tipoDepresionId);
             setDatosTablaModificar(tipoDepresionMensaje);
@@ -419,7 +422,7 @@ const useSintomas = () => {
 
     //Se ejecuta una sola vez al ser renderizado. Verifica que rol se tiene para mostrar diferentes componentes.
     useEffect(() => {
-        if (es_admin == true && token != undefined) { //Si es admin
+        if (es_admin === true && token !== undefined) { //Si es admin
 
             setComponenteBtnAgregarSintoma(<ComponenteAgregarSintoma />);
             setComponenteNombreOpcion(<NombreOpcion opcion={"Administrar Síntomas"} />);
