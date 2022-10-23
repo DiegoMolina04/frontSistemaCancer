@@ -12,7 +12,7 @@ const useAgregarTiposDepresion = () => {
 
     //Context
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext);
-    const { token, setToken } = useContext(UserContext);
+    const { token } = useContext(UserContext);
 
     //Componente
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState("");
@@ -25,7 +25,7 @@ const useAgregarTiposDepresion = () => {
         try {
             e.preventDefault();
 
-            if (datos.tipos_depresion == "" || datos.cantidad_sintomas == "") { //Campos vacios
+            if (datos.tipos_depresion === "" || datos.cantidad_sintomas === "") { //Campos vacios
                 verificarCodigo(408);
 
             } else {
@@ -33,7 +33,7 @@ const useAgregarTiposDepresion = () => {
                 let url = "https://secure-brushlands-86892.herokuapp.com/v1/depresion-type/create-one";
                 respuestaServidor = await postBodyAutorization(datos, token, url);
 
-                if (respuestaServidor.status == undefined) { //
+                if (respuestaServidor.status === undefined) { //
                     verificarCodigo(respuestaServidor.code);
 
                 } else { //Si es diferente
@@ -99,11 +99,11 @@ const useAgregarTiposDepresion = () => {
     }
 
     useEffect(() => {
-        if (cambiarEstado == "Estado inicial") {
+        if (cambiarEstado === "Estado inicial") {
             setCambiarEstado("");
             history.push("/plataforma/tiposdepresion");
 
-        } else if (cambiarEstado == "Correcto") {
+        } else if (cambiarEstado === "Correcto") {
             history.push("/plataforma/tiposdepresion");
 
         }
