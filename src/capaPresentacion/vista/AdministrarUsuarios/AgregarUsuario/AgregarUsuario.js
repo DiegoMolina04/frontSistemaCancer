@@ -4,7 +4,7 @@ import '../../../css/fontawesome-free-5.15.4-web/css/all.css'
 //Logo
 import logoAgregarUsuario from '../../../image/logo.png'
 //React
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 //Context
 import { UserContext } from '../../../../capaNegocio/context/UserContext';
 //HandleInput
@@ -13,11 +13,10 @@ import useChange from './useChange.js';
 import useAgregarUsuario from '../../../../capaNegocio/logicaNegocio/AdministrarUsuarios/useAgregarUsuario';
 import verificarNumeros from '../../../../capaNegocio/logicaNegocio/LogicaComun/verificarNumeros';
 
-
 function AgregarUsuario() {
 
     //Context
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
+    const { datosGuardados } = useContext(UserContext);
     //HanldeInput
     const { handleInputChange } = useChange();
     //Logica negocio
