@@ -17,7 +17,7 @@ const useDiagnosticar = () => {
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext); //Para entrar en el effect
     const { datosOriginales, setDatosOriginales } = useContext(UserContext); //Guardar las preguntas
     const { datosGuardados, setDatosGuardados } = useContext(UserContext); //Preguntas para mostrar en el textarea
-    const { token, setToken } = useContext(UserContext); //Token de autenticación
+    const { token } = useContext(UserContext); //Token de autenticación
 
     //Componente
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState(""); //Muestra mensaje informativo al usuario
