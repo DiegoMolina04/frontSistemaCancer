@@ -16,7 +16,7 @@ import verificarNumeros from '../../../../capaNegocio/logicaNegocio/LogicaComun/
 function AgregarTipoDepresion() {
 
     //Context
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
+    const { datosGuardados } = useContext(UserContext);
     //HanldeInput
     const { handleInputChange } = useChange();
     //Logica negocio

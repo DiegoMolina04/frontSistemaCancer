@@ -9,7 +9,7 @@ const useChange = () => {
     const [datos, setDatos] = useState({ tipo_depresion: '', cantidad_sintomas: '' });
 
     //Context
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
+    const { setDatosGuardados } = useContext(UserContext);
 
     const handleInputChange = (event) => { //Captura los datos ingresados
 
