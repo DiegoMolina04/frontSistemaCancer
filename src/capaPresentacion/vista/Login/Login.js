@@ -9,7 +9,7 @@ function Login() {
 
   //Contextos para globalizar datos
   //Datos guardados desde el handleChange y enviados a logica de negocio.
-  const { datosGuardados, setDatosGuardados } = useContext(UserContext);
+  const { datosGuardados } = useContext(UserContext);
 
   //Custom hook para comunicación con lógica de negocio.
   const { verificarUsuario, componenteCorreo, componenteMostrarMensaje, componenteContraseña, componenteBtnRegresar } = useLogin();

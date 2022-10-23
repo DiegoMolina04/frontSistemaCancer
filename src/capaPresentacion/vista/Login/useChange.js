@@ -8,7 +8,7 @@ const useChange = () => {
     //Estado para guardar datos
     const [datos, setDatos] = useState({ email: '', contraseña: '' });
     //Context
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
+    const { setDatosGuardados } = useContext(UserContext);
 
     const handleInputChange = (event) => { //Captura evento de los cambio en inputs
 
