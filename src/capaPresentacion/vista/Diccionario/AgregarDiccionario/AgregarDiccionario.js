@@ -15,7 +15,7 @@ import useAgregarDiccionario from '../../../../capaNegocio/logicaNegocio/Diccion
 function AgregarDiccionario() {
 
     //Context
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
+    const { datosGuardados } = useContext(UserContext);
     //HanldeInput
     const { handleInputChange } = useChange();
     //Logica negocio
