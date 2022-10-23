@@ -17,11 +17,11 @@ const useTiposDepresion = () => {
 
     //Contexto
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext);
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
-    const { datosIntroducidos, setDatosIntroducidos } = useContext(UserContext);
-    const { datosOriginales, setDatosOriginales } = useContext(UserContext);
-    const { token, setToken } = useContext(UserContext);
-    const { es_admin, setEs_admin } = useContext(UserContext);
+    const { setDatosGuardados } = useContext(UserContext);
+    const { setDatosIntroducidos } = useContext(UserContext);
+    const { setDatosOriginales } = useContext(UserContext);
+    const { token } = useContext(UserContext);
+    const { es_admin } = useContext(UserContext);
 
     //Componente
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState(""); //Agrega el mensaje informativo
@@ -41,7 +41,7 @@ const useTiposDepresion = () => {
     function cargarElementosTabla(datosExtraidos, funcion, es_admin) {
         try {
             let tabla = "";
-            if ((es_admin == true && funcion == "listar") || (es_admin == true && funcion == "filtrar")) { //Se muestra tabla con botones de modificar y eliminar*/
+            if ((es_admin === true && funcion === "listar") || (es_admin === true && funcion === "filtrar")) { //Se muestra tabla con botones de modificar y eliminar*/
                 tabla = datosExtraidos.map(elemento => (
                     <tr>
                         <th id="tipoDepresionTablaFila-AdministrarTipoDepresion" scope="row">{elemento.tipo_depresion}</th>
@@ -60,7 +60,7 @@ const useTiposDepresion = () => {
                         </td>
                     </tr>
                 ))
-            } else if ((es_admin == false && funcion == "listar") || (es_admin == false && funcion == "filtrar")) { //Se muestra tabla sin botones de modificar y eliminar
+            } else if ((es_admin === false && funcion === "listar") || (es_admin === false && funcion === "filtrar")) { //Se muestra tabla sin botones de modificar y eliminar
                 tabla = datosExtraidos.map(elemento => (
                     <tr>
                         <th id="tipoDepresionTablaFila-AdministrarTipoDepresion" scope="row">{elemento.tipo_depresion}</th>
@@ -82,7 +82,7 @@ const useTiposDepresion = () => {
 
         try {
 
-            if (respuesta.code != undefined) {
+            if (respuesta.code !== undefined) {
                 setCodigo(respuestaServidor.code);
 
             } else {
@@ -94,10 +94,10 @@ const useTiposDepresion = () => {
 
                 } else {
 
-                    if (funcion == "listar") {
+                    if (funcion === "listar") {
                         setCodigo(206); //No hay nada en la BD sobre lo tratado de mostrar.
 
-                    } else if (funcion == "filtrar") {
+                    } else if (funcion === "filtrar") {
                         setCodigo(404); //No se encuentra nada en el filtro.
 
                     }
@@ -114,7 +114,7 @@ const useTiposDepresion = () => {
         try {
             event.preventDefault();
 
-            if (funcion == "listar") {
+            if (funcion === "listar") {
 
                 setCodigo(""); //Se reinicia el mensaje de la tabla
                 url = "https://secure-brushlands-86892.herokuapp.com/v1/depresion-type/get-all";
@@ -122,11 +122,11 @@ const useTiposDepresion = () => {
                 tomarDecision(respuestaServidor, funcion);
 
 
-            } else if (funcion == "filtrar") {
+            } else if (funcion === "filtrar") {
 
                 setCodigo("");
 
-                if (datos.categoria == "Seleccione Categoria..." || datos.inputFiltro == "" || datos.categoria == undefined || datos.inputFiltro == undefined) {
+                if (datos.categoria === "Seleccione Categoria..." || datos.inputFiltro === "" || datos.categoria === undefined || datos.inputFiltro === undefined) {
                     setCodigo(408);
 
                 } else {
@@ -138,6 +138,9 @@ const useTiposDepresion = () => {
                             respuestaServidor = await getAutorization(token, url);
                             tomarDecision(respuestaServidor, funcion);
 
+                            break;
+
+                        default:
                             break;
 
                     }
@@ -171,7 +174,7 @@ const useTiposDepresion = () => {
             setDatosGuardados("");
 
             //Se valida que no existan campos vacios.
-            if (datosModificados.tipo_depresion == "" || datosModificados.cantidad_sintomas == "") {
+            if (datosModificados.tipo_depresion === "" || datosModificados.cantidad_sintomas === "") {
                 setCodigo(408);
             } else {
 
@@ -180,11 +183,11 @@ const useTiposDepresion = () => {
                 let varTiposDepresion = datosModificados.tipo_depresion;
                 let varCantidadSintomas = datosModificados.cantidad_sintomas;
 
-                if (varTiposDepresion == undefined) {
+                if (varTiposDepresion === undefined) {
                     varTiposDepresion = datosOriginales.tipo_depresion;
                 }
 
-                if (varCantidadSintomas == undefined) {
+                if (varCantidadSintomas === undefined) {
                     varCantidadSintomas = datosOriginales.cantidad_sintomas;
                 }
 
@@ -198,7 +201,7 @@ const useTiposDepresion = () => {
                 let url = "https://secure-brushlands-86892.herokuapp.com/v1/depresion-type/" + datosOriginales.id + "/update-one";
                 respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
 
-                if (respuestaServidor.status == 404) { //Correo a modificar no encontrado
+                if (respuestaServidor.status === 404) { //Correo a modificar no encontrado
                     setCodigo(406);
 
                 } else { //Si es diferente
@@ -220,7 +223,7 @@ const useTiposDepresion = () => {
             let url = "https://secure-brushlands-86892.herokuapp.com/v1/depresion-type/" + datosOriginales.id + "/delete-one";
             respuestaServidor = await deleteAutorization(token, url);
 
-            if (respuestaServidor.status == undefined) {
+            if (respuestaServidor.status === undefined) {
                 setCodigo(respuestaServidor.code);
             } else {
                 setCodigo(respuestaServidor.status);
@@ -240,7 +243,7 @@ const useTiposDepresion = () => {
     //Muestra mensajes informativos al usuario
     useEffect(() => {
 
-        if (cambiarEstado == "Correcto") {
+        if (cambiarEstado === "Correcto") {
             setCodigo(201);
             setCambiarEstado("");
 
@@ -301,7 +304,7 @@ const useTiposDepresion = () => {
 
     //Se ejecuta una sola vez al ser renderizado. Verifica si es admin y si tiene token para mostrar botones.
     useEffect(() => {
-        if (es_admin == true && token != undefined) { //Si es admin
+        if (es_admin === true && token !== undefined) { //Si es admin
             setComponenteBtnAgregarTipoDepresion(<ComponenteAgregarTipoDepresion />);
             setComponenteNombreOpcion(<NombreOpcion opcion={"Admin. Tipos Depresión"} />);
             setComponenteCabeceraModificarEliminar(<ColumnaModificarEliminar
