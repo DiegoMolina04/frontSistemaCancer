@@ -13,9 +13,9 @@ const useCrearContraseña = () => {
     //Contextos
     const { correo, setCorreo } = useContext(UserContext);
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext);
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
-    const { token, setToken } = useContext(UserContext); //Token para saber si esta logeado
-    const { es_admin, setEs_admin } = useContext(UserContext); //Para saber roles tienen
+    const { setDatosGuardados } = useContext(UserContext);
+    const { setToken } = useContext(UserContext); //Token para saber si esta logeado
+    const { setEs_admin } = useContext(UserContext); //Para saber roles tienen
 
     //Componentes
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState("");
@@ -29,13 +29,13 @@ const useCrearContraseña = () => {
         e.preventDefault();
 
         try {
-            if (datos.contraseña == datos.Recontraseña && datos.contraseña != "" && datos.Recontraseña != "") {
+            if (datos.contraseña === datos.Recontraseña && datos.contraseña !== "" && datos.Recontraseña !== "") {
 
                 let arrayDatos = { "contraseña": datos.contraseña }
                 const url = "https://secure-brushlands-86892.herokuapp.com/v1/users/" + correo + "/update-one";
                 respuestaServidor = await putBody(arrayDatos, url);
 
-                if (respuestaServidor.status == 200) {
+                if (respuestaServidor.status === 200) {
 
                     if (cambiarEstado === "Crear contraseña") {
                         setCambiarEstado("Contraseña creada correctamente");
@@ -50,13 +50,13 @@ const useCrearContraseña = () => {
 
                     }
 
-                } else if (respuestaServidor.code == 500 || respuestaServidor.code == 404 || respuestaServidor.code == 400) {
+                } else if (respuestaServidor.code === 500 || respuestaServidor.code === 404 || respuestaServidor.code === 400) {
 
                     setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Un error ha sucedido, regrese e intente de nuevo."} />);
 
                 }
 
-            } else if (datos.contraseña == "" || datos.Recontraseña == "") { /*Se verifica que no existan campos vacios*/
+            } else if (datos.contraseña === "" || datos.Recontraseña === "") { /*Se verifica que no existan campos vacios*/
 
                 setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Por favor llene todos los campos."} />);
 
@@ -89,11 +89,11 @@ const useCrearContraseña = () => {
 
     //Efecto para regresar a las respectivas plataformas
     useEffect(() => {
-        if (cambiarEstado == "Estado inicial") {
+        if (cambiarEstado === "Estado inicial") {
             setCambiarEstado("");
             history.push("/login");
 
-        } else if (cambiarEstado == "Regresar plataforma") {
+        } else if (cambiarEstado === "Regresar plataforma") {
             setCambiarEstado("");
             history.push("/plataforma/diagnosticar");
 
