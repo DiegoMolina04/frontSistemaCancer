@@ -17,12 +17,12 @@ const useResultadoDiagnostico = () => {
 
     //Contexto
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext);
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
-    const { datosIntroducidos, setDatosIntroducidos } = useContext(UserContext);
-    const { datosOriginales, setDatosOriginales } = useContext(UserContext);
-    const { token, setToken } = useContext(UserContext);
-    const { es_admin, setEs_admin } = useContext(UserContext);
-    const { filtro, setFiltro } = useContext(UserContext);
+    const { setDatosGuardados } = useContext(UserContext);
+    const { setDatosIntroducidos } = useContext(UserContext);
+    const { setDatosOriginales } = useContext(UserContext);
+    const { token } = useContext(UserContext);
+    const { es_admin } = useContext(UserContext);
+    const { filtro } = useContext(UserContext);
 
     //Componente
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState("");
@@ -41,7 +41,7 @@ const useResultadoDiagnostico = () => {
     function cargarElementosTabla(datosExtraidos, funcion, es_admin) {
         try {
             let tabla = "";
-            if ((es_admin == true && funcion == "listar") || (es_admin == true && funcion == "filtrar")) { //Se muestra tabla con botones de modificar y eliminar*/
+            if ((es_admin === true && funcion === "listar") || (es_admin === true && funcion === "filtrar")) { //Se muestra tabla con botones de modificar y eliminar*/
                 tabla = datosExtraidos.map(elemento => (
                     <tr>
                         <th id="cedulaTablaFila-ResultadoDiagnostico" scope="row">{elemento.cedula}</th>
@@ -63,7 +63,7 @@ const useResultadoDiagnostico = () => {
                         </td>
                     </tr>
                 ))
-            } else if ((es_admin == false && funcion == "listar") || (es_admin == false && funcion == "filtrar")) { //Se muestra tabla sin botones de modificar y eliminar
+            } else if ((es_admin === false && funcion === "listar") || (es_admin === false && funcion === "filtrar")) { //Se muestra tabla sin botones de modificar y eliminar
                 tabla = datosExtraidos.map(elemento => (
                     <tr>
                         <th id="cedulaTablaFila-ResultadoDiagnostico" scope="row">{elemento.cedula}</th>
@@ -93,7 +93,7 @@ const useResultadoDiagnostico = () => {
 
         try {
 
-            if (respuesta.code != undefined) {
+            if (respuesta.code !== undefined) {
                 setCodigo(respuestaServidor.code);
 
             } else {
@@ -113,10 +113,10 @@ const useResultadoDiagnostico = () => {
 
                 } else {
 
-                    if (funcion == "listar") {
+                    if (funcion === "listar") {
                         setCodigo(206); //No hay nada en la BD sobre lo tratado de mostrar.
 
-                    } else if (funcion == "filtrar") {
+                    } else if (funcion === "filtrar") {
                         setCodigo(404); //No se encuentra nada en el filtro.
 
                     }
@@ -133,7 +133,7 @@ const useResultadoDiagnostico = () => {
         try {
             event.preventDefault();
 
-            if (funcion == "listar") {
+            if (funcion === "listar") {
 
                 setCodigo(""); //Se reinicia el mensaje de la tabla
                 url = "https://secure-brushlands-86892.herokuapp.com/v1/diagnosis/get-all";
@@ -141,11 +141,11 @@ const useResultadoDiagnostico = () => {
                 tomarDecision(respuestaServidor, funcion);
 
 
-            } else if (funcion == "filtrar") {
+            } else if (funcion === "filtrar") {
 
                 setCodigo("");
 
-                if (datos.categoria == "Seleccione Categoria..." || datos.inputFiltro == "" || datos.categoria == undefined || datos.inputFiltro == undefined) {
+                if (datos.categoria === "Seleccione Categoria..." || datos.inputFiltro === "" || datos.categoria === undefined || datos.inputFiltro === undefined) {
                     setCodigo(408);
 
                 } else {
@@ -164,6 +164,10 @@ const useResultadoDiagnostico = () => {
                             respuestaServidor = await getAutorization(token, url);
                             tomarDecision(respuestaServidor, funcion);
 
+                            break;
+
+                        default:
+                            
                             break;
                     }
                 }
@@ -196,7 +200,7 @@ const useResultadoDiagnostico = () => {
             setDatosGuardados("");
 
             //Se valida que no existan campos vacios.
-            if (datosModificados.cedula == "" || datosModificados.nombre == "" || datosModificados.observaciones == "") {
+            if (datosModificados.cedula === "" || datosModificados.nombre === "" || datosModificados.observaciones === "") {
                 setCodigo(408);
             } else {
 
@@ -206,15 +210,15 @@ const useResultadoDiagnostico = () => {
                 let varNombre = datosModificados.nombre;
                 let varObservaciones = datosModificados.observaciones;
 
-                if (varCedula == undefined) {
+                if (varCedula === undefined) {
                     varCedula = datosOriginales.cedula;
                 }
 
-                if (varNombre == undefined) {
+                if (varNombre === undefined) {
                     varNombre = datosOriginales.nombre;
                 }
 
-                if (varObservaciones == undefined) {
+                if (varObservaciones === undefined) {
                     varObservaciones = datosOriginales.observaciones;
                 }
 
@@ -228,7 +232,7 @@ const useResultadoDiagnostico = () => {
                 let url = "https://secure-brushlands-86892.herokuapp.com/v1/diagnosis/" + datosOriginales.id + "/update-one";
                 respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
 
-                if (respuestaServidor.status == 404) { //Correo a modificar no encontrado
+                if (respuestaServidor.status === 404) { //Correo a modificar no encontrado
                     setCodigo(406);
 
                 } else if (respuestaServidor.status !== undefined) { //Si es diferente
@@ -252,7 +256,7 @@ const useResultadoDiagnostico = () => {
             let url = "https://secure-brushlands-86892.herokuapp.com/v1/diagnosis/" + datosOriginales.id + "/delete-one";
             respuestaServidor = await deleteAutorization(token, url);
 
-            if (respuestaServidor.status == undefined) {
+            if (respuestaServidor.status === undefined) {
                 setCodigo(respuestaServidor.code);
             } else {
                 setCodigo(respuestaServidor.status);
@@ -316,7 +320,7 @@ const useResultadoDiagnostico = () => {
     //Muestra mensajes informativos al usuario
     useEffect(() => {
 
-        if (cambiarEstado == "Correcto") {
+        if (cambiarEstado === "Correcto") {
             setCodigo(201);
             setCambiarEstado("");
 
@@ -381,7 +385,7 @@ const useResultadoDiagnostico = () => {
 
     //Se ejecuta una sola vez al ser renderizado. Verifica si es admin y si tiene token para mostrar botones.
     useEffect(() => {
-        if (es_admin == true && token != undefined) {
+        if (es_admin === true && token !== undefined) {
 
             setComponenteNombreOpcion(<NombreOpcion opcion={"Administrar Resultados"} />);
             setComponenteCabeceraModificarEliminar(<ColumnaModificarEliminar
