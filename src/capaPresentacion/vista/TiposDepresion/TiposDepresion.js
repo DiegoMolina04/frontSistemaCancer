@@ -38,9 +38,9 @@ function TiposDepresion() {
 
                     <form id="formato" onSubmit={(e) => listarTiposDepresion(e, "filtrar", filtro)}>
 
-                        <select class="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
+                        <select className="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
 
-                            <option selected >Seleccione Categoría...</option>
+                            <option value >Seleccione Categoría...</option>
                             <option value="tipoDepresion">Tipo Depresión</option>
 
                         </select>
@@ -48,7 +48,7 @@ function TiposDepresion() {
                         <input id="filtrar" type="text" className="form-control" onChange={handleFiltrarChange} name="inputFiltro" placeholder="¿Busca algo puntual?" title="Ingrese valor a buscar" />
 
                         <button id="enviarBuscar-Plataforma" type="submit" className="btn btn-success" title="Buscar" >
-                            <i class="fas fa-search"></i>
+                            <i className="fas fa-search"></i>
                         </button>
 
                     </form>
@@ -73,11 +73,11 @@ function TiposDepresion() {
                             <h5 id="mensajeRespuesta-AdministrarTiposDepresion">{componenteMostrarMensaje}</h5>
                         </div>
                         <div id="cajaBotonRecargar-AdministrarTiposDepresion">
-                            <button id="botonRecargar-AdministrarTiposDepresion" type='submit' className="btn btn-success" title='Recargar tabla'><i class="fas fa-redo"></i></button>
+                            <button id="botonRecargar-AdministrarTiposDepresion" type='submit' className="btn btn-success" title='Recargar tabla'><i className="fas fa-redo"></i></button>
                         </div>
                     </div>
 
-                    <table id="tabla-AdministrarTiposDepresion" class="table table-bordered">
+                    <table id="tabla-AdministrarTiposDepresion" className="table table-bordered">
                         <thead> {/*Cabeceras*/}
                             <tr>
                                 <th id="tipoDepresionTablaCabecera-AdministrarTiposDepresion" scope="col" title="Tipos de depresión">Tipo Depresión</th>
@@ -97,28 +97,28 @@ function TiposDepresion() {
             </form>
             {/*Modal para el botón de Eliminar Tipos depresion*/}
             <form className="row" onSubmit={(e) => eliminarTipoDepresion(e, datosOriginales)}>
-                <div class="modal fade" id="modalEliminar-AdministrarTipoDepresion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
+                <div className="modal fade" id="modalEliminar-AdministrarTipoDepresion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
 
-                                <h5 class="modal-title" id="modalLabelEliminar-AdministrarTiposDepresion">
+                                <h5 className="modal-title" id="modalLabelEliminar-AdministrarTiposDepresion">
 
-                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <i className="fas fa-exclamation-triangle"></i>
                                     <label >Advertencia</label>
 
                                 </h5>
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
 
                                 <label>¿Realmente desea eliminar el tipo de depresión "{datosGuardados.tipo_depresion}" ?</label>
                                 <label id="labelRevertirCambios-AdministrarTiposDepresion">Los cambios no se podrán revertir.</label>
 
                             </div>
-                            <div class="modal-footer">
+                            <div className="modal-footer">
 
-                                <button type="button" id="botonModalCancelar-AdministrarTiposDepresion" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a tipos depresión">Cancelar</button>
-                                <button type="submit" id="botonmodalEliminar-AdministrarTipoDepresion" class="btn btn-primary" data-bs-dismiss="modal" title="Eliminar tipo depresión">Eliminar</button>
+                                <button type="button" id="botonModalCancelar-AdministrarTiposDepresion" className="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a tipos depresión">Cancelar</button>
+                                <button type="submit" id="botonmodalEliminar-AdministrarTipoDepresion" className="btn btn-primary" data-bs-dismiss="modal" title="Eliminar tipo depresión">Eliminar</button>
 
                             </div>
                         </div>
@@ -128,19 +128,19 @@ function TiposDepresion() {
 
             {/*Modal para el botón de Modificar Tipos depresion*/}
             <form className="row" onSubmit={(e) => modificarTipoDepresion(e, datosGuardados, datosOriginales)}>
-                <div class="modal fade" id="modalModificar-AdministrarTipoDepresion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
+                <div className="modal fade" id="modalModificar-AdministrarTipoDepresion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
 
-                                <h5 class="modal-title" id="modalLabelModificar-AdministrarTiposDepresion">
+                                <h5 className="modal-title" id="modalLabelModificar-AdministrarTiposDepresion">
 
-                                    <i class="fas fa-cog"></i>
+                                    <i className="fas fa-cog"></i>
                                     <label >Modificar Tipo Depresión</label>
 
                                 </h5>
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
 
                                 <div id="labelTipoDepresionModificar-AdministrarTipoDepresion">
 
@@ -149,7 +149,7 @@ function TiposDepresion() {
                                 </div>
 
                                 <div className="input-group">
-                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-notes-medical"></i></div>
+                                    <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-notes-medical"></i></div>
                                     <input id="" type="text" className="form-control" value={datosGuardados.tipo_depresion} placeholder="Ingrese el tipo de depresión" onChange={handleInputChangeModificar} name="tipo_depresion" title="Tipo depresión" />
 
                                 </div>
@@ -164,7 +164,7 @@ function TiposDepresion() {
                                 </div>
 
                                 <div className="input-group">
-                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-clipboard-check"></i></div>
+                                    <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-clipboard-check"></i></div>
                                     <input id="" type="text" className="form-control" value={datosGuardados.cantidad_sintomas}
                                         onKeyDown={verificarNumeros} placeholder="Ingrese cantidad de sintomas que debe cumplir" onChange={handleInputChangeModificar} name="cantidad_sintomas" title="Cantidad sintomas a modificar" />
 
@@ -174,10 +174,10 @@ function TiposDepresion() {
 
                             </div>
 
-                            <div class="modal-footer">
+                            <div className="modal-footer">
 
-                                <button type="button" id="botonModalCancelar-AdministrarTiposDepresion" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a tipos depresión">Cancelar</button>
-                                <button type="submit" id="botonmodalModificar-AdministrarTipoDepresion" class="btn btn-primary" data-bs-dismiss="modal" title="Modificar tipo depresión">Modificar</button>
+                                <button type="button" id="botonModalCancelar-AdministrarTiposDepresion" className="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a tipos depresión">Cancelar</button>
+                                <button type="submit" id="botonmodalModificar-AdministrarTipoDepresion" className="btn btn-primary" data-bs-dismiss="modal" title="Modificar tipo depresión">Modificar</button>
 
                             </div>
                         </div>

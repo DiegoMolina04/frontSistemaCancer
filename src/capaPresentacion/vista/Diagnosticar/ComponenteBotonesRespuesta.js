@@ -8,16 +8,16 @@ function ComponenteBotonesRespuesta() {
         <>
             <div id="botonNegativo-Diagnosticar">
 
-                <button type="button" class="btn btn-primary" title="No corresponde" onClick={(e) => responderPregunta(e, false)}>
-                    <i class="fas fa-times"></i>
+                <button type="button" className="btn btn-primary" title="No corresponde" onClick={(e) => responderPregunta(e, false)}>
+                    <i className="fas fa-times"></i>
                 </button>
 
             </div>
 
             <div id="botonPositivo-Diagnosticar">
 
-                <button type="button" class="btn btn-secondary" title="Si corresponde" onClick={(e) => responderPregunta(e, true)}>
-                    <i class="fas fa-check"></i>
+                <button type="button" className="btn btn-secondary" title="Si corresponde" onClick={(e) => responderPregunta(e, true)}>
+                    <i className="fas fa-check"></i>
                 </button>
 
             </div>

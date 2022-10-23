@@ -56,7 +56,7 @@ function AgregarTipoDepresion() {
 
                     <label>Ingrese el tipo de depresión</label>
                     <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-notes-medical"></i></div>
+                        <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-notes-medical"></i></div>
                         <input id="inputIngreseTipoDepresion-AgregarTipoDepresion" type="text" className="form-control" placeholder="Ingrese el tipo de depresión" onChange={handleInputChange} name="tipo_depresion" required/>
                     </div>
 
@@ -64,7 +64,7 @@ function AgregarTipoDepresion() {
 
                     <label>Síntomas a cumplir</label>
                     <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-clipboard-check"></i></div>
+                        <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-clipboard-check"></i></div>
                         <input id="inputIngreseTipoDepresion-AgregarTipoDepresion" type="text" className="form-control" placeholder="Ingrese el número de sintomas a cumplir"
                             onKeyDown={verificarNumeros} onChange={handleInputChange} name="cantidad_sintomas" required/>
                     </div>
@@ -76,13 +76,13 @@ function AgregarTipoDepresion() {
 
                         <div id="cajaRegresar-AgregarTiposDepresion">
 
-                            <button id="botonRegresar-AgregarTiposDepresion" type="button" class="btn btn-primary" title="Regresar a la plataforma" onClick={(e) => estadoInicial(e)}>Regresar</button>
+                            <button id="botonRegresar-AgregarTiposDepresion" type="button" className="btn btn-primary" title="Regresar a la plataforma" onClick={(e) => estadoInicial(e)}>Regresar</button>
 
                         </div>
 
                         <form className="row" onSubmit={(e) => verificarDatos(e, datosGuardados)}>
                             <div id="cajaEnviar-AgregarTiposDepresion">
-                                <button id="botonEnviar-AgregarTiposDepresion" type="submit" class="btn btn-primary" title="Crear nuevo tipo de depresión" >Enviar</button>
+                                <button id="botonEnviar-AgregarTiposDepresion" type="submit" className="btn btn-primary" title="Crear nuevo tipo de depresión" >Enviar</button>
                             </div>
                         </form>
 

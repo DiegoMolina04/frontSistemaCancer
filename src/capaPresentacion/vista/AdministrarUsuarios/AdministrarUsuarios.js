@@ -38,9 +38,9 @@ function AdministrarUsuarios() {
 
                     <form id="formato" onSubmit={(e) => listarUsuarios(e, "filtrar", filtro)}>
 
-                        <select class="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
+                        <select className="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
 
-                            <option selected >Seleccione Categoría...</option>
+                            <option value >Seleccione Categoría...</option>
                             <option value="correo">Correo</option>
                             <option value="cuenta">Tipo Cuenta</option>
 
@@ -49,7 +49,7 @@ function AdministrarUsuarios() {
                         <input id="filtrar" type="text" className="form-control" onChange={handleFiltrarChange} name="inputFiltro" placeholder="¿Busca algo puntual?" title="Ingrese valor a buscar" />
 
                         <button id="enviarBuscar-Plataforma" type="submit" className="btn btn-success" title="Buscar" >
-                            <i class="fas fa-search"></i>
+                            <i className="fas fa-search"></i>
                         </button>
 
                     </form>
@@ -73,11 +73,11 @@ function AdministrarUsuarios() {
                             <h5 id="mensajeRespuesta-AdministrarUsuario">{componenteMostrarMensaje}</h5>
                         </div>
                         <div id="cajaBotonRecargar-AdministrarUsuario">
-                            <button id="botonRecargar-AdministrarUsuario" value="Formatooooo" type='submit' className="btn btn-success" title='Recargar tabla'><i class="fas fa-redo"></i></button>
+                            <button id="botonRecargar-AdministrarUsuario" value="Formatooooo" type='submit' className="btn btn-success" title='Recargar tabla'><i className="fas fa-redo"></i></button>
                         </div>
                     </div>
 
-                    <table id="tabla-AdministrarUsuarios" class="table table-bordered">
+                    <table id="tabla-AdministrarUsuarios" className="table table-bordered">
                         <thead> {/*Cabeceras*/}
                             <tr>
                                 <th id="cedulaTablaCabecera-AdministrarUsuarios" scope="col" title="Cedula del usuario">Cédula</th>
@@ -100,29 +100,29 @@ function AdministrarUsuarios() {
 
             {/*Modal para el botón de Eliminar AdministrarUsuarios*/}
             <form className="row" onSubmit={(e) => eliminarUsuario(e, datosOriginales)}>
-                <div class="modal fade" id="modalEliminar-AdministrarUsuarios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
+                <div className="modal fade" id="modalEliminar-AdministrarUsuarios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
 
-                                <h5 class="modal-title" id="modalLabelEliminar-AdministrarUsuarios">
+                                <h5 className="modal-title" id="modalLabelEliminar-AdministrarUsuarios">
 
-                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <i className="fas fa-exclamation-triangle"></i>
                                     <label >Advertencia</label>
 
                                 </h5>
 
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
 
                                 <label>¿Realmente desea eliminar a "{datosGuardados.nombre}"?</label>
                                 <label id="labelRevertirCambios-AdministrarUsuarios">Los cambios no se podrán revertir.</label>
 
                             </div>
-                            <div class="modal-footer">
+                            <div className="modal-footer">
 
-                                <button type="button" id="botonModalCancelar-AdministrarUsuarios" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a administrar usuarios">Cancelar</button>
-                                <button type="submit" id="botonModalEliminar-AdministrarUsuarios" class="btn btn-primary" data-bs-dismiss="modal" title="Eliminar cuenta">Eliminar</button>
+                                <button type="button" id="botonModalCancelar-AdministrarUsuarios" className="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a administrar usuarios">Cancelar</button>
+                                <button type="submit" id="botonModalEliminar-AdministrarUsuarios" className="btn btn-primary" data-bs-dismiss="modal" title="Eliminar cuenta">Eliminar</button>
 
                             </div>
                         </div>
@@ -132,20 +132,20 @@ function AdministrarUsuarios() {
 
             {/*Modal para el botón de Modificar AdministrarUsuarios*/}
             <form className="row" onSubmit={(e) => modificarUsuario(e, datosGuardados, datosOriginales)}>
-                <div class="modal fade" id="modalModificar-AdministrarUsuarios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
+                <div className="modal fade" id="modalModificar-AdministrarUsuarios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
 
-                                <h5 class="modal-title" id="modalLabelModificar-AdministrarUsuarios">
+                                <h5 className="modal-title" id="modalLabelModificar-AdministrarUsuarios">
 
-                                    <i class="fas fa-cog"></i>
+                                    <i className="fas fa-cog"></i>
                                     <label >Modificar Cuenta</label>
 
                                 </h5>
 
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
 
                                 <br />
                                 <div id="labelCedulaAgregarAdministrarUsuarios-AdministrarUsuarios">
@@ -155,7 +155,7 @@ function AdministrarUsuarios() {
                                 </div>
 
                                 <div className="input-group">
-                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-address-card"></i></div>
+                                    <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-address-card"></i></div>
                                     <input id="" type="text" className="form-control" value={datosGuardados.cedula} placeholder="Ingrese la cédula del usuario" onChange={handleInputChangeModificar}
                                         onKeyDown={verificarNumeros} name="cedula" title="Ingrese cedula" />
 
@@ -171,7 +171,7 @@ function AdministrarUsuarios() {
                                 </div>
 
                                 <div className="input-group">
-                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div>
+                                    <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-font"></i></div>
                                     <input id="" type="text" className="form-control" value={datosGuardados.nombre} placeholder="Ingrese el nombre de usuario completo" onChange={handleInputChangeModificar} name="nombre" title="Nuevo usuario" />
                                 </div>
 
@@ -183,7 +183,7 @@ function AdministrarUsuarios() {
 
                                 <div className="input-group">
 
-                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-envelope"></i></div>
+                                    <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-envelope"></i></div>
 
                                     <input id="" type="email" className="form-control" value={datosGuardados.email} placeholder="Ingrese el correo" onChange={handleInputChangeModificar} name="email" title="Nuevo correo" />
 
@@ -196,22 +196,22 @@ function AdministrarUsuarios() {
 
                                 <div id="cajaRadioButtons-AgregarCuenta">
 
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" id="radioButtonAdministrador-AdministrarUsuarios" value="true" onChange={handleInputChangeModificar} name="es_admin" title="Cuenta para administrador" />
+                                    <div className="form-check form-check-inline">
+                                        <input className="form-check-input" type="radio" id="radioButtonAdministrador-AdministrarUsuarios" value="true" onChange={handleInputChangeModificar} name="es_admin" title="Cuenta para administrador" />
                                         <p id="pAdministrador-AdministrarUsuarios" for="inlineRadio1">Administrador</p>
                                     </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" id="radioButtonAdministrador-AdministrarUsuarios" value="false" onChange={handleInputChangeModificar} name="es_admin" title="Cuenta para usuario" />
+                                    <div className="form-check form-check-inline">
+                                        <input className="form-check-input" type="radio" id="radioButtonAdministrador-AdministrarUsuarios" value="false" onChange={handleInputChangeModificar} name="es_admin" title="Cuenta para usuario" />
                                         <p id="pUsuario-AdministrarUsuarios" for="inlineRadio2">Usuario</p>
                                     </div>
 
                                 </div>
 
                             </div>
-                            <div class="modal-footer">
+                            <div className="modal-footer">
 
-                                <button type="button" id="botonModalCancelar-AdministrarUsuarios" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a administrar usuarios">Cancelar</button>
-                                <button type="submit" id="botonModalModificar-AdministrarUsuarios" class="btn btn-primary" data-bs-dismiss="modal" title="Modificar usuario">Modificar</button>
+                                <button type="button" id="botonModalCancelar-AdministrarUsuarios" className="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a administrar usuarios">Cancelar</button>
+                                <button type="submit" id="botonModalModificar-AdministrarUsuarios" className="btn btn-primary" data-bs-dismiss="modal" title="Modificar usuario">Modificar</button>
 
                             </div>
                         </div>

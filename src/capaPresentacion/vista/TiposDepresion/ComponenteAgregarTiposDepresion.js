@@ -12,7 +12,7 @@ function ComponenteAgregarTipoDepresion() {
             </label>
 
             <button id="agregarTipoDepresion-AdministrarTipoDepresion" type="button" className="btn btn-success" onClick={redireccionarAgregarTiposDepresion} title="Agregar nuevo tipo depresión">
-                <i class="fas fa-plus-circle"></i>
+                <i className="fas fa-plus-circle"></i>
                 Agregar Tipo Depresión
             </button>
             

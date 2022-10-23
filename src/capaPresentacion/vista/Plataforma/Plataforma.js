@@ -19,7 +19,7 @@ function Plataforma() {
     <div id="fondo">
 
       {/*SideBar*/}
-      <nav id="navbar" class="navbar">
+      <nav id="navbar" className="navbar">
 
         <div id="imagen">
 
@@ -36,32 +36,32 @@ function Plataforma() {
         <div id="opciones">
 
           <button type="button" className="btn btn-success" onClick={redireccionarDiagnosticar} title="Iniciar diagnostico del paciente">
-            <i class="fas fa-diagnoses"></i>
+            <i className="fas fa-diagnoses"></i>
             Diagnosticar
           </button>
 
           <button type="button" className="btn btn-success" onClick={redireccionarResultadoDiagnostico} title="Ver resultados de diagnostico">
-            <i class="fas fa-file-alt"></i>
+            <i className="fas fa-file-alt"></i>
             Resultados
           </button>
 
           <button type="button" className="btn btn-success" onClick={redireccionarPreguntas} title="Ver preguntas de diagnostico">
-            <i class="fas fa-question"></i>
+            <i className="fas fa-question"></i>
             Preguntas
           </button>
 
           <button type="button" className="btn btn-success" onClick={redireccionarSintomas} title="Ver reglas de diagnostico">
-            <i class="fas fa-heartbeat"></i>
+            <i className="fas fa-heartbeat"></i>
             Síntomas
           </button>
 
           <button type="button" className="btn btn-success" onClick={redireccionarTiposDepresion} title="Ver tipos de depresión">
-            <i class="fas fa-notes-medical"></i>
+            <i className="fas fa-notes-medical"></i>
             Clasificación Transtorno
           </button>
 
           <button type="button" className="btn btn-success" onClick={redireccionarDiccionario} title="Ver diccionario de terminos">
-            <i class="fas fa-book"></i>
+            <i className="fas fa-book"></i>
             Diccionario
           </button>
 
@@ -79,17 +79,17 @@ function Plataforma() {
           {componenteAdministrarUsuarios}
 
           <button id="inicio" type="button" className="btn btn-success" onClick={redireccionarDiagnosticar} title="Regresar a la pagina de inicio" >
-            <i class="fas fa-home"></i>
+            <i className="fas fa-home"></i>
             Inicio
           </button>
 
           <button id="cambioContraseña" type="button" className="btn btn-success" onClick={cambiarContraseña} title="Cambiar contraseña" >
-            <i class="fas fa-key"></i>
+            <i className="fas fa-key"></i>
             Cambio contraseña
           </button>
 
           <button id="salir" type="button" className="btn btn-success" onClick={redireccionarSalir} title="Cerrar sesión" >
-            <i class="fas fa-sign-out-alt"></i>
+            <i className="fas fa-sign-out-alt"></i>
             Salir
           </button>
 

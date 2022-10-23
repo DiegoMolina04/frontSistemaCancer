@@ -56,7 +56,7 @@ function AgregarDiccionario() {
 
                     <label>Ingrese el término</label>
                     <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-question"></i></div>
+                        <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-question"></i></div>
                         <input id="inputIngreseTermino-AgregarTerminos" type="text" className="form-control" placeholder="Ingrese el término" onChange={handleInputChange} name="termino" />
                     </div>
 
@@ -64,8 +64,8 @@ function AgregarDiccionario() {
 
                     <label>Descripción</label>
                     <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-book"></i></div>
-                        <textarea class="form-control" placeholder="Ingrese la descripción del término" onChange={handleInputChange} name="descripcion"></textarea>
+                        <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-book"></i></div>
+                        <textarea className="form-control" placeholder="Ingrese la descripción del término" onChange={handleInputChange} name="descripcion"></textarea>
                     </div>
 
                     <br />
@@ -76,13 +76,13 @@ function AgregarDiccionario() {
 
                         <div id="cajaRegresar-AgregarTerminos">
 
-                            <button id="botonRegresar-AgregarTerminos" type="button" class="btn btn-primary" title="Regresar a la plataforma" onClick={(e) => estadoInicial(e)}>Regresar</button>
+                            <button id="botonRegresar-AgregarTerminos" type="button" className="btn btn-primary" title="Regresar a la plataforma" onClick={(e) => estadoInicial(e)}>Regresar</button>
 
                         </div>
 
                         <form className="row" onSubmit={(e) => verificarDatos(e, datosGuardados)}>
                             <div id="cajaEnviar-AgregarTerminos">
-                                <button id="botonEnviar-AgregarTerminos" type="submit" class="btn btn-primary" title="Crear nuevo termino" >Enviar</button>
+                                <button id="botonEnviar-AgregarTerminos" type="submit" className="btn btn-primary" title="Crear nuevo termino" >Enviar</button>
                             </div>
                         </form>
 

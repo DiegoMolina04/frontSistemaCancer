@@ -55,16 +55,16 @@ function AgregarPregunta() {
 
                     <label>Ingrese la pregunta</label>
                     <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-question"></i></div>
-                        <textarea class="form-control" placeholder="Ingrese la pregunta" onChange={handleInputChange} name="pregunta" required></textarea>
+                        <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-question"></i></div>
+                        <textarea className="form-control" placeholder="Ingrese la pregunta" onChange={handleInputChange} name="pregunta" required></textarea>
                     </div>
 
                     <br />
 
                     <label>Seleccione el/los síntomas</label>
                     <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-book"></i></div>
-                        <textarea class="form-control" placeholder="Seleccione los sintomas" readonly="readonly" value={datosTablaModificar} onChange={handleChange}></textarea>
+                        <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-book"></i></div>
+                        <textarea className="form-control" placeholder="Seleccione los sintomas" readonly="readonly" value={datosTablaModificar} onChange={handleChange}></textarea>
                     </div>
 
                     <br />
@@ -72,10 +72,10 @@ function AgregarPregunta() {
                     <div id="cajaTabla-AgregarPreguntas">
                         <form className="row" onSubmit={(e) => cargarSintomas(e)}>
                             <div id="cajaBotonRecargar-AgregarPreguntas">
-                                <button id="botonRecargar-AgregarPreguntas" type='submit' className="btn btn-success" title='Recargar tabla'><i class="fas fa-redo"></i></button>
+                                <button id="botonRecargar-AgregarPreguntas" type='submit' className="btn btn-success" title='Recargar tabla'><i className="fas fa-redo"></i></button>
                             </div>
                         </form>
-                        <table id="tablaSintomas-AgregarPreguntas" class="table table-bordered">
+                        <table id="tablaSintomas-AgregarPreguntas" className="table table-bordered">
 
                             <thead> {/*Cabeceras*/}
                                 <tr>
@@ -97,13 +97,13 @@ function AgregarPregunta() {
 
                         <div id="cajaRegresar-AgregarPregunta">
 
-                            <button id="botonRegresar-AgregarPregunta" type="button" class="btn btn-primary" title="Regresar a la plataforma" onClick={reiniciarDatos}>Regresar</button>
+                            <button id="botonRegresar-AgregarPregunta" type="button" className="btn btn-primary" title="Regresar a la plataforma" onClick={reiniciarDatos}>Regresar</button>
 
                         </div>
 
                         <form className="row" onSubmit={(e) => enviarDatos(e, datosGuardados, guardarID)}>
                             <div id="cajaEnviar-AgregarPregunta">
-                                <button id="botonEnviar-AgregarPregunta" type="submit" class="btn btn-primary" title="Crear nueva pregunta" >Enviar</button>
+                                <button id="botonEnviar-AgregarPregunta" type="submit" className="btn btn-primary" title="Crear nueva pregunta" >Enviar</button>
                             </div>
                         </form>
 

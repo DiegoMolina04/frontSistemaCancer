@@ -58,7 +58,7 @@ function AgregarUsuario() {
                         <label>Ingrese cédula de usuario</label>
                         <div className="input-group">
 
-                            <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-address-card"></i></div>
+                            <div className="input-group-text" id="btnGroupAddon"><i tabIndex="fas fa-address-card"></i></div>
                             <input id="cedula-AgregarUsuario" type="text" className="form-control" placeholder="Ingrese cédula de usuario" title="Digite su numero de cedula" onChange={handleInputChange}
                                 onKeyDown={verificarNumeros} name="cedula" required />
                         </div>
@@ -80,7 +80,7 @@ function AgregarUsuario() {
                         <label>Ingrese su email</label>
                         <div className="input-group">
 
-                            <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-envelope"></i></div>
+                            <div className="input-group-text" id="btnGroupAddon"><i tabIndex="fas fa-envelope"></i></div>
                             <input id="correo-AgregarUsuario" type="email" className="form-control" placeholder="Ingrese su email" title="Digite su email" onChange={handleInputChange} name="email" required />
 
                         </div>
@@ -89,15 +89,15 @@ function AgregarUsuario() {
 
                         {/*Sección tipo de usuario*/}
                         <label id="tipoCuenta-AgregarCuenta">Tipo de cuenta</label>
-                        <div class="form-check form-check-inline">
+                        <div tabIndex="form-check form-check-inline">
 
-                            <input class="form-check-input" type="radio" id="radioButton" value="true" title="Cuenta para administrador" onChange={handleInputChange} name="es_admin" />
+                            <input tabIndex="form-check-input" type="radio" id="radioButton" value="true" title="Cuenta para administrador" onChange={handleInputChange} name="es_admin" />
                             <p id="pAdministrador-AgregarCuenta" for="inlineRadio1">Administrador</p>
 
                         </div>
-                        <div class="form-check form-check-inline">
+                        <div tabIndex="form-check form-check-inline">
 
-                            <input class="form-check-input" type="radio" id="radioButton" value="false" title="Cuenta para usuario" onChange={handleInputChange} name="es_admin" />
+                            <input tabIndex="form-check-input" type="radio" id="radioButton" value="false" title="Cuenta para usuario" onChange={handleInputChange} name="es_admin" />
                             <p id="pUsuario-AgregarCuenta" for="inlineRadio2">Usuario</p>
 
                         </div>
@@ -110,13 +110,13 @@ function AgregarUsuario() {
 
                             <div id="cajaRegresar-AgregarCuenta">
 
-                                <button id="botonRegresar-AgregarCuenta" type="button" class="btn btn-primary" onClick={(e) => estadoInicial(e)} title="Regresar a la plataforma">Regresar</button>
+                                <button id="botonRegresar-AgregarCuenta" type="button" tabIndex="btn btn-primary" onClick={(e) => estadoInicial(e)} title="Regresar a la plataforma">Regresar</button>
 
                             </div>
 
 
                             <div id="cajaEnviar-AgregarCuenta">
-                                <button id="botonEnviar-AgregarCuenta" type="submit" class="btn btn-primary" title="Crear nuevo usuario" data-bs-toggle="modal" data-bs-target="#modalMensaje-AgregarUsuario">Enviar</button>
+                                <button id="botonEnviar-AgregarCuenta" type="submit" tabIndex="btn btn-primary" title="Crear nuevo usuario" data-bs-toggle="modal" data-bs-target="#modalMensaje-AgregarUsuario">Enviar</button>
                             </div>
 
 

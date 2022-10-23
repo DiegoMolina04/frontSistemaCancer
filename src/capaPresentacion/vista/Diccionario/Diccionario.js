@@ -38,9 +38,9 @@ function Diccionario() {
 
                     <form id="formato" onSubmit={(e) => listarDiccionario(e, "filtrar", filtro)}>
 
-                        <select class="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
+                        <select className="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
 
-                            <option selected >Seleccione Categoría...</option>
+                            <option value >Seleccione Categoría...</option>
                             <option value="termino">Término</option>
                             <option value="descripcion">Descripción</option>
 
@@ -49,7 +49,7 @@ function Diccionario() {
                         <input id="filtrar" type="text" className="form-control" onChange={handleFiltrarChange} name="inputFiltro" placeholder="¿Busca algo puntual?" title="Ingrese valor a buscar" />
 
                         <button id="enviarBuscar-Plataforma" type="submit" className="btn btn-success" title="Buscar" >
-                            <i class="fas fa-search"></i>
+                            <i className="fas fa-search"></i>
                         </button>
 
                     </form>
@@ -74,11 +74,11 @@ function Diccionario() {
                             <h5 id="mensajeRespuesta-AdministrarTerminos">{componenteMostrarMensaje}</h5>
                         </div>
                         <div id="cajaBotonRecargar-AdministrarTerminos">
-                            <button id="botonRecargar-AdministrarTerminos" type='submit' className="btn btn-success" title='Recargar tabla'><i class="fas fa-redo"></i></button>
+                            <button id="botonRecargar-AdministrarTerminos" type='submit' className="btn btn-success" title='Recargar tabla'><i className="fas fa-redo"></i></button>
                         </div>
                     </div>
 
-                    <table id="tabla-AdministrarTerminos" class="table table-bordered">
+                    <table id="tabla-AdministrarTerminos" className="table table-bordered">
                         <thead> {/*Cabeceras*/}
                             <tr>
                                 <th id="terminoTablaCabecera-AdministrarTerminos" scope="col" title="Palabras">Término</th>
@@ -98,28 +98,28 @@ function Diccionario() {
             </form>
             {/*Modal para el botón de Eliminar */}
             <form className="row" onSubmit={(e) => eliminarTermino(e, datosOriginales)}>
-                <div class="modal fade" id="modalEliminar-AdministrarTerminos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
+                <div className="modal fade" id="modalEliminar-AdministrarTerminos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
 
-                                <h5 class="modal-title" id="modalLabelEliminar-AdministrarTerminos">
+                                <h5 className="modal-title" id="modalLabelEliminar-AdministrarTerminos">
 
-                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <i className="fas fa-exclamation-triangle"></i>
                                     <label >Advertencia</label>
 
                                 </h5>
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
 
                                 <label>¿Realmente desea eliminar el término "{datosGuardados.termino}" ?</label>
                                 <label id="labelRevertirCambios-AdministrarTerminos">Los cambios no se podrán revertir.</label>
 
                             </div>
-                            <div class="modal-footer">
+                            <div className="modal-footer">
 
-                                <button type="button" id="botonModalCancelar-AdministrarTerminos" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a terminos">Cancelar</button>
-                                <button type="submit" id="botonModalEliminar-AdministrarTerminos" class="btn btn-primary" data-bs-dismiss="modal" title="Eliminar termino">Eliminar</button>
+                                <button type="button" id="botonModalCancelar-AdministrarTerminos" className="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a terminos">Cancelar</button>
+                                <button type="submit" id="botonModalEliminar-AdministrarTerminos" className="btn btn-primary" data-bs-dismiss="modal" title="Eliminar termino">Eliminar</button>
 
                             </div>
                         </div>
@@ -129,19 +129,19 @@ function Diccionario() {
 
             {/*Modal para el botón de Modificar */}
             <form className="row" onSubmit={(e) => modificarTermino(e, datosGuardados, datosOriginales)}>
-                <div class="modal fade" id="modalModificar-AdministrarTerminos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
+                <div className="modal fade" id="modalModificar-AdministrarTerminos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
 
-                                <h5 class="modal-title" id="modalLabelModificar-AdministrarTerminos">
+                                <h5 className="modal-title" id="modalLabelModificar-AdministrarTerminos">
 
-                                    <i class="fas fa-cog"></i>
+                                    <i className="fas fa-cog"></i>
                                     <label >Modificar Término</label>
 
                                 </h5>
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
 
                                 <div id="labelTerminoModificar-AdministrarTerminos">
 
@@ -150,7 +150,7 @@ function Diccionario() {
                                 </div>
 
                                 <div className="input-group">
-                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-address-card"></i></div>
+                                    <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-address-card"></i></div>
                                     <input id="" type="text" className="form-control" value={datosGuardados.termino} placeholder="Ingrese el término" onChange={handleInputChangeModificar} name="termino" title="Termino a modificar" />
 
                                 </div>
@@ -164,17 +164,17 @@ function Diccionario() {
                                 </div>
 
                                 <div className="input-group">
-                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div>
-                                    <textarea class="form-control" placeholder="Ingrese la descripción del termino" value={datosGuardados.descripcion} onChange={handleInputChangeModificar} name="descripcion" title="Descripción del término"></textarea>
+                                    <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-font"></i></div>
+                                    <textarea className="form-control" placeholder="Ingrese la descripción del termino" value={datosGuardados.descripcion} onChange={handleInputChangeModificar} name="descripcion" title="Descripción del término"></textarea>
                                 </div>
 
                                 <br />
 
                             </div>
-                            <div class="modal-footer">
+                            <div className="modal-footer">
 
-                                <button type="button" id="botonModalCancelar-AdministrarTerminos" class="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a terminos">Cancelar</button>
-                                <button type="submit" id="botonModalModificar-AdministrarTerminos" class="btn btn-primary" data-bs-dismiss="modal" title="Modificar terminos">Modificar</button>
+                                <button type="button" id="botonModalCancelar-AdministrarTerminos" className="btn btn-secondary" data-bs-dismiss="modal" title="Regresa a terminos">Cancelar</button>
+                                <button type="submit" id="botonModalModificar-AdministrarTerminos" className="btn btn-primary" data-bs-dismiss="modal" title="Modificar terminos">Modificar</button>
 
                             </div>
                         </div>

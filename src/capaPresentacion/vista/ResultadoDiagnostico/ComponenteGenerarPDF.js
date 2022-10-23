@@ -7,7 +7,7 @@ function ComponenteGenerarPDF(props) {
             {props.mensaje}
         </label>
                 <button id="generarDiagnostico-ResultadoDiagnostico" type="button" className="btn btn-success" onClick={props.funcion} title="Generar PDF">
-                    <i class="fas fa-file-pdf"></i>
+                    <i className="fas fa-file-pdf"></i>
                     Generar PDF
                 </button>
         </div>

@@ -11,7 +11,7 @@ function ComponenteAgregarDiccionario() {
         </label>
 
             <button id="agregarTermino-AdministrarTerminos" type="button" className="btn btn-success" onClick={redireccionarAgregarDiccionario} title="Agregar nuevo término">
-                <i class="fas fa-plus-circle"></i>
+                <i className="fas fa-plus-circle"></i>
                 Agregar Término
             </button>
 

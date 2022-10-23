@@ -8,8 +8,8 @@ function ComponenteBotonIniciarDiagnostico() {
         <>
             <div id="botonIniciar-Diagnosticar">
 
-                <button type="button" class="btn btn-secondary" onClick={(e) => iniciarDiagnostico(e)} title="Iniciar diagnóstico">
-                    <i class="fas fa-share"></i>
+                <button type="button" className="btn btn-secondary" onClick={(e) => iniciarDiagnostico(e)} title="Iniciar diagnóstico">
+                    <i className="fas fa-share"></i>
                 </button>
 
             </div>

@@ -71,13 +71,13 @@ function CrearContraseña() {
 
                             <div id="cajaRegresar-AgregarCuenta">
 
-                                <button id="botonRegresar-AgregarCuenta" type="button" class="btn btn-primary" onClick={(e) => estadoInicial(e)} title="Regresar a la plataforma">Cancelar</button>
+                                <button id="botonRegresar-AgregarCuenta" type="button" className="btn btn-primary" onClick={(e) => estadoInicial(e)} title="Regresar a la plataforma">Cancelar</button>
 
                             </div>
 
                             <div id="cajaEnviar-AgregarCuenta">
 
-                                <button id="botonEnviar-AgregarCuenta" type="submit" class="btn btn-primary" title="Crear nuevo usuario">Enviar</button>
+                                <button id="botonEnviar-AgregarCuenta" type="submit" className="btn btn-primary" title="Crear nuevo usuario">Enviar</button>
 
                             </div>
 

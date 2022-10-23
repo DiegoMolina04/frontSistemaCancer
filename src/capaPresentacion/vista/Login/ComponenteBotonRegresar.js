@@ -6,7 +6,7 @@ function ComponenteBotonRegresar() {
 
     return (
 
-        <button id="btnRegresar" type="button" class="btn btn-secondary" onClick={estadoInicial} title="Regresar">Regresar</button>
+        <button id="btnRegresar" type="button" className="btn btn-secondary" onClick={estadoInicial} title="Regresar">Regresar</button>
     
     );
 }

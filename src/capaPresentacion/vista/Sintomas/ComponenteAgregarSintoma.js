@@ -11,7 +11,7 @@ function ComponenteAgregarSintoma() {
         </label>
 
             <button id="agregarSintoma-AdministrarSintomas" type="button" className="btn btn-success" onClick={redireccionarAgregarSintoma} title="Agregar nuevo sintoma">
-                <i class="fas fa-plus-circle"></i>
+                <i className="fas fa-plus-circle"></i>
                 Agregar Síntoma
             </button>
 

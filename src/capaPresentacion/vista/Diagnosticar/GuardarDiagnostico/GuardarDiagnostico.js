@@ -55,15 +55,15 @@ function GuardarDiagnostico() {
 
                     <label>Diagnóstico resultante</label>
                     <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-notes-medical"></i></div>
-                        <textarea class="form-control" placeholder="Diagnostico resultante" value={componenteDiagnostico} name="diagnostico" readOnly></textarea>
+                        <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-notes-medical"></i></div>
+                        <textarea className="form-control" placeholder="Diagnostico resultante" value={componenteDiagnostico} name="diagnostico" readOnly></textarea>
                     </div>
 
                     <br />
 
                     <label>Cédula del paciente</label>
                     <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-clipboard-check"></i></div>
+                        <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-clipboard-check"></i></div>
                         <input id="inputGuardarDiagnostico-GuardarDiagnostico" type="text" className="form-control" placeholder="Ingrese la cédula del paciente"
                             onKeyDown={verificarNumeros} onChange={handleInputChange} name="cedula" required />
                     </div>
@@ -72,7 +72,7 @@ function GuardarDiagnostico() {
 
                     <label>Nombre del paciente</label>
                     <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-clipboard-check"></i></div>
+                        <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-clipboard-check"></i></div>
                         <input id="inputGuardarDiagnostico-GuardarDiagnostico" type="text" className="form-control" placeholder="Ingrese el nombre del paciente" onChange={handleInputChange} name="nombre" required />
                     </div>
 
@@ -80,8 +80,8 @@ function GuardarDiagnostico() {
 
                     <label>Observaciones del diagnóstico</label>
                     <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-notes-medical"></i></div>
-                        <textarea class="form-control" placeholder="Ingrese observaciones del diagnóstico" onChange={handleInputChange} name="observaciones" required></textarea>
+                        <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-notes-medical"></i></div>
+                        <textarea className="form-control" placeholder="Ingrese observaciones del diagnóstico" onChange={handleInputChange} name="observaciones" required></textarea>
                     </div>
 
                     <br />
@@ -91,13 +91,13 @@ function GuardarDiagnostico() {
 
                         <div id="cajaRegresar-GuardarDiagnostico">
 
-                            <button id="botonRegresar-GuardarDiagnostico" type="button" class="btn btn-primary" title="No guardar diagnostico" onClick={(e) => estadoInicial(e)}>Cancelar</button>
+                            <button id="botonRegresar-GuardarDiagnostico" type="button" className="btn btn-primary" title="No guardar diagnostico" onClick={(e) => estadoInicial(e)}>Cancelar</button>
 
                         </div>
 
                         <form className="row" onSubmit={(e) => verificarDatos(e, datosGuardados)}>
                             <div id="cajaGuardar-GuardarDiagnostico">
-                                <button id="botonGuardar-GuardarDiagnostico" type="submit" class="btn btn-primary" title="Guardar diagnostico del paciente" >Guardar</button>
+                                <button id="botonGuardar-GuardarDiagnostico" type="submit" className="btn btn-primary" title="Guardar diagnostico del paciente" >Guardar</button>
                             </div>
                         </form>
 

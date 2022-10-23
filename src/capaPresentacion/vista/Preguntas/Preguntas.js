@@ -38,9 +38,9 @@ function Preguntas() {
 
                     <form id="formato" onSubmit={(e) => listarElementos(e, "filtrar", filtro)}>
 
-                        <select class="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
+                        <select className="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
 
-                            <option selected >Seleccione Categoría...</option>
+                            <option value >Seleccione Categoría...</option>
                             <option value="pregunta">Pregunta</option>
 
                         </select>
@@ -48,7 +48,7 @@ function Preguntas() {
                         <input id="filtrar" type="text" className="form-control" onChange={handleFiltrarChange} name="inputFiltro" placeholder="¿Busca algo puntual?" title="Ingrese valor a buscar" />
 
                         <button id="enviarBuscar-Plataforma" type="submit" className="btn btn-success" title="Buscar" >
-                            <i class="fas fa-search"></i>
+                            <i className="fas fa-search"></i>
                         </button>
 
                     </form>
@@ -72,11 +72,11 @@ function Preguntas() {
                             <h5 id="mensajeRespuesta-AdministrarPreguntas">{componenteMostrarMensaje}</h5>
                         </div>
                         <div id="cajaBotonRecargar-AdministrarPreguntas">
-                            <button id="botonRecargar-AdministrarPreguntas" type='submit' className="btn btn-success" title='Recargar tabla'><i class="fas fa-redo"></i></button>
+                            <button id="botonRecargar-AdministrarPreguntas" type='submit' className="btn btn-success" title='Recargar tabla'><i className="fas fa-redo"></i></button>
                         </div>
                     </div>
 
-                    <table id="tabla-AdministrarPreguntas" class="table table-bordered">
+                    <table id="tabla-AdministrarPreguntas" className="table table-bordered">
                         <thead> {/*Cabeceras*/}
                             <tr>
                                 <th id="preguntaTablaCabecera-AdministrarPreguntas" scope="col" title="Preguntas del sistema">Pregunta</th>
@@ -96,28 +96,28 @@ function Preguntas() {
             </form>
             {/*Modal para el botón de Eliminar*/}
             <form className="row" onSubmit={(e) => eliminarPregunta(e, datosOriginales)}>
-                <div class="modal fade" id="modalEliminar-AdministrarPreguntas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
+                <div className="modal fade" id="modalEliminar-AdministrarPreguntas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
 
-                                <h5 class="modal-title" id="modalLabelEliminar-AdministrarPreguntas">
+                                <h5 className="modal-title" id="modalLabelEliminar-AdministrarPreguntas">
 
-                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <i className="fas fa-exclamation-triangle"></i>
                                     <label >Advertencia</label>
 
                                 </h5>
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
 
                                 <label>¿Realmente desea eliminar la pregunta "{datosOriginales.pregunta}" ?</label>
                                 <label id="labelRevertirCambios-AdministrarPreguntas">Los cambios no se podrán revertir.</label>
 
                             </div>
-                            <div class="modal-footer">
+                            <div className="modal-footer">
 
-                                <button type="button" id="botonModalCancelar-AdministrarPreguntas" class="btn btn-secondary" data-bs-dismiss="modal" onClick={reiniciarModal} title="Regresa a administrar preguntas">Cancelar</button>
-                                <button type="submit" id="botonModalEliminar-AdministrarPreguntas" class="btn btn-primary" data-bs-dismiss="modal" title="Eliminar pregunta">Eliminar</button>
+                                <button type="button" id="botonModalCancelar-AdministrarPreguntas" className="btn btn-secondary" data-bs-dismiss="modal" onClick={reiniciarModal} title="Regresa a administrar preguntas">Cancelar</button>
+                                <button type="submit" id="botonModalEliminar-AdministrarPreguntas" className="btn btn-primary" data-bs-dismiss="modal" title="Eliminar pregunta">Eliminar</button>
 
                             </div>
                         </div>
@@ -127,19 +127,19 @@ function Preguntas() {
 
             {/*Modal para el botón de Modificar */}
             <form className="row" onSubmit={(e) => modificarPregunta(e, datosOriginales, datosGuardados, guardarID)}>
-                <div class="modal fade" id="modalModificar-AdministrarPreguntas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
+                <div className="modal fade" id="modalModificar-AdministrarPreguntas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
 
-                                <h5 class="modal-title" id="modalLabelModificar-AdministrarPreguntas">
+                                <h5 className="modal-title" id="modalLabelModificar-AdministrarPreguntas">
 
-                                    <i class="fas fa-cog"></i>
+                                    <i className="fas fa-cog"></i>
                                     <label >Modificar Pregunta</label>
 
                                 </h5>
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
 
                                 <div id="labelPreguntaModificar-AdministrarPreguntas">
 
@@ -148,8 +148,8 @@ function Preguntas() {
                                 </div>
 
                                 <div className="input-group">
-                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-address-card"></i></div>
-                                    <textarea class="form-control" placeholder="Ingrese la pregunta" value={datosGuardados.pregunta} onChange={handleInputChangeModificar} name="pregunta" title="Pregunta a modificar"></textarea>
+                                    <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-address-card"></i></div>
+                                    <textarea className="form-control" placeholder="Ingrese la pregunta" value={datosGuardados.pregunta} onChange={handleInputChangeModificar} name="pregunta" title="Pregunta a modificar"></textarea>
                                 </div>
 
                                 <br />
@@ -163,8 +163,8 @@ function Preguntas() {
                                 </div>
 
                                 <div className="input-group">
-                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div>
-                                    <textarea class="form-control" placeholder="Seleccione los sintomas" readonly="readonly" value={datosTablaModificar} onChange={handleChange} title="Sintomas seleccionados"></textarea>
+                                    <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-font"></i></div>
+                                    <textarea className="form-control" placeholder="Seleccione los sintomas" readonly="readonly" value={datosTablaModificar} onChange={handleChange} title="Sintomas seleccionados"></textarea>
                                 </div>
 
                                 <br />
@@ -175,11 +175,11 @@ function Preguntas() {
 
                                     <div id="cajaBotonRecargarModificar-AdministrarPreguntas">
 
-                                        <button id="botonRecargarModificar-AdministrarPreguntas" type='button' onClick={(e) => listarElementos(e, "sintomas")} className="btn btn-success" title='Recargar tabla'><i class="fas fa-redo"></i></button>
+                                        <button id="botonRecargarModificar-AdministrarPreguntas" type='button' onClick={(e) => listarElementos(e, "sintomas")} className="btn btn-success" title='Recargar tabla'><i className="fas fa-redo"></i></button>
 
                                     </div>
 
-                                    <table id="tablaSintomas-AdministrarPreguntas" class="table table-bordered">
+                                    <table id="tablaSintomas-AdministrarPreguntas" className="table table-bordered">
 
                                         <thead> {/*Cabeceras*/}
                                             <tr>
@@ -194,10 +194,10 @@ function Preguntas() {
                                 </div>
 
                             </div>
-                            <div class="modal-footer">
+                            <div className="modal-footer">
 
-                                <button type="button" id="botonModalCancelar-AdministrarPreguntas" class="btn btn-secondary" data-bs-dismiss="modal" onClick={reiniciarModal} title="Regresa a preguntas">Cancelar</button>
-                                <button type="submit" id="botonModalModificar-AdministrarPreguntas" class="btn btn-primary" data-bs-dismiss="modal" title="Modificar pregunta">Modificar</button>
+                                <button type="button" id="botonModalCancelar-AdministrarPreguntas" className="btn btn-secondary" data-bs-dismiss="modal" onClick={reiniciarModal} title="Regresa a preguntas">Cancelar</button>
+                                <button type="submit" id="botonModalModificar-AdministrarPreguntas" className="btn btn-primary" data-bs-dismiss="modal" title="Modificar pregunta">Modificar</button>
 
                             </div>
                         </div>

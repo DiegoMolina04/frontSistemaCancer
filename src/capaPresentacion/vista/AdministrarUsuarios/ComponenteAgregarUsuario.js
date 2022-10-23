@@ -11,7 +11,7 @@ function ComponenteAgregarUsuario() {
         </label>
 
             <button id="agregarAdministrarUsuarios-AdministrarUsuarios" type="button" className="btn btn-success" onClick={redireccionarAgregarUsuario} title="Agregar un nuevo usuario">
-                <i class="fas fa-plus-circle"></i>
+                <i className="fas fa-plus-circle"></i>
                 Agregar Usuario
             </button>
 

@@ -39,9 +39,9 @@ function Sintomas() {
 
                     <form id="formato" onSubmit={(e) => listarElementos(e, "filtrar", filtro)}>
 
-                        <select class="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
+                        <select className="form-select" onChange={handleFiltrarChange} name="categoria" title="Seleccione categoria para buscar palabra" >
 
-                            <option selected >Seleccione Categoría...</option>
+                            <option value >Seleccione Categoría...</option>
                             <option value="sintoma">Sintoma</option>
 
                         </select>
@@ -49,7 +49,7 @@ function Sintomas() {
                         <input id="filtrar" type="text" className="form-control" onChange={handleFiltrarChange} name="inputFiltro" placeholder="¿Busca algo puntual?" title="Ingrese valor a buscar" />
 
                         <button id="enviarBuscar-Plataforma" type="submit" className="btn btn-success" title="Buscar" >
-                            <i class="fas fa-search"></i>
+                            <i className="fas fa-search"></i>
                         </button>
 
                     </form>
@@ -74,11 +74,11 @@ function Sintomas() {
                             <h5 id="mensajeRespuesta-AdministrarSintomas">{componenteMostrarMensaje}</h5>
                         </div>
                         <div id="cajaBotonRecargar-AdministrarSintomas">
-                            <button id="botonRecargar-AdministrarSintomas" type='submit' className="btn btn-success" title='Recargar tabla'><i class="fas fa-redo"></i></button>
+                            <button id="botonRecargar-AdministrarSintomas" type='submit' className="btn btn-success" title='Recargar tabla'><i className="fas fa-redo"></i></button>
                         </div>
                     </div>
 
-                    <table id="tabla-AdministrarSintomas" class="table table-bordered">
+                    <table id="tabla-AdministrarSintomas" className="table table-bordered">
                         <thead> {/*Cabeceras*/}
                             <tr>
                                 <th id="sintomaTablaCabecera-AdministrarSintomas" scope="col" title="Sintomas ligados a tipo depresión">Síntoma</th>
@@ -98,28 +98,28 @@ function Sintomas() {
             </form>
             {/*Modal para el botón de Eliminar AdministrarSintomas*/}
             <form className="row" onSubmit={(e) => eliminarSintoma(e, datosOriginales)}>
-                <div class="modal fade" id="modalEliminar-AdministrarSintomas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
+                <div className="modal fade" id="modalEliminar-AdministrarSintomas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
 
-                                <h5 class="modal-title" id="modalLabelEliminar-AdministrarSintomas">
+                                <h5 className="modal-title" id="modalLabelEliminar-AdministrarSintomas">
 
-                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <i className="fas fa-exclamation-triangle"></i>
                                     <label >Advertencia</label>
 
                                 </h5>
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
 
                                 <label>¿Realmente desea eliminar el síntoma "{datosOriginales.sintoma}" ?</label>
                                 <label id="labelRevertirCambios-AdministrarSintomas">Los cambios no se podrán revertir.</label>
 
                             </div>
-                            <div class="modal-footer">
+                            <div className="modal-footer">
 
-                                <button type="button" id="botonModalCancelar-AdministrarSintomas" class="btn btn-secondary" data-bs-dismiss="modal" onClick={reiniciarModal} title="Regresa a sintomas">Cancelar</button>
-                                <button type="submit" id="botonModalEliminar-AdministrarSintomas" class="btn btn-primary" data-bs-dismiss="modal" title="Eliminar sintoma">Eliminar</button>
+                                <button type="button" id="botonModalCancelar-AdministrarSintomas" className="btn btn-secondary" data-bs-dismiss="modal" onClick={reiniciarModal} title="Regresa a sintomas">Cancelar</button>
+                                <button type="submit" id="botonModalEliminar-AdministrarSintomas" className="btn btn-primary" data-bs-dismiss="modal" title="Eliminar sintoma">Eliminar</button>
 
                             </div>
                         </div>
@@ -129,19 +129,19 @@ function Sintomas() {
 
             {/*Modal para el botón de Modificar AdministrarSintomas*/}
             <form className="row" onSubmit={(e) => modificarSintoma(e, datosOriginales, datosGuardados, guardarID)}>
-                <div class="modal fade" id="modalModificar-AdministrarSintomas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
+                <div className="modal fade" id="modalModificar-AdministrarSintomas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
 
-                                <h5 class="modal-title" id="modalLabelModificar-AdministrarSintomas">
+                                <h5 className="modal-title" id="modalLabelModificar-AdministrarSintomas">
 
-                                    <i class="fas fa-cog"></i>
+                                    <i className="fas fa-cog"></i>
                                     <label >Modificar Síntomas</label>
 
                                 </h5>
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
 
                                 <div id="labelSintomaModificar-AdministrarSintomas">
 
@@ -150,8 +150,8 @@ function Sintomas() {
                                 </div>
 
                                 <div className="input-group">
-                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-address-card"></i></div>
-                                    <textarea class="form-control" placeholder="Ingrese el sintoma" value={datosGuardados.sintoma} onChange={handleInputChangeModificar} name="sintoma" title="Sintoma a modificar"></textarea>
+                                    <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-address-card"></i></div>
+                                    <textarea className="form-control" placeholder="Ingrese el sintoma" value={datosGuardados.sintoma} onChange={handleInputChangeModificar} name="sintoma" title="Sintoma a modificar"></textarea>
                                 </div>
 
                                 <br />
@@ -165,8 +165,8 @@ function Sintomas() {
                                 </div>
 
                                 <div className="input-group">
-                                    <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-font"></i></div>
-                                    <textarea class="form-control" placeholder="Seleccione el/los tipos de depresión" readonly="readonly" value={datosTablaModificar} onChange={handleChange} title="Tipos depresión seleccionados"></textarea>
+                                    <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-font"></i></div>
+                                    <textarea className="form-control" placeholder="Seleccione el/los tipos de depresión" readonly="readonly" value={datosTablaModificar} onChange={handleChange} title="Tipos depresión seleccionados"></textarea>
                                 </div>
 
                                 <br />
@@ -177,10 +177,10 @@ function Sintomas() {
 
                                     <div id="cajaBotonRecargarModificar-AdministrarSintomas">
 
-                                        <button id="botonRecargarModificar-AdministrarSintomas" type='button' onClick={(e) => listarElementos(e, "tipos depresion")} className="btn btn-success" title='Recargar tabla'><i class="fas fa-redo"></i></button>
+                                        <button id="botonRecargarModificar-AdministrarSintomas" type='button' onClick={(e) => listarElementos(e, "tipos depresion")} className="btn btn-success" title='Recargar tabla'><i className="fas fa-redo"></i></button>
 
                                     </div>
-                                    <table id="tablaTiposDepresion-AdministrarSintomas" class="table table-bordered">
+                                    <table id="tablaTiposDepresion-AdministrarSintomas" className="table table-bordered">
 
                                         <thead> {/*Cabeceras*/}
                                             <tr>
@@ -195,10 +195,10 @@ function Sintomas() {
                                 </div>
 
                             </div>
-                            <div class="modal-footer">
+                            <div className="modal-footer">
 
-                                <button type="button" id="botonModalCancelar-AdministrarSintomas" class="btn btn-secondary" data-bs-dismiss="modal" onClick={reiniciarModal} title="Regresa a sintomas">Cancelar</button>
-                                <button type="submit" id="botonModalModificar-AdministrarSintomas" class="btn btn-primary" data-bs-dismiss="modal" title="Modificar sintoma">Modificar</button>
+                                <button type="button" id="botonModalCancelar-AdministrarSintomas" className="btn btn-secondary" data-bs-dismiss="modal" onClick={reiniciarModal} title="Regresa a sintomas">Cancelar</button>
+                                <button type="submit" id="botonModalModificar-AdministrarSintomas" className="btn btn-primary" data-bs-dismiss="modal" title="Modificar sintoma">Modificar</button>
 
                             </div>
                         </div>

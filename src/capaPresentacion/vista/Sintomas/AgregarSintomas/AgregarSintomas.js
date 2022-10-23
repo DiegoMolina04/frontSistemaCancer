@@ -58,8 +58,8 @@ function AgregarSintomas() {
                     {/*Sección ingrese cedula*/}
                     <label>Ingrese el síntoma</label>
                     <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-heartbeat"></i></div>
-                        <textarea class="form-control" placeholder="Ingrese el sintoma" onChange={handleInputChange} name="sintoma" required></textarea>
+                        <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-heartbeat"></i></div>
+                        <textarea className="form-control" placeholder="Ingrese el sintoma" onChange={handleInputChange} name="sintoma" required></textarea>
                     </div>
 
                     <br />
@@ -67,8 +67,8 @@ function AgregarSintomas() {
                     {/*Sección ingrese nombre*/}
                     <label>Seleccione el/los tipos de depresión</label>
                     <div className="input-group">
-                        <div className="input-group-text" id="btnGroupAddon"><i class="fas fa-book"></i></div>
-                        <textarea class="form-control" placeholder="Seleccione el/los tipos de depresión" readonly="readonly" value={datosTablaModificar} onChange={handleChange}></textarea>
+                        <div className="input-group-text" id="btnGroupAddon"><i className="fas fa-book"></i></div>
+                        <textarea className="form-control" placeholder="Seleccione el/los tipos de depresión" readonly="readonly" value={datosTablaModificar} onChange={handleChange}></textarea>
                     </div>
 
                     <br />
@@ -76,10 +76,10 @@ function AgregarSintomas() {
                     <div id="cajaTabla-AgregarSintomas">
                         <form className="row" onSubmit={(e) => cargarTiposDepresion(e)}>
                             <div id="cajaBotonRecargar-AgregarSintomas">
-                                <button id="botonRecargar-AgregarSintomas" type='submit' className="btn btn-success" title='Recargar tabla'><i class="fas fa-redo"></i></button>
+                                <button id="botonRecargar-AgregarSintomas" type='submit' className="btn btn-success" title='Recargar tabla'><i className="fas fa-redo"></i></button>
                             </div>
                         </form>
-                        <table id="tablaTiposDepresion-AgregarSintomas" class="table table-bordered">
+                        <table id="tablaTiposDepresion-AgregarSintomas" className="table table-bordered">
 
                             <thead> {/*Cabeceras*/}
                                 <tr>
@@ -101,13 +101,13 @@ function AgregarSintomas() {
 
                         <div id="cajaRegresar-AgregarSintomas">
 
-                            <button id="botonRegresar-AgregarSintomas" type="button" class="btn btn-primary" title="Regresar a la plataforma" onClick={reiniciarDatos}>Regresar</button>
+                            <button id="botonRegresar-AgregarSintomas" type="button" className="btn btn-primary" title="Regresar a la plataforma" onClick={reiniciarDatos}>Regresar</button>
 
                         </div>
 
                         <form className="row" onSubmit={(e) => enviarDatos(e, datosGuardados, guardarID)}>
                             <div id="cajaEnviar-AgregarSintomas">
-                                <button id="botonEnviar-AgregarSintomas" type="submit" class="btn btn-primary" title="Crear nuevo sintoma" >Enviar</button>
+                                <button id="botonEnviar-AgregarSintomas" type="submit" className="btn btn-primary" title="Crear nuevo sintoma" >Enviar</button>
                             </div>
                         </form>
 
