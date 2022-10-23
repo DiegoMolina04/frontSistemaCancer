@@ -15,11 +15,11 @@ import MostrarMensaje from '../../../capaPresentacion/vista/ComponentesComunes/M
 const useLogin = () => {
   
   //Contextos
-  const { token, setToken } = useContext(UserContext);
-  const { es_admin, setEs_admin } = useContext(UserContext);
-  const { correo, setCorreo } = useContext(UserContext);
+  const { setToken } = useContext(UserContext);
+  const { setEs_admin } = useContext(UserContext);
+  const { setCorreo } = useContext(UserContext);
   const { cambiarEstado, setCambiarEstado } = useContext(UserContext);
-  const { datosGuardados, setDatosGuardados } = useContext(UserContext);
+  const { setDatosGuardados } = useContext(UserContext);
   //Componentes
   const [componenteCorreo, setComponenteCorreo] = useState(<ComponenteCorreo />);
   const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState("");
@@ -38,10 +38,10 @@ const useLogin = () => {
     const url = "https://secure-brushlands-86892.herokuapp.com/v1/users/login";
 
     try {
-      if (correoLocal == "") { //Se verifica si el estado correoLocal esta vacia para saber si se debe guardar correo
+      if (correoLocal === "") { //Se verifica si el estado correoLocal esta vacia para saber si se debe guardar correo
         respuestaServidor = await postBody(datos, url);
 
-        if (respuestaServidor.code == 400) { //Se verifica si es un correo registrado, de serlo, se guarda
+        if (respuestaServidor.code === 400) { //Se verifica si es un correo registrado, de serlo, se guarda
           setCorreoLocal(datos.email);
 
         } else {
@@ -56,7 +56,7 @@ const useLogin = () => {
       const datoCorreo = datos.email
 
       /*Se verifica si tiene token, si lo tiene, se redirecciona a la aplicación*/
-      if (respuestaServidor.message == undefined && respuestaServidor.result.token !== undefined) {
+      if (respuestaServidor.message === undefined && respuestaServidor.result.token !== undefined) {
         //Se setean datos a usar durante toda la aplicación
         setToken(respuestaServidor.result.token);
         setEs_admin(respuestaServidor.result.es_admin);
@@ -72,7 +72,7 @@ const useLogin = () => {
 
           /*Muestra campo contraseña cuando contraseña vacia y verificación de email -> Please verify your credentials*/
           case 400:
-            if (datos.email == "") {
+            if (datos.email === "") {
               setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Debe ingresar un correo/contraseña valido."} />);
 
             } else {
@@ -94,7 +94,7 @@ const useLogin = () => {
           /*Crear contraseña primera vez -> Storage error*/
           case 500:
 
-            if (respuestaServidor.message == "data and hash arguments required") {
+            if (respuestaServidor.message === "data and hash arguments required") {
               setCorreo(datos.email);
               setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Ingrese contraseña valida."} />);
 
@@ -127,6 +127,10 @@ const useLogin = () => {
             
             break;
 
+          default:
+
+          break;
+
         }
       }
 
@@ -146,7 +150,7 @@ const useLogin = () => {
 
   //Cada vez que se ejecute cambiarEstado, se ejecuta el useEffect
   useEffect(() => {
-    if (cambiarEstado == "Estado inicial") { //Se reinician los datos
+    if (cambiarEstado === "Estado inicial") { //Se reinician los datos
       setCorreo("");
       setCorreoLocal("");
       setCambiarEstado("");
@@ -155,10 +159,10 @@ const useLogin = () => {
       setComponenteContraseña("");
       setComponenteBtnRegresar("");
 
-    } else if (cambiarEstado == "Contraseña creada correctamente") { //Se setea mensaje informativo
+    } else if (cambiarEstado === "Contraseña creada correctamente") { //Se setea mensaje informativo
       setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Contraseña creada correctamente"} />);
 
-    } else if(cambiarEstado == "Contraseña modificada correctamente"){
+    } else if(cambiarEstado === "Contraseña modificada correctamente"){
       setComponenteMostrarMensaje(<MostrarMensaje mensaje={"Contraseña modificada correctamente"} />);
 
     }
