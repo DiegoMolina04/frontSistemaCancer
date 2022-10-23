@@ -13,10 +13,10 @@ const useAgregarPregunta = () => {
 
     //Contexto
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext); //Se guardan los estados
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext); //Se guarda valores del input
-    const { token, setToken } = useContext(UserContext); //Se guarda token
-    const { datosTablaModificar, setDatosTablaModificar } = useContext(UserContext); //Se guardan datos del textarea
-    const { guardarID, setGuardarID } = useContext(UserContext); //Se guardan los id de los elementos seleccionados con los checkbox
+    const { setDatosGuardados } = useContext(UserContext); //Se guarda valores del input
+    const { token } = useContext(UserContext); //Se guarda token
+    const { setDatosTablaModificar } = useContext(UserContext); //Se guardan datos del textarea
+    const { setGuardarID } = useContext(UserContext); //Se guardan los id de los elementos seleccionados con los checkbox
 
     //Componente
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState(""); //Mensaje informativo para el usuario
@@ -105,7 +105,7 @@ const useAgregarPregunta = () => {
 
                 } else {
 
-                    if (respuestaServidor.status == 201) {
+                    if (respuestaServidor.status === 201) {
                         setCambiarEstado("Correcto");
                         redireccionar(); //Se reinician datos y se redirecciona
 
@@ -180,7 +180,7 @@ const useAgregarPregunta = () => {
     //Muestra mensajes informativos al usuario y cambia estado
     useEffect(() => {
 
-        if (cambiarEstado == "Lista seleccionada") { //Se guardan los datos seleccionados en la tabla con checkbox
+        if (cambiarEstado === "Lista seleccionada") { //Se guardan los datos seleccionados en la tabla con checkbox
 
             setGuardarID(sintomaId); //Se guardan los id de los checkbox seleccionados
             setDatosTablaModificar(sintomaMensaje); //Se guarda el mensaje de los checkbox seleccionados
