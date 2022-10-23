@@ -18,14 +18,14 @@ const usePreguntas = () => {
 
     //Contexto
     const { cambiarEstado, setCambiarEstado } = useContext(UserContext); //Cambia estado
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext); //Datos para mostrar en modal
-    const { datosIntroducidos, setDatosIntroducidos } = useContext(UserContext); //Datos que se van modificando en el handleChange.
-    const { datosOriginales, setDatosOriginales } = useContext(UserContext); //Datos originales para comparar.
-    const { token, setToken } = useContext(UserContext); //Token para saber si esta logeado
-    const { es_admin, setEs_admin } = useContext(UserContext); //Para saber roles tienen
+    const { setDatosGuardados } = useContext(UserContext); //Datos para mostrar en modal
+    const { setDatosIntroducidos } = useContext(UserContext); //Datos que se van modificando en el handleChange.
+    const { setDatosOriginales } = useContext(UserContext); //Datos originales para comparar.
+    const { token } = useContext(UserContext); //Token para saber si esta logeado
+    const { es_admin } = useContext(UserContext); //Para saber roles tienen
 
-    const { datosTablaModificar, setDatosTablaModificar } = useContext(UserContext); //Elementos del textarea
-    const { guardarID, setGuardarID } = useContext(UserContext); //Se guarda el id del elemento seleccionado en el checkbox
+    const { setDatosTablaModificar } = useContext(UserContext); //Elementos del textarea
+    const { setGuardarID } = useContext(UserContext); //Se guarda el id del elemento seleccionado en el checkbox
 
     //Componente
     const [componenteMostrarMensaje, setComponenteMostrarMensaje] = useState(""); //Mensajes informativos
@@ -52,7 +52,7 @@ const usePreguntas = () => {
 
         try {
             let tabla = "";
-            if ((es_admin == true && funcion == "listar") || (es_admin == true && funcion == "filtrar")) { //Se muestra tabla con botones de modificar y eliminar*/
+            if ((es_admin === true && funcion === "listar") || (es_admin === true && funcion === "filtrar")) { //Se muestra tabla con botones de modificar y eliminar*/
                 tabla = datosExtraidos.map(elemento => (
                     <tr>
                         <th id="preguntaTablaFila-AdministrarPreguntas" scope="row">{elemento.pregunta}</th>
@@ -70,14 +70,14 @@ const usePreguntas = () => {
                         </td>
                     </tr>
                 ))
-            } else if ((es_admin == false && funcion == "listar") || (es_admin == false && funcion == "filtrar")) { //Se muestra tabla sin botones de modificar y eliminar
+            } else if ((es_admin === false && funcion === "listar") || (es_admin === false && funcion === "filtrar")) { //Se muestra tabla sin botones de modificar y eliminar
                 tabla = datosExtraidos.map(elemento => (
                     <tr>
                         <th id="preguntaTablaFila-AdministrarPreguntas" scope="row">{elemento.pregunta}</th>
                         <td id="sintomaTablaFila-AdministrarPreguntas">{<ol>{elemento.symptoms.map(sintomas => (<li>{sintomas.sintoma}</li>))}</ol>}</td>{/*Se cargan los items listandolos*/}
                     </tr>
                 ))
-            } else if (funcion == "sintomas") {
+            } else if (funcion === "sintomas") {
                 tabla = datosExtraidos.map(elemento => (
                     <tr>
                         <td scope="row">{elemento.sintoma}</td>
@@ -110,20 +110,20 @@ const usePreguntas = () => {
 
                 if (datosExtraidos.length > 0) { //Si hay algún resultado
 
-                    if (funcion == "listar" || funcion == "filtrar") {
+                    if (funcion === "listar" || funcion === "filtrar") {
                         setComponenteListarPreguntas(<ComponenteTabla tabla={cargarElementosTabla(datosExtraidos, funcion, es_admin)} />);
 
-                    } else if (funcion == "sintomas") {
+                    } else if (funcion === "sintomas") {
                         setComponenteListarSintomas(<ComponenteTabla tabla={cargarElementosTabla(datosExtraidos, funcion, es_admin)} />);
 
                     }
 
                 } else {
 
-                    if (funcion == "listar") {
+                    if (funcion === "listar") {
                         setCodigo(206); //No hay nada en la BD sobre lo tratado de mostrar.
 
-                    } else if (funcion == "filtrar") {
+                    } else if (funcion === "filtrar") {
                         setCodigo(404); //No se encuentra nada en el filtro.
 
                     }
@@ -141,7 +141,7 @@ const usePreguntas = () => {
 
             event.preventDefault();
 
-            if (funcion == "listar") {
+            if (funcion === "listar") {
 
                 setCodigo(""); //Se reinicia el mensaje de la tabla
                 url = "https://secure-brushlands-86892.herokuapp.com/v1/questions/get-all";
@@ -149,7 +149,7 @@ const usePreguntas = () => {
                 tomarDecision(respuestaServidor, funcion);
 
 
-            } else if (funcion == "filtrar") {
+            } else if (funcion === "filtrar") {
 
                 setCodigo("");
 
@@ -167,10 +167,14 @@ const usePreguntas = () => {
 
                             break;
 
+                        default:
+
+                        break;
+
                     }
                 }
 
-            } else if (funcion == "sintomas") {
+            } else if (funcion === "sintomas") {
                 setCodigo(""); //Se reinicia el mensaje de la tabla
                 url = "https://secure-brushlands-86892.herokuapp.com/v1/symptoms/get-all";
                 respuestaServidor = await getAutorization(token, url);
@@ -236,10 +240,10 @@ const usePreguntas = () => {
             let sintomasOriginalesOrganizados = JSON.stringify((preguntaOriginal.sintomas).sort());
             let url = "https://secure-brushlands-86892.herokuapp.com/v1/questions/" + preguntaOriginal.id + "/update-one";
 
-            if ((preguntaModificada.pregunta == preguntaOriginal.pregunta) && (sintomasNuevosOrganizados == sintomasOriginalesOrganizados)) { //Si la pregunta y sintomas no se modificaron
+            if ((preguntaModificada.pregunta === preguntaOriginal.pregunta) && (sintomasNuevosOrganizados === sintomasOriginalesOrganizados)) { //Si la pregunta y sintomas no se modificaron
                 setCodigo(207);
 
-            } else if ((preguntaModificada.pregunta == preguntaOriginal.pregunta) && (sintomasNuevosOrganizados != sintomasOriginalesOrganizados)) { //Si la pregunta es igual y los sintomas cambian
+            } else if ((preguntaModificada.pregunta === preguntaOriginal.pregunta) && (sintomasNuevosOrganizados !== sintomasOriginalesOrganizados)) { //Si la pregunta es igual y los sintomas cambian
 
                 let sintomasOriginales = preguntaOriginal.sintomas;
                 const sintomasNuevos = [];
@@ -249,17 +253,17 @@ const usePreguntas = () => {
                     (preguntaOriginal.sintomas.includes(elemento)) ? (sintomasOriginales = sintomasOriginales.filter(id => id !== elemento)) : sintomasNuevos.push(elemento)
                 ));
 
-                if (sintomasOriginales.length == 0) { //Si solo hay que insertar sintomas
+                if (sintomasOriginales.length === 0) { //Si solo hay que insertar sintomas
 
                     const arrayDatos = { 'sintomas': sintomasNuevos }
                     respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
 
-                } else if (sintomasNuevos.length == 0) { //Si solo hay que borrar sintomas
+                } else if (sintomasNuevos.length === 0) { //Si solo hay que borrar sintomas
 
                     const arrayDatos = { 'remover_sintomas': sintomasOriginales }
                     respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
 
-                } else if (sintomasNuevos.length != 0 && sintomasOriginales.length != 0) { //Si hay que insertar sintomas y borrar sintomas
+                } else if (sintomasNuevos.length !== 0 && sintomasOriginales.length !== 0) { //Si hay que insertar sintomas y borrar sintomas
 
                     const arrayDatos = { 'sintomas': sintomasNuevos, 'remover_sintomas': sintomasOriginales }
                     respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
@@ -268,12 +272,12 @@ const usePreguntas = () => {
 
 
 
-            } else if ((preguntaModificada.pregunta !== preguntaOriginal.pregunta) && (sintomasNuevosOrganizados == sintomasOriginalesOrganizados)) { //Si pregunta diferente y sintomas iguales
+            } else if ((preguntaModificada.pregunta !== preguntaOriginal.pregunta) && (sintomasNuevosOrganizados === sintomasOriginalesOrganizados)) { //Si pregunta diferente y sintomas iguales
 
                 const arrayDatos = { 'pregunta': preguntaModificada.pregunta }
                 respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
 
-            } else if ((preguntaModificada.pregunta != preguntaOriginal.pregunta) && (sintomasNuevosOrganizados != sintomasOriginalesOrganizados)) { //Si Pregunta y sintomas diferentes
+            } else if ((preguntaModificada.pregunta !== preguntaOriginal.pregunta) && (sintomasNuevosOrganizados !== sintomasOriginalesOrganizados)) { //Si Pregunta y sintomas diferentes
 
                 let sintomasOriginales = preguntaOriginal.sintomas;
                 const sintomasNuevos = [];
@@ -283,17 +287,17 @@ const usePreguntas = () => {
                     (preguntaOriginal.sintomas.includes(elemento)) ? (sintomasOriginales = sintomasOriginales.filter(id => id !== elemento)) : sintomasNuevos.push(elemento)
                 ));
 
-                if (sintomasOriginales.length == 0) { //Si solo hay que insertar sintomas e insertar pregunta
+                if (sintomasOriginales.length === 0) { //Si solo hay que insertar sintomas e insertar pregunta
 
                     const arrayDatos = { 'pregunta': preguntaModificada.pregunta, 'sintomas': sintomasNuevos }
                     respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
 
-                } else if (sintomasNuevos.length == 0) { //Si solo hay que borrar sintomas e insertar pregunta
+                } else if (sintomasNuevos.length === 0) { //Si solo hay que borrar sintomas e insertar pregunta
 
                     const arrayDatos = { 'pregunta': preguntaModificada.pregunta, 'remover_sintomas': sintomasOriginales }
                     respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
 
-                } else if (sintomasNuevos.length != 0 && sintomasOriginales.length != 0) { //Si hay que insertar sintomas, borrar sintomas y pregunta
+                } else if (sintomasNuevos.length !== 0 && sintomasOriginales.length !== 0) { //Si hay que insertar sintomas, borrar sintomas y pregunta
 
                     const arrayDatos = { 'pregunta': preguntaModificada.pregunta, 'sintomas': sintomasNuevos, 'remover_sintomas': sintomasOriginales }
                     respuestaServidor = await putBodyAutorization(arrayDatos, token, url);
@@ -323,7 +327,7 @@ const usePreguntas = () => {
             let url = "https://secure-brushlands-86892.herokuapp.com/v1/questions/" + datosOriginales.id + "/delete-one";
             respuestaServidor = await deleteAutorization(token, url);
 
-            if (respuestaServidor.status == undefined) {
+            if (respuestaServidor.status === undefined) {
                 setCodigo(respuestaServidor.code);
             } else {
                 setCodigo(respuestaServidor.status);
@@ -349,11 +353,11 @@ const usePreguntas = () => {
     //Muestra mensajes informativos al usuario y cambia estado
     useEffect(() => {
 
-        if (cambiarEstado == "Correcto") {
+        if (cambiarEstado === "Correcto") {
             setCodigo(201);
             setCambiarEstado("");
 
-        } else if (cambiarEstado == "Lista seleccionada") {
+        } else if (cambiarEstado === "Lista seleccionada") {
 
             setGuardarID(sintomaId);
             setDatosTablaModificar(sintomaMensaje);
@@ -419,7 +423,7 @@ const usePreguntas = () => {
 
     //Se ejecuta una sola vez al ser renderizado. Verifica que rol se tiene para mostrar diferentes componentes.
     useEffect(() => {
-        if (es_admin == true && token != undefined) { //Si es admin
+        if (es_admin === true && token !== undefined) { //Si es admin
 
             setComponenteBtnAgregarPregunta(<ComponenteAgregarPregunta />);
             setComponenteNombreOpcion(<NombreOpcion opcion={"Administrar Preguntas"} />);
