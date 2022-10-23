@@ -54,7 +54,7 @@ function Login() {
 
             {componenteBtnRegresar} {/*Muestra el botón regresar una vez se fija el correo*/}
 
-            <button id="btnEnviar" type="submit" class="btn btn-success" title="Iniciar sesión">Enviar</button>
+            <button id="btnEnviar" type="submit" className="btn btn-success" title="Iniciar sesión">Enviar</button>
 
           </div>
 
