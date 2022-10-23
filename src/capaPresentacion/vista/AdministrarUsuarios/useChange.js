@@ -6,12 +6,12 @@ import { UserContext } from '../../../capaNegocio/context/UserContext';
 const useChange = () => {
 
     //Contexto
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
+    const { setDatosGuardados } = useContext(UserContext);
     const { datosIntroducidos, setDatosIntroducidos } = useContext(UserContext);
     const { filtro, setFiltro } = useContext(UserContext);
 
     //Estado
-    const [rol, setRol] = useState({ es_admin: null });
+    const [rol] = useState({ es_admin: null });
 
     const handleInputChangeModificar = (event) => { //Para guardar los datos ingresados en el modificar
 
