@@ -13,9 +13,9 @@ import useDiccionario from '../../../capaNegocio/logicaNegocio/Diccionario/useDi
 function Diccionario() {
 
     //Contexto
-    const { datosGuardados, setDatosGuardados } = useContext(UserContext);
-    const { datosOriginales, setDatosOriginales } = useContext(UserContext);
-    const { filtro, setFiltro } = useContext(UserContext);
+    const { datosGuardados } = useContext(UserContext);
+    const { datosOriginales } = useContext(UserContext);
+    const { filtro } = useContext(UserContext);
     //Capturador datos ingresados
     const { handleInputChangeModificar, handleFiltrarChange } = useChange();
     //Logica negocio
