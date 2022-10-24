@@ -57,7 +57,7 @@ function Plataforma() {
 
           <button type="button" className="btn btn-success" onClick={redireccionarTiposDepresion} title="Ver tipos de depresión">
             <i className="fas fa-notes-medical"></i>
-            Clasificación Transtorno
+            Clasificación Trastorno
           </button>
 
           <button type="button" className="btn btn-success" onClick={redireccionarDiccionario} title="Ver diccionario de terminos">
